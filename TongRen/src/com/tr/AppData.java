@@ -20,7 +20,6 @@ import com.utils.common.EUtil;
 /**
  * @ClassName: AppData.java
  * @Description: App对象中的数据（需要在App发生资源回收时进行数据恢复）
- * @Author leon
  * @Version v 1.0
  * @Date 2014-04-10
  * @LastEdit 2014-04-10
