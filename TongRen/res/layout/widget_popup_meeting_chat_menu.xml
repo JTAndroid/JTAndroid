@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/noticeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/hy_selector_button_alarm"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="提醒"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/navigationTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/hy_selector_button_navigation"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="地图导航"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/notesTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/hy_selector_button_note"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="会议笔记"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+</LinearLayout>

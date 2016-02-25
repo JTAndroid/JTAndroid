@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/demand_main_bg"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <!-- 模版样式显示 -->
+
+   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/choose_jump_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/child_nameTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/demand_create_item_top"
+            android:layout_marginLeft="@dimen/demand_create_item_left"
+            android:layout_marginRight="@dimen/demand_create_item_left"
+            android:layout_marginTop="@dimen/demand_create_item_top"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/demand_text_color"
+            android:textSize="@dimen/demand_create_item_text_size" />
+        <ImageView
+            android:id="@+id/child_left_Iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/demand_create_item_left"
+        android:layout_marginRight="@dimen/demand_create_item_left"
+        android:src="@drawable/demand_rightarrow" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/demand_line_bg" />
+
+</LinearLayout>

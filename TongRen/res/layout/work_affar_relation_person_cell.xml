@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal" >
+
+                <com.tr.ui.widgets.CircleImageView
+					 xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ImageViewPic1"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/work_pic_out" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TextViewName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="名称"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/TextViewLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="关系"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 2 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal" >
+
+                <com.tr.ui.widgets.CircleImageView
+					 xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ImageViewPic2"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/work_pic_out" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TextViewName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="名称"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/TextViewLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="关系"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 3 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal" >
+
+                <com.tr.ui.widgets.CircleImageView
+					 xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ImageViewPic3"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/work_pic_out" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TextViewName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="名称"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/TextViewLabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="关系"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 4 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal" >
+
+                <com.tr.ui.widgets.CircleImageView
+					 xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ImageViewPic4"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/work_pic_out" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TextViewName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="名称"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/TextViewLabel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="关系"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 5 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center_horizontal" >
+
+                <com.tr.ui.widgets.CircleImageView
+					 xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ImageViewPic5"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/work_pic_out" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TextViewName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="名称"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/TextViewLabel5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="关系"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

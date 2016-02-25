@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 20141103 zhang nian 
+	 我的会议-资料列表项布局  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20px"
+    android:background="#f9f9f9" >
+	<RelativeLayout
+        android:id="@+id/hy_myhy_archives_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20px" >
+
+        <RelativeLayout
+            android:id="@+id/hy_myhy_archives_rl_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px" >
+
+            <ImageView
+                android:id="@+id/hy_myhy_archives_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meeting_notice_logo_a" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="12px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hy_myhy_archives_rl_logo">
+
+            <TextView
+                android:id="@+id/hy_myhy_tv_archives_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《经济学原理》 曼昆著"
+                android:textColor="#1f1f1f"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/hy_myhy_tv_archives_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:layout_alignParentRight="true"
+                android:text="2014-11-03"
+                android:textColor="#8d8d8d"
+                android:textSize="24px" />
+        </RelativeLayout>
+    </RelativeLayout>
+	<TextView
+        android:id="@+id/hy_myhy_archives_tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/hy_myhy_archives_rl_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="#e3e3e3" />
+</RelativeLayout>

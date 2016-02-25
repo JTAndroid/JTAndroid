@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commen_list_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/hy_myhy_archibes_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="111"
+        android:textColor="@color/orange"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hy_myhy_archibes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="111"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/hy_myhy_archibes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="3"
+        android:textColor="@color/orange"
+        android:textSize="16sp" />
+</LinearLayout>

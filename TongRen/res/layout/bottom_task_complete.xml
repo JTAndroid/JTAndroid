@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TextView
+        android:id="@+id/completeTaskSumTv"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/project_bg"
+        android:gravity="center|left"
+        android:text="0个已完成任务"
+        android:textColor="@color/project_blue"
+        android:textSize="13sp"
+        android:visibility="gone"
+         />
+

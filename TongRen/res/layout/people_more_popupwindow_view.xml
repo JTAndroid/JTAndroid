@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/edit_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#90000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delete_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#95000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/docking_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#90000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="对接"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/report_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#95000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="举报"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invitation_join_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#90000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="邀请加入"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seeMainBody_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#95000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="查看主体"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="1dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cancel_pop"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="#90000000"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="6dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#F98512"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

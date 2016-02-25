@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hy_title_height"
+    android:background="@drawable/auth_title_back" >
+
+    <LinearLayout
+        android:id="@+id/hy_layoutTitle_backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/relation_home_back" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hy_layoutTitle_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/hy_title"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/actionbar_text_size" />
+
+    <TextView
+        android:id="@+id/hy_layoutTitle_rightTextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/hy_title_action_bar_to_side"
+        android:clickable="true"
+        android:text="@string/hy_confirm"
+        android:textColor="@color/text_black"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/hy_meeting_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/hy_meeting_shadow" />
+
+</FrameLayout>

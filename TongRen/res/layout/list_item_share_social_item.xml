@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/rootLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/parentLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                >
+
+               <!--  <LinearLayout
+                    android:id="@+id/show_meetings"
+                    android:layout_width="25dp"
+                    android:layout_height="45dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/folderIv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignBottom="@id/rootLl"
+                        android:layout_alignRight="@id/rootLl"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@null"
+                        android:src="@drawable/common_arrow_down" />
+                </LinearLayout>
+ -->
+                <!-- 头像部分 -->
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp">
+
+                    <com.tr.ui.widgets.CircleImageView
+                        android:id="@+id/avatarIv"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ic_default_avatar" />
+
+                    <GridView
+                        android:id="@+id/avatarGv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:horizontalSpacing="1dp"
+                        android:numColumns="2"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="1dp"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <!-- 标题、内容、时间 -->
+
+                <LinearLayout
+                    android:id="@+id/share_check_response_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal" >
+
+                        <!-- 标题 -->
+
+                        <TextView
+                            android:id="@+id/titleTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="国际互联网大会"
+                            android:textColor="#ff1f1f1f"
+                            android:textSize="16sp" />
+
+                        <!-- 时间 -->
+
+                        <TextView
+                            android:id="@+id/updateTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:text="早上11：18"
+                            android:textColor="#ff8d8d8d"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!-- 内容 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/contentTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="2015年12月26日"
+                            android:textColor="#ff8d8d8d"
+                            android:textSize="14sp" />
+                        <ImageView
+                            android:id="@+id/checkbox_chat_IV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hy_check_norm" />
+
+                        <ImageView
+                            android:id="@+id/folderIv"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@null"
+                            android:src="@drawable/social_share_arrow_down" />
+                        
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 分会场 -->
+
+    <com.tr.ui.widgets.BasicListView
+        android:id="@+id/topicBlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#ffe3e3e3"
+        android:dividerHeight="0.5dp"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+</LinearLayout>

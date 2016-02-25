@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_management_group_members"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:text="@string/management_group_members"
+        android:textColor="@color/text_flow_content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_management_group_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:drawablePadding="10dp"
+        android:drawableRight="@drawable/arrow_right_grey"
+        android:text=""
+        android:textColor="@color/text_flow_more"
+        android:textSize="13sp" />
+
+</RelativeLayout>

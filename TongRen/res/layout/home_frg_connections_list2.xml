@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 好友主界面 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/layout_form_bg_white">
+
+    <LinearLayout
+        android:id="@+id/searchLl"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#E3E3E3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/keywordEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_search_bg"
+            android:drawableLeft="@drawable/related_res_search"
+            android:drawablePadding="10dp"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#ff8d8d8d"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/addIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/related_res_add_bg"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/layout_form_bg_white"
+        android:padding="0dp" >
+
+        <!-- style="@style/layout_list" -->
+
+        <com.tr.ui.common.view.XListView
+            android:id="@+id/lvContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_form_bg_white"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:orientation="vertical"
+            android:scrollbars="none" />
+        <!-- </android.support.v4.widget.SwipeRefreshLayout> -->
+
+        <com.tr.ui.widgets.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            />
+
+        <RelativeLayout
+            android:id="@+id/waitview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/footLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category_tag_press_bg_selector"
+            android:drawableLeft="@drawable/kno_category_log"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:padding="10dp"
+            android:text="目录"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tagTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category_tag_press_bg_selector"
+            android:drawableLeft="@drawable/kno_tag_log"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:padding="10dp"
+            android:text="标签"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

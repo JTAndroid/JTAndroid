@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.11 23:22 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9" >
+
+        <TextView
+            android:id="@+id/hy_meeting_notice_tv_time_session"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="#e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/hy_meeting_notice_rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_notice_tv_time_session"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/hy_meeting_notice_tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="#8d8d8d"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hy_meeting_notice_tv_name_session"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/hy_meeting_notice_rl_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/hy_meeting_notice_rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_notice_tv_name_session"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/hy_meeting_notice_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text=" "
+                android:textColor="#1f1f1f"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/hy_meeting_notice_sl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_notice_rl_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+>
+
+            <LinearLayout
+                android:id="@+id/hy_meeting_notice_ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/hy_meeting_notice_tv_end_session"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/hy_meeting_notice_sl_content"
+            android:background="#e3e3e3" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp" >
+    </RelativeLayout>
+
+</LinearLayout>

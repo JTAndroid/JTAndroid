@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_search"/>
+
+    <ListView
+        android:background="@drawable/white_circular_beed_background"
+        android:id="@+id/contactsLv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:scrollbars="none" />
+
+<!--     <TextView
+        android:id="@+id/contactsCountTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/action_bar_bg"
+        android:gravity="center"
+        android:text="2位联系人" /> -->
+
+</LinearLayout>

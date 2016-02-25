@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshSrl"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:background="#fff7f7f7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 事件 -->
+
+            <LinearLayout
+                android:id="@+id/affParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:id="@+id/affTitleTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/joint_res_index_aff"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="投融资需求对接"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- 内容 -->
+
+                <com.tr.ui.widgets.ExpandableListViewForScrollView
+                    android:id="@+id/affElv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/joint_res_bg" 
+                    android:scrollbars="none" 
+                    android:listSelector="@drawable/kno_list_item_bg_selector"
+                    android:divider="#ffcccccc"
+                    android:childDivider="#ffcccccc"
+                    android:dividerHeight="0.2dp" />
+            </LinearLayout>
+
+            <!-- 人 -->
+
+            <LinearLayout
+                android:id="@+id/peoParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:id="@+id/peoTitleTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/joint_res_index_peo"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="人脉对接"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- 内容 -->
+
+                <com.tr.ui.widgets.ExpandableListViewForScrollView
+                    android:id="@+id/peoElv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/joint_res_bg" 
+                    android:scrollbars="none"
+                    android:listSelector="@drawable/kno_list_item_bg_selector"
+                    android:divider="#ffcccccc"
+                    android:childDivider="#ffcccccc"
+                    android:dividerHeight="0.2dp"/>
+            </LinearLayout>
+
+            <!-- 组织 -->
+
+            <LinearLayout
+                android:id="@+id/orgParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:id="@+id/orgTitleTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/joint_res_index_org"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="组织对接"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" 
+                    android:scrollbars="none"/>
+
+                <!-- 内容 -->
+
+                <com.tr.ui.widgets.ExpandableListViewForScrollView
+                    android:id="@+id/orgElv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/joint_res_bg" 
+                    android:scrollbars="none"
+                    android:divider="#ffcccccc"
+                    android:listSelector="@drawable/kno_list_item_bg_selector"
+                    android:childDivider="#ffcccccc"
+                    android:dividerHeight="0.2dp"/>
+            </LinearLayout>
+
+            <!-- 知识 -->
+
+            <LinearLayout
+                android:id="@+id/knoParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:id="@+id/knoTitleTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/joint_res_index_kno"
+                    android:drawablePadding="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="知识对接"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- 内容 -->
+
+                <com.tr.ui.widgets.ExpandableListViewForScrollView
+                    android:id="@+id/knoElv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/joint_res_bg" 
+                    android:scrollbars="none"
+                    android:listSelector="@drawable/kno_list_item_bg_selector"
+                    android:divider="#ffcccccc"
+                    android:childDivider="#ffcccccc"
+                    android:dividerHeight="0.2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

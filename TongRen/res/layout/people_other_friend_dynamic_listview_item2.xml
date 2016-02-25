@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phonecontacts"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余佳文"
+            android:layout_toRightOf="@id/person"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:id="@+id/dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新了人脉资料"
+            android:layout_toRightOf="@id/name"
+            android:paddingLeft="5dp"/>
+        </RelativeLayout>
+     <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phonecontacts"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余佳文"
+            android:layout_toRightOf="@id/person"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:id="@+id/dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新了人脉资料"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/person"/>
+        </RelativeLayout>
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginRight="20dp">   
+     <TextView
+         android:id="@+id/time"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="12分钟前"/>
+     
+     <ImageView
+         android:layout_width="15dp"
+         android:layout_height="15dp"
+         android:layout_alignParentRight="true"
+         android:src="@drawable/relation_home_sendmessage" />
+
+     </RelativeLayout>
+</LinearLayout>

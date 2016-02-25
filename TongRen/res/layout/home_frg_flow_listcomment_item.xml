@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout11"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffeeeeee"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/HFLLISenderImage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_default_avatar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/HFLLICommentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="1dp"
+        android:singleLine="false"
+        android:text="周广文  : "
+        android:textColor="@color/str_fous_list_item_tv"
+        android:textSize="@dimen/text_size_s" />
+
+    <TextView
+        android:id="@+id/HFLLICommentContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="1dp"
+        android:singleLine="false"
+        android:text="评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容"
+        android:textColor="@color/str_fous_list_item_tv"
+        android:textSize="@dimen/text_size_s" />
+
+</LinearLayout>

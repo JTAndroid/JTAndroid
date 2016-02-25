@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <include layout="@layout/demand_item_division_line_width" />
+
+    <TextView
+        android:id="@+id/createLabelTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/demand_layout_item_bg"
+        android:gravity="center"
+        android:padding="@dimen/add_label"
+        android:text="@string/add_label"
+        android:textColor="@color/add_label_txt" />
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tr.ui.widgets.KnoTagGroupView
+            android:id="@+id/meLabelCv"
+            style="@style/cv_label" />
+    </ScrollView>
+
+</LinearLayout>

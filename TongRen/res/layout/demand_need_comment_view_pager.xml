@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+ <TextView
+      android:id="@+id/commentCountTv"
+                      android:background="@color/need_etails_project_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/need_etails_lable_left"
+                    android:paddingBottom="@dimen/need_etails_lable_left"
+                    android:paddingTop="@dimen/need_etails_lable_top_bar"
+                    android:text="@string/need_etails_all_comment"
+                    android:textColor="@color/need_etails_financing_label"
+                    android:textSize="@dimen/need_etails_relevance_relation_txt_size" />
+        
+        
+        <include layout="@layout/demand_item_division_line" />
+
+        <com.tr.ui.common.view.MyXListView
+            android:id="@+id/infoLv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/find_project_white_bg" >
+        </com.tr.ui.common.view.MyXListView>
+        <TextView 
+            android:id="@+id/bottomTv"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="已经到底了"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="14sp"/>
+         <View android:layout_width="match_parent"
+	    android:layout_gravity="bottom"
+                    android:layout_height="85dp"
+                    android:id="@+id/placeholderView"
+                    />
+    </LinearLayout>
+
+   
+
+</LinearLayout>

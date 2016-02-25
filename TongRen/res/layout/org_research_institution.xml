@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_research_institution_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/intermediary_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="研究机构"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_research_institution_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+           
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                 android:id="@+id/research_institution_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/research_institution_principal_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="负责人" />
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/research_institution_specialist_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="专家" />
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/research_institution_competent_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="上级主管单位" />
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/research_institution_custom_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:isAddMore_hint="true"
+                    edittextview:text_label="自定义" />
+                	<View 
+                	    android:background="#f1f1f1"
+                	    android:layout_width="match_parent"
+                	    android:layout_height="10dp"/>
+                   <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/research_institution_history_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:JustLabel="true"
+                    edittextview:isReadOnly="true"
+                    edittextview:text_label="历史改革" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

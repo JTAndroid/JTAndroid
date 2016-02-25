@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:button="@drawable/list_item_tagcb_bg_selector" 
+        android:focusable="false"
+        android:clickable="false"
+        />
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/imageIv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/checkBox"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_default_avatar" />
+
+    <LinearLayout
+        android:id="@+id/nameLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/imageIv"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" 
+            android:text="黄达"
+            />
+        
+        <TextView
+            android:id="@+id/descriptionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:text="黄达黄达黄达"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+             />
+        
+    </LinearLayout>
+
+</RelativeLayout>

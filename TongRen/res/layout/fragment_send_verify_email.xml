@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/reset_password_by_email" />
+
+    <!-- 说明文字 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="邮件已发送到"
+        android:textColor="#1f1f1f"
+        android:textSize="14sp" />
+
+    <!-- 用户 邮箱 -->
+
+    <TextView
+        android:id="@+id/tv_emailNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="sdsxleon@163.com"
+        android:textColor="#1f1f1f"
+        android:textSize="14sp" />
+
+    <!-- 说明文字 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="请到您的邮箱查收并完成验证"
+        android:textColor="@color/commen_text_color_1"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/bt_re_send"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in"
+        android:text="重新发送"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/bt_second"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in"
+        android:text="下一步"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

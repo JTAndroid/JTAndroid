@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/hy_transmit_meeting_home_titlebar"
+        layout="@layout/hy_layout_title" />
+
+    <ExpandableListView
+        android:id="@+id/meeting_home_elv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="#f1f1f1"
+        android:childDivider="#f1f1f1"
+        android:divider="#f1f1f1"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

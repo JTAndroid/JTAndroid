@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_partner_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/partner_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="合伙人"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_partner_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/partner_main_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+			 <com.tr.ui.people.cread.view.MyAddMordView
+                android:id="@+id/partner_MAMV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_MyAddMordView_label="合伙人" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:id="@+id/partner_Ll"
+                android:orientation="vertical" >
+				<View 
+				    android:background="#f1f1f1"
+				    android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_name_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="姓名" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_duty_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="职务" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_territory_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:text_label="专业领域" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_office_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="办公地" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_scale_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="出资比例" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/partner_ctsuom_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:isAddMore_hint="true"
+                    edittextview:text_label="自定义" />
+                  <com.tr.ui.people.cread.view.MyDeleteView
+                    android:id="@+id/partner_delete_Mdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_hint" />
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/notice_item_image"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/top_line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_default_avatar" />
+
+    <TextView
+        android:id="@+id/notice_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_line"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/notice_item_image"
+        android:text="张方圆"
+        android:textColor="@color/text_flow_content"
+        android:textSize="@dimen/text_size_normal" />
+
+    <LinearLayout
+        android:id="@+id/layout_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notice_item_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/notice_item_image"
+        android:orientation="vertical" >
+
+        <!-- 申请或邀请  通过或拒绝 -->
+
+        <LinearLayout
+            android:id="@+id/layout_apply_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/notice_attendType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加入方式"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="艾梦萌部落"
+                android:textColor="@color/text_flow_more"
+                android:textSize="@dimen/text_size_micro" />
+        </LinearLayout>
+
+        <!-- 转让群 -->
+
+        <LinearLayout
+            android:id="@+id/layout_transfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/notice_item_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张方圆"
+                android:textColor="@color/text_flow_more"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="申请将社群转让给你"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+        </LinearLayout>
+
+        <!-- 转让群 已通过  被拒绝-->
+
+        <LinearLayout
+            android:id="@+id/layout_transfer_refuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="群转让"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_transfer_refuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="张方圆"
+                android:textColor="@color/text_flow_more"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="申请"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_notice_refuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="已通过"
+                android:textColor="@color/text_flow_more"
+                android:textSize="@dimen/text_size_micro" />
+        </LinearLayout>
+        
+        <!-- 自己的数据处理后的结果-->
+
+        <LinearLayout
+            android:id="@+id/layout_transfer_self_refuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/notice_item_transfer_self_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你已经"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_transfer_self_refuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="拒绝了"
+                android:textColor="@color/gintongyellow"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_transfer_self_refuse_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="张方圆"
+                android:textColor="@color/text_flow_more"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/notice_item_notice_self_refuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="的社群转让申请"
+                android:textColor="@color/text_search_gray"
+                android:textSize="@dimen/text_size_micro" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notice_applyReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_item_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/text_flow_content"
+        android:textSize="@dimen/text_size_micro"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notice_applyReason"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/text_hint" />
+
+        <LinearLayout
+            android:id="@+id/ownerll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/notice_item_refuse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="忽略"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_size_small" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/divider_line" />
+
+            <TextView
+                android:id="@+id/notice_item_agree"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="同意"
+                android:textColor="@color/gintongyellow"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notice_item_into"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="进群聊天"
+            android:textColor="@color/gintongyellow"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/layout_choice"
+            android:background="@color/text_hint" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/layout_choice"
+        android:layout_marginTop="20dp"
+        android:background="@color/text_hint"
+        android:visibility="gone" />
+
+</RelativeLayout>

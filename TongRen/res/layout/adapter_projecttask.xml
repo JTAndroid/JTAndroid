@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_sociality_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="#fff"
+        >
+	        <TextView 
+	            android:id="@+id/adapterTaskNameTv"
+	           android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="@color/projecttextcolor1"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="55dp"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginBottom="12dp"
+	        android:textSize="14sp"
+	        android:singleLine="true" 
+	        />
+        <ImageView 
+            android:id="@+id/adapterTaskAccessoryTv"
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        android:layout_toRightOf="@id/adapterTaskNameTv"
+        android:src="@drawable/tongren_accessory"/>
+         <ImageView 
+              android:id="@+id/adapterTaskStatusIv"
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+	        android:layout_marginBottom="12dp"
+        android:layout_marginRight="15dp"
+       />
+
+           <TextView
+               android:id="@+id/adapterTaskCompleteStatusTv"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_alignTop="@id/adapterTaskNameTv"
+               android:layout_marginRight="15dp"
+               android:text="已完成"
+               android:textColor="@color/projecttextorangebg"
+               android:textSize="12sp"
+               android:visibility="gone" />
+
+          <TextView 
+            android:id="@+id/adapterTaskTimeTv"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true" 
+        android:textSize="11sp"
+         android:paddingBottom="20dp"
+        android:textColor="@color/projecttextcolor"
+        android:layout_alignLeft="@id/adapterTaskNameTv"
+        android:layout_below="@id/adapterTaskNameTv"
+         />
+             <TextView 
+            android:id="@+id/adapterTaskPersonNameTv"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true" 
+        android:paddingLeft="20dp"
+         android:paddingBottom="20dp"
+         android:textSize="11sp"
+         android:textColor="@color/projecttextcolor"
+        android:layout_toRightOf="@id/adapterTaskTimeTv"
+        android:layout_below="@id/adapterTaskNameTv"
+        />
+    </RelativeLayout>
+	<View 
+	       android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="#e3e3e3"/>
+</LinearLayout>

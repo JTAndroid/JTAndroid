@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#1ABDE6" >
+
+        <ImageView
+            android:id="@+id/xiangzuojiantou"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/people_a" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/xiangzuojiantou"
+            android:text="我的主页"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/people_share" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/people_more" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp" >
+
+            <ImageView
+                android:id="@+id/touxiang"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/people_a" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/touxiang"
+                android:paddingLeft="5dp"
+                android:text="樊纲"
+                android:textColor="#ffffff"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/touxiang"
+                android:paddingLeft="5dp"
+                android:text="国民经济研究所"
+                android:textColor="#ffffff"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/touxiang"
+                android:paddingLeft="5dp"
+                android:text="所长"
+                android:textColor="#ffffff"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/name"
+                android:paddingLeft="5dp"
+                android:src="@drawable/people_a" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/people_erweima" />
+    </RelativeLayout>
+     <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

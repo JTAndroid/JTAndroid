@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_layout_switch_1line_text_labelclick"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingRight="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingTop="9dp"
+    android:paddingBottom="8dp"
+    android:background="@drawable/hy_selector_label_color"
+    android:clickable="false">
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	    <TextView 
+	        android:id="@+id/hy_layout_switch_1line_text_title"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:textColor="@color/hy_input_title_text_color"
+	   		android:textSize="@dimen/hy_input_title_text_font"
+	   		android:text="标题："/>
+	    <ImageView android:id="@+id/hy_layout_switch_1line_text_switchicon"
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:src="@drawable/hy_switch_off"
+	   		android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	   		android:clickable="true"/>
+	    <!-- 
+	    <CheckBox android:id="@+id/hy_layout_switch_1line_text_switchicon"
+	   	    android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	   		android:background="@null"
+	   		android:button="@drawable/hy_selector_switch"
+	   		android:clickable="true"/>
+	     -->
+	    
+	    <TextView 
+	        android:id="@+id/hy_layout_switch_1line_text"
+	       	android:layout_width="match_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_centerVertical="true"
+	   		android:gravity="center_vertical|left"
+	   		android:layout_toRightOf="@+id/hy_layout_switch_1line_text_title"
+	   		android:layout_toLeftOf="@+id/hy_layout_switch_1line_text_switchicon"
+	   		android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+	   		android:layout_marginLeft="18dp"
+	   		android:textColor="@color/hy_input_content_text_color"
+   			android:textSize="@dimen/hy_input_content_text_font"
+	   		android:singleLine="true"
+	   		android:ellipsize="end"
+	   		android:text="TEXT"/>
+	</RelativeLayout>
+</LinearLayout> 

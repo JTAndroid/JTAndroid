@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_layout_picker_1line_images_labelclick"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingRight="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingTop="@dimen/hy_label_tocontrol_topbottom_slide"
+    android:paddingBottom="@dimen/hy_label_tocontrol_topbottom_slide">
+    
+    <LinearLayout android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="8dp"
+    	android:background="@drawable/hy_shape_graywihte_color">
+        <android.support.v4.view.ViewPager
+	       android:id="@+id/hy_layout_picker_1line_images_viewpager"
+	       android:layout_marginTop="2dp"
+	       android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+

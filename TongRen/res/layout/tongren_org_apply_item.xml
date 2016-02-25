@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="@color/text_hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编号:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请用户:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请类型:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请内容:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交时间:"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/addTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_marginTop="20dp"
+        android:background="@color/text_hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:id="@+id/applyPerson1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="---->"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+
+        <TextView
+            android:id="@+id/applyPerson2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_s" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="@color/text_hint" />
+
+    <LinearLayout
+        android:id="@+id/cancel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_circle_click"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="撤回"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_tongren_size_ss" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="@color/text_hint" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f6f6f6" />
+
+</LinearLayout>

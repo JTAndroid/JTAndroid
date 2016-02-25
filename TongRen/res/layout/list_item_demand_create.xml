@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/choose_jump_bg"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical" >
+    <View 
+           android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="#f1f1f1"/>
+<LinearLayout
+   	android:id="@+id/demand_group_Ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/choose_jump_bg"
+    android:gravity="center_vertical" >
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/demand_create_item_top"
+        android:layout_marginLeft="@dimen/demand_create_item_left"
+        android:layout_marginTop="@dimen/demand_create_item_top"
+        android:src="@drawable/demand_financing" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/demand_create_item_top"
+        android:layout_marginLeft="@dimen/demand_create_item_left"
+        android:layout_marginTop="@dimen/demand_create_item_top"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/demand_text_color"
+        android:textSize="@dimen/demand_create_item_text_size"
+         />
+
+    <ImageView
+        android:id="@+id/rightIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/demand_create_item_left"
+        android:layout_marginRight="@dimen/demand_create_item_left"
+        android:src="@drawable/arrow_down_grey" />
+    </LinearLayout>
+	<View 
+	    android:background="#e3e3e3"
+	    android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>

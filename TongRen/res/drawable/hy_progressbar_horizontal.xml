@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.13 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">    
+	<item android:id="@android:id/progress" android:drawable="@drawable/hy_progressbar_fill" />   
+</layer-list>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/conns_delete_dialog_bg"
+    android:gravity="center_horizontal">
+    
+    <TextView 
+        style="@style/common_text_style_large_black"
+        android:text="您确定删除该板块？"
+        android:padding="30dp"/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffdcddd8"/>
+	<View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#fffffffd"/>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:padding="10dp">
+	    <TextView 
+	        android:id="@+id/okTv"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginRight="5dp"
+	        android:background="@drawable/fp_btn_bg"
+	        style="@style/common_text_style_large_black"
+	        android:text="确定"
+	        android:padding="12dp"
+	        android:gravity="center"/>
+	    <TextView 
+	        android:id="@+id/cancelTv"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_marginLeft="5dp"
+	        android:background="@drawable/fp_btn_bg"
+	        style="@style/common_text_style_large_black"
+	        android:text="取消"
+	        android:padding="12dp"
+	        android:gravity="center"/>
+	</LinearLayout>
+</LinearLayout>

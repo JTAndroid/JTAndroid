@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 好友主界面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form" android:padding="0dp">
+	<ListView android:id="@+id/lvContact" 
+	        style="@style/layout_list"
+	   		android:divider="@null"
+	   		android:layout_marginLeft="0dp"
+	   		android:scrollbars="none"></ListView>
+</FrameLayout>

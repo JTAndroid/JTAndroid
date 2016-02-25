@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  
+         android:orientation="vertical"  android:background="@drawable/establish_bj" android:layout_margin="10dp" >
+
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="活动类型 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:clickable="true" android:id="@+id/addPeopleActivity"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/activitiTypeList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/establish_fengexian"
+              />
+         
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/addDescription1">
+             <TextView  style="@style/item_text_title_m" android:text="描述 " android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:id="@+id/addDescription"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/addReferrals1">
+             <TextView  style="@style/item_text_title_m" android:text="介绍人" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/addReferrals"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal"  android:clickable="true" android:id="@+id/addFellow1">
+             <TextView  style="@style/item_text_title_m" android:text="老乡" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/addFellow"/>
+         </LinearLayout>
+
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="自定义字段 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:clickable="true" android:id="@+id/addNew" />
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/customList" android:layout_width="fill_parent" android:layout_height="wrap_content"   android:divider="@drawable/establish_fengexian"/>
+         
+     </LinearLayout>
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true" android:src="@drawable/establish_deletplate" android:clickable="true" android:id="@+id/delNew" />
+     </RelativeLayout>
+</FrameLayout>

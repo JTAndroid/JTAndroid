@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:id="@+id/iv_zheda_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="同业竞争"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+    
+    
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#1f1f1f"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+      <RelativeLayout
+        android:id="@+id/news_zheda"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="12dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="浙大网新"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+      
+    </RelativeLayout>
+    
+       <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/list_divider_color" />
+    
+       <ListView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/lv_news_zheda">
+           
+       </ListView>
+
+</LinearLayout>

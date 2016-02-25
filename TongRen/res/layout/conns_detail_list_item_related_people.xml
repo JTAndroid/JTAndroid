@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@color/white"
+    android:padding="10dp">
+    
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp" >
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/im_img_user" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/im_user_avatar_border" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/nameTv"
+            style="@style/common_text_style_middle_black"
+            android:text="周杰伦"/>
+        
+        <TextView 
+            android:id="@+id/reasonTv"
+            style="@style/common_text_style_middle_gray"
+            android:text="他同事"/>
+        
+        <TextView 
+            android:id="@+id/rangeTv"
+            style="@style/common_text_style_middle_gray"
+            android:text="2度人脉"/>
+    </LinearLayout>
+
+</LinearLayout>

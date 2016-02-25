@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 找项目 -->
+    <item android:state_checked="true" android:color="@color/report_message_btn_orange"></item>
+    <item android:state_selected="true"  android:color="@color/report_message_btn_orange"></item>
+    <item android:color="@color/report_message_btn_black"></item>
+  <!--   
+     菜单顶页显示
+    <item android:state_checked="true" android:color="@color/white"/>
+    <item android:state_checked="false" android:color="@color/text_gray"/>
+    <item android:color="@color/white"/> -->
+
+</selector>

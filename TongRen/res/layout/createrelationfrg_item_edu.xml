@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_wfillv">
+    	    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+    	    <LinearLayout style="@style/layout_item_wfillh" android:layout_height="40dp">
+    	       <RelativeLayout style="@style/layout_item_wfillh" android:layout_width="107dp" android:id="@+id/addone" >
+    	            <ImageView style="@style/item_comm" android:paddingLeft="0dp" android:src="@drawable/createrelatioadd" android:id="@+id/add" android:layout_alignParentLeft="true"
+    	                android:clickable="true" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+    	    	    <ImageView style="@style/item_comm" android:src="@drawable/createrelationtype" android:id="@+id/type" android:visibility="invisible" 
+    	    	        android:layout_alignParentRight="true" android:padding="5dp" android:clickable="true"/>
+    	    	    <TextView style="@style/item_text_title_m" android:text="移動電話" android:layout_width="30dp" android:id="@+id/title"
+    	    	        android:layout_toLeftOf="@+id/type" android:layout_toRightOf="@+id/add"
+    	    	        android:gravity="left"/>
+    	        </RelativeLayout>
+    	        <ImageView android:layout_width="1px" android:layout_height="fill_parent" android:background="@color/im_relationdetails_divider"/>
+    	        <EditText style="@style/item_edit" android:id="@+id/edit0" android:layout_width="fill_parent" android:textCursorDrawable="@null"
+    	             android:background="@null" android:singleLine="true"
+    	            />
+    	    </LinearLayout>  
+    	    <!-- 时间 -->
+    	    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+    	    <LinearLayout style="@style/layout_item_wfillv" android:layout_height="160dp" android:layout_marginLeft="107dp">
+				
+				<LinearLayout style="@style/layout_item_wfillh">
+				    <ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    <LinearLayout style="@style/layout_item_wfillh" android:layout_width="fill_parent">
+				        <TextView style="@style/item_text_title_m" android:layout_width="fill_parent" android:id="@+id/edit1"
+				            android:layout_weight="1" android:text="起始时间" android:clickable="true"/>
+				        <TextView style="@style/item_text_title_m" android:layout_width="wrap_content" android:text="至 " />
+				        <TextView style="@style/item_text_title_m" android:layout_width="fill_parent"  android:id="@+id/edit2" android:clickable="true"
+				            android:layout_weight="1" android:textCursorDrawable="@null" android:background="@null" android:text="今"/>
+				    </LinearLayout>
+				</LinearLayout>
+				
+				<!-- 专业-->
+				<ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+				<LinearLayout style="@style/layout_item_wfillh">
+				    <ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    <EditText style="@style/item_text_title_m" android:layout_width="fill_parent" android:singleLine="true"
+				        android:id="@+id/edit3" android:textCursorDrawable="@null" android:background="@null"/>
+				</LinearLayout>
+				
+
+				<!-- 教育海外学习-->
+				<LinearLayout style="@style/layout_item_wfillv" android:id="@+id/edu" > 
+				    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+				    
+				    <LinearLayout style="@style/layout_item_wfillh" android:id="@+id/backgrourdinputcon" android:visibility="gone">
+				    	<ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    	<EditText style="@style/item_text_title_m" android:layout_width="fill_parent" android:id="@+id/backgrourdinput" 
+				    	    android:textCursorDrawable="@null" android:background="@null" android:singleLine="true"/>
+					</LinearLayout>
+				    
+					<LinearLayout style="@style/layout_item_wfillh" android:id="@+id/backgrourdselectcon" android:clickable="true" android:visibility="gone">
+				    	<ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    	<TextView style="@style/item_text_title_m" android:layout_width="wrap_content" android:text="学历："/>
+				    	<TextView style="@style/item_text_title_m" android:layout_width="fill_parent"  android:id="@+id/backgrourdselect"/>
+				    </LinearLayout>
+				    
+				     <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+					<RelativeLayout style="@style/layout_item_wfillh">
+				    	<ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider" />
+				    	<TextView style="@style/item_text_title_m" android:layout_width="fill_parent" android:text="海外学习经历"
+				    	    android:layout_alignParentLeft="true" />
+				    	
+				    	<CheckBox android:id="@+id/isOverseas"   android:button="@drawable/button_yes_no_style"  style="@style/item_comm"  android:paddingLeft="0dp"
+				    	    android:layout_alignParentRight="true" />
+					</RelativeLayout>
+				</LinearLayout>
+				
+				
+    	    </LinearLayout>
+       </LinearLayout>    
+

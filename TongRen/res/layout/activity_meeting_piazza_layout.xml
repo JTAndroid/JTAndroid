@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/find_project_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/find_project_ll_height"
+        android:background="@color/find_project_white_bg"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/itemRg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/timeRB"
+                style="@style/rb_project_style"
+                android:singleLine="true"
+                android:text="时间" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/find_project_v_top_bot"
+                android:layout_marginTop="@dimen/find_project_v_top_bot"
+                android:background="@drawable/demand_find_project_dividing_line" />
+
+            <RadioButton
+                android:id="@+id/addressRB"
+                style="@style/rb_project_style"
+                android:singleLine="true"
+                android:text="地点" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/find_project_v_top_bot"
+                android:layout_marginTop="@dimen/find_project_v_top_bot"
+                android:background="@drawable/demand_find_project_dividing_line" />
+
+            <RadioButton
+                android:id="@+id/industryRB"
+                style="@style/rb_project_style"
+                android:singleLine="true"
+                android:text="行业" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/find_project_v_top_bot"
+                android:layout_marginTop="@dimen/find_project_v_top_bot"
+                android:background="@drawable/demand_find_project_dividing_line" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/anchor"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/list_category_divider" />
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+    </com.tr.ui.common.view.XListView>
+
+</LinearLayout>

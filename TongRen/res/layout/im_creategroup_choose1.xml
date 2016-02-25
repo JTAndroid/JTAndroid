@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    
+	<ScrollView 
+ 	android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" android:scrollbars="vertical" >
+	<LinearLayout  
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical" >
+  
+    
+      <RelativeLayout style="@style/layout_item_wfillv" android:id="@+id/investtv"  android:clickable="true" android:background="@color/list_category_divider">
+	    <TextView   style="@style/item_text_title" android:layout_alignParentLeft="true"
+        android:text="@string/im_group_invest" android:id="@+id/im_group_invest"/> 
+        
+	     <TextView   style="@style/item_text_title_yellow" android:layout_toRightOf="@+id/im_group_invest" android:id="@+id/im_group_invest_all"
+        android:text="全选" android:clickable="true"  android:paddingLeft="20dp"/> 
+	    
+	    <ImageView style="@style/item_comm" android:layout_alignParentRight="true" android:src="@drawable/zhankai" android:id="@+id/investtv_tag"
+	        android:layout_marginRight="@dimen/layout_form_margin_left"/>
+	 </RelativeLayout> 
+    
+    <com.tr.ui.widgets.CateaoryGrid
+        android:id="@+id/investGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"/>
+
+    <ImageView style="@style/layout_item_wfillv" android:layout_height="20dp" 
+	      android:background="@color/item_white" android:id="@+id/investend" android:visibility="visible"/>
+    
+     <RelativeLayout style="@style/layout_item_wfillv" android:id="@+id/tradetv"  android:clickable="true" android:background="@color/list_category_divider">
+	    <TextView   style="@style/item_text_title" android:layout_alignParentLeft="true"
+        android:text="@string/im_group_trade" android:id="@+id/im_group_trade"/> 
+        <TextView   style="@style/item_text_title_yellow" android:layout_toRightOf="@+id/im_group_trade" android:id="@+id/im_group_trade_all"
+        android:text="全选" android:clickable="true"  android:paddingLeft="20dp"/> 
+	    
+	    <ImageView style="@style/item_comm" android:layout_alignParentRight="true" android:src="@drawable/zhankai" android:id="@+id/tradetv_tag"
+	        android:layout_marginRight="@dimen/layout_form_margin_left"/>
+	 </RelativeLayout> 
+	
+    <com.tr.ui.widgets.CateaoryGrid
+        android:id="@+id/tradeGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+    
+    <ImageView style="@style/layout_item_wfillv" android:layout_height="20dp" 
+	      android:background="@color/item_white" android:id="@+id/tradeend" android:visibility="visible"/>
+    
+    
+    
+     <RelativeLayout style="@style/layout_item_wfillv" android:id="@+id/areatv"  android:clickable="true" android:background="@color/list_category_divider">
+	    <TextView   style="@style/item_text_title" android:layout_alignParentLeft="true"
+        android:text="@string/im_group_area" android:id="@+id/im_group_area"/> 
+        
+	    <TextView   style="@style/item_text_title_yellow" android:layout_toRightOf="@+id/im_group_area" android:id="@+id/im_group_area_all"
+        android:text="全选" android:clickable="true"  android:paddingLeft="20dp"  /> 
+	    
+	    <ImageView style="@style/item_comm" android:layout_alignParentRight="true" 
+	        android:src="@drawable/shouqi" android:layout_marginRight="@dimen/layout_form_margin_left" android:id="@+id/areatv_tag"/>
+	 </RelativeLayout> 
+    
+    <com.tr.ui.widgets.CateaoryGrid
+        android:id="@+id/areaGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+    
+    
+    <TextView android:clickable="true"   style="@style/item_text_title_yellow"   android:text="清除所选" android:padding="10dp" android:id="@+id/clearAll" /> 
+    <ImageView style="@style/layout_item_wfillv" android:layout_height="20dp" 
+	      android:background="@color/item_white" android:id="@+id/areaend" android:visibility="visible"/>
+    <!-- 
+    <Button android:layout_width="wrap_content"  android:layout_height="wrap_content" android:text="分享" android:id="@+id/share"  />
+    <Button android:layout_width="wrap_content"  android:layout_height="wrap_content" android:text="详情" android:id="@+id/detail"  />
+     -->
+   </LinearLayout>
+	
+    </ScrollView>
+</LinearLayout>

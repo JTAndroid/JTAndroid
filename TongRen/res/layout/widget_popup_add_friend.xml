@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:orientation="vertical"
+    	android:background="@drawable/pop_add_friend_bg"
+    	android:padding="15dp"
+    	android:gravity="center">
+    
+        <EditText 
+            android:id="@+id/messageEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pop_add_friend_info_bg"
+            android:textColorHint="@color/commen_text_color_2"
+            android:textColor="@color/commen_text_color_2"
+            android:textSize="14sp"
+            android:text="你好，想和你聊聊这个项目"
+            android:gravity="top|left"
+            android:padding="5dp"/>
+        
+        <Button 
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/pop_add_friend_btn_bg"
+            android:text="确定"
+            android:textColor="#ff000000"
+            android:textSize="16sp"/>
+
+	</LinearLayout>
+

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- 分割线 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/im_relationcontactlist_itembg" 
+        >
+
+        <!-- 排序的用户item -->
+
+        <TextView
+            android:id="@+id/contactitem_catalog"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F1F1F1"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:text="H"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/middlePartRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactitem_catalog"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp" 
+            >
+
+            <!-- android:background="@drawable/im_relationcontactlist_itembg" -->
+
+            <com.utils.picture.PorterShapeImageView
+				android:id="@+id/contactitem_avatar_iv" 
+				android:layout_width="45dp" 
+				android:layout_height="45dp" 
+				android:src="@drawable/ic_default_avatar"
+				app:siShape="@drawable/shape_rounded_rectangle"
+				app:siSquare="true"
+				/> 
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                     >
+					
+                    <TextView
+                        android:id="@+id/imcontactname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="姓名"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+					<!-- 嵌套的小图标 -->
+                    <ImageView
+                        android:id="@+id/contactitem_icontag"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0"
+                        android:contentDescription="@null"
+                        android:src="@drawable/im_relation_icontag" />
+            		
+
+                    <!-- 老行业 -->
+                    <TextView
+                        android:id="@+id/imcontactcomefrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/introductionLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/companyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/imcontactname"
+                        android:layout_below="@+id/imcontactname"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toLeftOf="@+id/sendSmsIv"
+                        android:singleLine="true"
+                        android:text="公司名称"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkgray"
+                         />
+
+                    <TextView
+                        android:id="@+id/careerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/companyTv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/companyTv"
+                        android:text="职位名称"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+	<LinearLayout
+                    android:id="@+id/communicationLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:visibility="visible"
+                    >
+            <ImageView
+                android:id="@+id/sendSmsIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:paddingTop="10dp"
+                android:src="@drawable/send_ems_bg_selector" />
+
+            <ImageView
+                android:id="@+id/callIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/call_bg_selector" />
+            </LinearLayout>
+            
+            <!-- 老邀请 加好友 布局 start -->
+
+            <LinearLayout
+                android:id="@+id/yaoqoingcon"
+                style="@style/layout_item_h"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/yaoqingicon"
+                    style="@style/item_comm"
+                    android:contentDescription="@null"
+                    android:src="@drawable/guanxi_yaoqing" />
+
+                <TextView
+                    android:id="@+id/yaoqingtxt"
+                    style="@style/item_text_title_yellow_m"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="2dp"
+                    android:text="加好友" />
+            </LinearLayout>
+            <!-- 老邀请 加好友 布局 start -->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/layout_item_wfillh"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/layout_form_margin_left"
+        android:layout_marginRight="@dimen/layout_form_margin_left"
+        android:background="@color/item_gray" />
+
+</LinearLayout>

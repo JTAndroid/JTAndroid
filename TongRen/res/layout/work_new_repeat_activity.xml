@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hy_activity_main_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/common_bg"
+        android:onClick="onLinearTypeClick"
+        android:orientation="horizontal"
+        android:tag="o" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="不重复"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ImageViewNo"
+            android:layout_width="21dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/work_new_remind_ok" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/common_bg"
+        android:onClick="onLinearTypeClick"
+        android:orientation="horizontal"
+        android:tag="d" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="每天"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ImageViewDay"
+            android:layout_width="21dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/work_new_remind_ok" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/common_bg"
+        android:onClick="onLinearTypeClick"
+        android:orientation="horizontal"
+        android:tag="w" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="每周"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ImageViewWeek"
+            android:layout_width="21dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/work_new_remind_ok" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/common_bg"
+        android:onClick="onLinearTypeClick"
+        android:orientation="horizontal"
+        android:tag="m" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="每月"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ImageViewMonth"
+            android:layout_width="21dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/work_new_remind_ok" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="41dp"
+        android:background="@drawable/common_bg"
+        android:onClick="onLinearTypeClick"
+        android:orientation="horizontal"
+        android:tag="y" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="每年"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/ImageViewYear"
+            android:layout_width="21dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/work_new_remind_ok" />
+    </LinearLayout>
+
+</LinearLayout>

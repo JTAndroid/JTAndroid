@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/custom_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="字段名称" />
+      <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/custom_item_Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:JustLabel="true"
+                edittextview:text_label="字段名称" />
+
+</LinearLayout>

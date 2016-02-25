@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/hy_item_attendee_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_above="@+id/relationNameTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            />
+
+        <ImageView
+             android:id="@+id/hy_item_add_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_above="@+id/relationNameTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            />
+
+        <TextView
+            android:id="@+id/hy_item_attendee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#4d4d4d"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</FrameLayout>

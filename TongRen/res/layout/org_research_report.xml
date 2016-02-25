@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_research_report_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/research_report_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="研究报告"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+       <ImageView
+            android:id="@+id/edit_reseaech_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="edit"
+            android:padding="10dp"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#f1f1f1"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_research_home_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"      
+        edittextview:text_label="家庭状况:" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_research_name_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        edittextview:text_hint_label="自定义字段内容"
+        edittextview:text_label="字段名称:" />
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_research_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        edittextview:isCustom_Text="true"
+        edittextview:hint_Text="这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段这是描述字段"
+        edittextview:text_label="描述字段:" />
+    
+</LinearLayout>

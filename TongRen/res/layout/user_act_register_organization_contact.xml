@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp" >
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.58"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="为获得更好的机构服务\n请提供自己的真实信息"
+        android:textColor="#ff000000"
+        android:textSize="14sp" />
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.07"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reg_input_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/cameraTipTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="拍照上传我的身份证件"
+                    android:singleLine="true" 
+                    android:textColor="@color/commen_text_color_2"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/contactPicIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null" />
+
+                    <ProgressBar
+                        android:id="@+id/loadingPb"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" 
+                        android:layout_marginLeft="5dp"
+                        style="?android:attr/android:progressBarStyleSmall"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/cameraIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/camera_bg" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/extraEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="邮箱/手机"
+            android:singleLine="true" 
+            android:background="@drawable/reg_input_bg"
+            android:textCursorDrawable="@null"
+            android:textColorHint="@color/commen_text_color_2"
+            android:textColor="@color/commen_text_color_1"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17.6"/>
+
+    <TextView
+        android:id="@+id/nextTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reg_btn_bg"
+        android:gravity="center"
+        android:text="还差一步完成"
+        android:textColor="@color/commen_text_color_3"
+        android:textSize="16sp" />
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.75"/>
+
+</LinearLayout>

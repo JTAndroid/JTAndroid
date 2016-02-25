@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/title_RL"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c">
+        
+        <ImageView
+            android:id="@+id/org_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/people_left_arrow"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+        
+        <TextView
+            android:id="@+id/org_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友/人脉"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+        
+    <LinearLayout
+            android:id="@+id/searchLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#e3e3e3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:id="@+id/keywordEt"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:drawableLeft="@drawable/related_res_search"
+                android:background="@drawable/related_res_search_bg"
+                android:textSize="12sp" 
+                android:textColorHint="#8c8c8c"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:hint="搜索"/>
+
+            <ImageView
+                android:id="@+id/addIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/related_res_add_bg"
+                android:visibility="gone" />
+        </LinearLayout>
+       <RelativeLayout
+          android:id="@+id/ListView_RL"
+	      android:layout_width="match_parent"
+	      android:layout_height="0dp"
+	      android:layout_weight="1"
+	      android:background="#ffffff">
+            
+        <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"/>
+        
+       <com.tr.ui.organization.firstpage.QuickIndexBar
+        android:id="@+id/quickIndexBar"
+        android:layout_width="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent" />
+       
+        <TextView 
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:id="@+id/currentIndex"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@drawable/bg_index"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"/>
+    
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/footLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category_tag_press_bg_selector"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:padding="10dp"
+            android:text="目录"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/kno_category_log"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tagTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/category_tag_press_bg_selector"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:padding="10dp"
+            android:text="标签"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/kno_tag_log"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="添加">
+        <menu>
+            <item
+                android:id="@+id/connection_edit"
+                android:showAsAction="always|withText"
+                android:title="编辑"/>
+            <item
+                android:id="@+id/connection_deletefri"
+                android:showAsAction="always|withText"
+                android:title="删除好友"/>
+            <item
+                android:id="@+id/connection_deletecontact"
+                android:showAsAction="always|withText"
+                android:title="删除人脉"/>
+            <item
+                android:id="@+id/connection_chat"
+                android:showAsAction="always|withText"
+                android:title="聊天"/>
+            <item
+                android:id="@+id/connection_recommend"
+                android:showAsAction="always|withText"
+                android:title="推荐"/>
+            <item
+                android:id="@+id/connection_share"
+                android:showAsAction="always|withText"
+                android:title="分享到畅聊"/>
+            <item
+                android:id="@+id/connection_hold"
+                android:showAsAction="always|withText"
+                android:title="转为我的人脉"/>
+            <item
+                android:id="@+id/connection_yaoqing"
+                android:showAsAction="always|withText"
+                android:title="邀请加入"/>
+            
+        </menu>
+    </item>
+</menu>

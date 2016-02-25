@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3" />
+    <!-- 验证码 -->
+
+    <RelativeLayout
+        android:id="@+id/vcodeParentLl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/region_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:text="+86"
+            android:textColor="@color/text_flow_content"
+            android:textSize="16sp" />
+        <!-- 填写验证码 -->
+
+        <EditText
+            android:id="@+id/phone_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1px"
+            android:layout_toRightOf="@id/region_number"
+            android:gravity="center"
+            android:background="#fff"
+            android:editable="false"
+            android:hint="请输入手机号 "
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/commen_text_color_1"
+            android:textColorHint="@color/text_hint"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/vcodeET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1px"
+            android:layout_toRightOf="@id/region_number"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:hint="请输入验证码"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="12dp"
+            android:singleLine="true"
+            android:textColor="@color/commen_text_color_1"
+            android:textColorHint="@color/text_hint"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/vcodeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1px"
+            android:layout_toRightOf="@id/region_number"
+            android:background="#fff"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/commen_text_color_hint"
+            android:textCursorDrawable="@null"
+            android:visibility="gone"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_gray" />
+
+    <include layout="@layout/user_register_next" />
+
+</LinearLayout>

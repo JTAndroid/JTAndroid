@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffffff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <!-- 提示文字 -->
+    <TextView 
+        android:id="@+id/statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="点击按钮开始录音"
+        android:textSize="16sp"
+        android:textColor="@color/commen_text_color_1"/>
+    <!-- 录音按钮 -->
+    <ImageView 
+        android:id="@+id/switchIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_rec_off"/>
+	<!-- 分割线 -->
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="#ffdcddd8"/>
+	<!-- 录音文件列表 -->
+	<ListView 
+	    android:id="@+id/fileLv"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:cacheColorHint="#00000000"
+	    android:listSelector="#00000000"
+	    android:scrollbars="none"
+	    android:divider="#ffdcddd8"
+	    android:dividerHeight="1dp"/>
+</LinearLayout>

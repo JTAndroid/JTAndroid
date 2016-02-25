@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_markey_info_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/markey_info_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上市信息"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finish_markey_info_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="@string/_finish"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/markey_Ll"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_data_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:text_label="上市时间" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_price_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="发行价格" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_mode_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="发行方式" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_referrer_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="上市推荐人" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_stock_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="股票发行数量" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_profit_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="发行市盈率" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_underwriter_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="主承销商" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_institution_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="保荐机构" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/markey_specification_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="招股说明书" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

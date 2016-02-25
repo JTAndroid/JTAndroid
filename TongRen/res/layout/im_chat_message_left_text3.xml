@@ -1,0 +1,78 @@
+<!-- 左侧文本消息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <!-- 头像 -->
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_default_avatar"
+           />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 人名 -->
+
+                <TextView
+                    android:id="@+id/userNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxEms="5"
+                    android:text="人名 "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_s" />
+
+                <!-- 时间 -->
+
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="00:00:00"
+                    android:textColor="@color/chat_time_font_color"
+                    android:textSize="@dimen/text_size_ss" />
+            </RelativeLayout>
+
+            <!-- 内容 -->
+
+            <TextView
+                android:id="@+id/textTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
+                android:textColor="@color/chat_time_font_color"
+                android:textSize="@dimen/text_size_m" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e3e3e3" />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/web_logon_ig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_60"
+        android:src="@drawable/web_volidate_logon" />
+
+    <TextView
+        android:id="@+id/web_logon_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/web_logon_ig"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_30"
+        android:textColor="@color/text_search"
+        android:textSize="@dimen/text_size_medium"
+        android:text="@string/web_logon_tv" />
+
+    <TextView
+        android:id="@+id/web_logon_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/web_logon_tv"
+        android:layout_marginTop="@dimen/common_77"
+        android:layout_marginLeft="@dimen/common_27"
+        android:layout_marginRight="@dimen/common_27"
+        android:background="@drawable/web_logon_bt"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/merchant_details_bg"
+        android:text="@string/web_logon_ok" />
+
+    <TextView
+        android:id="@+id/web_logon_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/web_logon_ok"
+        android:layout_alignRight="@+id/web_logon_ok"
+        android:layout_below="@+id/web_logon_ok"
+        android:layout_marginTop="@dimen/common_margain_top_20"
+        android:background="@drawable/web_logon_bt_cancel"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/home_index_text_on_bg"
+        android:text="@string/web_logon_cancel" />
+
+</RelativeLayout>

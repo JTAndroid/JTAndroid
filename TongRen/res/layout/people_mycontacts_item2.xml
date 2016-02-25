@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/contacts_RL"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1" >
+
+        <TextView
+            android:id="@+id/tv_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#f1f1f1"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="B"
+            android:textColor="#606060"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <com.utils.picture.PorterShapeImageView
+            android:id="@+id/imageview"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_default_avatar"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            app:siSquare="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imageview"
+            android:text="陈志武"
+            android:textColor="#1f1f1f"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/imageview"
+            android:text="国民经济研究所 所长"
+            android:textColor="#8d8d8d"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_message"
+             android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="38dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/mycontacts_message_selector" />
+
+        <ImageView
+            android:id="@+id/iv_dial"
+             android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="38dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/mycontacts_dial_selector" />
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/name"
+            android:src="@drawable/person" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/imageview"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+</LinearLayout>

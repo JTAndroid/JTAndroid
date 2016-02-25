@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/other_layout"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/item_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_Text" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="18dp"
+            android:text="@string/other"
+            android:textColor="@color/text_flow_address"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_edit_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/icon_edit"
+            android:drawablePadding="3dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="18dp"
+            android:text="@string/edit"
+            android:textColor="@color/text_flow_more"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+    <!-- 出生日期 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/birthdate_layout"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birthdate"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_birthdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:hint=""
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+    <!-- 籍贯 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/native_place_layout"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/native_place"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/my_native_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="right"
+            android:hint=""
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+    <!-- 兴趣爱好 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/hobbies_layout"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/hobbies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="right"
+            android:hint=""
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+    <!-- 擅长技能 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/be_skilled_in_layout"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/be_skilled_in"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/be_skilled_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="right"
+            android:hint=""
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+
+</LinearLayout>

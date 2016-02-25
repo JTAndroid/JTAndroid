@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.13 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="line">
+    <!-- dashWidth 表示'-'这样一个横线的宽度         -->
+    <!-- dashGap 表示之间隔开的距离         -->
+    <stroke android:width="1px" android:color="#D5D5D5"  android:dashWidth="2px" android:dashGap="0px" />   
+    <size android:height="2px" />    
+</shape>

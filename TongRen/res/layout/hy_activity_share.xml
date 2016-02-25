@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    <include layout="@layout/hy_layout_title_right_1textbtn"/>
+    
+    <com.tr.ui.widgets.hy.PagerSlidingTabStrip
+        android:id="@+id/hy_actShare_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    
+    <RelativeLayout android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center_vertical"
+    	android:padding="10dp"
+    	android:background="#f1f1f1">
+
+        <include
+            android:id="@+id/hy_actShare_searchLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/hy_actShare_addBtn"
+            layout="@layout/hy_layout_search" />
+
+        <ImageView android:id="@+id/hy_actShare_addBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+    		android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:background="@drawable/hy_selector_addbtn" 
+	        android:clickable="true"/>
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/hy_actShare_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+    <ListView
+        android:id="@+id/hy_actShare_searchListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/hy_split_line_cc"
+        android:dividerHeight="1px"
+        android:listSelector="@drawable/hy_selector_listitem_bg"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+</LinearLayout>

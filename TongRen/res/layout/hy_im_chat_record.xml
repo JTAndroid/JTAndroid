@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" >
+
+    <!-- 主讲人模块 -->
+    <FrameLayout
+        android:id="@+id/speakerFl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 会议主题窗口 -->
+    <com.tr.ui.widgets.BasicListView
+        android:id="@+id/personal_letter_item_ltw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:cacheColorHint="#00f5f5f5"
+        android:divider="@null"
+        android:listSelector="#00ffffff"
+        android:transcriptMode="normal" />
+
+</LinearLayout>

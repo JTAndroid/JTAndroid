@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_linkman_information_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/linkman_information_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="专业团队"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finish_linkman_information_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+      <LinearLayout
+          android:id="@+id/team_main_LL"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#ffffff"
+          android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linkman_LL1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <com.tr.ui.people.cread.view.MyAddMordView
+                android:id="@+id/linkman_MAMV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_MyAddMordView_label="专业团队" />
+
+            <LinearLayout
+                android:id="@+id/linkman_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+ 			<View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1" />
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/linkman_name_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="姓名" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/linkman_phone_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="电子邮箱" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/linkman_work_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="职务" />
+                
+                 <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/linkman_location_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="办公地" />
+                 
+                  <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/linkman_area_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="专业领域" />
+                  
+                   <com.tr.ui.people.cread.view.MyEditTextView
+                       android:id="@+id/custom_Text_Etv"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       edittextview:isChoose="true"
+                       edittextview:text_label="@string/_custom_field_Etv" />
+                <com.tr.ui.people.cread.view.MyDeleteView
+                    android:id="@+id/linkman_delete_Mdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

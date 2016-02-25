@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffeeeeee"
+    android:orientation="vertical" >
+
+    <!-- 密码管理 -->
+
+    <RelativeLayout
+        android:id="@+id/password_settings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="10dp"
+            android:src="@drawable/activity_information_manager_password" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码设置"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <!-- 手机号码 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="10dp"
+            android:src="@drawable/activity_information_manager_phone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/phone_settings_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18601972520"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/phone_settings"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/account_information_manager_selector"
+            android:text="更改"
+            android:textColor="@color/gintongyellow"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3" />
+
+    <!-- 邮箱 -->
+
+    <RelativeLayout
+        android:id="@+id/my_base_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="10dp"
+            android:src="@drawable/activity_information_manager_mail" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mail_settings_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="androidman@yeah.net"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/mail_settings"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/account_information_manager_selector"
+            android:text="更改"
+            android:textColor="@color/gintongyellow"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3" />
+
+    <!-- QQ -->
+
+    <RelativeLayout
+        android:id="@+id/my_base_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="10dp"
+            android:src="@drawable/activity_information_manager_qq" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="951863303"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/account_information_manager_selector"
+            android:text="绑定"
+            android:textColor="@color/gintongyellow"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3" />
+
+    <!-- 新浪微博 -->
+
+    <RelativeLayout
+        android:id="@+id/my_base_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="10dp"
+            android:src="@drawable/activity_information_manager_wb" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新浪微博"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="androidpig"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/account_information_manager_selector"
+            android:text="绑定"
+            android:textColor="@color/gintongyellow"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

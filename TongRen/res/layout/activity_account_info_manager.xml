@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff1f1f1"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#e3e3e3" />
+    <!-- 密码设置 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_password_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff" >
+
+        <ImageView
+            android:id="@+id/iv_password_info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_password_info"
+            android:text="密码设置"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/joint_columntype_select"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:id="@+id/accountInfo_layout_other"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="#e3e3e3" />
+        <!-- 手机号码 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_phone_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_phone_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/phone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_phone_info"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_phone_bing"
+                android:layout_width="46dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/unbing_bg"
+                android:text="绑定"
+                android:textColor="@color/find_project_txt_orange"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="66dp"
+                android:layout_height="1dp"
+                android:background="#fff" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider_line" />
+        </LinearLayout>
+
+        <!-- 邮箱 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_email_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_email_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/mailbox" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_email_info"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_email_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_email_bing"
+                android:layout_width="46dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/unbing_bg"
+                android:text="绑定"
+                android:textColor="@color/find_project_txt_orange"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="66dp"
+                android:layout_height="1dp"
+                android:background="#fff" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider_line" />
+        </LinearLayout>
+        <!-- QQ -->
+
+        <RelativeLayout
+            android:id="@+id/rl_qq_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_qq_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/small_qq_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_qq_info"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_qq_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_qq_bing"
+                android:layout_width="46dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/unbing_bg"
+                android:text="绑定"
+                android:textColor="@color/find_project_txt_orange"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="66dp"
+                android:layout_height="1dp"
+                android:background="#fff" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/divider_line" />
+        </LinearLayout>
+        <!-- 新浪微博 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_wb_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_wb_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@null"
+                android:src="@drawable/small_wb_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_wb_info"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新浪微博"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_wb_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_wb_bign"
+                android:layout_width="46dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/unbing_bg"
+                android:text="绑定"
+                android:textColor="@color/find_project_txt_orange"
+                android:textSize="14sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e3e3e3" />
+    </LinearLayout>
+
+</LinearLayout>

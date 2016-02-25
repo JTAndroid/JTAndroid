@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    
+    <!-- <item
+        android:id="@+id/my_home_page_set"
+        android:icon="@drawable/chat_huiyishezhi"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="详情"/> -->
+    <item
+        android:id="@+id/my_home_page_set"
+          android:icon="@drawable/frame_setting"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="设置"
+        />
+
+</menu>

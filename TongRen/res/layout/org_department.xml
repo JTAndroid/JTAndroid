@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_department_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/org_department_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="主要职能部门"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_department_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:padding="10dp"
+            android:onClick="finish"
+            android:textColor="#fff"
+            android:text="完成" />
+    </RelativeLayout>
+    <ScrollView 
+        android:background="#f1f1f1"
+        android:layout_width="match_parent"
+            android:layout_height="match_parent">
+     <LinearLayout 
+         android:id="@+id/org_department_Ll"
+         android:orientation="vertical"
+         android:background="#f1f1f1"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <View 
+        android:background="#f1f1f1"
+         android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+	
+	 	  <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/org_department_address_Mv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                 edittextview:text_label="地址"/>
+	 	    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/org_department_url_Mv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                 edittextview:text_label="网址"/>
+	 	      <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/org_department_phone_Mv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                 edittextview:text_label="电话"/>
+	 	        <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/org_department_fox_Mv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                 edittextview:text_label="传真"/>
+	 	          <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/org_department_leader_Mv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                 edittextview:text_label="主要领导"/>
+	 </LinearLayout>  
+       </ScrollView>
+</LinearLayout>

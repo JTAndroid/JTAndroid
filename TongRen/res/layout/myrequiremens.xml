@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form" >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mystartVPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@color/red"
+        android:layout_below="@id/LinearLayoutRoot"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+</LinearLayout>

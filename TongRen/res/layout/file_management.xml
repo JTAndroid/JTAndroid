@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/file_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/file_navigation_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- <include
+            android:id="@+id/fileManagementInclude"
+            layout="@layout/file_management_header"
+            android:visibility="gone" /> -->
+
+        <RelativeLayout
+            android:id="@+id/showFiflterLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F07643"
+            >
+
+            <ImageView
+                android:id="@+id/file_classification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:paddingTop="12dp"
+                android:src="@drawable/file_classification" />
+            <ImageView
+                android:id="@+id/file_managemen_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:paddingTop="12dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/file_managemen_upload" />
+        </RelativeLayout>
+
+        <com.tr.ui.common.view.XListView
+            android:id="@+id/file_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/recomand_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="畅聊中的文件\n可以保存到这里哦"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/fileManagementInclude_suspension"
+        layout="@layout/suspension_layout" />
+
+</LinearLayout>

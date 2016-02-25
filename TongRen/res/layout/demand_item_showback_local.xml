@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/localPhotoVideoIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/demand_defaultimg"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/localPhotoVideoIv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+            <ImageView
+                android:id="@+id/demand_photo_video"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/demand_photo_video" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/localVideoPlayIv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/demand_bigvideo_bg" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divisionLine"
+        android:layout_width="13dp"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/rl"
+        android:background="#ffffff" />
+
+</LinearLayout>

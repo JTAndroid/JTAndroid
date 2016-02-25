@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/commen_list_bg">
+    <TextView 
+        android:id="@+id/titleTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/common_text_style_large_black"
+        android:text="【投融工具】股市大涨，如何是好？ "
+        android:singleLine="true"/>
+</LinearLayout>

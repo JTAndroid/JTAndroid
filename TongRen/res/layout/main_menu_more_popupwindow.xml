@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+    <!-- 扫一扫 -->
+
+    <LinearLayout
+        android:id="@+id/home_scan"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/scan_Iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_sweep" />
+
+        <TextView
+            android:id="@+id/scan_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="扫一扫"
+            android:textColor="@color/affcreate"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0e0" />
+    <!-- 邀请好友 -->
+
+    <LinearLayout
+        android:id="@+id/invite_friends"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/invite_friends_Iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_invitation_with_heart" />
+
+        <TextView
+            android:id="@+id/invite_friends_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="邀请好友"
+            android:textColor="@color/affcreate"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0e0" />
+    <!-- 行业偏好 -->
+
+    <LinearLayout
+        android:id="@+id/onekeyback"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/onekeyback_Iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/industry_love" />
+
+        <TextView
+            android:id="@+id/onekeyback_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="行业偏好"
+            android:textColor="@color/affcreate"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e0e0e0" />
+ <LinearLayout
+        android:id="@+id/maindrawer"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/maindrawer_Iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/industry_love" />
+
+        <TextView
+            android:id="@+id/maindrawer_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="MainDrawer"
+            android:textColor="@color/affcreate"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

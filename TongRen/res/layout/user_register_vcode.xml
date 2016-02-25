@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/vcodeTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_circle_noclick"
+        android:gravity="center"
+        android:text="获取手机验证码"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册即表示同意"
+            android:textColor="@color/text_flow_content"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/gintong_aggreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《金桐网用户协议》"
+            android:textColor="@color/btn_click"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

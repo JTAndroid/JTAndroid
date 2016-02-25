@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="120dp"
+     android:background="@drawable/gridline"
+    android:layout_height="42dp"
+    >
+  <TextView 
+      android:textColor="#7d7d7d"
+      android:text="持股数量（万股）"
+      android:textSize="13sp"
+      android:id="@+id/title"
+      android:gravity="center"
+       android:layout_width="120dp"
+    android:layout_height="42dp"/>
+</LinearLayout>

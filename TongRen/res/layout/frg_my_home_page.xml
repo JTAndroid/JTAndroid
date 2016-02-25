@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- sunjianan -->
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#efefef"
+    android:fillViewport="true"
+    tools:context=".ui.conference.home.MeetingBranchMoreActivity" >
+
+    <!-- android:paddingBottom="40dp" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!--
+             <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="#ebebeb" />
+        -->
+
+        <RelativeLayout
+            android:id="@+id/my_base_info"
+            android:layout_width="fill_parent"
+            android:layout_height="78dp"
+            android:background="@drawable/list_item_sociality_selector" >
+
+            <FrameLayout
+                android:id="@+id/avatar_Rl"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12.5dp" >
+
+                <com.tr.ui.widgets.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/avatar"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:src="@drawable/default_people_avatar" />
+
+                <TextView
+                    android:id="@+id/avatarText_MyHomePage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#00ffffff"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/ivDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/joint_columntype_select" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/ivDraw"
+                android:layout_toRightOf="@id/avatar_Rl"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/my_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/my_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+
+                <include
+                    layout="@layout/layout_user_state"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#ebebeb" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="#ebebeb" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/friend_and_relation"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/gridview_item_people_bg" />
+
+                <TextView
+                    android:id="@+id/tv_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_friends"
+                    android:text="好友/人脉"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/friend_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_friends"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_listview_dividing_line" />
+
+            <RelativeLayout
+                android:id="@+id/organization"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/img_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/gridview_item_organization_bg" />
+
+                <TextView
+                    android:id="@+id/tv_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_organization"
+                    android:text="组织/客户"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/organization_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_organization"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="#ebebeb" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/knowledge"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_knowledge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/gridview_item_know_bg" />
+
+                <TextView
+                    android:id="@+id/tv_knowledge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_knowledge"
+                    android:text="知识"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/knowledge_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_knowledge"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_listview_dividing_line" />
+
+            <RelativeLayout
+                android:id="@+id/requirment"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_requirment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/gridview_item_project_bg" />
+
+                <TextView
+                    android:id="@+id/tv_requirment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_requirment"
+                    android:text="需求"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/requirment_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_requirment"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_listview_dividing_line" />
+
+            <RelativeLayout
+                android:id="@+id/conference"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_conference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/gridview_item_meet_bg" />
+
+                <TextView
+                    android:id="@+id/tv_conference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_conference"
+                    android:text="活动"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/conference_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_conference"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_listview_dividing_line" />
+
+            <RelativeLayout
+                android:id="@+id/my_community"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_my_community"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_community" />
+
+                <FrameLayout
+                    android:id="@+id/img_my_community_red_fl"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/img_my_community"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/img_my_community_red_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/alarm2x" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_my_community"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_toRightOf="@id/img_my_community"
+                    android:text="社群"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/my_community_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_my_community"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_listview_dividing_line" />
+
+            <RelativeLayout
+                android:id="@+id/file_management"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_page_height"
+                android:background="@drawable/list_item_sociality_selector" >
+
+                <ImageView
+                    android:id="@+id/img_file_management"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/wenjian" />
+
+                <TextView
+                    android:id="@+id/tv_file_management"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_file_management"
+                    android:text="文件"
+                    android:textColor="#1a1a1a"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/file_management_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/tv_file_management"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/joint_columntype_select" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="#ebebeb" />
+
+        <RelativeLayout
+            android:id="@+id/share_gintong"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_page_height"
+            android:background="@drawable/list_item_sociality_selector" >
+
+            <ImageView
+                android:id="@+id/img_share_gintong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="12.5dp"
+                android:contentDescription="@null"
+                android:src="@drawable/fenxiang" />
+
+            <TextView
+                android:id="@+id/tv_share_gintong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_share_gintong"
+                android:text="分享金桐"
+                android:textColor="#1a1a1a"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/joint_columntype_select"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:background="#efefef" />
+    </LinearLayout>
+
+</ScrollView>

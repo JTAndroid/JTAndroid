@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myEditTextView_Rootview"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/overline"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/input_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="93dp"
+            android:background="@drawable/people_requiredbox"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edittext_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/dropdowntriangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="89dp"
+                        android:background="@drawable/people_dropdowntriangle"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal" >
+
+                        <FrameLayout
+                            android:id="@+id/myEditTextView_Fl"
+                            android:layout_width="104dp"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:layout_gravity="center_vertical"
+                            android:focusableInTouchMode="true"
+                            android:paddingBottom="14dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="14dp" >
+
+                            <TextView
+                                android:id="@+id/myEditTextView_Tv"
+                                android:layout_width="104dp"
+                                android:layout_height="wrap_content"
+                               
+                                android:textColor="#808080"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/myEditTextView_custom"
+                                android:layout_width="104dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:hint="自定义"
+                                android:cursorVisible="true"
+                                android:textCursorDrawable="@null"
+                                android:selectAllOnFocus="true"
+                                android:maxLength="6"
+                                android:singleLine="true"
+                                android:textColor="#808080"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <View
+                            android:id="@+id/input_unline"
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="#e3e3e3"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/myEditText_Tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="35dp"
+                            android:layout_marginTop="14dp"
+                            android:singleLine="true"
+                            android:textSize="14sp"
+                            android:textColor="#353535"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/myEditTextView_Et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="14dp"
+                            android:paddingBottom="14dp"
+                            android:background="@null"
+                            android:cursorVisible="true"
+                            android:textCursorDrawable="@null"
+                            android:maxLength="200"
+                            android:layout_marginRight="42dp"
+                            android:selectAllOnFocus="true"
+                            android:textColor="#1f1f1f"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/AddMore_hint_Fl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/hint_Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="248dp"
+                            android:text="点击填写更多 "
+                            android:textColor="#bebebe"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" 
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/myedittext_Addmore_Rl"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/required_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/people_required"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/right_arrow_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/people_right_arrow"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:visibility="gone" />
+					<ImageView
+                                android:id="@+id/down_arrow_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/arrow_down_grey"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:visibility="gone" />
+                            <CheckBox
+                                android:id="@+id/checkbox_cb"
+                                android:layout_width="18.5dp"
+                                android:layout_height="17dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/people_checkbox"
+                                android:button="@null"
+                                android:focusable="false"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/Addmore_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/column_add"
+                                android:focusable="false"
+                                 android:clickable="false"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" >
+
+                    <View
+                        android:id="@+id/underline"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/custom_Et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请在此输入内容"
+                android:minLines="5"
+                android:textCursorDrawable="@null"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/custom_underline"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e3e3e3"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

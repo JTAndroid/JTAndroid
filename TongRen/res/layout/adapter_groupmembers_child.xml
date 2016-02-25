@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 分割线 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/im_relationcontactlist_itembg" >
+
+        <LinearLayout
+            android:id="@+id/groupMembersLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/groupMembers_avatar_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_default_avatar"
+               
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+             >
+			<RelativeLayout
+                    android:id="@+id/groupMembers_Rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    >
+                <RelativeLayout
+                    android:id="@+id/groupMembersName_Rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                      <ImageView 
+                            android:id="@+id/groupMembersFriendTag"
+                            android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/contactfriendtag"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"/>
+                         <TextView
+                        android:id="@+id/groupMembersName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/groupMembersFriendTag"
+                        android:singleLine="true"
+                        android:maxWidth="100dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                 
+                    <TextView
+                        android:id="@+id/groupMembersFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp" />
+                        <ImageView 
+                            android:id="@+id/bannedToPostTag"
+                            android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/groupMembersName"
+                        android:src="@drawable/contactusertag"
+                        android:visibility="gone"/>
+                    
+                    
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/groupMembersIntroductionLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/groupMembersName_Rl"
+                    android:orientation="horizontal"
+                    android:minWidth="120dp"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/groupMembersCompanyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/groupMembersName"
+                        android:layout_below="@+id/groupMembersName"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/darkgray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/groupMembersCareerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/groupMembers"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/groupMembers"
+                        android:text="职位名称"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        />
+                    
+                    
+                </LinearLayout>
+                
+                 </RelativeLayout>
+
+                   
+            </RelativeLayout>
+		
+  <RelativeLayout
+                android:id="@+id/groupMembersCommunicationRl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="visible" >
+
+
+                <ImageView
+                    android:id="@+id/groupMembersMoreIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:visibility="visible"
+                    android:src="@drawable/icon_work_more" />
+                <CheckBox
+			        android:id="@+id/groupMembersBatchCb"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:layout_alignParentLeft="true"
+			        android:layout_centerInParent="true"
+			        android:background="@null"
+			        android:visibility="gone"
+			        android:button="@null"
+			        android:paddingLeft="15dp"
+			        android:paddingRight="15dp"
+			        android:drawableLeft="@drawable/list_item_tagcb_bg_selector"
+			        android:focusable="false"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        style="@style/layout_item_wfillh"
+        android:layout_height="1px"
+        android:background="@color/item_gray" />
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/selectContentLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/lv_item1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="@color/find_project_white_bg"
+                android:divider="@null" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/lv_item2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/find_project_white_bg"
+                android:cacheColorHint="@color/find_project_white_bg"
+                android:divider="@null"
+                android:visibility="gone" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/lv_item3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="@color/find_project_white_bg"
+                android:divider="@null"
+                android:visibility="gone" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="38dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最低金额"
+                    android:textColor="#4d4d4d"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/lowEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/demand_find_project_txt_edit_bg"
+                    android:cursorVisible="true"
+                    android:inputType="numberDecimal"
+                    android:minWidth="150dp"
+                    android:numeric="integer"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:textColor="#1f1f1f"
+                    android:textCursorDrawable="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="万元"
+                    android:textColor="#4d4d4d"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="38dp"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最高金额"
+                    android:textColor="#4d4d4d"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/highestEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@drawable/demand_find_project_txt_edit_bg"
+                    android:cursorVisible="true"
+                    android:inputType="numberDecimal"
+                    android:minWidth="150dp"
+                    android:numeric="integer"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:textColor="#1f1f1f"
+                    android:textCursorDrawable="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="万元"
+                    android:textColor="#4d4d4d"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="38dp"
+                android:paddingLeft="73dp"
+                android:paddingRight="73dp" >
+
+                <TextView
+                    android:id="@+id/cancelTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/demand_backfilter_bg"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/startTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/demand_customfilter_bg"
+                    android:gravity="center"
+                    android:text="开始筛选"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line_width" />
+
+</LinearLayout>

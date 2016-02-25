@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ExpandableListView android:id="@+id/hy_layoutShare_peoplehub_Expandlistview"
+       	android:layout_width="match_parent"
+	   	android:layout_height="match_parent"
+	   	android:clipChildren="true"
+	   	android:clickable="true"
+		android:divider="@color/hy_split_line_cc"
+		android:dividerHeight="1px"
+		android:childDivider="@color/transparent"
+		android:cacheColorHint="@color/transparent"
+		android:background="@color/transparent"
+		android:scrollbarFadeDuration="0"
+	   	android:fastScrollEnabled="false"
+	   	android:scrollbars="none"/>
+    <!-- 
+    android:childDivider="@color/hy_split_line_cc"
+     -->
+      <TextView  
+		android:id="@+id/hy_layoutShare_peoplehub_showSelLetter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:background="@drawable/hy_chose_letter_bg"
+		android:textColor="@color/white"
+		android:textSize="36sp"
+		android:text="A"
+		android:visibility="gone"/>
+  	<com.tr.ui.widgets.hy.SlideLetterView 
+       android:id="@+id/hy_layoutShare_peoplehub_slideLetterView"
+       android:layout_height="match_parent"
+       android:layout_width="15dp"
+       android:layout_gravity="right" 
+       android:background="@color/transparent"/>
+</FrameLayout>

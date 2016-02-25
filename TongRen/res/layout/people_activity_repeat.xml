@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:id="@+id/choose_repeat_back_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/choose_repeat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="重复"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/repeat_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="完成"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    <RelativeLayout 
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+   
+
+    <RelativeLayout
+        android:id="@+id/no_repeat_Rl"
+        android:layout_below="@id/choose_repeat_back_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/no_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="不重复"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+       <!--  <TextView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="14dp"
+            android:text="15"
+            android:textColor="#353535"
+            android:textSize="14sp" /> -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/repeat_day_Rl"
+        android:layout_below="@id/no_repeat_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/repeat_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="每天"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+<!-- 
+        <TextView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="14dp"
+            android:text="15"
+            android:textColor="#353535"
+            android:textSize="14sp" /> -->
+
+      
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/repeat_week_Rl"
+        android:layout_below="@id/repeat_day_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/repeat_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="每周"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+      <!--   <TextView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="14dp"
+            android:text="15"
+            android:textColor="#353535"
+            android:textSize="14sp" /> -->
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+         android:id="@+id/repeat_month_Rl"
+        android:layout_below="@id/repeat_week_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/repeat_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="每月"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+      <!--   <TextView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="14dp"
+            android:text="15"
+            android:textColor="#353535"
+            android:textSize="14sp" /> -->
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+         android:id="@+id/repeat_year_Rl"
+        android:layout_below="@id/repeat_month_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/repeat_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="每年"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+      <!--   <TextView
+            android:id="@+id/complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="104dp"
+            android:layout_marginTop="14dp"
+            android:text="15"
+            android:textColor="#353535"
+            android:textSize="14sp" /> -->
+
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_marginTop="10dp"
+         android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+        <RadioGroup 
+             android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+              <RadioButton
+                    android:id="@+id/noChecked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+             <RadioButton
+                    android:id="@+id/checkedDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+                <RadioButton
+                    android:id="@+id/checkedweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/checkedmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+
+              
+               
+                  <RadioButton
+                    android:id="@+id/checkedyear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+            </RadioGroup>
+    </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

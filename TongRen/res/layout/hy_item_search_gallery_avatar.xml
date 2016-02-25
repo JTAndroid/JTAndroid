@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.tr.ui.widgets.CircleImageView android:id="@+id/hy_itemSearchGallery_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/ic_launcher" 
+        android:clickable="false"/>
+</FrameLayout>

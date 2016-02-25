@@ -1,0 +1,305 @@
+<!-- 个人详情 主页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form"
+    android:background="#ffeeeeee"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tabLinearLayoutRoot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/usericon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_default_avatar" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:gravity="bottom"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/name"
+                                        style="@style/item_text_title_m"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                    <TextView
+                                        android:id="@+id/sex"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="4dp"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="@dimen/text_size_ss" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/addfriend"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone" >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:src="@drawable/ic_friend" />
+
+                                    <TextView
+                                        style="@style/item_text_title_m"
+                                        android:gravity="center_vertical"
+                                        android:text="加为好友" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/companyPosition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/companyJobTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/reqBtn"
+                                style="@style/item_text_title2"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="#8810be51"
+                                android:text="需求" />
+
+                            <Button
+                                android:id="@+id/resBtn"
+                                style="@style/item_text_title2"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="#88e01c53"
+                                android:text="资源" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/newbtn"
+                                style="@style/item_text_title2"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="#883d6dd5"
+                                android:text="动态" />
+
+                            <Button
+                                android:id="@+id/metBtn"
+                                style="@style/item_text_title2"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="#88b2bb17"
+                                android:text="会面" />
+
+                            <Button
+                                android:id="@+id/actBtn"
+                                style="@style/item_text_title2"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="#887735cf"
+                                android:text="活动" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/baseInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:divider="@drawable/establish_fengexian" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/contactInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:divider="@drawable/establish_fengexian" />
+
+            <com.tr.ui.widgets.BasicGridView
+                android:id="@+id/imInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:gravity="center"
+                android:numColumns="2" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/addressInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:divider="@drawable/establish_fengexian" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/countryInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:divider="@drawable/establish_fengexian" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/bodyInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/details_bj"
+                android:divider="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/item_text_title_m"
+                    android:layout_width="fill_parent"
+                    android:background="#338a8a8a"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="教育经历" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/eduInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details_bj"
+                    android:divider="@drawable/establish_fengexian" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/item_text_title_m"
+                    android:layout_width="fill_parent"
+                    android:background="#338a8a8a"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="工作经历" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/workinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details_bj"
+                    android:divider="@drawable/establish_fengexian" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/custominfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/establish_fengexian"
+                    android:dividerHeight="0px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/downloaderLlcontainer"
+                style="@style/layout_item_v"
+                android:layout_width="fill_parent"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/item_text_title_m"
+                    android:layout_width="fill_parent"
+                    android:background="#338a8a8a"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="附件" />
+
+                <!-- 下载 -->
+
+                <com.tr.ui.widgets.FileDownloadLinearLayout
+                    android:id="@+id/downloaderLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/details_bj"
+                    android:orientation="vertical"
+                    android:padding="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

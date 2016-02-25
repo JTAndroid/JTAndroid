@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="88dp"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_know_people"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:maxHeight="70dp"
+            android:maxWidth="70dp"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#ff8d8d8d"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

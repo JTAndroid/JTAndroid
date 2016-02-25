@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="AlwaysShowAction" severity="ignore" />
+    <issue id="ClickableViewAccessibility" severity="ignore">
+        <ignore path="src/com/tr/ui/people/contactsdetails/fragment/PeopleContactsdetailFragment.java" />
+    </issue>
+    <issue id="CommitPrefEdits" severity="ignore" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="CutPasteId" severity="ignore" />
+    <issue id="DrawAllocation" severity="ignore" />
+    <issue id="DuplicateActivity" severity="ignore" />
+    <issue id="DuplicateDefinition">
+        <ignore path="res/values/dimens.xml" />
+    </issue>
+    <issue id="DuplicateIds" severity="ignore" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="HardcodedText" severity="ignore">
+        <ignore path="res/layout/activity_industry_comment.xml" />
+    </issue>
+    <issue id="IncludeLayoutParam" severity="ignore" />
+    <issue id="InefficientWeight">
+        <ignore path="res/layout/industry_comment_detail_list_item.xml" />
+    </issue>
+    <issue id="InflateParams" severity="ignore" />
+    <issue id="MangledCRLF" severity="ignore" />
+    <issue id="MenuTitle" severity="ignore" />
+    <issue id="MissingTranslation" severity="ignore" />
+    <issue id="NestedWeights" severity="ignore" />
+    <issue id="NewApi" severity="ignore" />
+    <issue id="NotSibling" severity="ignore" />
+    <issue id="ObsoleteLayoutParam" severity="ignore" />
+    <issue id="Orientation">
+        <ignore path="res/layout/activity_industry_comment.xml" />
+    </issue>
+    <issue id="ProtectedPermissions" severity="ignore" />
+    <issue id="Recycle" severity="ignore" />
+    <issue id="ResourceAsColor" severity="ignore" />
+    <issue id="RtlHardcoded" severity="ignore" />
+    <issue id="ScrollViewSize" severity="ignore">
+        <ignore path="res/layout/fragment_knowledge_details.xml" />
+    </issue>
+    <issue id="SetJavaScriptEnabled" severity="ignore" />
+    <issue id="ShowToast" severity="ignore" />
+    <issue id="SimpleDateFormat" severity="ignore" />
+    <issue id="Suspicious0dp" severity="ignore" />
+    <issue id="UnknownId" severity="ignore" />
+    <issue id="UnusedAttribute" severity="ignore" />
+    <issue id="UseSparseArrays" severity="ignore" />
+    <issue id="UseValueOf" severity="ignore" />
+    <issue id="ValidFragment" severity="ignore" />
+    <issue id="ViewHolder" severity="ignore" />
+    <issue id="WebViewLayout" severity="ignore" />
+    <issue id="WrongCall" severity="ignore" />
+    <issue id="WrongManifestParent">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+    <issue id="WrongViewCast" severity="ignore" />
+</lint>

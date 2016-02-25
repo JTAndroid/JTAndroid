@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+    
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/people_a"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_above"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@id/imageview"
+        android:layout_toRightOf="@id/imageview"
+        android:paddingLeft="5dp">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textSize="18sp"/>
+    
+      <ImageView
+        android:paddingLeft="5dp"
+        android:id="@+id/renmai"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/people_person"/>
+      
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_above"
+        android:layout_toRightOf="@id/imageview"
+        android:paddingLeft="5dp">
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="公司"
+        android:layout_below="@id/name"
+        android:textSize="18sp"/>
+  
+    <TextView
+        android:id="@+id/work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/company"
+        android:paddingLeft="10dp"
+        android:text="职务"
+        android:textSize="18sp"/>
+   </LinearLayout>
+</RelativeLayout>

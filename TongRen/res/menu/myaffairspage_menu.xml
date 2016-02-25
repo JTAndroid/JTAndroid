@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/affairs_new_menu_calendar"
+        android:icon="@drawable/people_contents"
+        android:title="@string/aff_list"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/affairs_new_menu_list"
+        android:icon="@drawable/affairs_calendar_top"
+        android:title="@string/aff_list"
+        android:showAsAction="always"/>
+    
+    
+    <item
+        android:id="@+id/aff_create"
+        android:showAsAction="withText|always"
+        android:menuCategory="system"
+        android:title="@string/aff_create">
+    </item>
+     
+</menu>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hy_activity_main_bg_color"
+    android:orientation="vertical" >
+
+    <!-- 对接，动态，社群 -->
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/image_docking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/image_docking" />
+
+        <ImageView
+            android:id="@+id/image_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/image_dynamic" />
+
+        <ImageView
+            android:id="@+id/image_community"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/image_community" />
+    </LinearLayout>
+
+    <com.tr.ui.widgets.ScrollViewExtend
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 此model就是原来的发现模块：人脉，组织，活动 ,知识，桐人，需求 ，外加桐人模块 -->
+
+            <com.tr.ui.widgets.BasicGridView
+                android:id="@+id/grid_find_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="0.5dp"
+                android:gravity="center"
+                android:horizontalSpacing="0.5dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.5dp" 
+                android:background="@color/common_spacing_bg"/>
+
+            <fragment
+                android:id="@+id/fragment_cycle_viewpager_content"
+                android:name="com.tr.ui.widgets.CycleViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="90dp" />
+            <!-- 此model就是原来的发现模块：人脉，组织，活动 ,知识，桐人，需求 ，外加桐人模块 -->
+
+            <com.tr.ui.widgets.BasicGridView
+                android:id="@+id/grid_other_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:horizontalSpacing="0.5dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.5dp" 
+                android:background="@color/common_spacing_bg"/>
+        </LinearLayout>
+    </com.tr.ui.widgets.ScrollViewExtend>
+
+</RelativeLayout>

@@ -1,0 +1,270 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_height="wrap_content" >
+
+    <com.tr.ui.widgets.viewpagerheaderscroll.TouchCallbackLayout
+        android:id="@+id/homepage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/homepage_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tabs_height" />
+
+        <LinearLayout
+            android:id="@+id/homepage_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewpager_header_height"
+                android:background="#44ffffff" >
+
+                <ImageView
+                    android:id="@+id/homepage_relationBgRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/org_big_bg" />
+
+                <ImageView
+                    android:id="@+id/homepage_relationBgRlCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height"
+                    android:alpha="1"
+                   />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height" >
+
+                    <TextView
+                        android:id="@+id/homepage_relationPositionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/homepage_relationNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/homepage_relationPositionTv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <com.tr.ui.widgets.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/homepage_RelationImage"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_above="@+id/homepage_relationNameTv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="13dp"
+                        android:src="@drawable/default_portrait116"
+                        app:border_color="@color/lightgray"
+                        app:border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/homepage_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="160dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:maxWidth="180dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/homepage_layout_his_homePage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/homepage_name_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/org_clientswitch"
+						android:visibility="gone"                        
+                        />
+
+                    <TextView
+                        android:id="@+id/homepage_tv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/homepage_relationNameTv"
+                        android:layout_marginRight="30dp" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/homepage_QRCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@id/homepage_tv"
+                        android:layout_alignTop="@+id/homepage_relationNameTv"
+                        android:layout_marginBottom="45dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/org_myhomepage_qrcode" />
+
+                    <View
+                        android:id="@+id/homepage_headerVi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+            <com.tr.ui.widgets.viewpagerheaderscroll.SlidingTabLayout
+                android:id="@+id/homepage_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabs_height"
+                android:background="#F1F1F1"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D7D7D7" />
+        </LinearLayout>
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/common_bottom_input"
+            android:visibility="gone" />
+
+        <!-- 对接    动态添加 -->
+
+        <include
+            android:id="@+id/homepage_docking_resources"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/org_bottom_addfriend"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/homepage_addFriendFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_addfriend"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/homepage_sendMessageFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_sendmessage"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/homepage_waitingPassFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_wait_pass"
+            android:visibility="gone" />
+    </com.tr.ui.widgets.viewpagerheaderscroll.TouchCallbackLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/retion_title_height" >
+
+        <ImageView
+            android:id="@+id/homepage_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.01"
+            android:background="@drawable/auth_title_back" />
+
+        <LinearLayout
+            android:id="@+id/homepage_hy_layoutTitle_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+<ImageView
+                android:id="@+id/homepage_relationHomeBackIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/left_arrow" />
+        </LinearLayout>
+             <TextView
+            android:id="@+id/homepage_hometypeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/hy_title_text_font" />
+            
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/homepage_relationShareIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/forward_share_white" />
+
+            
+                <ImageView
+                android:id="@+id/homepage_relationMoreIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/more_whilte" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

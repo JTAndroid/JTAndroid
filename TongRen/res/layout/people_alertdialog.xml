@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#22292c"
+    android:alpha="0.9">
+    
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+            android:text="全部"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />       
+    </RelativeLayout>
+    
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.2dp"
+       android:background="#ffffff"
+       android:alpha="0.2"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"/>
+   
+    <RelativeLayout
+        android:id="@+id/my_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我创建"
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+        
+   </RelativeLayout>   
+     
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="0.2dp"
+       android:background="#ffffff"
+       android:alpha="0.2"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"/>
+   
+    <RelativeLayout
+        android:id="@+id/my_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我保存"
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+        
+   </RelativeLayout>
+        
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="0.2dp"
+       android:background="#ffffff"
+       android:alpha="0.2"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"/>
+     
+     <RelativeLayout
+         android:id="@+id/my_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已收藏"
+        android:textSize="13sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>        
+   </RelativeLayout>
+</LinearLayout>

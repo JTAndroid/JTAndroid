@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context="com.tr.ui.relationship.viewfrg.ScrollViewFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/people_img_su" />
+
+            <TextView
+                android:id="@+id/add_meeting"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="119dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/people_conns_btn_on"
+                android:gravity="center"
+                android:text="添加会面"
+                android:textColor="#616161"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <com.tr.ui.widgets.BasicListView
+            android:id="@+id/ptrlv_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_marginBottom="100dp"
+            android:listSelector="#f1f1f1"
+            />
+    </LinearLayout>
+
+</ScrollView>

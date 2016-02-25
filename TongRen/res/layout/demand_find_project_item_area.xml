@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/find_project_v_top_bot"
+        android:paddingBottom="@dimen/find_project_v_top_bot"
+        android:layout_marginLeft="@dimen/find_project_area_left"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/find_project_area_txt_size"
+        android:textColor="#4d4d4d"
+        android:text="城市" />
+
+    <View
+        android:layout_marginLeft="@dimen/find_project_v_top_bot"
+        android:visibility="invisible"
+        android:id="@+id/divisionLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/find_project_bg" />
+   
+
+</LinearLayout>

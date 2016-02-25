@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_itemInvitefriend_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="9.6dp"
+    android:paddingBottom="9.6dp"
+    android:background="@drawable/hy_selector_listitem_bg">
+    
+    <ImageView android:id="@+id/hy_itemGroupInviteSpeakerEdit_avatar"
+        android:layout_width="43.2dp"
+        android:layout_height="43.2dp"
+        android:src="@drawable/hy_ic_default_friend_avatar" 
+        android:clickable="false"/>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content">
+        <TextView 
+	        android:id="@+id/hy_itemGroupInviteSpeakerEdit_nameText"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_marginLeft="12dp"
+	   		android:layout_marginRight="12dp"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_toLeftOf="@+id/hy_itemGroupInviteSpeakerEdit_arrow"
+	   		android:textColor="@color/hy_listitem_nametext_font_color"
+	   		android:textSize="@dimen/hy_list_nametext_font"
+	   		android:text="名称"
+	   		android:singleLine="true"
+	   		android:ellipsize="end"/>
+        <ImageView android:id="@+id/hy_itemGroupInviteSpeakerEdit_arrow"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	        android:src="@drawable/zhankai" 
+	        android:clickable="false"/>
+    </RelativeLayout>
+</LinearLayout>

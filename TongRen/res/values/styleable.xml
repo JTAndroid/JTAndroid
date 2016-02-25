@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyEditTextView">
+	<attr name="text_label" format="string"/>
+	<attr name="text_hint_label" format="string"/>
+	<attr name="image_id" format="reference"/>
+	<attr name="edttext_inputtype" format="string"/>
+	<attr name="label_width" format = "dimension"/>
+	<attr name="text_readonly" format="string"/>
+	<attr name="default_text" format="string"/>
+	<attr name="delete_image_id" format="reference"></attr>
+	<attr name="isChoose" format="boolean" ></attr>
+	<attr name="isDelete" format="boolean"></attr>
+	<attr name="isAddMore" format="boolean"></attr>
+	<attr name="isInput" format="boolean"></attr>
+	<attr name="isUnderline" format="boolean"></attr>
+	<attr name="addMore_Text" format="string"></attr>
+	<attr name="isAddMore_hint" format="boolean"></attr>
+	<attr name="isReadOnly" format="boolean"></attr>
+	<attr name="isPopupwindow" format="boolean"></attr>
+	<attr name="isPopupwindow_Text" format="boolean"></attr>
+	<attr name="isRequired" format="boolean"></attr>
+	<attr name="isDivider" format="boolean"></attr>
+	<attr name="isCustom" format="boolean"></attr>
+	<attr name="isCustom_Text" format="boolean"></attr>
+	<attr name="isCheckBox" format="boolean"></attr>
+	<attr name="JustInput" format="boolean"></attr>
+	<attr name="JustLabel" format="boolean"></attr>
+	<attr name="hint_Text" format="string"></attr>
+	<attr name="isOverline" format="boolean"></attr>
+	<attr name="isPull" format="boolean"/>
+	<attr name="MaxLength" format="integer"></attr>
+</declare-styleable>
+ <declare-styleable name="MyitemView">
+     <attr name="text_MyitemView_label" format="string"/>
+     	<attr name="edit" format="boolean"></attr>
+     </declare-styleable>
+      <declare-styleable name="MyAddMordView">
+     <attr name="text_MyAddMordView_label" format="string"/>
+     </declare-styleable>
+      <declare-styleable name="CalendarView">
+     <attr name="TakeBack" format="boolean"/>
+     </declare-styleable>
+</resources>

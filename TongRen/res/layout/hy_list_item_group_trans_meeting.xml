@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1" />
+
+    <RelativeLayout
+        android:id="@+id/hy_trans2meeting_tile_ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hy_trans2meeting_tile_tv_header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp" >
+
+        <TextView
+            android:id="@+id/hy_trans2meeting_tile_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:text=" "
+            android:textColor="#8d8d8d" />
+
+        <TextView
+            android:id="@+id/hy_trans2meeting_tile_tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="21dp"
+            android:text=" "
+            android:textColor="#f42626" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hy_trans2meeting_tile_tv_session"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/hy_trans2meeting_tile_ll_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:background="#e3e3e3" />
+
+    <RelativeLayout
+        android:id="@+id/hy_trans2meeting_tile_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hy_trans2meeting_tile_tv_session"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/hy_trans2meeting_tile_iv_logo"
+            android:layout_width="102dp"
+            android:layout_height="73dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hy_home_tile_meeting_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/hy_trans2meeting_tile_iv_logo"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hy_trans2meeting_tile_tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="对符合双方的黑色防护手套和反弹后反弹恢复生态恢复生态恢复身体 打扰噶当然更哈德和噶如何噶如何感受感受他忽然他还是"
+                android:textColor="#1f1f1f"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/hy_trans2meeting_tile_tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="对符合双方的黑色防护手套和反弹后反弹恢复生态恢复生态恢复身体 打扰噶当然更哈德和噶如何噶如何感受感受他忽然他还是"
+                android:textColor="#8d8d8d"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hy_trans2meeting_tile_ll_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hy_trans2meeting_tile_rl_content" >
+
+        <ImageView
+            android:id="@+id/hy_trans2meeting_tile_iv_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/hy_selector_button_expand" />
+    </RelativeLayout>
+
+</RelativeLayout>

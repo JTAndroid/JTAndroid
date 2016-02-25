@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/hy_meeting_data_requirment_titlebar"
+        layout="@layout/hy_layout_title" />
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/hy_meeting_data_requirment_toolbar"
+        layout="@layout/hy_list_item_meeting_regist_data_requirment_toolbar" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#e3e3e3" />
+
+    <ListView
+        android:id="@+id/hy_meeting_data_requirment__lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:divider="#f1f1f1"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

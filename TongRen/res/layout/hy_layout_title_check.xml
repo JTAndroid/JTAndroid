@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hy_title_height"
+    android:background="@color/hy_title_bg_color">
+    <CheckBox android:id="@+id/hy_layoutTitle_checkbox"
+   	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/hy_title_action_bar_to_side"
+   		android:background="@null"
+   		android:button="@drawable/hy_selector_check"
+   		android:textColor="@color/hy_title_action_font_color"
+   		android:textSize="@dimen/hy_title_right_text_font"
+   		android:text="@string/hy_check_all"/>
+    
+    <TextView 
+        android:id="@+id/hy_layoutTitle_title"
+       	android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="center"
+   		android:textColor="@color/hy_title_font_color"
+   		android:textSize="@dimen/hy_title_text_font"
+   		android:singleLine="true"
+   		android:gravity="center"/>
+    <TextView 
+        android:id="@+id/hy_layoutTitle_rightTextbtn"
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/hy_title_action_bar_to_side"
+   		android:text="@string/hy_cancel"
+   		android:textColor="@color/hy_ic_action_text_color_selector"
+   		android:textSize="@dimen/hy_title_right_text_font"
+   		android:clickable="true"/>
+     <ImageView
+        android:id="@+id/hy_meeting_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/hy_meeting_shadow" />
+</FrameLayout>

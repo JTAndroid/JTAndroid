@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/deep_gray"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_split_line_e3" />
+
+    <TextView
+        android:id="@+id/hy_itemInvitefriend_expLvGroup_letterText"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginLeft="15dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="A"
+        android:textColor="#999999"
+        android:textSize="13sp" />
+
+    <include layout="@layout/hy_layout_split_line_e3" />
+
+</LinearLayout>

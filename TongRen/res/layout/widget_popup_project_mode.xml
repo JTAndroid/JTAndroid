@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <TextView
+            android:id="@+id/mode1Tv"
+            style="@style/commen_font_type_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="推介"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" 
+            android:background="@color/commen_text_color_3"
+            android:layout_gravity="center"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/mode2Tv"
+            style="@style/commen_font_type_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="承做"
+            android:textSize="14sp" 
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/mode3Tv"
+            style="@style/commen_font_type_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="推介和承做"
+            android:textSize="14sp" 
+            android:gravity="center"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

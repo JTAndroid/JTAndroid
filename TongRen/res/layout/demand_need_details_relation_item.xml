@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/demand_layout_item_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ll"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/headTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="20dip"
+            android:text="知识"
+              android:textStyle="bold"
+            android:textColor="#1F1F1F" />
+		<include layout="@layout/relevance_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/needDetailsLabelInfoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

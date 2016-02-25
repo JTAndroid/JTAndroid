@@ -1,0 +1,61 @@
+<RelativeLayout 
+      xmlns:android="http://schemas.android.com/apk/res/android"     
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#ffffff">
+      
+       <com.tr.ui.widgets.CircleImageView
+           android:id="@+id/imageview"
+           android:layout_width="45dp"
+           android:layout_height="45dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:layout_centerVertical="true"
+          />
+       
+       <!-- android:src="@drawable/contactfriendtag" -->
+       <ImageView
+           android:id="@+id/person"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/contactpeopletag"
+           android:layout_toRightOf="@id/imageview"
+           android:visibility="gone"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="12dp"/>
+       
+       <TextView
+           android:id="@+id/name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@drawable/contactpeopletag"
+           android:text="陈志武"
+           android:textSize="15sp"
+           android:textColor="@color/text_black"
+           android:gravity="center_vertical"
+           android:drawablePadding="10dp"
+           android:layout_toRightOf="@id/imageview"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="10dp"/>
+       
+       <TextView
+           android:id="@+id/work"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="国民经济研究所 所长"
+           android:textSize="13sp"
+           android:textColor="@color/text_color"
+           android:layout_toRightOf="@id/imageview"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="5dp"
+           android:layout_below="@id/name"/>
+       
+       <View
+           android:layout_below="@id/imageview"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:layout_marginLeft="70dp"
+           android:background="#e0e0e0" />
+
+</RelativeLayout>

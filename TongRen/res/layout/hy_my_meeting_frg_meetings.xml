@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     20141103 zhang nian 
+	 我的会议-所有会议首页布局
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AllHyLinearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jt_list_style"
+    android:orientation="vertical" >
+
+    
+
+    <ExpandableListView
+        android:id="@+id/hy_myhy_show_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/aff_det_keyword_bottom" />
+
+   
+
+</RelativeLayout>

@@ -1,0 +1,411 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchRelativeLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/result_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:text="搜索更多内容"
+            android:textColor="@color/text_search"
+            android:textSize="@dimen/hy_search_text_font" />
+
+        <LinearLayout
+            android:id="@+id/resultll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_person"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_person" />
+
+                <TextView
+                    android:id="@+id/Tv_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="人脉"
+                    android:textColor="@color/text_search_gray"
+                    android:textSize="@dimen/text_size_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_custom"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_orag" />
+
+                <TextView
+                    android:id="@+id/Tv_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="组织"
+                    android:textColor="@color/text_search_gray"
+                    android:textSize="@dimen/text_size_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/knowledge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_knowledge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_knowledge" />
+
+                <TextView
+                    android:id="@+id/Tv_knowledge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="知识"
+                    android:textColor="@color/text_search_gray"
+                    android:textSize="@dimen/text_size_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/conference"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_conference"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_meet" />
+
+                <TextView
+                    android:id="@+id/Tv_conference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="活动"
+                    android:textColor="@color/text_search_gray"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/require"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_require"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_demand" />
+
+                <TextView
+                    android:id="@+id/Tv_require"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="需求"
+                    android:textColor="@color/text_search_gray"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/resultIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换一个关键字试试吧！"
+            android:textColor="@color/text_search"
+            android:textSize="@dimen/hy_search_text_font" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/resultSv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/personll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/search_Text"
+                    android:padding="10dp"
+                    android:text="人脉"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.NoScrollListview
+                    android:id="@+id/perosnLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/personMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="right"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/search_Text"
+                    android:padding="10dp"
+                    android:text=" 组织"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.NoScrollListview
+                    android:id="@+id/customLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/customMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="right"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/conferencell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/search_Text"
+                    android:padding="10dp"
+                    android:text="活动"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.NoScrollListview
+                    android:id="@+id/conferenceLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/conferenceMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="right"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requirell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/search_Text"
+                    android:padding="10dp"
+                    android:text="需求"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.NoScrollListview
+                    android:id="@+id/requireLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/requireMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="right"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_m" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/knowledgell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/search_Text"
+                    android:padding="10dp"
+                    android:text="知识"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_l" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.NoScrollListview
+                    android:id="@+id/knowledgeLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/knowledgeMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="right"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sidebar_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

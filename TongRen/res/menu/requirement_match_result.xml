@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/continues"
+        android:showAsAction="always|withText"
+        android:title="继续浏览">
+    </item>
+</menu>

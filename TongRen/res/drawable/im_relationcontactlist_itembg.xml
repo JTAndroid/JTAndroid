@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关系列表 选中item的背景 -->
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/im_relationcontactlist_itembgb" />
+    <item android:state_focused="true" android:drawable="@drawable/im_relationcontactlist_itembgb" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/im_relationcontactlist_itembgb" />
+    <item android:drawable="@drawable/im_relationcontactlist_itembga" />
+</selector>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   android:background="#f1f1f1"
+  
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:edittextview="http://schemas.android.com/apk/res/com.tr">
+        <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="#22292c"
+   		 android:layout_height="49dp">
+   		  <RelativeLayout 
+        android:id="@+id/quit_custom_Rl"
+        android:padding="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageButton 
+        android:focusable="false"
+         android:layout_centerVertical="true"
+         android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/people_left_arrow"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/custom_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        />
+
+    <TextView 
+        android:id="@+id/finish_custom_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/_finish"
+        android:onClick="finish"
+         android:textColor="#ffffff"
+        android:textSize="13sp"
+         />
+	  
+	</RelativeLayout>
+	<ScrollView 
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<LinearLayout 
+	      android:id="@+id/custom_Ll"
+	    android:orientation="vertical"
+	    android:background="#ffffff"
+	     android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<RelativeLayout  
+	    android:background="#ffffff"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    	<com.tr.ui.people.cread.view.MyEditTextView
+    	    android:id="@+id/custom_Ttv"
+    	     android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	edittextview:isCustom="true"
+        	edittextview:isAddMore="true"
+        	
+    	    />
+    </LinearLayout>
+	  
+	</RelativeLayout>
+	<FrameLayout 
+	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content">
+	<com.tr.ui.people.cread.view.MyEditTextView
+    	    android:id="@+id/custom_Text_Ttv"
+    	     android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	edittextview:isAddMore="true"
+        	edittextview:isReadOnly="true"
+        	edittextview:text_label="自定义文本"
+        	edittextview:isCustom_Text="true"
+    	    />
+	</FrameLayout>
+	</LinearLayout>
+	</ScrollView>
+</LinearLayout>

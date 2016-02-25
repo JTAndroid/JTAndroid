@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/float_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/relationshipTv"
+        style="@style/global_create_button"
+        android:text="人脉" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/clientTv"
+        style="@style/global_create_button"
+        android:text="客户" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/knowladageTv"
+        style="@style/global_create_button"
+        android:text="知识" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/demandTv"
+        style="@style/global_create_button"
+        android:text="需求" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/taskTv"
+        style="@style/global_create_button"
+        android:text="任务" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/mettingTv"
+        style="@style/global_create_button"
+        android:text="会议" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/chatTv"
+        style="@style/global_create_button"
+        android:text="群聊" />
+
+    <FrameLayout
+        android:id="@+id/menuFL"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/menudownTv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/float_menu_normal" />
+
+        <TextView
+            android:id="@+id/menuupTv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/float_menu_selector" />
+    </FrameLayout>
+
+</FrameLayout>

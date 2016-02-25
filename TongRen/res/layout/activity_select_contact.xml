@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#F1F1F1"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F1F1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:id="@+id/searchNameEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/edittext_bg_shape"
+            android:hint="请输入关键字"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+             />
+
+        <TextView
+            android:id="@+id/searchTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/orange"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+    
+    <ExpandableListView 
+        android:id="@+id/contactElv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/knowledge_item_bg"
+        android:groupIndicator="@null"
+        />
+       <!--  android:divider="@android:color/black"
+        android:dividerHeight="0dp"
+        android:childDivider="@android:color/black" -->
+<!--         android:groupIndicator="@drawable/indicator_selector" -->
+    
+    
+</LinearLayout>

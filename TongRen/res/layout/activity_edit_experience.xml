@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:id="@+id/root_Ll"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+
+        <LinearLayout
+        android:id="@+id/text_add_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+          android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/commen_list_bg"
+        android:orientation="horizontal"
+ >	
+	
+        <ImageView
+            android:id="@+id/text_personal_description_IV"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/addtask" />
+
+        <TextView
+            android:id="@+id/text_add_experience_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical"
+            android:text="添加工作经历"
+            android:textColor="@color/text_flow_more"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+    <!--  <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+        -->
+
+    <com.tr.ui.widgets.BasicListView2
+        android:id="@+id/list_edit_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/commen_list_divider" />
+
+</LinearLayout>

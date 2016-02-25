@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+	android:background="@drawable/atest"    
+	android:baselineAligned="true">
+
+    <!-- 内容 -->
+    <LinearLayout
+        android:id="@+id/avatarParentLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" 
+        android:paddingBottom="10dp">
+
+        <!-- 头像 -->
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_default_avatar" />
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="2014-01-01\n12:00:00"
+            android:textSize="12sp" />
+    </LinearLayout>
+    
+    <!-- 分隔线 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/topVi"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.16"
+            android:background="@color/commen_text_color_3" />
+
+        <ImageView
+            android:id="@+id/middleIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/circle" />
+
+        <View
+            android:id="@+id/bottomVi"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:layout_weight="4.16"
+            android:background="@color/commen_text_color_3" />
+    </LinearLayout>
+
+    <!-- 内容 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <!-- 姓名 -->
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="管理员yinxing2"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+        <!-- 评论内容 -->
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="修改需求状态：调研完成待审核"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

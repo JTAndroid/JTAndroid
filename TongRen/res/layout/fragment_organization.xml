@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/project_bg"
+    android:orientation="vertical">
+
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/orgXlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="134dp"
+        layout="@layout/activity_common_empty"
+        android:visibility="gone" />
+</FrameLayout>

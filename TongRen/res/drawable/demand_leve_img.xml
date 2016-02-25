@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/demand_excel"
+        android:maxLevel="0"/>
+    <item
+        android:drawable="@drawable/demand_ppt"
+        android:maxLevel="1"/>
+    <item
+        android:drawable="@drawable/demand_word"
+        android:maxLevel="2"/>
+    <item
+        android:drawable="@drawable/demand_pdf"
+        android:maxLevel="3"/>
+    <item
+        android:drawable="@drawable/demand_file"
+        android:maxLevel="4"/>
+    <item
+        android:drawable="@drawable/demand_rar"
+        android:maxLevel="5"/>
+    <item
+        android:drawable="@drawable/demand_music"
+        android:maxLevel="6"/>
+
+</level-list>

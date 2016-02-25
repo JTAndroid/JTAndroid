@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:padding="8dp">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@null"
+            android:src="@drawable/kno_column_pic" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@null"
+            android:src="@drawable/im_user_avatar_border" 
+            
+            />
+        	
+    </RelativeLayout>
+    
+    <TextView 
+        android:id="@+id/nameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="咨询"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/subscribIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/kno_column_unsubscrib" />
+
+</LinearLayout>

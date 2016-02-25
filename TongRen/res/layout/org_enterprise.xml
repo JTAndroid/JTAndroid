@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_enterprise_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/enterprise_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="一般企业"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_enterprise_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/enterprise_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_capital_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="注册资金" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_legal_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="法人" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_holding_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="实际控股人" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_fox_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="传真" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_url_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="网址" />
+
+                <View
+                    android:id="@+id/line_Ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f1f1f1" >
+                </View>
+
+                
+                
+                
+	                 <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_custom_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:isAddMore_hint="true"
+                    edittextview:text_label="自定义" />
+	                 <View 
+	                      android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f1f1f1"></View>
+	                  <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_describe_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     edittextview:JustLabel="true"
+                    edittextview:text_label="产品描述" />
+	                   <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/enterprise_history_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    edittextview:JustLabel="true"
+                    edittextview:text_label="历史改革" />
+	                   <View 
+	                        android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f1f1f1"/>
+	                <com.tr.ui.people.cread.view.MyDeleteView
+                    android:id="@+id/enterprise_delete_Etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     />
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

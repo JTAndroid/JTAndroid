@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/conTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="关系"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+        <TextView
+            android:id="@+id/jterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="桐人"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+
+        <TextView
+            android:id="@+id/finTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="金融产事业部"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp"
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+
+        <TextView
+            android:id="@+id/estTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="房地产事业部"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+
+        <TextView
+            android:id="@+id/peTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="PE产事业部"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+
+        <TextView
+            android:id="@+id/vcTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="VC事业部"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_people"
+            android:drawablePadding="5dp"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#fff9a013"/>
+        
+        <TextView
+            android:id="@+id/smTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="短信"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_sm"
+            android:drawablePadding="5dp"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+        
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="邮件"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" 
+            android:drawableLeft="@drawable/ic_share_email"
+            android:drawablePadding="5dp"/>
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

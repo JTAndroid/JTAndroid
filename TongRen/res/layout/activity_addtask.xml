@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+     <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/taskNameMetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:MaxLength="15"
+                edittextview:text_label="名称" />
+        <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/taskTimeMetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:isChoose="true"
+                edittextview:text_label="时间" />
+           <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/taskDesignatedMetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:isChoose="true"
+                edittextview:text_label="指派给" />
+
+</LinearLayout>

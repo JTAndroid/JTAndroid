@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/text_view_border"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="提示！"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_alert_title" />
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="加入黑名单你将收不到对方的消息,\n并且你们互相对方看不到对方朋友圈的更新"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_alert_edit" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/ll"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancelTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.00"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_flow_more"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@color/line_gray"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/okTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_flow_more"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

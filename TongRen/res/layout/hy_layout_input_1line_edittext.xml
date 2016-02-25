@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_layout_input_1line_edittext_labelclick"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/hy_label_normal_color"
+    android:paddingLeft="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingRight="@dimen/hy_label_toscreen_leftright_slide" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="11dp"
+	        android:paddingTop="11dp" >
+
+        <TextView
+            android:id="@+id/hy_layout_input_1line_edittext_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:text="标题："
+            android:textColor="@color/hy_input_title_text_color"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/hy_layout_input_1line_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/hy_lable_content_totitile_gap"
+            android:layout_marginRight="22dp"
+            android:layout_toRightOf="@+id/hy_layout_input_1line_edittext_title"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="必填"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:textColor="@color/hy_input_content_text_color"
+            android:textColorHint="@color/hy_input_content_text_color"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

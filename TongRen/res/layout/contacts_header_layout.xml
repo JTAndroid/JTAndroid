@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/newConectionsItemTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_press_gray_selector"
+        android:drawableLeft="@drawable/kno_tag_log"
+        android:drawablePadding="10dp"
+        android:padding="13dp"
+        android:text="新的关系"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/homeBottomView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_below="@id/newConectionsItemTv"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:id="@+id/companyConnectionItemTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeBottomView1"
+        android:background="@drawable/list_item_press_gray_selector"
+        android:drawableLeft="@drawable/kno_tag_log"
+        android:drawablePadding="10dp"
+        android:padding="13dp"
+        android:text="企业通讯录"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/homeBottomView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_below="@id/companyConnectionItemTv"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:id="@+id/attentionCompanyItemTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeBottomView2"
+        android:background="@drawable/list_item_press_gray_selector"
+        android:drawableLeft="@drawable/kno_tag_log"
+        android:drawablePadding="10dp"
+        android:padding="13dp"
+        android:text="关注企业"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/homeBottomView3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_below="@id/attentionCompanyItemTv"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:id="@+id/directoryItemTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeBottomView3"
+        android:background="@drawable/list_item_press_gray_selector"
+        android:drawableLeft="@drawable/kno_category_log"
+        android:drawablePadding="10dp"
+        android:padding="13dp"
+        android:text="目录"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/homeBottomView4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_below="@id/directoryItemTv"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:id="@+id/lableItemTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeBottomView4"
+        android:background="@drawable/list_item_press_gray_selector"
+        android:drawableLeft="@drawable/kno_tag_log"
+        android:drawablePadding="10dp"
+        android:padding="13dp"
+        android:text="标签"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/homeBottomView5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_below="@id/lableItemTv"
+        android:background="#e0e0e0" />
+
+</RelativeLayout>

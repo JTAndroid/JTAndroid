@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_gravity="center_horizontal" >
+
+            <com.tr.ui.widgets.CircleImageView
+                
+                android:id="@+id/ImageViewPic"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_corners"
+                android:src="@drawable/ic_default_avatar" />
+
+          <!--   <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip" 
+                android:background="@drawable/work_pic_out"
+                /> -->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TextViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="名称名"
+            android:textColor="#b6c4c8"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/knowCommentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_detail_item_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp" >
+
+                <com.tr.ui.widgets.CircleImageView
+                    android:id="@+id/commentIv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_know_people" />
+
+                <com.tr.ui.widgets.CircleImageView
+                    android:id="@+id/namePicIv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_know_people" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="25dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/commentNameTv"
+                        style="@style/common_text_style_middle_black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/commentDataTv"
+                        style="@style/common_text_style_middle_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/commentContentTv"
+                    style="@style/common_text_style_middle_gray"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.tr.ui.widgets.BasicListView
+            android:id="@+id/commentMessageLv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.0"
+            android:background="@color/ivory"
+            android:clickable="false"
+            android:divider="@null" />
+
+        <LinearLayout
+            android:id="@+id/commentFooterLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/comment_detail_item_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/commDividingLineIv"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/establish_frame_line" />
+
+            <TextView
+                android:id="@+id/commentMoreDataTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="查看全部评论"
+                android:textColor="#0099ff"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

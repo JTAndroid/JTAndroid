@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/knowledge_item_bg" 
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/noPermissionRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp" >
+
+            
+            <TextView
+                android:id="@+id/noPermissionTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="独乐"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/noPermissionContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noPermissionTitleTv"
+                android:text="（不可见、不可对接、不可分享）"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="13sp" />
+            <CheckBox
+                android:id="@+id/noPermissionSwitchCb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:background="@drawable/iphone_checkbox_bg_selector"
+                android:button="@null" 
+                />
+            
+        </RelativeLayout>
+        <!-- 分隔线 -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+        
+        <!-- 小乐 -->
+        <RelativeLayout
+            android:id="@+id/lowPermissionRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/lowPermissionTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小乐"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lowPermissionContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lowPermissionTitleTv"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
+                android:text="（不可见、可对接、不可分享）"
+                 />
+
+            <ImageView
+                android:id="@+id/lowPermissionRightArrowsIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_right_grey" />
+        </RelativeLayout>
+        <!-- 分隔线 -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+        
+        <!-- 中乐 -->
+        <RelativeLayout
+            android:id="@+id/middlePermissionRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/middlePermissionTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中乐"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/middlePermissionContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/middlePermissionTitleTv"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
+                android:text="（可见、可对接、不可分享）"
+                 />
+
+            <ImageView
+                android:id="@+id/middlePermissionRightArrowsIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_right_grey" />
+        </RelativeLayout>
+        
+        <!-- 分隔线 -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+        
+        <!-- 大乐 -->
+        
+        
+        <RelativeLayout
+            android:id="@+id/highPermissionRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/highPermissionTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大乐"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/highPermissionContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/highPermissionTitleTv"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray"
+                android:text="（可见、可对接、可分享）"
+                 />
+
+            <CheckBox
+                android:id="@+id/highPermissionRightArrowsCb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:background="@drawable/iphone_checkbox_bg_selector"
+                android:button="@null" />
+
+           <ImageView
+                android:id="@+id/highPermissionRightArrowsIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_right_grey" /> 
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/knowle_highPermissionTv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="12sp" />
+    
+    
+
+</LinearLayout>

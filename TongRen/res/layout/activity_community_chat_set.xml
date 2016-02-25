@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 社群聊天设置页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/im_gray"
+            android:orientation="vertical" >
+
+            <!-- 选择参与者 -->
+
+            <com.tr.ui.widgets.IMEditMumberGrid
+                android:id="@+id/grid_community_chat_set"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:columnWidth="66dp"
+                android:gravity="center"
+                android:horizontalSpacing="15dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+    			android:background="@color/white"
+                android:verticalSpacing="15dp" />
+            <!-- 群消息提醒 -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <include layout="@layout/layout_item_notice_set" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@color/transparent" />
+
+            <!-- 我在本群的昵称 -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <include layout="@layout/layout_item_my_nickname_ingroup" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+            <!-- 显示群成员昵称 -->
+
+            <include layout="@layout/layout_item_show_membername_ingroup" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@color/transparent" />
+            <!-- 管理群成员 -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <include layout="@layout/layout_item_management_group_members" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@color/transparent" />
+            <!-- 群聊名称 -->
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <include layout="@layout/layout_item_group_chat_name" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+
+            <!-- 清除记录 -->
+
+            <TextView
+                android:id="@+id/text_empty_chat_record"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/empty_chat_record"
+                android:textColor="@color/text_flow_content"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+            <!-- 查找聊天记录 -->
+
+            <TextView
+                android:id="@+id/text_find_chat_record"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/find_chat_record"
+                android:textColor="@color/text_flow_content"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/jt_dt_line_1" />
+            <!-- 退出登录 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/im_gray" />
+
+            <!-- 退出登录接口 -->
+
+            <TextView
+                android:id="@+id/dissolve_group"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_circle_click"
+                android:gravity="center"
+                android:text="@string/dissolve_group"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

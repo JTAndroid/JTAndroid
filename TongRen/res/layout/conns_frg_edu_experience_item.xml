@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  
+         android:orientation="vertical"  android:layout_margin="10dp" android:background="@drawable/establish_bj">
+         <RelativeLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"  android:gravity="center_vertical" android:paddingRight="10dp">
+             <TextView  style="@style/item_text_title_m" android:text="就读时间" android:padding="10dp" android:layout_alignParentLeft="true" 
+                 android:id="@+id/timeTitle"/>
+             <TextView style="@style/item_text_content" android:id="@+id/timeEnd" android:clickable="true" android:layout_alignParentRight="true" android:text="结束时间"/>
+             <TextView style="@style/item_text_content" android:id="@+id/time__" android:layout_toLeftOf="@+id/timeEnd" android:text="--"/>   
+             <TextView style="@style/item_text_content" android:id="@+id/timeStart" android:clickable="true" android:layout_toLeftOf="@+id/time__" android:text="开始时间"/> 
+         </RelativeLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/schoolname1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="学校名称 " android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/schoolname"/>
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/specialty1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="专业类别" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/specialty" />
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/college1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="学院" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/college" />
+         </LinearLayout>
+         
+          <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/educationalBackgroundType1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="学历" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true"  android:id="@+id/educationalBackgroundType" />
+         </LinearLayout>
+         
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/degreeType1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="学位" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/degreeType" />
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/studyAbroadType1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="海外学习" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/studyAbroadType" />
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+        
+         
+         <!-- <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal"  android:id="@+id/description1" android:clickable="true">
+             <TextView  style="@style/item_text_title_m" android:text="描述" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" 
+           	     android:id="@+id/description"/>
+         </LinearLayout> -->
+         
+         <LinearLayout
+            android:id="@+id/description1" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:clickable="true"
+             >
+
+            <TextView
+                android:id="@+id/keyTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:textSize="14sp" 
+                android:text="描述"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5" >
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/item_text_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="同学关系 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:id="@+id/addclass" />"
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/classmateList" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:divider="@drawable/establish_fengexian" />
+
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="外语语种等级 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:id="@+id/addlanguage"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/foreignList" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:divider="@drawable/establish_fengexian" />
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian"  />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="自定义字段 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:id="@+id/addNew" android:clickable="true"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/customList" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:divider="@drawable/establish_fengexian" />
+         
+ 
+     </LinearLayout>
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true" android:src="@drawable/establish_deletplate" android:id="@+id/delNew" />
+     </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/tagRg"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <RadioButton
+            android:id="@+id/communityRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center_vertical|right"
+            android:text="社群畅聊"
+            android:textColor="@drawable/text_color_style"
+            android:background="@drawable/rb_selector"
+            android:textSize="@dimen/text_tongren_size_m" />
+
+        <View
+            android:layout_width="35dp"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/systemRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center_vertical|left"
+            android:text="系统消息"
+            android:textColor="@drawable/text_color_style"
+            android:background="@drawable/rb_selector"
+            android:textSize="@dimen/text_tongren_size_m" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="@color/text_hint" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

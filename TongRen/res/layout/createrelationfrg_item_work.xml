@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_wfillv" android:layout_height="wrap_content">
+    	    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+    	    <LinearLayout style="@style/layout_item_wfillh" android:layout_height="40dp">
+    	       <RelativeLayout style="@style/layout_item_wfillh" android:layout_width="107dp" android:id="@+id/addone" >
+    	            <ImageView style="@style/item_comm" android:paddingLeft="0dp" android:src="@drawable/createrelatioadd" android:id="@+id/add" 
+    	                android:layout_alignParentLeft="true" android:clickable="true" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+    	    	    <ImageView style="@style/item_comm" android:src="@drawable/createrelationtype" android:id="@+id/type" android:visibility="invisible" 
+    	    	        android:layout_alignParentRight="true" android:padding="5dp"/>
+    	    	    <TextView style="@style/item_text_title_m" android:layout_width="30dp" android:id="@+id/title"
+    	    	        android:layout_toLeftOf="@+id/type" android:layout_toRightOf="@+id/add"
+    	    	        android:gravity="left"/>
+    	        </RelativeLayout>
+    	        <ImageView android:layout_width="1px" android:layout_height="fill_parent" android:background="@color/im_relationdetails_divider"/>
+    	        <EditText style="@style/item_edit" android:id="@+id/edit0" android:layout_width="fill_parent" android:textCursorDrawable="@null" android:background="@null"
+    	            android:singleLine="true"/>
+    	    </LinearLayout>  
+    	    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+    	    <LinearLayout style="@style/layout_item_wfillv" android:layout_height="wrap_content" android:layout_marginLeft="107dp">
+				
+				<LinearLayout style="@style/layout_item_wfillh">
+				    <ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    <LinearLayout style="@style/layout_item_wfillh" android:layout_width="fill_parent">
+				        <TextView style="@style/item_text_title_m" android:layout_width="fill_parent" android:id="@+id/edit1"
+				            android:layout_weight="1" android:textCursorDrawable="@null" android:background="@null" android:text="起始时间"
+				            android:clickable="true"/>
+				        <TextView style="@style/item_text_title_m" android:layout_width="wrap_content" android:text="至 " />
+				        <TextView style="@style/item_text_title_m" android:layout_width="fill_parent"  android:id="@+id/edit2" android:text="今"
+				            android:layout_weight="1" android:textCursorDrawable="@null" android:background="@null"
+				            android:clickable="true"/>
+				    </LinearLayout>
+				</LinearLayout>
+				<!--  行业-->
+					<ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"
+					    android:id="@+id/tradecontainer_line" />
+					<LinearLayout style="@style/layout_item_wfillh" android:id="@+id/tradecontainer" >
+					    <ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+					    <EditText style="@style/item_text_title_m" android:layout_width="fill_parent" android:id="@+id/edit3" 
+					        android:textCursorDrawable="@null" android:background="@null" android:singleLine="true"/>
+					</LinearLayout>
+				<!-- 部门职务-->
+				<LinearLayout style="@style/layout_item_wfillv" android:id="@+id/work" >  
+				    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+					<LinearLayout style="@style/layout_item_wfillh">
+				    	<ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    	<EditText style="@style/item_text_title_m" android:layout_width="fill_parent"  android:id="@+id/edit4" android:singleLine="true"
+				    	    android:textCursorDrawable="@null" android:background="@null"/>
+				    </LinearLayout>
+				    
+				     <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+					<LinearLayout style="@style/layout_item_wfillh">
+				    	<ImageView android:layout_width="1px" android:layout_height="40dp" android:background="@color/im_relationdetails_divider"/>
+				    	<EditText style="@style/item_text_title_m" android:layout_width="fill_parent"  android:id="@+id/edit5" android:singleLine="true"
+				    	     android:textCursorDrawable="@null" android:background="@null"/>
+					</LinearLayout>
+				</LinearLayout>
+				    
+				
+    	    </LinearLayout>
+       </LinearLayout>    
+

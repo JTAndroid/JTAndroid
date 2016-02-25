@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_layout_pickerShare_3content_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/hy_layout_pickerSharePeopleHub_layout"
+        layout="@layout/hy_layout_picker_1line_text" />
+
+    <include layout="@layout/hy_layout_split_line_e3" />
+
+    <include
+        android:id="@+id/hy_layout_pickerShareOrg_layout"
+        layout="@layout/hy_layout_picker_1line_text" />
+
+    <include layout="@layout/hy_layout_split_line_e3" />
+
+    <include
+        android:id="@+id/hy_layout_pickerShareKnowleadge_layout"
+        layout="@layout/hy_layout_picker_3line_text" />
+
+    <include layout="@layout/hy_layout_split_line_e3" />
+
+    <include
+        android:id="@+id/hy_layout_pickerShareDemand_layout"
+        layout="@layout/hy_layout_picker_3line_text" />
+
+</LinearLayout>

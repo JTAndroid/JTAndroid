@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/hy_explist_item_trans_meeting_green" >
+
+    <TextView
+        android:id="@+id/hy_trans_meeting_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="2014:11:08 22:10:08"
+        android:textColor="#8d8d8d"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hy_trans_meeting_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="议题 : "
+            android:textColor="#1f1f1f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/hy_trans_meeting_topic "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="凯胜2014TMT峰会-互联峰会"
+            android:textColor="#1f1f1f"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

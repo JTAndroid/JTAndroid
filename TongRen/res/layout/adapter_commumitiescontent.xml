@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.tr.ui.widgets.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/picture_Iv"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/people_portrait" />
+
+    <LinearLayout
+        android:id="@+id/layout_NameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/picture_Iv"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/people_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/contentNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="标题" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_NameTV"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/picture_Iv"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="内容" />
+
+    <LinearLayout
+        android:id="@+id/layout_TimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_contentTv"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/picture_Iv"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/commumitiesNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="发布时间" />
+
+        <TextView
+            android:id="@+id/addressAndHy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="地址|行业" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/QRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:text="关注"
+        android:visibility="gone" />
+
+         <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_line" />
+
+</RelativeLayout>

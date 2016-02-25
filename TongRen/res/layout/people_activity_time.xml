@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+<LinearLayout 
+     android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+        <View 
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#1f1f1f"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e3e3e3"
+           />
+
+        <LinearLayout
+            android:id="@+id/linear_wheel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <NumberPicker
+                android:id="@+id/year"
+                android:layout_width="62dp"
+                android:layout_height="166.5dp"
+                android:background="#FFF" 
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=":"
+                android:layout_marginLeft="20.5dp"
+                android:layout_marginRight="20.5dp"
+                android:textSize="16sp" />
+
+            <NumberPicker
+                android:id="@+id/month"
+                android:layout_width="62dp"
+                android:layout_height="166.5dp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=":"
+                android:layout_marginLeft="20.5dp"
+                android:layout_marginRight="20.5dp"
+                android:textColor="#1f1f1f"
+                android:textSize="15sp" />
+
+            <NumberPicker
+                android:id="@+id/day"
+                android:layout_width="62dp"
+                android:layout_height="166.5dp"
+               />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e3e3e3"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp" />
+
+        <LinearLayout
+            android:id="@+id/linear_wheel2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <NumberPicker
+                android:id="@+id/hour"
+                android:layout_width="70dp"
+                android:layout_height="166.5dp"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=":"
+                android:layout_marginLeft="25.5dp"
+                android:layout_marginRight="25.5dp"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <NumberPicker
+                android:id="@+id/min"
+                android:layout_width="70dp"
+                android:layout_height="166.5dp"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/remind_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/remindTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="提醒"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/remindTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/remindTv"
+            android:textColor="#353535"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/rightImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_right_arrow" />
+
+        <LinearLayout
+            android:id="@+id/backgroudLayout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/rightImages"
+            android:background="#f1f1f1"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/repeatRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/repeatTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="重复"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/repeatTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/repeatTv"
+            android:textColor="#353535"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/repeatRightImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_right_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/repeatRightImages"
+            android:background="#f1f1f1"
+            />
+    </RelativeLayout>
+    
+  
+</LinearLayout>
+</ScrollView>

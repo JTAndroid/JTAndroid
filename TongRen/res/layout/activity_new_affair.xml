@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 导航区 -->
+    <!--
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:background="@drawable/new_aff_tab_bg">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <RelativeLayout 
+                android:id="@+id/tabReqRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tabReqTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="业务需求"
+                    android:textColor="@color/commen_text_color_3"
+                    android:textSize="16sp" 
+                    android:drawableLeft="@drawable/new_aff_req_tab_on"
+                    android:drawablePadding="5dp"/>
+
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/tabTaskRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tabTaskTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="任务"
+                    android:textColor="@color/commen_text_color_1"
+                    android:textSize="16sp" 
+                    android:drawableLeft="@drawable/new_aff_task_tab_off"
+                    android:drawablePadding="5dp"/>
+                
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:id="@+id/tabProRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+                
+                <TextView
+                    android:id="@+id/tabProTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="项目"
+                    android:textColor="@color/commen_text_color_1"
+                    android:textSize="16sp" 
+                    android:drawableLeft="@drawable/new_aff_pro_tab_off"
+                    android:drawablePadding="5dp"/>
+                
+            </RelativeLayout>
+
+        </LinearLayout>
+        
+        <View
+        	android:id="@+id/indicatorVi"
+        	android:layout_width="wrap_content"
+        	android:layout_height="3dp"
+       		android:background="@drawable/new_aff_indicator" />
+    </LinearLayout>
+    -->
+
+
+    <!-- 导航栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffe2e2e2" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffffffff" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/tabParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/tabReqRl"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tabReqTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/new_aff_req_tab_on"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="业务需求"
+                        android:textColor="@color/commen_text_color_3"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tabTaskRl"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tabTaskTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/new_aff_task_tab_off"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="任务"
+                        android:textColor="@color/commen_text_color_1"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tabProRl"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tabProTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/new_aff_pro_tab_off"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="项目"
+                        android:textColor="@color/commen_text_color_1"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/indicatorVi"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_alignBottom="@id/tabParentLl"
+                android:background="@drawable/req_detail_tab_indicator" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tab_divider" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tab_divider" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 指示条 -->
+
+    </LinearLayout>
+
+    <!-- 内容区 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

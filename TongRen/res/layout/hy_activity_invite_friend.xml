@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hy_activity_main_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title_right_1textbtn" />
+
+    <include
+        android:id="@+id/hy_actInviteFriend_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/hy_layout_search" />
+
+    <include layout="@layout/hy_layout_split_line_cc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/hy_actInviteFriend_FriListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/allFL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/hy_itemInvitefriend_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_circular_beed_background"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp" >
+
+                    <com.tr.ui.widgets.CircleImageView
+                        android:id="@+id/hy_itemInvitefriend_avatar"
+                        android:layout_width="43.2dp"
+                        android:layout_height="43.2dp"
+                        android:clickable="false"
+                        android:src="@drawable/gintong_smart_brain" />
+
+                    <TextView
+                        android:id="@+id/hy_itemInvitefriend_nameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/hy_itemInvitefriend_avatar"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="金桐脑"
+                        android:textColor="@color/hy_listitem_nametext_font_color"
+                        android:textSize="@dimen/hy_list_nametext_font" />
+
+                    <ImageView
+                        android:id="@+id/hy_itemInvitefriend_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:button="@drawable/hy_selector_check"
+                        android:clickable="false"
+                        android:src="@drawable/demand_me_need_checkbox_default" />
+                </RelativeLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/otherInviteFl"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/hy_itemInvitefriend_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_circular_beed_background"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp" >
+
+                    <ImageView
+                        android:id="@+id/hy_itemInvitefriend_avatar"
+                        android:layout_width="43.2dp"
+                        android:layout_height="43.2dp"
+                        android:clickable="false"
+                        android:src="@drawable/other_invite_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/hy_itemInvitefriend_avatar"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="其他邀请方式"
+                        android:textColor="@color/hy_listitem_nametext_font_color"
+                        android:textSize="@dimen/hy_list_nametext_font" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:button="@drawable/hy_selector_check"
+                        android:background="@drawable/right_arrow" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/OrgFriendFl"
+                android:layout_width="match_parent"
+                android:background="@color/deep_gray"
+                android:layout_height="24dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <!-- <ImageView
+                        android:id="@+id/org_listview_Iv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/common_arrow_down" /> -->
+
+                    <TextView
+                        android:id="@+id/tv_myorg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的组织"
+                        android:textColor="#666666"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/org_listview_Iv"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="13sp" />
+                    
+                    <TextView 
+                        android:id="@+id/tv_myorg_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A"
+                        android:textColor="#999999"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_myorg"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp" 
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/org_check_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="15dp"
+                        android:button="@drawable/hy_selector_check"
+                        android:clickable="false"
+                        android:src="@drawable/demand_me_need_checkbox_default" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <include layout="@layout/hy_layout_split_line_e3" />
+
+            <com.tr.ui.common.view.XListView
+                android:id="@+id/hy_actInviteFriend_orgelistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:childDivider="@color/hy_split_line_cc"
+                android:clickable="false"
+                android:clipChildren="true"
+                android:divider="@color/hy_split_line_cc"
+                android:dividerHeight="1px"
+                android:listSelector="@drawable/hy_selector_listitem_bg"
+                android:scrollbars="none" />
+            <include layout="@layout/hy_layout_split_line_e3" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@color/deep_gray" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <!-- <ImageView
+                        android:id="@+id/people_listView_Iv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/common_arrow_down" /> -->
+                    
+                    <TextView
+                        android:id="@+id/tv_myfirend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="我的好友"
+                        android:textColor="#666666"
+                        android:layout_toRightOf="@+id/people_listView_Iv"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="13sp" />
+                    
+                    <TextView 
+                        android:id="@+id/tv_myfriend_char"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="A"
+                        android:textColor="#999999"
+                        android:layout_toRightOf="@+id/tv_myfirend"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp" 
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/hy_check_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="15dp"
+                        android:button="@drawable/hy_selector_check"
+                        android:clickable="false"
+                        android:src="@drawable/demand_me_need_checkbox_default" />
+                </RelativeLayout>
+            </FrameLayout>
+            
+			<include layout="@layout/hy_layout_split_line_e3" />
+			
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" >
+
+                <ExpandableListView
+                    android:id="@+id/hy_actInviteFriend_friExpandlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:cacheColorHint="@color/transparent"
+                    android:childDivider="@color/transparent"
+                    android:clickable="true"
+                    android:clipChildren="true"
+                    android:divider="@color/hy_split_line_cc"
+                    android:dividerHeight="1px"
+                    android:fastScrollEnabled="false"
+                    android:scrollbarFadeDuration="0"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/hy_actInviteFriend_showSelLetter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/hy_chose_letter_bg"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textColor="@color/white"
+                    android:textSize="36sp"
+                    android:visibility="gone" />
+
+                <com.tr.ui.widgets.hy.SlideLetterView
+                    android:id="@+id/hy_actInviteFriend_slideLetterView"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="@color/transparent" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/hy_actInviteFriend_searchListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/hy_split_line_cc"
+            android:dividerHeight="1px"
+            android:listSelector="@drawable/hy_selector_listitem_bg"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

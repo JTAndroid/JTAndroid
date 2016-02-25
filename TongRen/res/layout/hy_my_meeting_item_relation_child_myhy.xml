@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/commen_list_bg"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5sp" >
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/hy_myhy_relation_child_showimg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/default_people_avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/hy_myhy_relation_child_showimg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hy_myhy_relation_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="增沥青"
+            android:textColor="#1f1f1f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/hy_myhy_relation_child_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            android:text="天使投资人"
+            android:textColor="#8d8d8d"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/hy_myhy_relation_child_img"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow_gray_right1" />
+
+</RelativeLayout>

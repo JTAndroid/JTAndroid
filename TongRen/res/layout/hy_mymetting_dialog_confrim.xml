@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="170dp"
+    android:layout_gravity="center"
+    android:background="@drawable/hy_mymeeting_dialog_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/myConfCursor"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/hy_mymeeting_dialog_title_line" />
+
+    <TextView
+        android:id="@+id/hy_mymeeting_dialog_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myConfCursor"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="删除会议"
+        android:textColor="#1f1f1f"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/hy_mymeeting_dialog_tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hy_mymeeting_dialog_tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:text="会议中的人脉、笔记、资料也将会是删除"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/hy_mymeeting_dialog_tv_message"
+        android:layout_marginTop="15dp"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/hy_mymeeting_dialog_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/hy_mymeeting_select_btn_public"
+            android:text="取消"
+            android:textColor="#1f1f1f"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <Button
+            android:id="@+id/hy_mymeeting_dialog_btn_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/hy_mymeeting_select_btn_public"
+            android:text="完毕"
+            android:textColor="#1f1f1f"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

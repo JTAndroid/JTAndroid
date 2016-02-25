@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title_right_1iconbtn" />
+
+    <ScrollView
+        android:id="@+id/hy_meeting_master_sl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal" >
+
+                        <com.tr.ui.widgets.CircleImageView
+                            android:id="@+id/hy_meeting_master_iv_logo"
+                            android:layout_width="94dp"
+                            android:layout_height="94dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/meeting_logo_a" />
+
+                        <LinearLayout
+                            android:id="@+id/meeting_master_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/hy_meeting_master_tv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-2dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="会议名称"
+                                android:textColor="#1f1f1f"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="主办方："
+                                    android:textColor="#1f1f1f"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/hy_meeting_master_tv_leader"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="主办方人名"
+                                    android:textColor="@color/blue" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/hy_meeting_master_tv_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:text="会议简介"
+                                android:textColor="#616161"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="#f1f1f1" >
+
+                            <ProgressBar
+                                android:id="@+id/hy_meeting_master_pb_checkin"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="14dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#cccccc"
+                                android:indeterminate="false"
+                                android:max="30"
+                                android:progress="30"
+                                android:progressDrawable="@drawable/hy_progressbar_horizontal" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="false"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="9dp"
+                                    android:text="参会人"
+                                    android:textColor="#616161"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/hy_meeting_master_tv_checkin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0/30"
+                                    android:textColor="#616161"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/hy_meeting_master_btn_checkin"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/hy_selector_button_checkin"
+                            android:text="签到"
+                            android:textColor="#ffffff"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/hy_meeting_master_dotlint_checkin"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/hy_dotted_line"
+                        android:textColor="#a5a5a5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/hy_home_tile_meeting_rl_alarm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_home_tile_meeting_iv_alarm"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_button_alarm" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="提醒"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_home_tile_meeting_rl_navigation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_home_tile_meeting_iv_navigation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_button_navigation" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="地图导航"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_meeting_master_rm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_meeting_master_iv_cantact"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_master_connection" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="人脉"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_meeting_master_xq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_meeting_master_iv_requirment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_master_note" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="需求"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_meeting_master_zs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_meeting_master_iv_knowledge"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_master_knowledge" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="知识"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_meeting_master_hyxg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_meeting_master_iv_more"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_master_related" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="会议相关"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hy_home_tile_meeting_rl_hybj"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|center_horizontal"
+                                    android:orientation="vertical" >
+
+                                    <ImageView
+                                        android:id="@+id/hy_meeting_master_iv_note"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="15dp"
+                                        android:background="@drawable/hy_selector_button_note" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:text="会议笔记"
+                                        android:textColor="#3d3d3d"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <!-- 议题列表根布局    start -->
+
+            <LinearLayout
+                android:id="@+id/hy_meeting_master_ll_topic_session"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 议题列表 -->
+
+                <LinearLayout
+                    android:id="@+id/hy_meeting_master_ll_topic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+                <!-- 分割线 -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+            <!-- 议题列表根布局    end -->
+
+            <LinearLayout
+                android:id="@+id/hy_meeting_master_ll_join_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#d9d9d9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:id="@+id/hy_meeting_master_tv_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:id="@+id/hy_meeting_master_tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+
+                    <!-- 分割线 -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#cccccc" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" >
+
+                        <Button
+                            android:id="@+id/hy_meeting_master_btn_join"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/hy_selector_button_yellow"
+                            android:text="进入会议"
+                            android:textColor="#ffffff"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#d9d9d9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f8f8f8" >
+
+                    <TextView
+                        android:id="@+id/hy_meeting_master_tv_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toLeftOf="@+id/hy_meeting_master_btn_end"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="#151515"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/hy_meeting_master_btn_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/hy_selector_button_yellow"
+                        android:text="结束会议"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

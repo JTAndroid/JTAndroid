@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widgets ="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- 上传图片 -->
+        <com.tr.ui.widgets.FileSelectorTextView
+            android:id="@+id/addPicTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            widgets:type="pic"
+            android:drawablePadding="5dp" />
+
+        <!-- 上传视频 -->
+        <com.tr.ui.widgets.FileSelectorTextView
+            android:id="@+id/addVideoTv"
+           	android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            widgets:type="video" 
+            android:drawablePadding="5dp"/>
+
+        <!-- 上传文件 -->
+        <com.tr.ui.widgets.FileSelectorTextView
+            android:id="@+id/addDocTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            widgets:type="doc" 
+            android:drawablePadding="5dp"/>
+
+        <!-- 上传录音 -->
+        <com.tr.ui.widgets.FileSelectorTextView
+            android:id="@+id/addRecTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            widgets:type="rec" 
+            android:drawablePadding="5dp"/>
+    </LinearLayout>
+    
+    <!-- 待上传的文件 队列 -->
+    <LinearLayout
+        android:id="@+id/uploadQueueParentLl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>

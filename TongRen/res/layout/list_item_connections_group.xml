@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    >
+    <TextView 
+        android:id="@+id/keyTv"
+        android:layout_width="wrap_content"
+    	android:layout_height="24dp"
+    	android:gravity="center_vertical"
+    	android:paddingLeft="10dp"
+    	android:textColor="#3c6fa9"
+    	android:textSize="14sp"
+		android:text="专家 : "
+        />
+    
+    <TextView 
+        android:id="@+id/valueTv"
+        android:layout_width="wrap_content"
+    	android:layout_height="24dp"
+    	android:gravity="center_vertical"
+    	android:singleLine="true"
+    	android:layout_weight="1"
+    	android:ellipsize="end"
+    	android:textColor="#8d8d8d"
+    	android:textSize="14sp"
+		android:text="悲哉圆顶喱工哈根达斯吉颉中地地地大都是右是时是百时期刊碴寺"
+		
+        />
+    
+    <ImageView 
+		    android:id="@+id/deleteIv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:clickable="true"
+	        android:padding="10dp" 
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/people_column_delete"
+		    />
+    
+
+</LinearLayout>

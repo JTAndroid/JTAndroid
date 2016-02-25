@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical" >
+<View 
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="0.01dp"
+    />
+    <LinearLayout
+        android:id="@+id/myConferenceLinearLayoutRoot"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/meetingTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="活动"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/peopleTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="人脉"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/orgnazationTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="组织"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/knowledgeTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="知识"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/requirementTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="事件"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/noteTabTv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="笔记"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/hy_mymeeting_title_text_font" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/myConfCursor"
+        android:layout_width="wrap_content"
+        android:layout_height="2.5dp"
+        android:layout_alignBottom="@id/myConferenceLinearLayoutRoot"
+        android:background="@drawable/jt_dt_tap_d_bg" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myMeetingViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

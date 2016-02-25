@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_marginTop="15dp"
+        android:background="#e0e0e0" />
+
+    <RelativeLayout
+        android:id="@+id/phone_friend"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff">
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/phone_friends_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:src="@drawable/invite_friends_contacts" />
+
+        <TextView
+            android:id="@+id/lxr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/phone_friends_iv"
+            android:text="手机联系人"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select" />
+
+        <TextView
+            android:gravity="right"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/lxr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow1"
+            android:text="添加或邀请通讯录中的好友"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/common_listview_dividing_line"
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@id/phone_friends_iv"
+	        android:background="#e0e0e0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wechat_friend"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff">
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/phone_wechat_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:src="@drawable/logo_wechat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/phone_wechat_iv"
+            android:text="微信"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow2"
+            android:text="添加或邀请微信中的好友"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/common_listview_dividing_line"
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@id/phone_wechat_iv"
+	        android:background="#e0e0e0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qq_friend"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff">
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/phone_qq_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:src="@drawable/logo_qq" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/phone_qq_iv"
+            android:text="QQ"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow3"
+            android:text="添加或邀请QQ中的好友"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/common_listview_dividing_line"
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@id/phone_qq_iv"
+	        android:background="#e0e0e0" />
+    </RelativeLayout>
+    
+  <RelativeLayout
+        android:id="@+id/sao_yi_sao"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff">
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/sao_yi_sao_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.5dp"
+            android:src="@drawable/scan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/sao_yi_sao_iv"
+            android:text="扫一扫"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+              android:id="@+id/arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow3"
+            android:text="扫描好友的二维码加好友"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/common_listview_dividing_line"
+	        android:layout_alignParentBottom="true"
+	        android:layout_toRightOf="@id/sao_yi_sao_iv"
+	        android:background="#e0e0e0" />
+    </RelativeLayout>
+    
+</LinearLayout>

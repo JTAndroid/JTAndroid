@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f1" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="#CCCCCC" />
+    <!-- 谁可以看我的资料 -->
+
+    <RelativeLayout
+        android:id="@+id/look_my_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/choose_jump_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="谁可以看我的资料"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:text="仅限自己"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:drawablePadding="10dp"
+             />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#CCCCCC" />
+    <!-- 谁可以加我为好友 -->
+
+    <RelativeLayout
+        android:id="@+id/add_me_as_friend "
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/choose_jump_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="谁可以加我为好友"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+       <TextView
+            android:text="所有人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:drawablePadding="10dp"
+             />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#CCCCCC" />
+    <!-- 谁可以给我评价 -->
+
+    <RelativeLayout
+        android:id="@+id/give_me_a_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/choose_jump_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="谁可以给我评价"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+       <TextView
+            android:text="好友"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:drawableRight="@drawable/arrow_right_grey"
+            android:drawablePadding="10dp"
+             />
+    </RelativeLayout>
+
+</LinearLayout>

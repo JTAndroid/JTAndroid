@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/text_view_border">
+
+    <!-- 操作控件 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="取消" />
+        <TextView
+            android:id="@+id/okTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="确定" />
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider" />
+
+    <!-- 内容区 -->
+   	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" >
+		
+   	    <EditText
+            android:id="@+id/contentEt"
+            style="@style/common_text_style_large_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_border"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColorHint="@color/common_light_gray"
+            android:hint="请填写内容" 
+            android:gravity="top"/>
+   	    
+    </LinearLayout>
+
+</LinearLayout>

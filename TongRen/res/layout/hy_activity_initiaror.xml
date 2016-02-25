@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hy_activity_main_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title_right_2textbtn" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<!-- 分割线 -->
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+			<!-- 名称 -->
+            <include
+                android:id="@+id/hy_actInitiaror_inputName_layout"
+                layout="@layout/hy_layout_input_1line_edittext" />
+			<!-- 分割线 -->
+            <include layout="@layout/hy_layout_split_line_e3" />
+			<!-- 时间 -->
+            <include
+                android:id="@+id/hy_actInitiaror_pickTime_layout"
+                layout="@layout/hy_layout_picker_3line_text" />
+
+			<!-- 分割线 -->
+            <include layout="@layout/hy_layout_split_line_e3" />
+
+			<!-- 行业 -->
+            <include
+                android:id="@+id/hy_actInitiaror_busniess_layout"
+                layout="@layout/hy_layout_picker_3line_text" />
+			<!-- 分割块 -->
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+			<!-- 邀请参会人 全部 -->
+            <include
+                android:id="@+id/hy_actInitiaror_pickerInviteAttendee_layout"
+                layout="@layout/hy_layout_picker_1line_imags" />
+			<!-- 分割块 -->
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+
+			<!-- 四大组件 -->
+            <include
+                android:id="@+id/hy_actInitiaror_pickerShare_4content_layout"
+                layout="@layout/hy_layout_picker_share_3content"
+                android:visibility="visible" />
+			<!-- 分割线 -->
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+
+			<!-- 地点 -->
+            <include
+                android:id="@+id/hy_actInitiaror_pickerAddress_layout"
+                layout="@layout/hy_layout_picker_1line_text" />
+
+			<!-- 分割线 -->
+            <include layout="@layout/hy_layout_split_line_e3" />
+
+			<!-- 介绍 -->
+            <include
+                android:id="@+id/hy_actInitiaror_pickerIntroduce_layout"
+                layout="@layout/hy_layout_picker_1line_text" />
+
+			<!-- 分割块 --> 
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+
+            <include
+                android:id="@+id/hy_actInitiaror_pickerInviteSpeaker_layout"
+                layout="@layout/hy_layout_picker_1line_imags" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+
+            <include
+                android:id="@+id/hy_actInitiaror_pickerSecrecyHY_layout"
+                layout="@layout/hy_layout_switch_1line_text" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                layout="@layout/hy_layout_split_line_e3" />
+
+            <include
+                android:id="@+id/hy_actInitiaror_pickerApplyPeopleNum_layout"
+                layout="@layout/hy_layout_switch_1line_edittext" />
+
+            <include layout="@layout/hy_layout_split_line_e3" />
+
+            <include
+                android:id="@+id/hy_actInitiaror_fillin_info_layout"
+                layout="@layout/hy_layout_fillin_info"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

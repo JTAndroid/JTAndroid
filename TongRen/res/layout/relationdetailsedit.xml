@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffffff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <!-- 提示文字 -->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="点击按钮开始录音"
+        android:textSize="16sp"/>
+    <!-- 录音按钮 -->
+    <Button 
+        android:id="@+id/switchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="开始"/>
+	<!-- 分割线 -->
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="#ff000000"/>
+	<!-- 录音文件列表 -->
+	<ListView 
+	    android:id="@+id/fileLv"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="20dp"/>
+</LinearLayout>

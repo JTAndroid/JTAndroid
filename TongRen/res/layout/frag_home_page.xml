@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/im_gray"
+            android:orientation="vertical" >
+
+            <!-- 名片信息 -->
+
+            <include layout="@layout/layout_business_card" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@null" />
+            <!-- 与他对接 -->
+
+            <include layout="@layout/layout_item_to_docking" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 动态 -->
+
+            <include layout="@layout/layout_item_dynamic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 二维码名片 -->
+
+            <include layout="@layout/layout_item_maxcard" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 个人描述 -->
+
+            <include layout="@layout/layout_item_personal_description" />
+
+            <!-- 评价 -->
+
+            <include layout="@layout/layout_item_label" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 工作经历 -->
+
+            <include layout="@layout/layout_item_work_experience" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 教育经历 -->
+
+            <include layout="@layout/layout_item_education_experience" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/commen_text_color_hint" />
+            <!-- 其他 -->
+
+            <include layout="@layout/layout_item_other" />
+
+            <!--
+             <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/transparent" />
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        layout="@layout/relation_home_bottom_addfriend" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        layout="@layout/relation_home_bottom_sendmessage" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        layout="@layout/relation_home_bottom_wait_pass" />
+
+</LinearLayout>

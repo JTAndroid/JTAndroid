@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="horizontal" >
+    
+    <ImageView
+        android:id="@+id/home_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:src="@drawable/jt_dt_search" 
+        android:contentDescription="@null"/>
+
+    <EditText
+        android:id="@+id/home_search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionSearch"
+        android:inputType="text" 
+        android:text="asdfafd"/>
+
+</LinearLayout>

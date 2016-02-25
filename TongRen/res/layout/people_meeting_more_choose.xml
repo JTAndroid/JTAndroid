@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/people_white_circular_beed_background"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/delete_meeting_contant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="删除"
+            android:textColor="#FE6542"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/jointView_creater"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E3E3E3" />
+
+        <TextView
+            android:id="@+id/delete_meeting_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="编辑"
+            android:textColor="#0079FF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_meeting_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@drawable/people_white_circular_beed_background"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="取消"
+        android:textColor="#0079FF"
+        android:textSize="18sp" />
+
+</LinearLayout>

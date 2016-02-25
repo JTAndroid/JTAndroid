@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:onegravity="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <FrameLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topHeight"
+        android:background="@drawable/auth_title_back" >
+
+        <include
+            android:id="@+id/rte_titleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/ret_titleview" />
+
+        <RelativeLayout
+            android:id="@+id/rte_audiorecoder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/auth_title_back"
+            android:visibility="gone" >
+
+            <com.utils.note.view.SineWave
+                android:id="@+id/sw_recode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/topHeight"
+                android:layout_centerVertical="true" >
+            </com.utils.note.view.SineWave>
+
+            <Chronometer
+                android:id="@+id/timedown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="#4A4A4A"
+                android:text="@string/sample_time"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="#4A4A4A"
+                android:padding="10dp"
+                android:text="@string/finish"
+                android:textColor="#5FC253"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/rte_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_top"
+        android:layout_margin="4dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/rtet_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/label_subject"
+                android:singleLine="true" />
+
+            <include layout="@layout/rte_horizontal_separator" />
+
+            <com.utils.note.rteditor.RTEditText
+                android:id="@+id/rtEditText_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="top"
+                android:hint="@string/label_message"
+                android:imeOptions="actionDone|flagNoEnterAction"
+                android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                android:paddingBottom="100dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/rte_layout_toolbar"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 消息列表 -->
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/chatRecordPlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:listSelector="@color/white"
+        android:transcriptMode="normal" />
+
+    <!-- 语音面板 -->
+    <LinearLayout
+        android:id="@+id/inputLl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/chat_bj"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="8dp" >
+
+        <!-- 切换语音/文本 -->
+
+        <ImageView
+            android:id="@+id/switchIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:padding="8dp"
+            android:src="@drawable/chat_microphone"
+            android:visibility="visible" />
+
+        <!-- 输入框/语音按钮 -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <!-- 文本 -->
+
+            <EditText
+                android:id="@+id/textEt"
+                style="@style/item_edit"
+                android:layout_width="fill_parent"
+                android:minHeight="30dp"
+                android:background="@drawable/item_edit_background"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:maxLines="4"
+                android:textCursorDrawable="@null"
+                android:visibility="visible" />
+            <!-- 语音 -->
+
+            <TextView
+                android:id="@+id/voiceTv"
+                style="@style/common_text_style_large_gray"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/voice_talk_bg"
+                android:gravity="center"
+                android:text="按住 说话"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 表情 -->
+
+        <ImageView
+            android:id="@+id/expressionIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:contentDescription="@null"
+            android:src="@drawable/chat_biaoqing" />
+
+        <!-- 发送/附件 -->
+
+        <ImageView
+            android:id="@+id/sendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:contentDescription="@null"
+            android:src="@drawable/chat_more" />
+       
+    </LinearLayout>
+ <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffffff"
+            />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat_fengexian"
+        android:contentDescription="@null"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/smileyPagerContainer"
+        style="@style/layout_item_wfillv"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/smileyPager"
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:persistentDrawingCache="animation" >
+        </android.support.v4.view.ViewPager>
+
+        <ImageView
+            android:id="@+id/smileyPagerchange"
+            style="@style/item_comm"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:contentDescription="@null"
+            android:src="@drawable/chat_biaoqing_1" 
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <!-- 功能面板 -->
+    <LinearLayout
+        android:id="@+id/moreGrid_Ll"
+        style="@style/layout_item_wfillv"
+        android:gravity="center"
+        android:background="#f7f7f7"
+        android:paddingTop="7dp"
+        android:paddingLeft="29dp"
+        android:paddingRight="29dp"
+        android:paddingBottom="15dp"
+         android:visibility="gone"
+        >
+    <GridView
+        android:id="@+id/moreGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:listSelector="#f7f7f7"
+        android:numColumns="4"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="31dp"
+        android:cacheColorHint="@null"
+        android:visibility="gone" />
+</LinearLayout>
+</LinearLayout>

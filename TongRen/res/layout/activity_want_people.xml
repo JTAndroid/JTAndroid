@@ -1,0 +1,88 @@
+<!-- 主页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="欢迎来到金桐网，现在开始创建人脉吧！"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/uploadingCellphoneAddressBookBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/sign_in"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="导入手机通讯录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="您可能想结交的人脉/组织"
+        android:textColor="@color/gray"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/mainLv"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="#ffdcddd8"
+        android:dividerHeight="1dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_bar"
+        android:paddingRight="10dp"
+        >
+
+        <CheckBox
+            android:id="@+id/allcheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:drawableLeft="@drawable/list_item_tagcb_bg_selector"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="全选"
+            android:textColor="@color/black"
+            android:textSize="16sp" 
+            android:drawablePadding="10dp"
+             />
+
+
+        <TextView
+            android:id="@+id/addFriendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/register_add_friend_button_bg"
+            android:text="＋好友"
+            android:textColor="@color/black"
+            android:textSize="14sp" 
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 好友主界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_wfillh">
+	<ImageView style="@style/item_comm" android:id="@+id/icon" android:src="@drawable/face0"/>
+	<TextView style="@style/item_text_title" android:layout_toRightOf="@+id/icon" android:id="@+id/text" 
+	    android:src="@drawable/face0"/>
+	<ImageView style="@style/item_comm"  android:src="@drawable/face0" android:layout_alignParentRight="true"/>
+</RelativeLayout>

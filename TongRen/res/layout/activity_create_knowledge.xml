@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 标题 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/knowledge_item_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="标题"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <!-- <EditText -->
+
+                        <com.tr.ui.widgets.BaseEditTextWithPaseteCallBack
+                            android:id="@+id/knowledgeTitleEt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:gravity="right"
+                            android:hint="粘贴链接，自动填充 "
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 内容 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/knowledge_item_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/knowledgeContentLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/common_bg"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="内容"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/knowledgeContentTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:hint="请输入内容"
+                            android:maxLines="2"
+                            android:text=""
+                            android:textColor="@color/text_black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/arrow_right_grey" />
+                    </LinearLayout>
+
+                    <!-- 分隔线带 内容图片 -->
+
+                    <LinearLayout
+                        android:id="@+id/contentImageLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <!-- 分隔线 -->
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#CCCCCC" />
+                        <!-- 内容图片 -->
+
+                        <com.tr.ui.widgets.ExpandableHeightGridView
+                            android:id="@+id/contentImageGv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/common_border"
+                            android:horizontalSpacing="8dp"
+                            android:numColumns="4"
+                            android:padding="8dp"
+                            android:verticalSpacing="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 关联 -->
+                <!--
+            <LinearLayout
+                android:id="@+id/knowledgeRelatedLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/knowledge_item_bg"
+                android:orientation="horizontal"
+                android:padding="10dp" 
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="关联"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:hint="可添加相关人脉、知识、需求"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/arrow_right_grey" />
+            </LinearLayout>
+            
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text="关联"
+                android:visibility="gone"
+                />
+            
+
+            关联详细
+
+            <LinearLayout
+                android:id="@+id/relatedDetailsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/knowledge_item_bg"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                关联人脉
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/addRelatedPeopleLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:background="@drawable/common_bg"
+                        >
+
+                        <ImageView
+                            android:id="@+id/addRelatedPeopleIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/add_new_knowledge" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人脉"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/relatedPeopleLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:visibility="visible"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#CCCCCC" />
+
+                        <com.tr.ui.widgets.BasicListView2
+                            android:id="@+id/relatedPeopleBlv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/establish_fengexian" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                关联组织
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/addRelatedOrganizationLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:background="@drawable/common_bg"
+                        >
+
+                        <ImageView
+                            android:id="@+id/addRelatedOrganizationIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/add_new_knowledge" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="组织"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/relatedOrganizationLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:visibility="visible"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#CCCCCC" />
+
+                        <com.tr.ui.widgets.BasicListView2
+                            android:id="@+id/relatedOrganizationBlv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/establish_fengexian" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                
+                关联知识
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/addRelatedKnowledgeLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:background="@drawable/common_bg"
+                        >
+
+                        <ImageView
+                            android:id="@+id/addRelatedKnowledgeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/add_new_knowledge" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="知识"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/relatedKnowledgeLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:visibility="visible"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#CCCCCC" />
+
+                        <com.tr.ui.widgets.BasicListView2
+                            android:id="@+id/relatedKnowledgeBlv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/establish_fengexian" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                
+                关联需求(事件)
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/addRelatedRequirementLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:background="@drawable/common_bg"
+                        >
+
+                        <ImageView
+                            android:id="@+id/addRelatedRequirementIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:src="@drawable/add_new_knowledge" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="事件"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/relatedRequirementLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" 
+                        android:visibility="visible"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#CCCCCC" />
+
+                        <com.tr.ui.widgets.BasicListView2
+                            android:id="@+id/relatedRequirementBlv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/establish_fengexian" />
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+                
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/knowledge_item_bg"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/knowledgeCategoryLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp" 
+                    android:background="@drawable/common_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="目录"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/categoryTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:hint="请选择目录"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/arrow_right_grey" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/knowledgeTagLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp" 
+                    android:visibility="gone"
+                    android:background="@drawable/common_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="标签"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tagTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:ellipsize="end"
+                        android:hint="请选择标签"
+                        android:maxLines="2"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/arrow_right_grey" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#CCCCCC" />
+
+                <LinearLayout
+                    android:id="@+id/knowledgePermissionLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp" 
+                    android:visibility="gone"
+                    android:background="@drawable/common_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="权限控制"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/noPermissionTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:hint="独乐"
+                        android:text=""
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp" 
+                        android:visibility="visible"
+                        />
+                    
+                    <LinearLayout 
+                        android:id="@+id/permissionLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        android:visibility="gone"
+                        >
+                        
+                        <LinearLayout
+                            android:id="@+id/lowPermissionLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="小乐 : "
+                                android:singleLine="true"
+                                android:textColor="@color/orange"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/lowPermissionTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/text_gray"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                       
+                        
+                        <LinearLayout
+                            android:id="@+id/middlePermissionLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="中乐 : "
+                                android:singleLine="true"
+                                android:textColor="@color/orange"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/middlePermissionTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/text_gray"
+                                android:textSize="14sp" />
+                            
+                        </LinearLayout>
+                        
+                        
+                        
+                         <LinearLayout
+                            android:id="@+id/hightPermissionLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="大乐 : "
+                                android:singleLine="true"
+                                android:textColor="@color/orange"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/hightPermissionTv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/text_gray"
+                                android:textSize="14sp" />
+                            
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/arrow_right_grey" />
+                </LinearLayout>
+            </LinearLayout>
+                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/knowledge_asso_Tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f1f1f1"
+                        android:padding="10dp"
+                        android:text="关联信息"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <!--
+                             <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#e3e3e3" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/people_knowledge_Ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="人脉"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:id="@+id/person_Line"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/people_knowledge_conn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#e3e3e3" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/organization_knowledge_Ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="组织"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:id="@+id/organization_Line"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/organization_knowledge_conn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#e3e3e3" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/knowledge_knowledge_Ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="知识"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:id="@+id/knowledge_Line"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/knowledge_knowledge_conn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#e3e3e3" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/requirement_knowledge_Ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="事件"
+                            android:textColor="#1f1f1f"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/requirement_Line"
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="#e3e3e3" />
+
+                        <com.tr.ui.widgets.BasicListView2
+                            android:id="@+id/requirement_knowledge_conn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/establish_fengexian" >
+                        </com.tr.ui.widgets.BasicListView2>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#f1f1f1" />
+
+                    <include
+                        android:id="@+id/knowledgeTreeIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/people_include_view"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/knowledgeLabelIC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/people_include_view"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <LinearLayout
+                android:id="@+id/sidazujian_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/relevance_knowledge"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/people_textviewshape"
+                    android:drawableLeft="@drawable/people_associate"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="14dp"
+                    android:text="关联"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/catalogue_knowledge"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/people_textviewshape"
+                    android:drawableLeft="@drawable/people_contents"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="14dp"
+                    android:text="目录"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/label_knowledge"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/people_textviewshape"
+                    android:drawableLeft="@drawable/people_label"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="14dp"
+                    android:text="标签"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/jurisdiction_knowledge"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/people_textviewshape"
+                    android:drawableLeft="@drawable/people_competence"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="14dp"
+                    android:text="权限"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

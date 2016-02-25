@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+     >
+    
+    <TextView
+        android:id="@+id/module_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:textColor="#1f1f1f"
+        android:textSize="14sp"
+        android:text="模块选择" />
+
+	<CheckBox
+	    android:id="@+id/module_Cb"
+	    android:layout_width="18.5dp"
+	    android:layout_height="17dp"
+	    android:layout_alignParentRight="true"
+	   android:layout_centerVertical="true"
+	   android:focusable="false"
+	   android:clickable="false"
+	   android:background="@drawable/people_checkbox" 
+							android:button="@null"
+	   android:checked="false"
+	    android:layout_marginRight="15dp" />
+    
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff"
+        android:focusable="true"  
+   		android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:textColor="#808080"
+            android:text="名称" 
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/EditTextTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:textSize="16sp"
+            android:textColor="#5e6f74"
+            android:layout_marginLeft="15dp"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#b6c4c8"
+            android:hint="事务名称(必填)" />
+
+        <Button
+            android:id="@+id/ButtonSound"
+            android:layout_width="13dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/work_selector_new_sound"
+            android:visibility="gone"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

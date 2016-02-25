@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_lists_common_item_RL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/hy_selector_listitem_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp" >
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/contactLists_orgGroup_Iv"
+        android:layout_width="43.2dp"
+        android:layout_height="43.2dp"
+        android:clickable="false"
+        android:src="@drawable/hy_ic_default_friend_avatar" />
+
+    <TextView
+        android:id="@+id/contactLists_orgGroup_name_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+         android:layout_marginRight="12dp"
+         android:maxWidth="200dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/hy_listitem_nametext_font_color"
+        android:textSize="@dimen/hy_list_nametext_font"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/contactLists_orgGroup_Iv"/>
+
+    <ImageView
+        android:id="@+id/contactLists_orgGroup_checkBox_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginRight="12dp"
+        android:button="@drawable/hy_selector_check"
+        android:clickable="false"
+        android:src="@drawable/demand_me_need_checkbox_default" />
+
+</RelativeLayout>

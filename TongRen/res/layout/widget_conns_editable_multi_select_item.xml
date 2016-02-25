@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLl"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="horizontal" 
+    android:background="@drawable/conns_item_off"
+    android:gravity="center_vertical"
+    android:padding="5dp">
+    
+    <TextView 
+        android:id="@+id/itemTv"
+        style="@style/common_text_style_large_gray"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="高血压"
+        android:gravity="center"
+        android:singleLine="true"/>
+    
+    <ImageView 
+        android:id="@+id/deleteIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/conns_item_delete_bg"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <LinearLayout
+        android:id="@+id/fileHeadLl_navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/fileSearchEt_navigationbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/edittext_bg_shape"
+            android:cursorVisible="true"
+            android:drawableLeft="@drawable/related_res_search"
+            android:drawablePadding="5dp"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:padding="8dp"
+            android:textColor="#bebebe"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/fileCreateCatalogIv_navigationbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:src="@drawable/file_create_catalog" />
+    </LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/screen_Ll"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:background="#fff"
+	    >
+	    <TextView 
+	        android:id="@+id/screen_navigationbar"
+	        android:layout_marginTop="9dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginBottom="9dp"
+	        android:textSize="13sp"
+	        android:drawableLeft="@drawable/screen"
+	        android:drawablePadding="5dp"
+	        android:textColor="#507daf"
+	        android:padding="5dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="筛选"/>
+	    <View 
+	        android:layout_width="0.5dp"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="9dp"
+	        android:background="#808080"
+	        android:layout_marginBottom="9dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+	    <TextView 
+	        android:id="@+id/select_navigationbar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	         android:layout_marginTop="9dp"
+	        android:layout_marginBottom="9dp"
+	        android:textColor="#1f1f1f"
+	        android:textSize="13sp"
+	        android:text="全部"/>
+	</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#f1f1f1" />
+    
+
+</LinearLayout>

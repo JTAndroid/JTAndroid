@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 
+    <item
+        android:id="@+id/im_chat_record_search"
+        android:icon="@drawable/jt_dt_search"
+        android:showAsAction="always"
+        android:orderInCategory="0"
+        android:title="搜索"/>
+    -->
+    <item
+        android:id="@+id/im_muc_detail_create_next"
+        android:icon="@drawable/hy_ic_action_relation_pressed"
+        android:showAsAction="always"
+        android:orderInCategory="0"
+        android:title="详情"/>
+</menu>

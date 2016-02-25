@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/browsDelete"
+        android:showAsAction="always"
+        android:title="删除"
+       android:icon="@drawable/demand_delete">
+    </item>
+
+</menu>

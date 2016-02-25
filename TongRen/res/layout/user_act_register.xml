@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  
+    <!-- 导航区 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/req_detail_tab_bg"
+        android:orientation="vertical" >
+
+        <!-- Tab选项卡 -->
+
+        <LinearLayout
+            android:id="@+id/tabParentLl"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/tabPersonRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tabPersonTv"
+                    style="@style/common_text_style_large_orange"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_reg_per_on"
+                    android:drawablePadding="5dp"
+                    android:text="个人注册" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabOrgRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tabOrgTv"
+                    style="@style/common_text_style_large_black"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_reg_org_off"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="机构注册"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 指示条 -->
+
+        <View
+            android:id="@+id/indicatorVi"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:background="@drawable/req_detail_tab_indicator" />
+    </LinearLayout>
+    
+    <!-- 内容区 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+</LinearLayout>

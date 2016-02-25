@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:id="@+id/actionbarLayoutId"
+     >
+
+        <ImageView
+            android:id="@+id/reminder_time_backs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/arrow_left_grey"
+            android:onClick="onActionClick"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/time_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="时间"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/time_click_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="完成"
+            android:padding="10dp"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" 
+            android:onClick="onActionClick"
+            android:clickable="true"/>
+
+</RelativeLayout>

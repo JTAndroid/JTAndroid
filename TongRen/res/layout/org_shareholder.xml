@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_shareholder_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/shareholder_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="股东研究"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/edit_shareholder_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="edit"
+            android:padding="10dp"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/gao_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="61.5dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/tv_guname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="14.5dp"
+                    android:text=""
+                    android:textColor="#1e1e1e" />
+
+                <TextView
+                    android:id="@+id/tv_guposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_guname"
+                    android:paddingTop="16dp"
+                    android:text="董事长"
+                    android:textColor="#8c8c8c"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_gupname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_guname"
+                    android:paddingLeft="10dp"
+                    android:text="控股股东"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_gubili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_gupname"
+                    android:layout_toRightOf="@id/tv_gupname"
+                    android:paddingLeft="43dp"
+                    android:text="持股比率:"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_gusum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_gubili"
+                    android:layout_toRightOf="@id/tv_gubili"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/list_divider_color" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="61.5dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/tv_jishi_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="14.5dp"
+                    android:text=""
+                    android:textColor="#1e1e1e" />
+
+                <TextView
+                    android:id="@+id/tv_jishi_guposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_jishi_name"
+                    android:paddingTop="16dp"
+                    android:text="董事长"
+                    android:textColor="#8c8c8c"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_jishi_gupname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_jishi_name"
+                    android:paddingLeft="10dp"
+                    android:text="实际控股人"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_jishi_gubili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_jishi_gupname"
+                    android:layout_toRightOf="@id/tv_jishi_gupname"
+                    android:paddingLeft="43dp"
+                    android:text="持股比率:"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_jishi_gusum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_jishi_gubili"
+                    android:layout_toRightOf="@id/tv_jishi_gubili"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/list_divider_color" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="61.5dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/tv_zuizhong_guname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="14.5dp"
+                    android:text=""
+                    android:textColor="#1e1e1e" />
+
+                <TextView
+                    android:id="@+id/tv_zuizhong_guposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_zuizhong_guname"
+                    android:paddingTop="16dp"
+                    android:text="董事长"
+                    android:textColor="#8c8c8c"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_zuizhong_gupname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_zuizhong_guname"
+                    android:paddingLeft="10dp"
+                    android:text="最终控股人"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_zuizhong_gubili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_zuizhong_gupname"
+                    android:layout_toRightOf="@id/tv_zuizhong_gupname"
+                    android:paddingLeft="43dp"
+                    android:text="持股比率:"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_zuizhong_gusum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_zuizhong_gubili"
+                    android:layout_toRightOf="@id/tv_zuizhong_gubili"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+			<View 
+			    android:background="#e3e3e3"
+			      android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <ListView
+                android:id="@+id/konggu_Lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/IPOSHODER"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dp"
+                        android:text="十大股东"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/floating_stockholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dp"
+                        android:text="流通股东"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="相关描述"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e3e3e3" />
+
+            <ListView
+                android:id="@+id/stockholder_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

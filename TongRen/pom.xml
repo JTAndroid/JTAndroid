@@ -1,0 +1,439 @@
+<!-- 对此文件的修改禁止提交 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tr</groupId>
+	<artifactId>GinTong</artifactId>
+	<version>1.0.0 sim</version>
+	<packaging>apk</packaging>
+
+	<!-- 设置编码格式 -->
+	<properties>
+		<!-- use UTF-8 for everything -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<!-- 工程依赖 -->
+	<dependencies>
+		<!-- Android Framework -->
+		<dependency>
+			<groupId>android</groupId>
+			<artifactId>android</artifactId>
+			<version>4.4.2_r4</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Android Support包 -->
+		<dependency>
+			<groupId>com.android.support</groupId>
+			<artifactId>support-v4</artifactId>
+			<version>22.0.0</version>
+		</dependency>
+		<!-- 百度地图相关 -->
+		<dependency>
+			<groupId>gintong.librarys.baidu</groupId>
+			<artifactId>lbs</artifactId>
+			<version>3.3.0.11</version>
+		</dependency>
+		<!-- 地图 -->
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libBaiduMapSDK_v3_3_0_11</artifactId>
+			<version>3.3.0.11</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<!-- 定位 -->
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>liblocSDK5</artifactId>
+			<version>5.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<!-- 百度推送 -->
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libbdpush_V2_0</artifactId>
+			<version>2.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.baidu</groupId>
+			<artifactId>pushsdk</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+		<!-- 工具类包 -->
+		<dependency>
+			<groupId>gintong.librarys.apache</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.apache</groupId>
+			<artifactId>CommonsLangs</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<!-- 工具类 -->
+		<dependency>
+			<groupId>gintong.librarys.github</groupId>
+			<artifactId>NineOldAndroids</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.github</groupId>
+			<artifactId>PhotoView</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.github</groupId>
+			<artifactId>SqliteAssetHelper</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.github</groupId>
+			<artifactId>UniversalImageLoader</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.github</groupId>
+			<artifactId>xUtils</artifactId>
+			<version>2.6.7</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.google</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+		<!-- xcl charts -->
+		<dependency>
+			<groupId>gintong.librarys.xclchat</groupId>
+			<artifactId>xclchat</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.mpchat</groupId>
+			<artifactId>mpchat</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+		<!--zxing二维码 -->
+		<dependency>
+			<groupId>gintong.librarys.google</groupId>
+			<artifactId>zxing</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- 分享相关 -->
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>MobLogCollector</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>MobTools</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>Core</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>QQ</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>QZone</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>SinaWeibo</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>TencentWeibo</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>Wechat</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>Wechat.Core</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>Wechat.Favorite</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<!-- 会议笔记第三方包 -->
+		<dependency>
+			<groupId>gintong.librarys</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.sharesdk</groupId>
+			<artifactId>Wechat.Moments</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.8.2</version>
+		</dependency>
+		<!-- 汉字转拼音 -->
+		<dependency>
+			<groupId>gintong.librarys.sourceforge</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<!-- 透镜 -->
+		<dependency>
+			<groupId>gintong.librarys.tingyun</groupId>
+			<artifactId>newlens</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- 友盟 -->
+		<dependency>
+			<groupId>gintong.librarys.umeng</groupId>
+			<artifactId>analytics</artifactId>
+			<version>5.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libbspatch</artifactId>
+			<version>1.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<!-- Unknown -->
+		<dependency>
+			<groupId>gintong.librarys.unknown</groupId>
+			<artifactId>mframework</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- 科大讯飞 -->
+		<dependency>
+			<groupId>gintong.librarys.xunfei</groupId>
+			<artifactId>msc</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- 环信聊天 -->
+		<dependency>
+			<groupId>gintong.librarys.hxchat</groupId>
+			<artifactId>easemobchat</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libmsc</artifactId>
+			<version>1.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<!-- 引用其他的工程 -->
+		<dependency>
+			<groupId>gintong.librarys.self</groupId>
+			<artifactId>DynamicGrid</artifactId>
+			<version>1.0.0</version>
+			<type>aar</type>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.self</groupId>
+			<artifactId>IndicatorLibrary</artifactId>
+			<version>2.4.1</version>
+			<type>aar</type>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.self</groupId>
+			<artifactId>WheelLibrary</artifactId>
+			<version>2.1</version>
+			<type>aar</type>
+		</dependency>
+
+		<!-- MultiDex包 -->
+		<dependency>
+			<groupId>com.android.support</groupId>
+			<artifactId>multidex</artifactId>
+			<version>22.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<!-- 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<!-- android-maven-plugin -->
+			<plugin>
+				<groupId>com.simpligility.maven.plugins</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<version>4.0.0</version>
+				<inherited>true</inherited>
+				<extensions>true</extensions>
+				<configuration>
+					<sdk>
+						<platform>19</platform>
+						<path>${env.ANDROID_SDK_HOME}</path>
+					</sdk>
+					<deleteConflictingFiles>true</deleteConflictingFiles>
+					<extractDuplicates>true</extractDuplicates>
+					<undeployBeforeDeploy>true</undeployBeforeDeploy>
+					<androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
+					<!-- 引入aar工程时一定要加这个属性 -->
+					<mergeManifests>true</mergeManifests>
+					<assetsDirectory>${project.basedir}/assets</assetsDirectory>
+					<nativeLibrariesDirectory>${project.basedir}/libs</nativeLibrariesDirectory>
+					<resourceDirectory>${project.basedir}/res</resourceDirectory>
+					<dex>
+						<jvmArguments>
+							<jvmArgument>-Xms2048m</jvmArgument>
+							<jvmArgument>-Xmx2048m</jvmArgument>
+						</jvmArguments>
+						<multi-dex>true</multi-dex>
+						<minimal-main-dex>true</minimal-main-dex>
+						<dex-arguments>--set-max-idx-number=65536</dex-arguments>
+						<!-- 打包到class.dex中的类 -->
+						<!-- 如果App启动过程中提示找不到某个类，可以确认下该类是否添加到了MainDexList.txt文件中 -->
+						<main-dex-list>${project.basedir}/MainDexList.txt</main-dex-list>
+					</dex>
+					<!-- 加上这个属性说明是否要打签名包 -->
+					<sign>
+						<debug>true</debug>
+					</sign>
+					<!-- 对生成的包进行zipalign操作 -->
+					<zipalign>
+						<verbose>true</verbose>
+						<inputApk>${project.basedir}/target/${project.artifactId}-${project.version}.apk</inputApk>
+						<outputApk>${project.basedir}/target/${project.artifactId}-${project.version}-signed-aligned.apk</outputApk>
+						<skip>false</skip>
+					</zipalign>
+				</configuration>
+				<!-- 已签名的apk包需要进行zipaligned操作 -->
+				<executions>
+					<execution>
+						<id>alignApk</id>
+						<phase>package</phase>
+						<goals>
+							<goal>zipalign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											com.simpligility.maven.plugins
+										</groupId>
+										<artifactId>
+											android-maven-plugin
+										</artifactId>
+										<versionRange>
+											[4.0.0,)
+										</versionRange>
+										<goals>
+											<goal>emma</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- 打签名包配置 -->
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<version>1.2</version>
+						<executions>
+							<execution>
+								<id>signing</id>
+								<goals>
+									<goal>sign</goal>
+									<goal>verify</goal>
+								</goals>
+								<phase>package</phase>
+								<inherited>true</inherited>
+								<configuration>
+									<removeExistingSignatures>true</removeExistingSignatures>
+									<archiveDirectory></archiveDirectory>
+									<includes>
+										<include>${project.basedir}/target/${project.artifactId}-${project.version}-signed-aligned.apk</include>
+									</includes>
+									<keystore>android.keystore</keystore>
+									<storepass>www.gintong.com</storepass>
+									<keypass>www.gintong.com</keypass>
+									<alias>android.keystore</alias>
+									<!-- 如果jdk版本在1.7以上，对apk签名时，需要加上以下参数，否则会出现：Failure [INSTALL_PARSE_FAILED_NO_CERTIFICATES]的错误 -->
+									<arguments>
+										<argument>-sigalg</argument>
+										<argument>MD5withRSA</argument>
+										<argument>-digestalg</argument>
+										<argument>SHA1</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>com.simpligility.maven.plugins</groupId>
+						<artifactId>android-maven-plugin</artifactId>
+						<configuration>
+							<sign>
+								<debug>false</debug>
+							</sign>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
+
+

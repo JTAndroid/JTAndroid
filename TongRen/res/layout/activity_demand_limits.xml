@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/demand_item_division_line" />
+
+
+            <LinearLayout
+                android:id="@+id/itemLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line_width" />
+
+            <LinearLayout
+                android:id="@+id/relevanceLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/choose_jump_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/demand_choose_item_left"
+                android:paddingRight="@dimen/demand_choose_item_left" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/financing_desired_padding_top_bot"
+                    android:paddingTop="@dimen/financing_desired_padding_top_bot" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/demand_relevance" />
+
+                    <TextView
+                        android:textColor="@color/demand_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/financing_desired_txt_margin_left"
+                        android:text="@string/financing_esired_relevance" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rightCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/demand_cb_img_bg" />
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

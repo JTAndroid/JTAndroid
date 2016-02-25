@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commen_list_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f6f6f6" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_weight="0"
+            android:id="@+id/hy_myhy_im_group_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:singleLine="true"
+            android:text="11月8日"
+            android:textColor="@color/orange"
+            android:textSize="13sp" />
+
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/hy_myhy_im_group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:text="凯峰盛会"
+            android:textColor="#1f1f1f"
+            android:textSize="13sp" />
+
+        <TextView
+             android:layout_weight="0"
+            android:id="@+id/hy_myhy_im_gruop_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text=""
+            android:textColor="@color/blue"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

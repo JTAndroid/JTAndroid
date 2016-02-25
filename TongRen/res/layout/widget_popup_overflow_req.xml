@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/editLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/editTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="修改"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdcdcdc" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff6f6f6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/closeLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/closeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="终止此需求"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdcdcdc" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff6f6f6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/refreshLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/refreshTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="刷新"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdcdcdc" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff6f6f6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/followTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="关注"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdcdcdc" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff6f6f6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toBReqLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/toBReqTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="转为业务需求"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffdcdcdc" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#fff6f6f6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toProjLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/toProjTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/overflow_item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="转为项目"
+                android:textColor="@drawable/overflow_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

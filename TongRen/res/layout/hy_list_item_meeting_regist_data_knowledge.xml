@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="6dp" >
+
+    <!-- 这里是通过两张ImageView实现的checkBox 到时候要更换 -->
+
+    <ImageView
+        android:id="@+id/hy_meeting_data_checkbox_unselected"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/hy_icon_meeting_data_normal"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/hy_meeting_data_checkbox_selected"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/hy_icon_meeting_data_checked"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hy_meeting_data_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="XXXXX为什么亏损"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp"
+             />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+		android:layout_marginTop="7dp"
+             >
+
+            <TextView
+                android:id="@+id/hy_meeting_data_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014-8-11"
+                android:textColor="#8d8d8d"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/hy_meeting_data_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="360k"
+                android:textColor="#8d8d8d"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

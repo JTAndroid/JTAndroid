@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.9 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/hy_actBroPhoto_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v4.view.ViewPager>
+
+    <RelativeLayout
+        android:id="@+id/hy_actBroPhoto_btmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/hy_actBroPhoto_exit"  
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/hy_selector_x_btn" />
+
+        <Button
+            android:id="@+id/hy_actBroPhoto_del"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/hy_selector_delete_btn"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/hy_actBroPhoto_ok"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+             android:layout_marginRight="60dp"
+            android:background="@drawable/hy_selector_ok_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

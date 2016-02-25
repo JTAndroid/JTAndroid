@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 姓名 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="@string/not_null"
+        edittextview:text_label="@string/full_name" />
+    <!-- 性别 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_hint_label="@string/yes_null"
+        edittextview:text_label="@string/_gender_Etv" />
+    <!-- 职能即： 行业/方向 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_hint_label="@string/yes_null"
+        edittextview:text_label="职能" />
+    <!-- 公司 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="@string/yes_null"
+        edittextview:text_label="@string/_company_Etv" />
+    <!-- 职位 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="@string/yes_null"
+        edittextview:text_label="@string/_post_Etv" />
+    <!-- 地区 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_hint_label="@string/yes_null"
+        edittextview:text_label="@string/_area_Etv" />
+
+</LinearLayout>

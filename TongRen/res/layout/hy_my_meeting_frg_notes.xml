@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 20141103 zhang nian -->
+<!-- 我的会议-笔记页面布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hy_myhy_ll_notes"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jt_list_style"
+    android:orientation="vertical" >
+
+    <ExpandableListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:divider="@drawable/aff_det_keyword_bottom" >
+    </ExpandableListView>
+
+</RelativeLayout>

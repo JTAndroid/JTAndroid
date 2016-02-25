@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="main_action_list">
+        <item>任务</item>
+        <item>讨论</item>
+        <item>畅聊</item>
+        <item>消息</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="default_face_texts">
+        <item>"[大笑]"</item>
+        <item>"[调皮]"</item>
+        <item>"[汗]"</item>
+        <item>"[偷笑]"</item>
+        <item>"[白白]"</item>
+        <item>"[敲打]"</item>
+        <item>"[流汗]"</item>
+        <item>"[泪如泉涌]"</item>
+        <item>"[大哭]"</item>
+        <item>"[嘘嘘]"</item>
+        <item>"[酷]"</item>
+        <item>"[抓狂]"</item>
+        <item>"[委屈]"</item>
+        <item>"[一坨屎]"</item>
+        <item>"[刀砍]"</item>
+        <item>"[可爱]"</item>
+        <item>"[色]"</item>
+        <item>"[害羞]"</item>
+        <item>"[得意]"</item>
+        <item>"[吐]"</item>
+    </string-array>
+    <string-array name="default_face_texts2">
+        <item>"[微笑]"</item>
+        <item>"[发怒]"</item>
+        <item>"[尴尬]"</item>
+        <item>"[惊恐]"</item>
+        <item>"[擦汗]"</item>
+        <item>"[香吻]"</item>
+        <item>"[白眼]"</item>
+        <item>"[傲气]"</item>
+        <item>"[哇哦]"</item>
+        <item>"[疑问]"</item>
+        <item>"[睡觉]"</item>
+        <item>"[亲亲]"</item>
+        <item>"[憨笑]"</item>
+        <item>"[撇嘴]"</item>
+        <item>"[阴险]"</item>
+        <item>"[奋斗]"</item>
+        <item>"[发呆]"</item>
+        <item>"[右哼哼]"</item>
+        <item>"[抱抱]"</item>
+        <item>"[坏笑]"</item>
+    </string-array>
+    <string-array name="face_texts">
+        <item>[爱心]</item>
+        <item>[白白]</item>
+        <item>[羡慕哇]</item>
+        <item>[卖萌]</item>
+        <item>[抓狂中]</item>
+        <item>[憨憨哒]</item>
+        <item>[噢耶]</item>
+        <item>[避而不谈]</item>
+        <item>[心碎一地]</item>
+        <item>[吃饭]</item>
+        <item>[点赞]</item>
+        <item>[伤心难过]</item>
+        <item>[大爱]</item>
+        <item>[差劲]</item>
+        <item>[呱唧呱唧]</item>
+        <item>[足球]</item>
+        <item>[太low]</item>
+        <item>[拜谢]</item>
+        <item>[握手]</item>
+        <item>[生快]</item>
+        <item>[fighting]</item>
+        <item>[嘿嘿]</item>
+        <item>[笑哭了]</item>
+        <item>[微笑]</item>
+        <item>[鬼脸]</item>
+        <item>[爱慕]</item>
+        <item>[感冒]</item>
+        <item>[昏昏欲睡]</item>
+        <item>[吃药]</item>
+        <item>[玫瑰发]</item>
+        <item>[亲亲]</item>
+        <item>[NO]</item>
+        <item>[香蕉]</item>
+        <item>[祝福]</item>
+        <item>[奖杯]</item>
+        <item>[抽烟]</item>
+        <item>[大赞]</item>
+        <item>[阿弥陀佛]</item>
+        <item>[飞吻]</item>
+        <item>[强大]</item>
+        <item>[赚大钱]</item>
+        <item>[大喜]</item>
+        <item>[鞭炮]</item>
+        <item>[大发]</item>
+        <item>[发财猫]</item>
+        <item>[神秘礼物]</item>
+        <item>[人民币]</item>
+        <item>[祈福]</item>
+        <item>[K歌]</item>
+        <item>[阴险]</item>
+        <item>[雨天]</item>
+        <item>[阴天]</item>
+        <item>[灰机]</item>
+        <item>[大牛市]</item>
+        <item>[TM]</item>
+        <item>[沙发]</item>
+        <item>[满分]</item>
+        <item>[大涨]</item>
+        <item>[大跌]</item>
+        <item>[得意]</item>
+        <item>[大汗]</item>
+        <item>[纠结]</item>
+        <item>[敲打]</item>
+        <item>[泪流满面]</item>
+        <item>[嘘]</item>
+        <item>[屎坨坨]</item>
+        <item>[勾引]</item>
+        <item>[咖啡]</item>
+        <item>[边儿去]</item>
+        <item>[害羞]</item>
+        <item>[酷]</item>
+        <item>[委屈]</item>
+        <item>[猪头]</item>
+        <item>[白眼]</item>
+        <item>[傲慢]</item>
+        <item>[雾霾]</item>
+        <item>[OK]</item>
+        <item>[激动]</item>
+        <item>[认错]</item>
+        <item>[吐舌头]</item>
+        <item>[大哭]</item>
+        <item>[偷笑]</item>
+        <item>[杀猪刀]</item>
+        <item>[蛋糕]</item>
+        <item>[礼物]</item>
+        <item>[常青树]</item>
+        <item>[皇冠]</item>
+        <item>[花凋落]</item>
+        <item>[挤眉弄眼]</item>
+        <item>[咒骂]</item>
+        <item>[情绪低落]</item>
+        <item>[坏笑]</item>
+        <item>[雨伞]</item>
+        <item>[圣诞树]</item>
+        <item>[出击]</item>
+        <item>[鼓掌]</item>
+        <item>[戒指]</item>
+        <item>[大笑]</item>
+        <item>[晕掉]</item>
+        <item>[尴尬]</item>
+        <item>[疑问]</item>
+        <item>[高角杯]</item>
+        <item>[钱袋子]</item>
+        <item>[哼哼]</item>
+        <item>[无语]</item>
+        <item>[冒汗]</item>
+        <item>[大红唇]</item>
+        <item>[撇嘴]</item>
+        <item>[抱抱]</item>
+        <item>[电话]</item>
+        <item>[鄙视]</item>
+        <item>[冰淇淋]</item>
+        <item>[昏睡]</item>
+        <item>[右哼哼]</item>
+        <item>[啤酒泡泡]</item>
+        <item>[爱情]</item>
+        <item>[淘气]</item>
+        <item>[舔嘴]</item>
+        <item>[困死]</item>
+        <item>[衰]</item>
+        <item>[憨憨笑]</item>
+        <item>[大兵]</item>
+        <item>[左哼哼]</item>
+        <item>[打瞌睡]</item>
+        <item>[怒吼]</item>
+        <item>[百抓挠心]</item>
+        <item>[蔫儿坏]</item>
+        <item>[糗]</item>
+        <item>[不顺眼]</item>
+        <item>[抠鼻]</item>
+        <item>[抓狂]</item>
+        <item>[奋斗]</item>
+        <item>[马到成功]</item>
+        <item>[火箭]</item>
+        <item>[公交车]</item>
+        <item>[哇]</item>
+        <item>[囧到汗死]</item>
+        <item>[囧]</item>
+        <item>[流口水]</item>
+        <item>[亲亲侬]</item>
+        <item>[动车]</item>
+        <item>[惊呆]</item>
+        <item>[打针]</item>
+    </string-array>
+    <string-array name="im_message_dialog_items">
+        <item>转发消息</item>
+        <item>复制消息</item>
+    </string-array>
+    <string-array name="im_message_dialog_items_2">
+        <item>转发消息</item>
+    </string-array>
+    <string-array name="week_array">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+    <string-array name="date">
+        <item>年</item>
+        <item>月</item>
+        <item>日</item>
+        <item>时</item>
+        <item>分</item>
+    </string-array>
+    <string-array name="select_photo">
+        <item>拍照</item>
+        <item>选择本地照片</item>
+    </string-array>
+    <string-array name="select_video">
+        <item>拍摄视频</item>
+        <item>从视频库选择</item>
+    </string-array>
+    <string-array name="task_schedule">
+        <item>选择任务进度</item>
+        <item>0%</item>
+        <item>10%</item>
+        <item>20%</item>
+        <item>......</item>
+    </string-array>
+    <string-array name="pro_exc_mode">
+        <item>选择项目执行方式</item>
+        <item>推介</item>
+        <item>承做</item>
+        <item>推介和承做</item>
+    </string-array>
+    <string-array name="persion_backgroud_list">
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中</item>
+        <item>中专 </item>
+        <item>专科</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
+    </string-array>
+
+    <array name="fileEndingImage">
+        <item>.png</item>
+        <item>.gif</item>
+        <item>.jpg</item>
+        <item>.jpeg</item>
+        <item>.bmp</item>
+    </array>
+    <array name="fileEndingAudio">
+        <item>.mp3</item>
+        <item>.wav</item>
+        <item>.ogg</item>
+        <item>.midi</item>
+        <item>.amr</item>
+    </array>
+    <array name="fileEndingVideo">
+        <item>.mp4</item>
+        <item>.rmvb</item>
+        <item>.avi</item>
+        <item>.flv</item>
+        <item>.3gp</item>
+    </array>
+    <array name="fileEndingPackage">
+        <item>.jar</item>
+        <item>.zip</item>
+        <item>.rar</item>
+        <item>.gz</item>
+        <item>.apk</item>
+        <item>.img</item>
+    </array>
+    <array name="fileEndingWebText">
+        <item>.htm</item>
+        <item>.html</item>
+        <item>.php</item>
+        <item>.jsp</item>
+    </array>
+    <array name="fileEndingText">
+        <item>.txt</item>
+        <item>.java</item>
+        <item>.c</item>
+        <item>.cpp</item>
+        <item>.py</item>
+        <item>.xml</item>
+        <item>.json</item>
+        <item>.log</item>
+    </array>
+    <array name="fileEndingWord">
+        <item>.doc</item>
+        <item>.docx</item>
+    </array>
+    <array name="fileEndingExcel">
+        <item>.xls</item>
+        <item>.xlsx</item>
+    </array>
+    <array name="fileEndingPPT">
+        <item>.ppt</item>
+        <item>.pptx</item>
+    </array>
+    <array name="fileEndingPdf">
+        <item>.pdf</item>
+    </array>
+
+    <!-- 人脉板块 -->
+    <array name="connections_module">
+        <item>基本信息</item>
+        <item>联系方式</item>
+        <item>个人情况</item>
+        <item>投资需求</item>
+        <item>融资需求</item>
+        <item>专家需求</item>
+        <item>他是专家身份</item>
+        <item>教育经历</item>
+        <item>工作经历</item>
+        <item>社会活动</item>
+        <item>会面情况</item>
+        <item>上传附件</item>
+    </array>
+
+    <!-- 基本信息 -->
+    <!-- 姓名 -->
+    <array name="conns_name">
+        <item>中文名</item>
+        <item>英文名</item>
+    </array>
+    <!-- 性别 -->
+    <array name="conns_gender">
+        <item>男</item>
+        <item>女</item>
+        <item>未知</item>
+    </array>
+
+    <!-- 联系方式 -->
+    <!-- 手机 -->
+    <array name="conns_mobile">
+        <item>手机</item>
+        <item>电话</item>
+        <item>商务电话</item>
+        <item>主要电话</item>
+    </array>
+    <!-- 固话 -->
+    <array name="conns_phone">
+        <item>固话</item>
+        <item>家庭固话</item>
+        <item>办公固话</item>
+        <item>主要固话</item>
+    </array>
+    <!-- 传真 -->
+    <array name="conns_fax">
+        <item>住宅传真</item>
+        <item>商务传真</item>
+    </array>
+    <!-- 邮箱 -->
+    <array name="conns_email">
+        <item>主要邮箱</item>
+        <item>商务邮箱</item>
+    </array>
+    <!-- 主页 -->
+    <array name="conns_homepage">
+        <item>商务主页</item>
+        <item>个人主页</item>
+    </array>
+    <!-- 即时通讯 -->
+    <array name="conns_im">
+        <item>QQ</item>
+        <item>微信</item>
+        <item>微博</item>
+        <item>Skype</item>
+        <item>facebook</item>
+        <item>twitter</item>
+    </array>
+    <!-- 地址 -->
+    <array name="conns_address">
+        <item>住宅地址</item>
+        <item>商务地址</item>
+    </array>
+
+    <!-- 个人情况 -->
+    <!-- 信仰 -->
+    <array name="conns_religious">
+        <item>佛教</item>
+        <item>道教</item>
+        <item>基督教</item>
+        <item>天主教</item>
+        <item>犹太教</item>
+        <item>伊斯兰教</item>
+        <item>印度教</item>
+        <item>无神论</item>
+    </array>
+    <!-- 重要日期 -->
+    <array name="conns_keydates">
+        <item>生日</item>
+        <item>周年纪念日</item>
+    </array>
+    <!-- 社会关系 -->
+    <array name="conns_social_relations">
+        <item>配偶</item>
+        <item>父亲</item>
+        <item>母亲</item>
+        <item>兄弟</item>
+        <item>姐妹</item>
+        <item>同居伴侣</item>
+        <item>子女</item>
+        <item>经理</item>
+        <item>助手</item>
+        <item>合作伙伴</item>
+        <item>介绍人</item>
+    </array>
+    <!-- 身体情况 -->
+    <array name="conns_healthy">
+        <item>健康</item>
+        <item>高血压</item>
+        <item>心脏病</item>
+        <item>胃病</item>
+        <item>无其他疾病</item>
+    </array>
+    <!-- 生活习惯 -->
+    <array name="conns_habit">
+        <item>抽烟</item>
+        <item>喝酒</item>
+        <item>打牌</item>
+        <item>不近烟酒</item>
+        <item>早睡早起</item>
+        <item>忌辛辣</item>
+    </array>
+    <!-- 爱好 -->
+    <array name="conns_hobby">
+        <item>游泳</item>
+        <item>爬山</item>
+        <item>钓鱼</item>
+        <item>唱歌</item>
+        <item>电影</item>
+        <item>羽毛球</item>
+        <item>旅游</item>
+        <item>美食</item>
+    </array>
+
+    <!-- 教育经历 -->
+    <!-- 学历 -->
+    <array name="conns_education">
+        <item>保密</item>
+        <item>MBA</item>
+        <item>博士</item>
+        <item>硕士</item>
+        <item>本科</item>
+        <item>专科</item>
+        <item>中专</item>
+        <item>高中</item>
+        <item>初中</item>
+        <item>小学</item>
+    </array>
+    <!-- 学位 -->
+    <array name="conns_degree">
+        <item>博士学位</item>
+        <item>硕士学位</item>
+        <item>学士学位</item>
+    </array>
+
+    <!-- 学位 -->
+    <array name="conns_studyAbroadType">
+        <item>是</item>
+        <item>否</item>
+    </array>
+
+    <!-- 同学关系 -->
+    <array name="conns_classmate_relations">
+        <item>同学关系</item>
+        <item>校友</item>
+        <item>老师</item>
+        <item>校长</item>
+        <item>自定义模版</item>
+    </array>
+    <!-- 外语语种 -->
+    <array name="conns_languages">
+        <item>英语</item>
+        <item>日语</item>
+        <item>法语</item>
+        <item>德语</item>
+        <item>韩语</item>
+        <item>俄语</item>
+        <item>西班牙语</item>
+        <item>葡萄牙语</item>
+        <item>阿拉伯语</item>
+        <item>意大利语</item>
+    </array>
+
+    <!-- 工作经历 -->
+    <!-- 同事关系 -->
+    <array name="conns_colleague_relations">
+        <item>同事</item>
+        <item>上级</item>
+        <item>下级</item>
+    </array>
+
+    <!-- 社会活动 -->
+    <!-- 活动类型 -->
+    <array name="conns_activities">
+        <item>社团</item>
+        <item>组织</item>
+        <item>党派</item>
+        <item>政治团体</item>
+        <item>慈善机构</item>
+    </array>
+
+    <!-- 民族 -->
+    <array name="ethnic">
+        <item>汉族</item>
+        <item>壮族</item>
+        <item>满族</item>
+        <item>回族</item>
+        <item>苗族</item>
+        <item>维吾尔族 </item>
+        <item>土家族</item>
+        <item>彝族</item>
+        <item>蒙古族</item>
+        <item>藏族</item>
+        <item>布依族</item>
+        <item>侗族</item>
+        <item>瑶族 </item>
+        <item>朝鲜族</item>
+        <item>白族</item>
+        <item>哈尼族</item>
+        <item>哈萨克族</item>
+        <item>黎族</item>
+        <item>傣族</item>
+        <item>畲族</item>
+        <item>傈僳族</item>
+        <item>仡佬族</item>
+        <item>东乡族</item>
+        <item>高山族</item>
+        <item>拉祜族</item>
+        <item>水族</item>
+        <item>佤族</item>
+        <item>纳西族</item>
+        <item>羌族</item>
+        <item>土族</item>
+        <item>仫佬族</item>
+        <item>锡伯族 </item>
+        <item>柯尔克孜族</item>
+        <item>达斡尔族</item>
+        <item>景颇族</item>
+        <item>毛南族</item>
+        <item>撒拉族 </item>
+        <item>布朗族</item>
+        <item>塔吉克族</item>
+        <item>阿昌族</item>
+        <item>普米族</item>
+        <item>鄂温克族</item>
+        <item>怒族</item>
+        <item>京族</item>
+        <item>基诺族</item>
+        <item>德昂族</item>
+        <item>保安族</item>
+        <item>俄罗斯族</item>
+        <item>裕固族</item>
+        <item>乌孜别克族</item>
+        <item>门巴族</item>
+        <item>鄂伦春族</item>
+        <item>独龙族</item>
+        <item>塔塔尔族</item>
+        <item>赫哲族</item>
+        <item>珞巴族</item>
+    </array>
+
+    <!-- 英语等级 -->
+    <array name="english_level">
+        <item>大学英语四级考试(CET-4)</item>
+        <item>大学英语六级考试(CET-6)</item>
+        <item>大学英语专业四级(TEM-4)</item>
+        <item>大学英语专业八级(TEM-8)</item>
+        <item>英语口译考试</item>
+        <item>英语笔译考试</item>
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>BEC初级</item>
+        <item>BEC中级</item>
+        <item>BEC高级</item>
+        <item>托福</item>
+        <item>雅思</item>
+        <item>托业</item>
+        <item>GRE</item>
+        <item>GMAT</item>
+        <item>SAT</item>
+        <item>全国外语水平考试PETS</item>
+        <item>计算机职业英语一级</item>
+        <item>计算机职业英语二级</item>
+        <item>计算机职业英语三级</item>
+    </array>
+
+    <!-- 日语等级 -->
+    <array name="japanese_level">
+        <item>日语专业四级考试</item>
+        <item>日语专业八级考试</item>
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>BJT商务日语能力考试</item>
+        <item>JSST日语标准口语考试</item>
+        <item>JLPT(N1级)</item>
+        <item>JLPT(N2级)</item>
+        <item>JLPT(N3级)</item>
+        <item>JLPT(N4级)</item>
+        <item>JLPT(N5级)</item>
+        <item>全国外语水平考试-日语(NNS)</item>
+        <item>J.TEST实用日本语鉴定考试(初级)</item>
+        <item>J.TEST实用日本语鉴定考试(中高级</item>
+        <item>J.TEST实用日本语鉴定考试(初级)</item>
+    </array>
+
+    <!-- 法语等级 -->
+    <array name="frence_level">
+        <item>公共法语四级</item>
+        <item>大学法语四级</item>
+        <item>法语专业四级</item>
+        <item>法语专业八级</item>
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>TEF考试</item>
+        <item>TCF考试</item>
+        <item>全国外语水平考试-法语(TNF)</item>
+        <item>DELF/DALF考试</item>
+        <item>公务员法语考试</item>
+        <item>TAGE-MAGE考试</item>
+    </array>
+
+    <!-- 德语等级 -->
+    <array name="german_level">
+        <item>大学德语四级考试</item>
+        <item>大学德语六级考试</item>
+        <item>德语专业四级</item>
+        <item>德语专业八级</item>
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>德语导游资格考试</item>
+        <item>全国专业人员技术职称德语等级考试</item>
+        <item>德福考试(TestDaF 3级)</item>
+        <item>德福考试(TestDaF 4级)</item>
+        <item>德福考试(TestDaF 5级)</item>
+        <item>全国外语水平考试-德语(NTD)</item>
+        <item>高校德语水平考试DSH</item>
+        <item>ZdaF考试</item>
+        <item>ZMP考试</item>
+        <item>ZOP考试</item>
+        <item>KDS考试</item>
+        <item>GDS考试</item>
+        <item>PWD考试</item>
+    </array>
+
+    <!-- 韩语等级 -->
+    <array name="korean_level">
+        <item>韩国语能力考试(TOPIK)低级</item>
+        <item>韩国语能力考试(TOPIK)中级</item>
+        <item>韩国语能力考试(TOPIK)高级</item>
+        <item>实务韩国语考试</item>
+        <item>韩语能力考试(KPT)</item>
+        <item>韩国文字审定考试</item>
+        <item>韩国语水平考试(KLT)</item>
+        <item>世界韩国语认证考试(KLPT)</item>
+        <item>国际商务韩语等级认证考试</item>
+    </array>
+
+    <!-- 俄语等级 -->
+    <array name="russian_level">
+        <item>大学俄语四级</item>
+        <item>大学俄语六级</item>
+        <item>俄语专业四级</item>
+        <item>俄语专业八级</item>
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>职称俄语考试</item>
+        <item>全国外语水平考试-俄语(ТПРЯ)</item>
+        <item>俄语基础级水平考试</item>
+        <item>俄语初级水平考试</item>
+        <item>俄语一级水平考试</item>
+        <item>俄语二级水平考试</item>
+        <item>俄语三级水平考试</item>
+        <item>俄语四级水平考试</item>
+    </array>
+
+    <!-- 西班牙语等级 -->
+    <array name="spanish_level">
+        <item>西班牙语水平考试(DELE)初级</item>
+        <item>西班牙语水平考试(DELE)中级</item>
+        <item>西班牙语水平考试(DELE)高级</item>
+        <item>全国翻译资格考试(CATTI)</item>
+    </array>
+
+    <!-- 葡萄牙语等级 -->
+    <array name="portuguese_level">
+        <item>葡萄牙语水平测试(CIPLE)入门级</item>
+        <item>葡萄牙语水平测试(DEPLE)初级</item>
+        <item>葡萄牙语水平测试(DIPLE)中级</item>
+        <item>葡萄牙语水平测试(DAPLE)高级</item>
+        <item>葡萄牙语水平测试(DUPLE)</item>
+    </array>
+
+    <!-- 阿拉伯语等级 -->
+    <array name="arabic_level">
+        <item>全国翻译资格考试(CATTI)</item>
+        <item>阿拉伯语专业四级考试</item>
+    </array>
+
+    <!-- 意大利语等级 -->
+    <array name="italian_level">
+        <item>意大利语水平考试(CILS/CELI)初级</item>
+        <item>意大利语水平考试(CILS/CELI)中级</item>
+        <item>意大利语水平考试(CILS/CELI)高级</item>
+        <item>意大利PLIDA考试A1</item>
+        <item>意大利PLIDA考试A2</item>
+        <item>意大利PLIDA考试B1</item>
+        <item>意大利PLIDA考试B2</item>
+        <item>意大利PLIDA考试C1</item>
+        <item>意大利PLIDA考试C2</item>
+    </array>
+
+    <string-array name="hy_slide_letters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+        <item>#</item>
+    </string-array>
+    <string-array name="demand_preview_video">
+        <item>关闭</item>
+        <item>仅WI-FI</item>
+        <item>3G/4G和WI-FI</item>
+    </string-array>
+    <string-array name="famous_quotes">
+        <item>成功并不是重要的事，重要的是努力。——加费罗</item>
+        <item>成功的秘诀，在永不改变既定的目的。——卢梭</item>
+        <item>当你做成功一件事，千万不要等待着享受荣誉，应该再做那些需要的事。 ——巴斯德</item>
+        <item>不在乎别人是否赏识他的人，必然成功。——金基尔</item>
+        <item>凡是自强不息者，最终都会成功。——歌德</item>
+        <item>你因成功而内心充满喜悦的时候，就没有时间颓废。——弗兰克·迈耶</item>
+        <item>当你希望成功，当以恒心为良友。——爱迪生</item>
+        <item>如果工作是一种乐趣，人生就是天堂!——歌德</item>
+        <item>要工作，要勤劳，劳动是最可靠的财富。——拉封丹</item>
+        <item>天才就其本质而论只不过是对事业、对工作过程的热爱而已。——高尔基</item>
+        <item>最好不是在夕阳西下的时候幻想什么，而要在旭日东升的时候即投入工作。——谢觉哉</item>
+        <item>你要追求工作，别让工作追求你。 ——富兰克林</item>
+        <item>别因为落入了一把牛毛就把一锅奶油泼掉，别因为犯了一点错误就把一生的事业扔掉。——蒙古</item>
+        <item>任何研究工作都应有所创新。创新的基础，一是新概念的指导，二是新方法的突破。——王鸿祯</item>
+        <item>生活最沉重的负担不是工作，而是无聊。——罗曼.罗兰</item>
+        <item>敏而好学，不耻下问。——孔子</item>
+        <item>不怕读得少，只怕记不牢。——徐特立</item>
+        <item>少壮不努力，老大徒伤悲。——汉乐府长歌行</item>
+        <item>读过一本好书，像交了一个益友。——藏克家</item>
+        <item>饭可以一日不吃，觉可以一日不睡，书不可以一日不读。——毛泽东</item>
+        <item>读一本好书，就是和许多高尚的人谈话。——歌德</item>
+        <item>不读书的人，思想就会停止。 ——狄德罗</item>
+        <item>书山有路勤为径，学海无涯苦作舟。——韩愈</item>
+        <item>和书籍生活在一起，永远不会叹气。——罗曼罗兰</item>
+        <item>天下无难事，只怕有心人。天下天易事，只怕粗心人。——袁枚</item>
+        <item>欲速而不达。——孔丘《论语》</item>
+        <item>不要失去信心，只有坚韧不拔，就终会有成果的。——钱学森</item>
+        <item>学而时习之，不亦说乎？——孔丘《论语》</item>
+        <item>锲而舍之，朽木不折；坚持不懈，金石可镂。——荀况</item>
+        <item>日日行，不怕千万里；常常做，不怕千万事。——金樱</item>
+        <item>精诚所至，金石为开。——蔡锷</item>
+        <item>只有功夫深，铁杵磨成针。——中国谚语</item>
+        <item>最可怕的敌人，就是没有坚强的信念。——罗曼罗兰</item>
+        <item>有志者事竟成也！——刘秀</item>
+        <item>君子志于择天下。——刘炎</item>
+        <item>古之立大事者，不惟有超世之才，亦必有坚忍不拔之志。 ——苏轼</item>
+        <item>一个有坚强心志的人，财产可以被人掠夺，勇气却不会被人剥夺的。—— 雨果</item>
+        <item>一知半解的人，多不谦虚；见多识广有本领的人，一定谦虚。——谢觉哉</item>
+        <item>路曼曼其修远兮，吾将上下而求索。 —— 屈原</item>
+        <item>在劳力上劳心，是一切发明之母。事事在劳力上劳心，变可得事物之真理。—— 陶行知</item>
+        <item>志向不过是记忆的奴隶，生气勃勃地降生，但却很难成长。 —— 莎士比亚</item>
+        <item>积土而为山，积水而为海。——荀子</item>
+        <item>对我来说,不学习,毋宁死。——罗蒙诺索夫</item>
+        <item>天下之事常成于困约，而败于奢靡。——陆游</item>
+        <item>少壮不努力，老大徒悲伤。——汉乐府</item>
+        <item>一日不书，百事荒芜。——李诩</item>
+        <item>尺有所短;寸有所长。物有所不足;智有所不明。——屈原</item>
+        <item>锲而舍之，朽木不折;锲而不舍，金石可镂。——荀子</item>
+        <item>不傲才以骄人，不以宠而作威。——诸葛亮</item>
+        <item>若要功夫深，铁杵磨成针。——曹学</item>
+        <item>人生各有志。——王粲</item>
+        <item>人生莫惧少年贫。——曾国藩</item>
+        <item>我也说不出人生在世，是不是一件容易事儿。——高尔斯华绥</item>
+        <item>人生，始终充满战斗激情。——惠特曼</item>
+        <item>人生处万类，知识最为贤。——韩愈</item>
+        <item>在人生中最艰难的是选择。——莫尔</item>
+        <item>在蠢人感到人生困难的时候，贤人看起来容易；而当蠢人感到容易的时候，贤者就感到困难。——歌德</item>
+        <item>人生中最困难者，莫过于选择。——莫尔</item>
+        <item>一寸光阴一寸金，寸金难买寸光阴。——王贞白</item>
+        <item>时间是一切财富中最宝贵的财富。——德奥弗拉斯多</item>
+        <item>对时间的慷慨，就等于慢性自杀。 ——奥斯特洛夫斯基</item>
+        <item>浪费时间叫虚度，剥用时间叫生活。——扬格</item>
+        <item>凡夫俗子只关心如何去打发时间，而略具才华的人却考虑如何应用时间。——叔本华</item>
+        <item>没有人不爱惜他的生命，但很少人珍视他的时间。——梁实秋</item>
+        <item>在今天和明天之间，有一段很长的时间；趁你还有精神的时候，学习迅速办事。——歌德</item>
+        <item>生命最长久的人并不是活得时间最多的人。——索尔仁尼琴</item>
+        <item>把时间用在思考上是最能节省时间的事情。——卡曾斯</item>
+    </string-array>
+
+</resources>

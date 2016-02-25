@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout 
+        android:id="@+id/statusLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="8dp">
+        
+        <ProgressBar 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"/>
+        <TextView 
+            style="@style/common_text_style_large_gray"
+            android:layout_marginLeft="8dp"
+            android:text="正在加载数据......"/>
+    </LinearLayout>
+
+    <TextView 
+        android:id="@+id/loadMoreTv"
+        style="@style/common_text_style_large_gray"
+        android:layout_width="match_parent"
+        android:layout_height= "wrap_content"
+        android:text="查看更多"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+</RelativeLayout>

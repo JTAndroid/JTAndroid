@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 文字+输入框的样式 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/choose_jump_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/view_tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.41"
+            android:textColor="@color/report_message_txt_title_color"
+            android:textSize="@dimen/demand_create_item_text_size" />
+
+        <TextView
+            android:id="@+id/view_et_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/demand_text_color"
+            android:textSize="@dimen/demand_create_item_text_size" />
+
+        <ImageView
+            android:id="@+id/rightIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/demand_create_item_left"
+            android:layout_marginRight="@dimen/demand_create_item_left"
+            android:src="@drawable/demand_rightarrow" />
+    </LinearLayout>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3"/>
+
+</LinearLayout>

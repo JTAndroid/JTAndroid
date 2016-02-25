@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tr.ui.widgets.CustomRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/home_root"
+    
+    android:background="@color/commen_text_color_4"
+    >
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/home_frg_flow_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:layout_marginBottom="55dp"
+        android:scrollbars="none" />
+    
+    <include 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/common_bottom_input"/>
+
+</com.tr.ui.widgets.CustomRelativeLayout>

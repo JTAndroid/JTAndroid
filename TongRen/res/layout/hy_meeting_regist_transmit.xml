@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- created by sun'jia'nan    2014.21.09 转发到界面-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 转发到标题 -->
+    <include layout="@layout/hy_layout_title"/>
+    
+    <!-- item   hy_list_item_meeting_regist_transmit.xml -->
+	<ListView
+	    android:layout_height="fill_parent"
+	    android:layout_width="fill_parent"/>
+    
+</LinearLayout>

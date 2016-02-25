@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#e3e3e3" />
+
+    <EditText
+        android:id="@+id/companyEt"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:hint="公司"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textColor="@color/commen_text_color_1"
+        android:textColorHint="@color/text_hint"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_gray" />
+
+    <EditText
+        android:id="@+id/hangyeEt"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:hint="职位"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textColor="@color/commen_text_color_1"
+        android:textColorHint="@color/text_hint"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@+id/nextTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_circle_click"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+</LinearLayout>

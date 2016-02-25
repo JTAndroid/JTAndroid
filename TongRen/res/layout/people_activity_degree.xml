@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+       <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="@drawable/auth_title_back"
+   		 android:layout_height="49dp">
+   		 <RelativeLayout 
+        android:id="@+id/quit_degree_Rl"
+        android:padding="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView 
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+         android:background="@drawable/arrow_left_grey"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/degree_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学位"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#333333"
+        />
+<View 
+     android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#f1f1f1"/>
+	</RelativeLayout>
+	  <LinearLayout 
+         android:id="@+id/ll"
+	    android:orientation="horizontal"
+	    android:background="#f3f3f3"
+	    android:padding="5dp"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     </LinearLayout>
+    <ListView 
+        android:id="@+id/degree_Lv"
+        android:background="#ffffff"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </ListView>
+
+</LinearLayout>

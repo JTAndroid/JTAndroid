@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/editflowLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editflowEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="这一刻你的想法.."
+            android:imeOptions="actionDone"
+            android:maxLength="500"
+            android:minLines="3"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/text_black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_small" />
+
+        <RelativeLayout
+            android:id="@+id/shareLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#ffeeeeee"
+            android:padding="8dp" >
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/ImageIv"
+                android:layout_width="53.333dp"
+                android:layout_height="53.333dp"
+                android:src="@drawable/ic_default_avatar" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/ImageIv"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="yinxing"
+                android:textColor="@color/text_black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/contentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTv"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/ImageIv"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="yinxingyinxingyinxingyinxingyinxingyinxingyinxingyinxing"
+                android:textColor="@color/text_gray"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="17dp" >
+
+            <com.tr.ui.demand.MyView.DemandHorizontalListView
+                android:id="@+id/flowshowBackPicVidHlv"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1.0"
+                android:visibility="gone" >
+            </com.tr.ui.demand.MyView.DemandHorizontalListView>
+
+            <ImageView
+                android:id="@+id/photoVideoIb"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/demand_photo_video" />
+        </LinearLayout>
+
+        <include layout="@layout/demand_item_division_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/flow_location"
+            android:drawablePadding="12dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="所在位置"
+            android:textColor="@color/text_flow_name" />
+
+        <TextView
+            android:id="@+id/locationTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:id="@+id/topicLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/flow_tag"
+            android:drawablePadding="12dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="15dp"
+            android:text="话题"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/topicEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right"
+            android:imeOptions="actionDone"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textCursorDrawable="@null" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+    <!-- <include layout="@layout/demand_item_division_line" /> -->
+
+    <LinearLayout
+        android:id="@+id/relevanceLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/flow_asso"
+            android:drawablePadding="12dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="关联"
+            android:textColor="@color/text_flow_name" />
+
+        <TextView
+            android:id="@+id/relevanceTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/people_flow_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="人脉"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/person_Line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/people_conn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/establish_fengexian" >
+                </com.tr.ui.widgets.BasicListView2>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/organization_flow_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="组织"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/organization_Line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/organization_conn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/establish_fengexian" >
+                </com.tr.ui.widgets.BasicListView2>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/knowledge_flow_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="知识"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/knowledge_Line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/knowledge_conn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/establish_fengexian" >
+                </com.tr.ui.widgets.BasicListView2>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/requirement_flow_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="事件"
+                    android:textColor="#1f1f1f"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/requirement_Line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3" />
+
+                <com.tr.ui.widgets.BasicListView2
+                    android:id="@+id/requirement_conn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/establish_fengexian" >
+                </com.tr.ui.widgets.BasicListView2>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <include layout="@layout/demand_item_division_line" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/project_bg" />
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:id="@+id/WhoCanLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/flow_receiver"
+            android:drawablePadding="12dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="谁可以看"
+            android:textColor="@color/text_flow_name" />
+
+        <TextView
+            android:id="@+id/WhoCanTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:id="@+id/remindLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/flow_relation"
+            android:drawablePadding="12dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="提醒谁看"
+            android:textColor="@color/text_flow_name" />
+
+        <TextView
+            android:id="@+id/remindTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+</LinearLayout>

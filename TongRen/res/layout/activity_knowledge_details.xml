@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tr.ui.knowledge.swipeback.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.tr.ui.demand.MyView.MyViewPager
+        android:id="@+id/knowDetailContentVp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</com.tr.ui.knowledge.swipeback.SwipeBackLayout>

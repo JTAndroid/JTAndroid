@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detailTabRl"
+    android:layout_width="fill_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/detailTabRgp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/myDynamicNews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_tab_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="动态"
+            android:textColor="@drawable/related_res_tab_text_color"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/myProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_tab_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="资料"
+            android:textColor="@drawable/related_res_tab_text_color"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/myDiscuss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_tab_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="评价"
+            android:textColor="@drawable/related_res_tab_text_color"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/related_tab_divider_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/related_res_tab_divider" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/related_res_tab_divider" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

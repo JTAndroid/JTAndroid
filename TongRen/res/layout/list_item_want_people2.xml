@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commen_list_bg"
+    android:gravity="center_vertical" >
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:button="@drawable/list_item_tagcb_bg_selector"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/imageIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/checkBox"
+        android:clickable="true"
+        android:src="@drawable/ic_default_avatar"
+        app:siShape="@drawable/shape_rounded_rectangle"
+        app:siSquare="true" />
+
+    <TextView
+        android:id="@+id/peopleNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/imageIv"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/imageIv"
+        android:text="人名"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/peopleNameTv"
+        android:layout_below="@+id/peopleNameTv"
+        android:layout_marginTop="9dp"
+        android:textSize="14dp"
+        android:text="公司" />
+
+    <TextView
+        android:textSize="14dp"
+        android:id="@+id/companyJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/companyName"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@+id/companyName"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="职位" />
+
+    <TextView
+        android:id="@+id/friendStateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/addFriendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/register_add_friend_button_bg"
+        android:padding="5dp"
+        android:text="＋好友"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <View
+        android:background="@color/transparent"
+        android:id="@+id/homeBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imageIv"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

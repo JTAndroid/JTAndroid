@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_module_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/org_module_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="组织模块"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_module_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:padding="10dp"
+            android:onClick="finishs"
+            android:textColor="#fff"
+            android:text="完成" />
+    </RelativeLayout>
+    <ScrollView 
+        android:background="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     <LinearLayout 
+         android:id="@+id/org_module_Ll"
+         android:orientation="vertical"
+         android:background="#f1f1f1"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+    <View 
+        android:background="#f1f1f1"
+         android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+	 <com.tr.ui.people.cread.view.MyEditTextView
+         android:id="@+id/org_details_Etv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        edittextview:isReadOnly="true"
+        edittextview:isCheckBox="true"
+         edittextview:text_label="组织详情" />
+	  <com.tr.ui.people.cread.view.MyEditTextView
+		 android:id="@+id/module_resource_Etv"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content"
+		edittextview:isReadOnly="true"
+		edittextview:isCheckBox="true"
+		 edittextview:text_label="资源需求" />
+	   <com.tr.ui.people.cread.view.MyEditTextView
+		    android:id="@+id/module_finance_Etv"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		   edittextview:isReadOnly="true"
+		   edittextview:isCheckBox="true"
+		    edittextview:text_label="财务分析" />
+	    <com.tr.ui.people.cread.view.MyEditTextView
+		    android:id="@+id/module_high_rise_Etv"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		   edittextview:isReadOnly="true"
+		   edittextview:isCheckBox="true"
+		    edittextview:text_label="高层治理" />
+	     <com.tr.ui.people.cread.view.MyEditTextView
+             android:id="@+id/module_shareholder_Etv"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            edittextview:isReadOnly="true"
+            edittextview:isCheckBox="true"
+             edittextview:text_label="股东研究" />
+	      <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/module_contend_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               edittextview:isReadOnly="true"
+               edittextview:isCheckBox="true"
+                edittextview:text_label="同业竞争" />
+	      
+	       <com.tr.ui.people.cread.view.MyEditTextView
+                  android:id="@+id/module_industry_trends_Etv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  edittextview:isReadOnly="true"
+                 edittextview:isCheckBox="true"
+                  edittextview:text_label="行业动态" />
+	        <com.tr.ui.people.cread.view.MyEditTextView
+                  android:id="@+id/module_research_Etv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  edittextview:isReadOnly="true"
+                  edittextview:isCheckBox="true"
+                  edittextview:text_label="研究报告" />
+	 
+	 </LinearLayout>  
+  </ScrollView>
+</LinearLayout>

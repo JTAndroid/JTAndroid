@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/org_myhomepage_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f1f1" />
+
+        <RelativeLayout
+            android:id="@+id/homepage_rl_orgRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:paddingRight="12dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="组织详情"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/org_rightarrow"
+                android:gravity="center_vertical"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="组织全称"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/org_full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="组织简称"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/org_short_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="组织类型"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/org_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="组织行业"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/org_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:id="@+id/listingLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="上市信息"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/listingInformationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/listing_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:id="@+id/stockLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="证券代码"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/stockNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/stock_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="联系电话"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/contactPhoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="组织邮箱"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/org_emial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/brief_introduction_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:text="简         介"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/brief_introduction_contant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/brief_introduction_tv"
+                android:layout_centerInParent="true"
+                android:textColor="#363636"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/org_rightarrow"
+                android:visibility="gone" />
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/divider_line" />
+        <!--自定义  -->
+        <LinearLayout
+            	android:id="@+id/customContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- <RelativeLayout
+            android:id="@+id/homepage_newnoticeRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="12dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="@string/_newnotice"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/org_rightarrow"
+                android:gravity="center_vertical" />
+        </RelativeLayout> -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line" 
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/latestAnnouncementListView"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <!--
+        <LinearLayout
+            android:id="@+id/homepage_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="短融网将获千万美金A轮融资 红杉资本领投" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="短融网将获千万美金A轮融资 红杉资本领投" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="短融网将获千万美金A轮融资 红杉资本领投" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="短融网将获千万美金A轮融资 红杉资本领投" />
+        </LinearLayout>
+        -->
+
+       <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/homepage_rl_newsRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="12dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="@string/_news"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/org_rightarrow"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line" 
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/latestInformationListView"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"  />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/homepage_investment_intentionsRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="12dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="融资需求"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/org_rightarrow"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout> -->
+        
+                        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#1f1f1f"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+         <LinearLayout
+            android:id="@+id/homepage_org"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+          <!--  <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/investment_areaTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="北京"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="行业"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/investment_industryNamesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="交通"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/investment_typeNames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="股票投资"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/cuinvestment_stomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="字段名称"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/investment_customContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="39dp"
+                    android:gravity="center_vertical"
+                    android:text="自定义字段内容"
+                    android:textColor="#BDBDBD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/investment_custom_largeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="描述字段"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/investment_DescriptionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="描述内容冰岛邮政编码是三位数,首都雷克压威客的市中心邮编是101Reykjavik。101在冰岛就带一种时髦感,有最讲究的餐厅，有最炫的酒吧有数不胜数的咖啡吧..."
+                    android:textColor="#2B2B2B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_financing_intentRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="融资意向"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/financing_areaTypeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="北京"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="行业"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/financing_industryNamesTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="交通"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/financing_typeNames"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="股票投资"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/financing_cuinvestment_stomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="字段名称"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/financing_customContentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="39dp"
+                    android:gravity="center_vertical"
+                    android:text="自定义字段内容"
+                    android:textColor="#BDBDBD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/financing_custom_largeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="描述字段"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/financing_DescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="描述内容冰岛邮政编码是三位数,首都雷克压威客的市中心邮编是101Reykjavik。101在冰岛就带一种时髦感,有最讲究的餐厅，有最炫的酒吧有数不胜数的咖啡吧..."
+                    android:textColor="#2B2B2B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_experts_demandRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="专家需求"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/experts_demand_areaTypeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="北京"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="行业"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/experts_demand_industryNamesTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="交通"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/experts_demand_typeNames"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="股票投资"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/experts_demand_cuinvestment_stomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="字段名称"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/experts_demand_customContentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="39dp"
+                    android:gravity="center_vertical"
+                    android:text="自定义字段内容"
+                    android:textColor="#BDBDBD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/experts_demand_custom_largeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="描述字段"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/experts_demand_DescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="描述内容冰岛邮政编码是三位数,首都雷克压威客的市中心邮编是101Reykjavik。101在冰岛就带一种时髦感,有最讲究的餐厅，有最炫的酒吧有数不胜数的咖啡吧..."
+                    android:textColor="#2B2B2B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_experts_identity"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="专家身份"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/expert_status_areaTypeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="北京"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="行业"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/expert_status_industryNamesTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="交通"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/expert_status_typeNames"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="67dp"
+                    android:gravity="center_vertical"
+                    android:text="股票投资"
+                    android:textColor="#343434"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/expert_status_cuinvestment_stomText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="字段名称"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/expert_status_customContentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="39dp"
+                    android:gravity="center_vertical"
+                    android:text="自定义字段内容"
+                    android:textColor="#BDBDBD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/expert_status_custom_largeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tv_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="描述字段"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/expert_status_DescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="描述内容冰岛邮政编码是三位数,首都雷克压威客的市中心邮编是101Reykjavik。101在冰岛就带一种时髦感,有最讲究的餐厅，有最炫的酒吧有数不胜数的咖啡吧..."
+                    android:textColor="#2B2B2B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/_relationmsg"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+ -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <!-- <LinearLayout
+                android:id="@+id/homepage_addMeetingContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/homepage_contacts_LinearLayout"
+                    android:layout_width="57dp"
+                    android:layout_height="84dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:text="人脉"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/homepage_backLine1"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#e3e3e3" />
+
+                <LinearLayout
+                    android:id="@+id/homepage_contactsLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:background="#ffffff"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/homepage_firstContactsRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="14dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/homepage_occupation_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="14dp"
+                            android:text="专家:"
+                            android:textColor="@color/orange_light"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/homepage_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_toRightOf="@+id/homepage_occupation_text"
+                            android:ellipsize="end"
+                            android:maxEms="18"
+                            android:singleLine="true"
+                            android:text="黄达、迪陪、李迪、纪妍妍..."
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/homepage_backLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3"
+                        android:textIsSelectable="true" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/homepage_author_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="14dp"
+                            android:text="作者:"
+                            android:textColor="@color/orange_light"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/homepage_author_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_toRightOf="@+id/homepage_author_text"
+                            android:ellipsize="end"
+                            android:maxEms="18"
+                            android:singleLine="true"
+                            android:text="黄达、迪陪、李迪、纪妍妍..."
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:id="@+id/homepage_organization_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="组织"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/homepage_company_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="94dp"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:text="同行上市公司:"
+                    android:textColor="@color/orange_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/homepage_companyname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/homepage_company_text"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:singleLine="true"
+                    android:text="银杏资本、金通网、科技、银杉资本、奇虎360、影星资本、"
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:id="@+id/homepage_owledge_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="知识"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/homepage_owledge_author_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="94dp"
+                    android:layout_marginTop="14dp"
+                    android:text="作者相同:"
+                    android:textColor="@color/orange_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/homepage_owledge_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/homepage_owledge_author_text"
+                    android:ellipsize="end"
+                    android:maxEms="9"
+                    android:singleLine="true"
+                    android:text="银杏资本、金通网、科技、银杉资本、奇虎360、影星资本"
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp" >
+
+                <TextView
+                    android:id="@+id/homepage_event_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="事件"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/homepage_experts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="94dp"
+                    android:text="涉及专家相同:"
+                    android:textColor="@color/orange_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ehomepage_vent_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/homepage_experts_text"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:singleLine="true"
+                    android:text="银杏资本、金通网、科技、银杉资本、奇虎360、影星资本、"
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+ -->
+           <!--  <RelativeLayout
+                android:id="@+id/homepage_financial_analysisRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/_caiwufenxi"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_senior_managementRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/_gaochengzhili"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_shareholders_researchRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/_gudongyanjiu"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_industryNewsRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/_hangyedongtai"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_peer_competition"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="@string/_tonghangjingzhen"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_ResearchreportRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="研究报告"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="95dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout> -->
+
+            <RelativeLayout
+                android:id="@+id/homepage_area_overviewRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="地区概况"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/homepage_main_sectorsRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tv_height"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="12dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="主要职能部门"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/org_rightarrow"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="100dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

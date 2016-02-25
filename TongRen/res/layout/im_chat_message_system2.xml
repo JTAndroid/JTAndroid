@@ -1,0 +1,27 @@
+<!-- 系统消息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_time_bg"
+        android:text=" "
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_ss" />
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_s" />
+
+</LinearLayout>

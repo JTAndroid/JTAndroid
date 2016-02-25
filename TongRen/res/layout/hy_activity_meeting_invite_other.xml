@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title" />
+
+    <RelativeLayout
+        android:id="@+id/hy_ll_invite_by_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#f9f9f9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/hy_invite_by_sms" />
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/hy_iv_invite_by_sms"
+            android:text="短信邀请"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/hy_right_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hy_ll_invite_by_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.1dp"
+        android:background="#f9f9f9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/hy_invite_by_email" />
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/hy_iv_invite_by_email"
+            android:text="邮件邀请"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/hy_right_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hy_ll_invite_by_weibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.1dp"
+        android:background="#f9f9f9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/hy_invite_by_weibo" />
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/hy_iv_invite_by_weibo"
+            android:text="微博邀请"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/hy_right_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hy_ll_invite_by_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.1dp"
+        android:background="#f9f9f9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/hy_invite_by_weixin" />
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/hy_iv_invite_by_weixin"
+            android:text="微信邀请"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/hy_right_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hy_ll_invite_by_face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.1dp"
+        android:background="#f9f9f9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/hy_invite_by_face" />
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/hy_iv_invite_by_face"
+            android:text="当面邀请"
+            android:textColor="#1f1f1f"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/hy_right_arrow" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/hy_bth_invite_copy_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="33dp"
+        android:text="复制会议邀请链接"
+        android:textColor="#3d3d3d"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/contentTv"
+        style="@style/common_text_style_middle_white"
+        android:layout_width="fill_parent"
+        android:padding="5dp"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+    
+	<EditText
+	    android:id="@+id/messageEt"
+	    style="@style/common_text_style_middle_white"
+	    android:hint="说点什么......"
+	    android:textColorHint="@color/common_gray" 
+	    android:layout_width="fill_parent"/>
+
+</LinearLayout>

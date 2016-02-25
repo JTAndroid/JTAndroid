@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_RL"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/action_bar_bg"  >
+
+        <ImageView
+            android:id="@+id/conn_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/conn_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新的关系"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/invite_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dp"
+            android:visibility="gone"
+            android:text="邀请好友"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/invite_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/invitation_with_heart" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/NCBG"
+            style="@style/layout_form" >
+            <com.tr.ui.common.view.XListView
+                android:id="@+id/newconnectionlist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@null"
+                android:dividerHeight="1px"
+                android:drawSelectorOnTop="false"
+                android:fadingEdgeLength="0.0sp"
+                android:listSelector="@drawable/im_relationcontactlist_itembg"
+                android:paddingTop="0dp" />
+            <!-- </android.support.v4.widget.SwipeRefreshLayout> -->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/NCTxtNoContent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="5"
+            android:text="当前暂无好友请求"
+            android:textColor="@color/home_dt_font_comment_content"
+            android:textSize="@dimen/text_size_l"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_wfillv" android:layout_height="wrap_content" android:id="@+id/info" >
+    	    <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+    	    <LinearLayout style="@style/layout_item_wfillh" android:layout_height="40dp">
+    	        <RelativeLayout style="@style/layout_item_wfillh" android:layout_width="107dp">
+    	            <ImageView style="@style/item_comm" android:src="@drawable/createrelatioadd" android:paddingLeft="0dp" android:id="@+id/add" android:layout_alignParentLeft="true"/>"
+    	    	    
+    	    	    <ImageView style="@style/item_comm" android:src="@drawable/createrelationtype" android:id="@+id/type" 
+    	    	        android:layout_alignParentRight="true" android:padding="5dp"/>
+    	    	    <TextView style="@style/item_text_title_m" android:layout_width="30dp" android:id="@+id/title"
+    	    	        android:layout_toLeftOf="@+id/type" android:layout_toRightOf="@+id/add"
+    	    	        android:gravity="left"/>
+    	        </RelativeLayout>
+    	        <ImageView android:layout_width="1px" android:layout_height="fill_parent" android:background="@color/im_relationdetails_divider"/>
+    	        
+    	        <RelativeLayout style="@style/layout_item_wfillh" android:layout_width="fill_parent">
+    	            <ImageView style="@style/item_comm" android:src="@drawable/createrelationcontacts" android:id="@+id/tocontacts"  android:background="@null"
+    	                android:layout_alignParentRight="true"  android:paddingRight="10dp" android:clickable="true" android:visibility="invisible"/>
+    	    	    <EditText style="@style/item_edit" android:layout_width="fill_parent"  android:layout_alignParentLeft="true" android:textCursorDrawable="@null"
+    	    	        android:layout_toLeftOf="@+id/tocontacts" android:id="@+id/edit101" android:background="@null" android:singleLine="true"/>
+    	        </RelativeLayout>
+    	    </LinearLayout>
+    	</LinearLayout>

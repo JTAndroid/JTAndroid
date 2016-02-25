@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/comment_footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/common_text_style_middle_gray"
+        android:text="查看全部评论"
+        android:textColor="@color/gray"
+        android:textSize="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="加群理由"
+        android:textColor="@color/text_flow_content"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/joincommumitiesEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:imeOptions="actionDone"
+        android:minLines="6"
+        android:padding="10dp"
+        android:textColor="@color/text_flow_address"
+        android:textCursorDrawable="@null" />
+
+    <TextView
+        android:id="@+id/joincommumitiesBt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_circle_click"
+        android:gravity="center"
+        android:text="提交申请"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>

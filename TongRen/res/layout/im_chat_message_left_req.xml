@@ -1,0 +1,110 @@
+<!-- 左侧需求消息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+	<TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/chat_time_bg"
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_ss" 
+        android:text="2014-06-25 10:52"/>
+
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal" 
+    android:background="@color/white">
+
+    <!-- 头像 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal">
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp" >
+            <ImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/im_img_user" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:src="@drawable/im_user_avatar_border" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="测试"
+            android:textColor="@color/chat_right_font_color"
+            android:textSize="@dimen/text_size_s"
+            android:maxEms="5" />
+    </LinearLayout>
+
+    <!-- 需求 -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/reqTopLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_duifang_share_top"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/reqMsgTv"
+                style="@style/common_text_style_large_black"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp" 
+                android:text="很不错"/>
+        </LinearLayout>
+        <!-- 内容部分 -->
+        <LinearLayout
+            android:id="@+id/reqBottomLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_duifang_share_bottom"
+            android:orientation="vertical" >
+            <TextView
+                style="@style/common_text_style_large_black"
+                android:layout_margin="3dp"
+                android:textColor="#ffbc0516" 
+                android:text="[需求]"/>
+            <TextView
+                android:id="@+id/reqTitleTv"
+                style="@style/common_text_style_large_black"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp" 
+                android:text="山东招远金矿开发项目"/>
+            <TextView
+                android:id="@+id/reqTimeTv"
+                style="@style/common_text_style_middle_gray"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp" 
+                android:text="2014-06-25 10:59"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

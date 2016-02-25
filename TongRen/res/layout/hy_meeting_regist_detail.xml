@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title_right_1iconbtn" />
+
+    <!-- 报名的具体信息 -->
+	
+	<!-- 复用  hy_meeting_relation.xml（图文文图）  以及   hy_meeting_requirement.xml（图文文）-->
+	
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

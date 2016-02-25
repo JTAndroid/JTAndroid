@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/project_bg" >
+
+        <RelativeLayout
+            android:id="@+id/org_quit_report_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/org_report_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="举报"
+            android:textColor="#1f1f1f"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/org_report_Tl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:shrinkColumns="3,2" >
+
+        <RadioGroup
+            android:id="@+id/org_report_Rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/org_report_seqing"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="色情淫秽"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/org_report_saorao"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="骚扰谩骂"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/org_report_guanggao"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="广告欺诈"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/org_report_eyi"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="恶意营销"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RadioButton
+                    android:id="@+id/org_report_maoming"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="冒名抄袭"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/org_report_fandong"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/gridview_item_report_bg"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="反动政治"
+                    android:textColor="#353535"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RadioGroup>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/org_editSms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="您的举报理由..."
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:minLines="5"
+            android:textColorHint="#bebebe" />
+
+        <TextView
+            android:id="@+id/org_num_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right|bottom"
+            android:text="100"
+            android:textColor="#808080"
+            android:textColorHint="#bebebe"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/org_commit"
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/sign_in_normal"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="17sp" />
+
+</LinearLayout>

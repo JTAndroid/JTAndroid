@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:state_selected="false" android:color="@color/hy_meeting_data_edit_normal"></item>  
+    <item android:state_selected="true" android:color="@color/hy_meeting_data_edit_pressed"></item>  
+    
+</selector>

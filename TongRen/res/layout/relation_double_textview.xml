@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/relation_evaluationtag_bg_commen_shape"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="全民老公"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <!-- android:background="@drawable/relation_evaluation_count" -->
+
+        <TextView
+            android:id="@+id/numberTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingRight="6dp"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/layout"
+        android:src="@drawable/demand_column_delete_label"
+        android:visibility="gone"/>
+
+</RelativeLayout>

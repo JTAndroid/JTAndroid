@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/retion_title_height"
+    android:background="@drawable/action_bar_bg" >
+
+    <RelativeLayout
+        android:id="@+id/title_RL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/action_bar_bg" >
+
+        <ImageView
+            android:id="@+id/myProFileIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@drawable/me_bg" />
+
+        <TextView
+            android:id="@+id/mainTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#1a1a1a"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/moreIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/more" />
+
+        <ImageView
+            android:id="@+id/searchIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/moreIv"
+            android:padding="10dp"
+            android:src="@drawable/jt_dt_search" />
+
+        <TextView
+            android:id="@+id/rightMenuTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="" />
+    </RelativeLayout>
+
+</FrameLayout>

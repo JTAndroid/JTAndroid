@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/im_relationcontactmain_itemfirst">
+  
+  	<!-- 关系界面的item -->
+    <LinearLayout style="@style/layout_item_wfillv" android:id="@+id/connections">"
+        <LinearLayout android:clickable="true"  android:background="@drawable/im_relationcontactlist_itembg" android:paddingLeft="8.0dip" android:layout_height="56.0dip" style="@style/MMListItem">
+        	<ImageView android:id="@+id/contactitem_all_img" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+        	<LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            	<TextView android:id="@+id/contactitem_all" android:text="公开" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontTitleInList" />
+        	</LinearLayout>
+        	<RadioButton android:id="@+id/contactitem__all_rb" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="21.0dip" />
+    	</LinearLayout>
+    	<LinearLayout android:clickable="true"  android:background="@drawable/im_relationcontactlist_itembg" android:paddingLeft="8.0dip" android:layout_height="56.0dip" style="@style/MMListItem">
+        	<ImageView android:id="@+id/contactitem_onlyme_img" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+        	<LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            	<TextView android:id="@+id/contactitem_onlyme" android:text="仅自己" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontTitleInList" />
+        	</LinearLayout>
+        	<RadioButton android:id="@+id/contactitem_onlyme_rb" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="21.0dip" />
+    	</LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/contactitem_catalog" android:clickable="true" android:paddingRight="4.0dip" android:layout_height="wrap_content" style="@style/MMListCatalog" />
+    <LinearLayout android:clickable="true"  android:background="@drawable/im_relationcontactlist_itembg" android:paddingLeft="8.0dip" android:layout_height="56.0dip" style="@style/MMListItem">
+        <ImageView android:id="@+id/contactitem_avatar_iv" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@+id/contactitem_nick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/MMFontTitleInList" />
+        </LinearLayout>
+        <CheckBox android:id="@+id/contactitem_select_cb" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="21.0dip" />
+    </LinearLayout>
+</LinearLayout>

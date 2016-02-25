@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/newsBackIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"         
+            android:layout_gravity="left|center_vertical"
+            android:padding="7dp"
+            android:src="@drawable/relation_home_back" />
+
+        <TextView
+            android:id="@+id/tv_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:text="最新资讯"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+    </RelativeLayout>
+         
+     <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:scrollbars="none"
+         android:orientation="vertical">
+
+         <ListView
+             android:id="@+id/lv_news"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" >
+         </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

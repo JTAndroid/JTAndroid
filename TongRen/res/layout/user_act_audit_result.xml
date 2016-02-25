@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5" />
+
+    <TextView
+        android:id="@+id/tip1Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="对不起，审核未通过，原因如下："
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5" />
+
+    <TextView
+        android:id="@+id/tip2Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="营业执照图片不清晰"
+        android:textColor="@color/black"
+        android:textSize="16sp" 
+        android:gravity="center_horizontal"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.75" />
+
+    <TextView
+        android:id="@+id/tip3Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请点击下面的按钮重新提交审核资料"
+        android:textColor="@color/black"
+        android:textSize="14sp" 
+        android:gravity="center_horizontal"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20.5" />
+
+    <TextView
+        android:id="@+id/editTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reg_btn_bg"
+        android:gravity="center"
+        android:text="修改审核资料"
+        android:textColor="@color/commen_text_color_3"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.72" />
+
+</LinearLayout>

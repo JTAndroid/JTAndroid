@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/report_message_bg"
+    android:orientation="vertical" >
+    <include layout="@layout/demand_item_division_line_width" />
+ <!--     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+                <!-- android:padding="@dimen/report_message_padding_item" -->
+
+            <GridView
+                android:id="@+id/InfoGv"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/report_message_padding_item"
+                android:verticalSpacing="@dimen/report_message_item_vertical"
+                android:horizontalSpacing="@dimen/report_message_item_margin_left"
+                android:numColumns="2" >
+            </GridView>
+
+            <include layout="@layout/demand_item_division_line_width" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_message_reason_height"
+                android:background="@color/report_message_white"
+                android:paddingBottom="@dimen/report_message_reason_bot"
+                android:paddingLeft="@dimen/report_message_reason_left_right"
+                android:paddingRight="@dimen/report_message_reason_left_right"
+                android:paddingTop="@dimen/report_message_reason_top" >
+
+                <EditText
+                    android:textCursorDrawable="@null"
+                    android:id="@+id/ReasonEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="@string/report_message_reason"
+                    android:maxLength="100"
+                    android:textColor="@color/report_message_txt_color"
+                    android:textSize="@dimen/report_message_reason_size" />
+
+                <TextView
+                    android:id="@+id/charCountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="100"
+                    android:textColor="@color/report_message_txt_title_color"
+                    android:textSize="@dimen/report_message_txt_size" />
+            </RelativeLayout>
+
+            <include layout="@layout/demand_item_division_line_width" />
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/report_message_phone_hint"
+                android:textCursorDrawable="@null"
+                android:inputType="numberSigned"
+                android:paddingBottom="@dimen/report_message_phone_top_bot"
+                android:paddingLeft="@dimen/report_message_phone_left_right"
+                android:paddingRight="@dimen/report_message_phone_left_right"
+                android:paddingTop="@dimen/report_message_phone_top_bot"
+                android:textColor="@color/report_message_txt_color"
+                android:textSize="@dimen/report_message_phone_size" />
+
+            <include layout="@layout/demand_item_division_line" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/report_message_btn_top_bot"
+                android:layout_marginLeft="@dimen/report_message_btn_left_right"
+                android:layout_marginRight="@dimen/report_message_btn_left_right"
+                android:layout_marginTop="@dimen/report_message_btn_top_bot"
+                android:background="@drawable/demand_report_submit_bn_bg_default"
+                android:text="@string/report_message_submit" />
+        </LinearLayout>
+<!-- </ScrollView> -->
+
+</LinearLayout>

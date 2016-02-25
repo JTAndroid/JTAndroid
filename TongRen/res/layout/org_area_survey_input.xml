@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_area_input_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/org_area_input_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="地区概况"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/finishs_area_input_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="finish"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1" >
+
+        <LinearLayout
+            android:id="@+id/org_area_input_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_name_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="中文名称" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_othername_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="别名" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_acreage_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:hint_Text="平方千米"
+                edittextview:isAddMore_hint="true"
+                edittextview:text_label="面积" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_population_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:hint_Text="万"
+                edittextview:isAddMore_hint="true"
+                edittextview:text_label="人口" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_administrative_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:isChoose="true"
+                edittextview:text_label="行政区域范围" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_superior_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="上级行政区域" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_GDP_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:hint_Text="亿元"
+                edittextview:isAddMore_hint="true"
+                edittextview:text_label="地区GDP" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_resource_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="资源" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_airport_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="机场" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_train_station_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="火车站" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_enterprise_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="主要企业" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_college_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="主要高校" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_celebrity_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_label="当代名人" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/orge_area_input_custom_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:isAddMore_hint="true"
+                edittextview:isChoose="true"
+                edittextview:text_label="自定义" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1" />
+
+            <com.tr.ui.people.cread.view.MyEditTextView
+                android:id="@+id/org_area_input_synopsis_Etv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:JustLabel="true"
+                edittextview:text_label="地方简介" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

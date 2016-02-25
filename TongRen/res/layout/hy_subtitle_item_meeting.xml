@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 灰色背景图 -->
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="32px"
+        android:background="@drawable/hy_icon_meeting_detail_cancel_pressed" />
+    								
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24px" >
+
+        <TextView
+            android:id="@+id/subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:textColor="#1F1F1F"
+            android:text="邀请参会人（组织）" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_gray_right" />
+    </RelativeLayout>
+    
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24px"
+        android:background="@drawable/dash_line" />
+
+</LinearLayout>

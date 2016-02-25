@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/search_home"
+
+          android:title="搜索"
+
+          android:icon="@drawable/search_menu"
+
+          android:showAsAction="collapseActionView|ifRoom"
+
+        />
+ 	<item
+        android:id="@+id/create"
+        android:showAsAction="withText|always"
+        android:title="创建">
+    </item>
+</menu>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_views"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/im_new_contactlist"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="12.5dp"
+        android:visibility="gone" >
+        
+        <RelativeLayout
+            android:id="@+id/newcontact_rl"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true">
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/iv_newcontact_bg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/im_relation_new_contact" />
+
+            <FrameLayout
+                android:id="@+id/cnsSizeTvNew_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/push_data_num" />
+
+                <TextView
+                    android:id="@+id/cnsSizeTvNew"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:gravity="center"
+                    android:text="88"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </FrameLayout>
+        </RelativeLayout>
+        
+        <TextView
+            android:id="@+id/tv_newcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/newcontact_rl"
+            android:singleLine="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/im_new_contactlist"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_l" />
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12.5dp"
+            android:src="@drawable/joint_columntype_select"
+            android:visibility="visible" />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/common_listview_dividing_line"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="51dp"
+	        android:background="#e0e0e0" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/chat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/list_item_sociality_chat" >
+        </include>
+
+        <include
+            android:id="@+id/conference"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/list_item_sociality_conference" >
+        </include>
+
+        <include
+            android:id="@+id/notification"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/list_item_sociality_notification" >
+        </include>
+
+        <include
+            android:id="@+id/invitation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/list_item_sociality_invitation" >
+        </include>
+    </LinearLayout>
+
+</LinearLayout>

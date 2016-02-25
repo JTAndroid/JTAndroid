@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentRl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="#fff6f6f6">
+    
+    <TextView 
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="金桐栏目"
+        android:textSize="16sp"
+        android:textColor="#fff39700"/>
+    
+    <ImageView 
+        android:id="@+id/prefixIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kno_column_prefix"
+        android:contentDescription="@null"/>
+
+</RelativeLayout>

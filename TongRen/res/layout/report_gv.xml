@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/report_Bt"
+        android:layout_width="155dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:enabled="true"
+        android:button="@null"
+        android:background="@drawable/gridview_item_report_bg"
+        android:text="色情"
+        android:textColor="#353535"
+        android:textSize="13sp" />
+
+</LinearLayout>

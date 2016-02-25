@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f1">
+    
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="49dp"
+	    android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/org_intro_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="客户简介"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <TextView
+        android:background="#ffffff"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#353535"
+		android:lineSpacingExtra="5dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="25dp"
+        android:text="红杉总共投资超过500家公司，200多家成功上市，100多个通过兼并收购成功退出的案例。红杉资本由于投资了匹克尝公司，200多家成功上市100多个通过兼并收购成功退出的案例。红杉资本由于投资了匹克尝公司，200多家成功上市，100多个通过兼并收购成功退出的案例。"/>
+    
+</LinearLayout>

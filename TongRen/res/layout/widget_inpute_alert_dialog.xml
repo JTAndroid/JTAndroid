@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_view_border"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tipTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="添加新的职业标签"
+        android:textColor="@color/text_flow_content"
+        android:textSize="@dimen/text_size_alert_title" />
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/kno_input_bg"
+        android:hint="请在此处填写"
+        android:textColorHint="@color/text_hint"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/text_size_alert_edit"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancelTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.00"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_flow_more"
+            android:textSize="@dimen/text_size_l" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@color/line_gray" />
+
+        <TextView
+            android:id="@+id/okTv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_flow_more"
+            android:textSize="@dimen/text_size_l" />
+    </LinearLayout>
+
+</LinearLayout>

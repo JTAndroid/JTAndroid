@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+    
+       <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="@drawable/auth_title_back"
+   		 android:layout_height="49dp">
+   		 <RelativeLayout 
+   		     android:id="@+id/quit_remark_Rl"
+   		     android:padding="11dp"
+   		      android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView 
+        android:id="@+id/quit_remark_Ib"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/people_left_arrow"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/remark_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="备注"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="@color/text_black"
+        />
+
+    
+    <TextView 
+        android:id="@+id/finish_remark_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/_finish"
+        android:onClick="finish"
+         android:textColor="@color/text_black"
+        android:textSize="13sp"
+         />
+	  
+	</RelativeLayout>
+	<ScrollView 
+	     android:background="#ffffff"
+	   android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:background="#ffffff"
+	   android:layout_width="match_parent"
+        android:layout_height="wrap_content"  >
+	<include layout="@layout/people_include_remark"/>
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	 </LinearLayout>
+	 </ScrollView>
+</LinearLayout>

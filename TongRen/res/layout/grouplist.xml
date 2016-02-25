@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form">
+	<android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/group_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.tr.ui.widgets.BasicListView
+            android:id="@+id/grouplist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/common_list_divider_white"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

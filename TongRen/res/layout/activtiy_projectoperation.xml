@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_bg"
+    android:orientation="vertical" >
+
+    <com.tr.ui.common.view.MyXListView
+        android:id="@+id/projectOperationLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.tr.ui.common.view.MyXListView>
+
+</LinearLayout>

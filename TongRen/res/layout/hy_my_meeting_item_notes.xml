@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     20141103 zhang nian 
+	 我的会议-笔记列表项布局
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20px"
+    android:background="#f9f9f9" >
+	
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/hy_selector_addbtn"/>
+    
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="24px"
+        android:layout_marginBottom="24px"
+        
+        android:text="8月9日"
+        />
+    
+    <TextView
+        android:id="@+id/hy_myhy_tv_archives_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无标题笔记"
+        android:textColor="#1f1f1f"
+        android:textSize="30px" />
+
+    <TextView
+        android:id="@+id/hy_myhy_tv_archives_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="这是一个内容为空的笔记"
+        android:textColor="#8d8d8d"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/hy_myhy_notes_tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/hy_myhy_notes_rl_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="#e3e3e3" />
+
+</RelativeLayout>

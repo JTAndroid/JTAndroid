@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/transparent_line" />
+
+    <include layout="@layout/layout_search" />
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/new_xlistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:listSelector="@drawable/commen_list_bg"
+        android:divider="@drawable/commen_list_divider"
+        />
+ 	<include
+        android:id="@+id/empty"
+        layout="@layout/activity_common_empty"
+        android:visibility="gone" />
+</LinearLayout>

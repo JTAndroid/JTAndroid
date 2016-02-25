@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/relation_home_waiting"
+    android:background="@drawable/relation_home_bottom_waiting_pass" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="等待确认"
+        android:textColor="@color/text_white"
+        android:textSize="20dp" />
+
+</FrameLayout>

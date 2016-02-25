@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/home_dt_background" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/home_frg_im_swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tr.ui.widgets.BasicListView
+            android:id="@+id/home_frg_im_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="20dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="none" 
+            android:listSelector="#00000000"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/home_frg_no_content_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/home_frg_im_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请您的好友加入畅聊"
+            android:textColor="@color/home_dt_font_comment_content"
+            android:textSize="@dimen/text_size_l" />
+        
+        <Button
+            android:id="@+id/home_frg_im_no_content_add_requirement"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/im_detail_exit_style"
+            android:text="发起畅聊"
+            android:textColor="@color/home_dt_darkgrey_font"
+            android:textSize="@dimen/text_size_m" />
+    </LinearLayout>
+
+</RelativeLayout>

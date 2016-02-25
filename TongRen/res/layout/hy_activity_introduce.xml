@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hy_activity_main_bg_color">
+    
+    <include layout="@layout/hy_layout_title_right_1textbtn"/>
+    <ScrollView
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbars="none">
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    
+		    android:orientation="vertical">
+    	    <RelativeLayout android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:paddingTop="8dp"
+		    	android:paddingBottom="8dp"
+		    	android:paddingLeft="10dp"
+    			android:paddingRight="10dp"
+		    	android:background="@color/hy_label_normal_color">
+
+		        <EditText
+		            android:id="@+id/hy_actIntroduce_edittext"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:background="@null"
+		            android:hint="说点什么吧"
+		            android:singleLine="false"
+		            android:textColor="#8d8d8d"
+		            android:textColorHint="#8d8d8d"
+		            android:textCursorDrawable="@null"
+		            android:textSize="16sp" />
+
+		        <ImageView android:id="@+id/hy_actIntroduce_speechBtn"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginTop="30dp"
+			        android:layout_below="@+id/hy_actIntroduce_edittext"
+			        android:background="@drawable/hy_selector_speech_btn" 
+			        android:clickable="true"/>
+		    </RelativeLayout>
+		    <include layout="@layout/hy_layout_split_line_e3"/>
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+			   	android:layout_height="wrap_content"
+			   	android:orientation="vertical"
+			   	android:paddingTop="13dp"
+		   	   	android:paddingBottom="10dp"
+		   	   	android:paddingLeft="10dp"
+    			android:paddingRight="10dp"
+		   	   	android:layout_marginTop="20dp"
+		   	   	android:background="@color/hy_label_normal_color">
+		        <HorizontalScrollView
+		           android:id="@+id/horizontalScrollView"
+			       android:layout_width="match_parent"
+				   android:layout_height="wrap_content"
+				   android:scrollbars="none"
+				   android:overScrollMode="never"
+				   android:cacheColorHint="@android:color/transparent"
+				   android:focusable="false">
+				   <LinearLayout 
+			           android:layout_width="wrap_content"
+				   	   android:layout_height="wrap_content"
+				   	   android:orientation="horizontal"
+				   	   android:focusable="false">
+				   	   <GridView android:id="@+id/hy_actIntroduce_gridview"
+					       	android:layout_width="wrap_content"
+					   		android:layout_height="wrap_content"
+					   		android:scrollbars="none"
+					   		android:numColumns="1"
+					   		android:listSelector="@drawable/hy_selector_listitem_bg"/>
+			       </LinearLayout>
+			   </HorizontalScrollView>
+			   <TextView 
+			        android:id="@+id/hy_actIntroduce_tip"
+			       	android:layout_width="wrap_content"
+			   		android:layout_height="wrap_content"
+			   		android:layout_marginTop="8dp"
+			   		android:layout_gravity="right"
+			   		android:textColor="#8d8d8d"
+			   		android:textSize="14sp"
+			   		android:text="0/0"/>
+		    </LinearLayout>
+		    
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>

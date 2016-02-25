@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:textColor="#1f1f1f"
+        android:textSize="14sp"
+        android:text="资源需求" />
+
+	<ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	   android:layout_centerVertical="true"
+	   android:background="@drawable/people_right_arrow" 
+	   android:checked="false"
+	    android:layout_marginRight="15dp" />
+
+</RelativeLayout>

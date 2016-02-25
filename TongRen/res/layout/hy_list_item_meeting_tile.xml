@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.10.29 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9" >
+
+        <TextView
+            android:id="@+id/hy_meeting_tile_tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="#e3e3e3" />
+
+        
+
+        
+
+        <RelativeLayout
+            android:id="@+id/hy_meeting_tile_rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_tile_tv_header"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/hy_meeting_tile_rv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp" >
+
+                <ImageView
+                    android:id="@+id/hy_meeting_tile_iv_logo"
+                    android:layout_width="102dp"
+                    android:layout_height="73dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hy_home_tile_meeting_default" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/hy_meeting_tile_iv_logo"
+                    android:layout_alignLeft="@+id/hy_meeting_tile_iv_logo"
+                    android:layout_alignRight="@+id/hy_meeting_tile_iv_logo"
+                    android:layout_alignTop="@+id/hy_meeting_tile_iv_logo" >
+
+                    <TextView
+                        android:id="@+id/hy_meeting_tile_tv_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/hy_home_tile_counter"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="2" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@+id/hy_meeting_tile_rv_logo" >
+
+                <TextView
+                    android:id="@+id/hy_meeting_tile_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#1f1f1f"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/hy_meeting_tile_tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#8d8d8d"
+                    android:textSize="14sp" />
+                
+                 <RelativeLayout
+            android:id="@+id/hy_meeting_tile_ll_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_tile_tv_name"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/hy_meeting_tile_tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/hy_meeting_tile_tv_status"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=" "
+                android:textColor="#8d8d8d"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/hy_meeting_tile_tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=" "
+                android:textColor="#f42626"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hy_meeting_tile_ll_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_tile_rl_content" >
+
+            <ImageView
+                android:id="@+id/hy_meeting_tile_iv_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/hy_selector_button_expand" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/hy_meeting_tile_ll_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hy_meeting_tile_ll_arrow"
+            android:background="#f9f9f9"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/hy_home_tile_meeting_rl_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/hy_home_tile_meeting_iv_navigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/hy_selector_button_navigation" />
+
+                        <TextView
+                            android:id="@+id/hy_home_tile_meeting_tv_navigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="地图导航"
+                            android:textColor="#3d3d3d"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hy_home_tile_meeting_rl_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/hy_home_tile_meeting_iv_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/hy_selector_button_note" />
+
+                        <TextView
+                            android:id="@+id/hy_home_tile_meeting_tv_note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="会议笔记"
+                            android:textColor="#3d3d3d"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hy_home_tile_meeting_rl_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/hy_home_tile_meeting_iv_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/hy_selector_button_alarm" />
+
+                        <TextView
+                            android:id="@+id/hy_home_tile_meeting_tv_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="提醒"
+                            android:textColor="#3d3d3d"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hy_home_tile_meeting_rl_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/hy_home_tile_meeting_iv_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/hy_selector_button_cancel_invite" />
+
+                        <TextView
+                            android:id="@+id/hy_home_tile_meeting_tv_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="取消参会"
+                            android:textColor="#3d3d3d"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/hy_meeting_tile_tv_session"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/hy_meeting_tile_ll_actions"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#e3e3e3" />
+        
+       
+
+        <TextView
+            android:id="@+id/hy_meeting_tile_tv_footer"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/hy_meeting_tile_ll_actions"
+            android:layout_marginTop="10dp"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" >
+    </RelativeLayout>
+
+</LinearLayout>

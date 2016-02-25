@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff">
+         <TextView
+             android:id="@+id/name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="商务电话"
+             android:textSize="13sp"
+             android:textColor="#808080"
+             android:layout_marginTop="15dp"
+             android:layout_marginBottom="15dp"
+             android:layout_centerVertical="true"
+             android:layout_centerHorizontal="true"
+             android:layout_alignParentLeft="true"
+             android:layout_marginLeft="30dp"/>
+         
+         <TextView
+             android:id="@+id/phone"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="+8612345678999"
+             android:textSize="13sp"
+             android:textColor="#3996FD"
+             android:layout_marginTop="15dp"
+             android:layout_marginBottom="15dp"
+             android:layout_centerVertical="true"
+             android:layout_centerHorizontal="true"
+             android:layout_alignParentRight="true"
+             android:layout_toRightOf="@id/name"
+             android:layout_marginLeft="50dp"/>
+    </RelativeLayout>

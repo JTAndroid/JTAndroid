@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/countTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(10位好友已赞同)"
+            android:textColor="#7DBAFE"
+            android:textSize="16sp" />
+
+        <TextView
+            android:textColor="#7DBAFE"
+            android:id="@+id/evaluationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/countTv"
+            android:text="评价内容"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/favoriteIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/heart_commen" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@color/lightgrey" />
+
+    <com.tr.ui.widgets.ExpandableHeightGridView
+        android:id="@+id/imageGv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:horizontalSpacing="6dp"
+        android:numColumns="5"
+        android:scrollbars="none"
+        android:verticalSpacing="10dp" >
+    </com.tr.ui.widgets.ExpandableHeightGridView>
+
+    <TextView
+        android:drawableRight="@drawable/relation_evaluation_showmorele"
+        android:id="@+id/showAllTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="展开全部 "
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+</LinearLayout>

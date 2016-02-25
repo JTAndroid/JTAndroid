@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_conference_detail_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center" >
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/gridlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/im_detai_other"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/im_detail_interval"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <!-- 置顶提示 -->
+
+                    <TextView
+                        android:id="@+id/im_detail_name_tag11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:singleLine="true"
+                        
+                        android:text="以下所填写内容会在畅聊界面中置顶显示"
+                        android:textColor="@color/home_dt_orange_font_comment_title"
+                        android:textSize="@dimen/im_font_normal"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 分割线 会议主题 -->
+
+                <LinearLayout
+                    android:id="@+id/im_conference_detail_layout_subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="false"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/HFIDIVIDEIMAGE"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/im_detail_layout_subject333"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval" >
+
+                        <EditText
+                            android:id="@+id/im_detail_txt_subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@+id/im_detail_name_tag22"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:hint="请填写会议主题"
+                            android:textCursorDrawable='@null'
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/home_dt_font_comment_content"
+                            android:textSize="@dimen/im_font_normal" />
+
+                        <ImageView
+                            android:id="@+id/HFIDIVIDEIMAGE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/arrow_right"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 分割线 会议时间(必选) -->
+
+                <LinearLayout
+                    android:id="@+id/im_conference_detail_layout_subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="false"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/HFIDIVIDEIMAGE"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <RelativeLayout
+                        android:id="@+id/conference_detail_time_bg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval"
+                        android:clickable="true" >
+
+                        <ImageView
+                            android:id="@+id/im_conference_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/new_aff_ic_deadline" />
+
+                        <TextView
+                            android:id="@+id/im_conference_detail_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toRightOf="@+id/im_conference_image2"
+                            android:gravity="left|center_vertical"
+                            android:hint="会议开始时间(必选)"
+                            android:maxWidth="200dp"
+                            android:paddingLeft="2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/home_dt_font_comment_content"
+                            android:textSize="@dimen/im_font_normal" />
+
+                        <ImageView
+                            android:id="@+id/HFIDIVIDEIMAGE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/arrow_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 描述需求 -->
+
+                <LinearLayout
+                    android:id="@+id/im_conference_detail_layout_111"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/HFIDIVIDEIMAGE"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <EditText
+                        android:id="@+id/im_conference_detail_et_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/blackbackgroud"
+                        android:gravity="left|center_vertical"
+                        android:hint="请填写会议内容"
+                        android:textCursorDrawable='@null'
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="false"
+                        android:textColor="@color/home_dt_font_comment_content"
+                        android:textSize="@dimen/im_font_normal" />
+                </LinearLayout>
+
+                <!-- 文件管理 -->
+
+                <TextView
+                    android:id="@+id/im_conference_detail_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="附件"
+                    android:singleLine="true"
+                    android:textColor="@color/home_dt_darkgrey_font"
+                    android:textSize="@dimen/im_font_normal" />
+
+                <LinearLayout
+                    android:id="@+id/attchmentParentLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical" >
+
+                    <!-- 添加附件 -->
+
+                    <com.tr.ui.widgets.FileUploaderLinearLayout
+                        android:id="@+id/im_conference_detai_uploaderLl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

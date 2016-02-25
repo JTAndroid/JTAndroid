@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_item_wfillv" >
+	    <!--竖横分割线 -->
+		<ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+		<LinearLayout style="@style/layout_item_wfillv">
+	        <TextView style="@style/item_text_title_yellow_m"    android:id="@+id/text0" android:paddingBottom="3dp" android:paddingTop="3dp"/>
+	        <ImageView android:layout_width="fill_parent" android:layout_height="1px" android:background="@color/im_relationdetails_divider"/>
+	        <TextView style="@style/item_text_title" android:text="北京某大学"   android:id="@+id/text1" android:paddingTop="3dp"/>
+	        <TextView style="@style/item_text_title_m" android:text="工程师"   android:id="@+id/text2" />
+	        <TextView style="@style/item_text_title_m" android:text="工程师"   android:id="@+id/text3" />
+	        <TextView style="@style/item_text_content" android:text="java android pho"   android:id="@+id/text4" android:paddingTop="3dp" android:paddingBottom="3dp"/>
+	   </LinearLayout>
+</LinearLayout>

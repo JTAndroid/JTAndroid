@@ -1,0 +1,252 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.tr.ui.widgets.viewpagerheaderscroll.TouchCallbackLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:id="@+id/headerVi"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tabs_height" />
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/viewpager_header_height"
+                android:background="#44ffffff" >
+
+                <ImageView
+                    android:id="@+id/relationBgRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/relationBgRlCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height"
+                    android:alpha="1"
+                    android:background="@drawable/relation_man_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/viewpager_header_height" >
+
+                    <TextView
+                        android:id="@+id/relationPositionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/relationNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/relationPositionTv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <FrameLayout
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:layout_above="@+id/relationNameTv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="13dp" >
+
+                        <com.tr.ui.widgets.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/RelationImage"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:src="@drawable/default_people_avatar"
+                            app:border_color="@color/lightgray"
+                            app:border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/avatarText_RelationHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#00ffffff"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/relationNameTv"
+                        android:layout_marginRight="30dp" />
+
+                    <ImageView
+                        android:id="@+id/QRCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/tv"
+                        android:layout_alignTop="@+id/relationNameTv"
+                        android:background="@drawable/relation_qrcode" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <com.tr.ui.widgets.viewpagerheaderscroll.SlidingTabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabs_height"
+                android:background="#F1F1F1"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D7D7D7" />
+        </LinearLayout>
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/common_bottom_input"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/addFriendFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_addfriend"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/sendMessageFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_sendmessage"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/waitingPassFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            layout="@layout/relation_home_bottom_wait_pass"
+            android:visibility="gone" />
+    </com.tr.ui.widgets.viewpagerheaderscroll.TouchCallbackLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/retion_title_height" >
+
+        <ImageView
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.01"
+            android:background="@drawable/auth_title_back" />
+
+        <LinearLayout
+            android:id="@+id/hy_layoutTitle_backBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/relationHomeBackIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/left_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hometypeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/hy_title_text_font" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/relationShareIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/forward_share_white" />
+
+            <ImageView
+                android:id="@+id/relationMoreIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/more_whilte" />
+        </LinearLayout>
+
+        <!--
+         <ImageView
+        android:id="@+id/hy_meeting_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:background="@color/text_gray" />
+        -->
+
+    </FrameLayout>
+
+</FrameLayout>

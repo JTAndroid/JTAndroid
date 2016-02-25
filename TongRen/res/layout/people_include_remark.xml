@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <EditText
+            android:id="@+id/remark_Et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="说点什么吧..."
+            android:minLines="5"
+            android:maxEms="500"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp" />
+
+        <ImageButton
+            android:id="@+id/remark_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/people_voice"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

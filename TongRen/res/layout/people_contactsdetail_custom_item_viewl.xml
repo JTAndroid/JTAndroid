@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contactsDetails_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context="com.tr.ui.relationship.viewfrg.ScrollViewFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+             android:layout_marginTop="14dp"
+             android:layout_marginBottom="14dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="104dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"  
+                android:gravity="center_vertical"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="#353535"
+                android:textSize="14sp" 
+               />
+        </LinearLayout>
+<include layout="@layout/demand_item_division_line" />
+    </LinearLayout>
+
+</ScrollView>

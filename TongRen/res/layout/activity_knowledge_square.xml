@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/white">
+    <View 
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/tab_bg">
+
+        <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/indicatorTpi"
+            
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"/>
+
+      <!--   <RelativeLayout
+            android:id="@+id/editParentRl"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginRight="50dp" 
+            android:paddingLeft="5dp"
+            android:background="@drawable/tab_bg_ex"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/editHintTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="选择栏目"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/editTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="排序/删除"
+                android:textSize="14sp"
+                android:textColor="@color/orange" />
+        </RelativeLayout> -->
+    
+        
+        <ImageView
+            android:id="@+id/columnIv"
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@null"
+            android:src="@drawable/kno_arrow_down" 
+            android:scaleType="fitCenter"
+            android:padding="15dp"
+            android:background="@drawable/kno_column_arrow_bg"/>
+        
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/addBegin_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#fff" >
+
+            <LinearLayout
+                android:id="@+id/begin_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/beginTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="上班"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_m" />
+
+                <TextView
+                    android:id="@+id/beginTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/beginTv"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recordBeginTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addressBegin_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/addressBeginTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+
+            <TextView
+                android:id="@+id/addressBeginDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beginTv"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_tongren_size_ss" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addEnd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#fff" >
+
+            <LinearLayout
+                android:id="@+id/end_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/endTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="下班"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_m" />
+
+                <TextView
+                    android:id="@+id/endTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/beginTv"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recordEndTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addressEnd_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/addressEndTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+
+            <TextView
+                android:id="@+id/addressEndDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beginTv"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_tongren_size_ss" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+</LinearLayout>

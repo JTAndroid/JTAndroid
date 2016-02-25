@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/pull_to_refresh"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="2dp"
+                android:textSize="@dimen/xlistview_header_xlistview_header_hint_textview_0_textSize" />
+
+            <ImageView
+                android:id="@+id/pull_icon"
+                android:layout_width="@dimen/xlistview_header_img_arrow_width"
+                android:layout_height="@dimen/xlistview_header_img_arrow_height"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/state_tv"
+                android:background="@drawable/refresh_list_pull" />
+
+            <ImageView
+                android:id="@+id/refreshing_icon"
+                android:layout_width="@dimen/xlistview_header_progressbar_width"
+                android:layout_height="@dimen/xlistview_header_progressbar_width"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/state_tv"
+                android:background="@drawable/refresh_list_pulling"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/state_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/state_tv"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

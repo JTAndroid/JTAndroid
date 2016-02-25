@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingRight="@dimen/hy_label_toscreen_leftright_slide"
+    android:paddingTop="@dimen/hy_label_tocontrol_topbottom_slide"
+    android:paddingBottom="@dimen/hy_label_tocontrol_topbottom_slide">
+    
+    <RelativeLayout android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="8dp"
+    	android:background="@drawable/hy_shape_graywihte_color">
+        <EditText android:id="@+id/hy_layout_input_text_voiceSwitch_edittext"
+	       	android:layout_width="match_parent"
+	   		android:layout_height="wrap_content"
+	   		android:minHeight="80dp"
+	   		android:maxHeight="200dp"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_toLeftOf="@+id/hy_layout_input_text_voiceSwitch_voiceBtn"
+	   		android:background="@null"
+	   		android:gravity="left|top"
+	   		android:textColor="@color/black"
+	   		android:textSize="@dimen/hy_input_content_text_font"
+	   		android:singleLine="true"
+	   		android:ellipsize="end"
+	   		android:hint="请输入介绍"
+	   		android:textColorHint="@color/hy_input_content_text_color"
+	   		android:imeOptions="actionNext"/>
+        <ImageView android:id="@+id/hy_layout_input_text_voiceSwitch_voiceBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="4dp"
+	        android:background="@drawable/refresh" 
+	        android:clickable="true"/>
+    </RelativeLayout>
+</LinearLayout>

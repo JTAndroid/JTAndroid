@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hy_activity_main_bg_color">
+    
+    <include layout="@layout/hy_layout_title"/>
+    <GridView
+        android:id="@+id/hy_actPhotoAlbumBucket_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:horizontalSpacing="15dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="15dp">
+    </GridView>
+    <!-- 
+    android:listSelector="@drawable/hy_selector_listitem_bg"
+     -->
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+     >
+
+    <LinearLayout
+        android:id="@+id/my_conference_footer_linear1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/commen_list_bg"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.0" >
+
+            <CheckBox
+                android:id="@+id/item_child_myhy_checked"
+                style="@style/CustomCheckboxTheme2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="全选"
+                android:textColor="#4d4d4d"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/item_child_myhy_cancel"
+                style="@style/CustomCheckboxTheme2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dip"
+                android:text="取消"
+                android:textColor="#4d4d4d"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/myhy_conference_btn_delete"
+            android:layout_width="70dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/button_delete_sector"
+            android:text="删除(0)"
+            android:textColor="#f3f3f3"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/my_hy_top_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/my_conference_footer_linear1"
+        android:background="@drawable/aff_det_keyword_bottom" />
+
+</RelativeLayout>

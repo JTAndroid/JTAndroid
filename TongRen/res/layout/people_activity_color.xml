@@ -1,0 +1,280 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/color_back_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/color_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/people_left_arrow" 
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="颜色"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/color_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" 
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_color_image_Rl"
+        android:layout_below="@id/color_back_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/no_color_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_nocolor" />
+
+        <TextView
+            android:id="@+id/no_color_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/no_color_image"
+            android:text="无颜色"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/green_image_Rl"
+        android:layout_below="@id/no_color_image_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/green_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_green" />
+
+        <TextView
+            android:id="@+id/green_image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/green_image"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:text="绿色"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/blue_image_Rl"
+        android:layout_below="@id/green_image_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/blue_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_blue" />
+
+        <TextView
+            android:id="@+id/blue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/blue_image"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:text="蓝色"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+       
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orange_image_Rl"
+        android:layout_below="@id/blue_image_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/orange_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_orange" />
+
+        <TextView
+            android:id="@+id/orange_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_toRightOf="@+id/orange_image"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:text="橙色"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/red_image_rL"
+        android:layout_below="@id/orange_image_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/red_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_red" />
+
+        <TextView
+            android:id="@+id/red_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/red_image"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:text="红色"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+       
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_below="@id/color_back_Rl"
+        android:layout_marginTop="10dp"
+         android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioGroup 
+            android:layout_alignParentRight="true"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+         <RadioButton
+            android:id="@+id/noColorChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:button="@null"
+            android:background="@drawable/people_check_the_number" />
+          <RadioButton
+            android:id="@+id/greenColorChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:button="@null"
+            android:background="@drawable/people_check_the_number" />
+           <RadioButton
+            android:id="@+id/blueColorChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:button="@null"
+            android:background="@drawable/people_check_the_number" />
+            <RadioButton
+            android:id="@+id/orangeColorChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:button="@null"
+            android:background="@drawable/people_check_the_number" />
+              <RadioButton
+            android:id="@+id/redColorChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:button="@null"
+            android:background="@drawable/people_check_the_number" />
+              </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>
+</LinearLayout>

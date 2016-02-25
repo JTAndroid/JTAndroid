@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_wfillv"
+    android:orientation="vertical" >
+
+    <!-- 分割线 -->
+
+    <RelativeLayout
+        style="@style/layout_item_wfillh"
+        android:background="@drawable/im_relationcontactlist_itembg"
+        android:paddingLeft="@dimen/layout_form_margin_left"
+        android:paddingRight="@dimen/layout_form_margin_left" >
+
+        <!-- 排序的用户item -->
+
+        <FrameLayout
+            android:id="@+id/imorglistitem"
+            style="@style/layout_item_wfillh" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                
+                >
+				
+                <TextView
+                    android:id="@+id/contactitem_catalog"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="#F1F1F1"
+                    android:text="H"
+                    android:textSize="@dimen/text_size_s" 
+                    android:textColor="@color/black"
+                    
+                    />
+                
+            <LinearLayout
+                android:id="@+id/im_groupslist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+                
+                <FrameLayout style="@style/layout_item_v" >
+ 					<!-- 嵌套的小图标 -->
+                    <ImageView
+                        android:id="@+id/contactitem_avatar_iv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_default_avatar" 
+                        android:contentDescription="@null"
+                        android:background="@drawable/rounded_corners"/>
+                    <ImageView
+                        android:id="@+id/contactitem_icontag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/im_relation_icontag" 
+                        android:contentDescription="@null"/>
+                </FrameLayout>
+
+                <LinearLayout 
+                    style="@style/layout_item_v" 
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/imcontactname"
+                        style="@style/item_text_title" 
+                        android:layout_marginTop="3dp"
+                        android:text="姓名"/>
+
+                    <TextView
+                        android:id="@+id/imcontactcomefrom"
+                        style="@style/item_text_content" 
+                        android:layout_marginTop="2dp"
+                        android:text="行业"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+
+            <!-- <TextView
+                android:id="@+id/contactitem_catalog"
+                style="@style/item_text_title"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="0dp"
+                android:text="H"
+                android:textSize="@dimen/text_size_s" /> -->
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/yaoqoingcon"
+            style="@style/layout_item_h"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical" 
+            android:padding="5dp"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/yaoqingicon"
+                style="@style/item_comm"
+                android:src="@drawable/guanxi_yaoqing" 
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/yaoqingtxt"
+                style="@style/item_text_title_yellow_m"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="2dp" 
+                android:text="加好友"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/layout_item_wfillh"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/layout_form_margin_left"
+        android:layout_marginRight="@dimen/layout_form_margin_left"
+        android:background="@color/item_gray" />
+
+</LinearLayout>

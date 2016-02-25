@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="18dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:paddingTop="15dp"
+        android:text="转发到"
+        android:textColor="#f98512"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#e3e3e3" />
+
+    <TextView
+        android:id="@+id/transmit_to_meeting_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:enabled="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"
+        android:text="会议"
+        android:textColor="#1f1f1f"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e3e3e3" />
+
+    <TextView
+        android:id="@+id/transmit_to_chat_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:enabled="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="畅聊"
+        android:textColor="#1f1f1f"
+        android:textSize="13sp" />
+
+</LinearLayout>

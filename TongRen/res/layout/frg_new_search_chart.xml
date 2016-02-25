@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/searchRelativeLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/org_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.CircleProgressView
+            android:id="@+id/org_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_max_large"
+            app:bgColor="#EEEEEE"
+            app:circleRadius="45dip"
+            app:circleStrokeWidth="4dip"
+            app:iconType="1"
+            app:progressColor="#957DEF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/orgTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#957DEF"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="组织"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/know_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.CircleProgressView
+            android:id="@+id/know_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_max_large"
+            app:bgColor="#EEEEEE"
+            app:circleRadius="45dip"
+            app:circleStrokeWidth="4dip"
+            app:iconType="2"
+            app:progressColor="#66C4EF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/knowTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#66C4EF"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="知识"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/people_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.CircleProgressView
+            android:id="@+id/people_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_max_large"
+            app:bgColor="#EEEEEE"
+            app:circleRadius="45dip"
+            app:circleStrokeWidth="4dip"
+            app:iconType="3"
+            app:progressColor="#4DF049" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/peopleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#4DF049"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="人脉"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/demand_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.CircleProgressView
+            android:id="@+id/demand_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_max_large"
+            app:bgColor="#EEEEEE"
+            app:circleRadius="45dip"
+            app:circleStrokeWidth="4dip"
+            app:iconType="4"
+            app:progressColor="#F5BF00" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/demandTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#F5BF00"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="需求"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

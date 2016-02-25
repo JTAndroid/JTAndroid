@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:text="设置加入社群权限"
+        android:textColor="@color/text_flow_address"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/group_jion_permisson"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/checkbox_style_circle"
+            android:text="所有人"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radio_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/checkbox_style_circle"
+            android:text="申请加入"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="18dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社群内容对外可见权限"
+            android:textColor="@color/text_flow_address"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(可选择多项)"
+            android:textColor="@color/text_flow_more"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp" >
+
+        <CheckBox
+            android:id="@+id/group_menber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_style_circle_blue"
+            android:drawablePadding="10dp"
+            android:text="群成员"
+            android:checked="true"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/group_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_style_circle_blue"
+            android:drawablePadding="10dp"
+            android:text="群人脉"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/group_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_style_circle_blue"
+            android:drawablePadding="10dp"
+            android:text="群企业"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp" >
+
+        <CheckBox
+            android:id="@+id/group_know"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_style_circle_blue"
+            android:drawablePadding="10dp"
+            android:text="群知识"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/group_demand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:button="@null"
+            android:drawableRight="@drawable/checkbox_style_circle_blue"
+            android:drawablePadding="10dp"
+            android:text="群需求"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:text="社群隐身状态"
+        android:textColor="@color/text_flow_content"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/group_state"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/checkbox_style_circle"
+            android:text="不隐身"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radio_hiding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:button="@null"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/checkbox_style_circle"
+            android:text="社群隐身"
+            android:textColor="@color/text_flow_content"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:text="@string/state_tip"
+        android:textColor="@color/text_flow_address"
+        android:textSize="12sp" />
+
+</LinearLayout>

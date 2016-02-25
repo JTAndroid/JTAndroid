@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 菜单顶页显示 -->
+    <item android:state_checked="true" android:color="@color/find_project_white_bg"/>
+    <item android:state_checked="false" android:color="@color/find_project_text_gray"/>
+    <item android:color="@color/find_project_white_bg"/>
+
+</selector>

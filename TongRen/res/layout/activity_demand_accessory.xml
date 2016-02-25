@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/need_etails_title_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/accessoryAllTv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/need_etails_txt"
+            android:textSize="@dimen/need_etails_txt" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/documentTv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="文档"
+            android:textColor="@color/need_etails_txt"
+            android:textSize="@dimen/need_etails_txt" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/compressFileTv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="压缩文件"
+            android:textColor="@color/need_etails_txt"
+            android:textSize="@dimen/need_etails_txt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cursor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="66dp"
+            android:layout_height="2dp"
+            android:background="#F98512" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <TextView
+        android:id="@+id/fileSizeTv"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:text="已选择"
+        android:textColor="#6C6C6C"
+        android:textSize="14sp" />
+
+</LinearLayout>

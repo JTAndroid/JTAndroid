@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:scrollbars="none"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/rl_qrcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#58C8F8"
+            android:gravity="left"
+            android:padding="10dp"
+            android:id="@+id/qrcodeTitleTv"
+            android:text="金桐二维码图片"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.tr.ui.widgets.CircleImageView
+            android:layout_marginTop="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_default_avatar" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#58C8F8"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="#fff"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp"
+            android:id="@+id/qrcodeBottomTv"
+            android:text="在金桐上扫一扫加我"
+            android:textColor="#A1A1A1"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</ScrollView>

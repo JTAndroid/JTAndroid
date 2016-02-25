@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/transparent_line" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/project_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/project_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/project_bg"
+                android:focusable="true"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/groupMembersKeywordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/related_res_search_bg"
+                    android:drawableLeft="@drawable/related_res_search30"
+                    android:hint="请输入关键字"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#8c8c8c"
+                    android:textCursorDrawable="@null"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/groupMembersOwnerLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/groupMembersOwnerTabLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/list_item_project_selector"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/groupMembersOwnerTv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:text="群主"
+                            android:textColor="@color/projecttextcolor1"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/groupMembersOwnerIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/arrow_down_grey"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.tr.ui.widgets.NoScrollListview
+                        android:id="@+id/groupMembersOwnerNslv"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" >
+                    </com.tr.ui.widgets.NoScrollListview>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/groupMembersLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/groupMembersTabLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/list_item_project_selector"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/groupMembersTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="#f6f6f6"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:text="群成员"
+                            android:textColor="@color/projecttextcolor1"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/groupMembersIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/arrow_down_grey"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <com.tr.ui.widgets.NoScrollListview
+                        android:id="@+id/groupMembersNslv"
+                        android:layout_width="match_parent"
+                           android:layout_weight="1"
+                        android:layout_height="0dp" >
+                    </com.tr.ui.widgets.NoScrollListview>
+                </LinearLayout>
+            </LinearLayout>
+	
+           <View 
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/project_bg"/>
+                
+        </LinearLayout>
+    </ScrollView>
+     <FrameLayout 
+                android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+                <LinearLayout
+                    android:id="@+id/editRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/edit_navigation_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+           
+                  <CheckBox
+            android:id="@+id/group_notice_all"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/checkbox_style_circle"
+            android:text="全选"
+            android:textColor="@color/text_flow_content"
+            android:textSize="14sp" />
+                  <LinearLayout 
+                     android:layout_width="0dp"
+           		 android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="15dp">
+                    <TextView 
+                        android:id="@+id/bannedToPostTv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/organage_pointofview"
+                    android:text="禁言"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    />
+                      <TextView 
+                          android:id="@+id/relieveBannedToPostTv"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/blue_pointofview"
+                    android:text="解除禁言"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+				</LinearLayout>
+                  <!--   <ImageView
+                        android:id="@+id/bannedToPostIv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tagIv"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/forward_share" />
+
+                    <ImageView
+                        android:id="@+id/relieveBannedToPostIv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/tag_grey_icon" />
+
+                    <ImageView
+                        android:id="@+id/deleteIv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tagIv"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:src="@drawable/delete_grey_icon" /> -->
+                </LinearLayout>
+                </FrameLayout>
+</FrameLayout>
+</LinearLayout>

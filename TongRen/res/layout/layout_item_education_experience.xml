@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/item_education_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_Text" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="18dp"
+            android:text="@string/education_experience"
+            android:textColor="@color/text_flow_address"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_edit_educationexp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/icon_edit"
+            android:drawablePadding="3dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="18dp"
+            android:text="@string/edit"
+            android:visibility="gone"
+            android:textColor="@color/text_flow_more"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/commen_text_color_hint" />
+
+    <LinearLayout
+        android:id="@+id/text_edit_educationexp_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/commen_list_bg"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp" >
+
+        <ImageView
+            android:id="@+id/text_edit_educationexp_IV"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/addtask" />
+
+        <TextView
+            android:id="@+id/text_add_educationexp_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="添加教育经历"
+            android:textColor="@color/text_flow_more"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.tr.ui.widgets.BasicListView2
+        android:id="@+id/list_education_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_education_experience"
+        android:divider="@drawable/commen_list_divider" />
+
+</LinearLayout>

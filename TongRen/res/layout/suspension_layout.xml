@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/bottom_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/delete_file_document"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="删除"
+            android:textColor="#f98512"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/delete_file_document_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="删除"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rename_file_document"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="重命名"
+            android:textColor="#f98512"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/rename_file_document_gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="重命名"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/label_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="转发分享"
+            android:textColor="#f98512"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/jurisdiction_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:gravity="center"
+            android:paddingBottom="19dp"
+            android:paddingTop="19dp"
+            android:text="下载"
+            android:textColor="#f98512"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

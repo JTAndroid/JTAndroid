@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="#ffeeeeee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/common_border"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/typeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/conns_ic_rongzi" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical" >
+
+            <!-- 地区 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_style_large_black"
+                    android:text="地区：" />
+
+                <TextView
+                    android:id="@+id/areaTv"
+                    style="@style/common_text_style_large_gray"
+                    android:text="" />
+            </LinearLayout>
+            <!-- 行业 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_style_large_black"
+                    android:text="行业：" />
+
+                <TextView
+                    android:id="@+id/tradeTv"
+                    style="@style/common_text_style_large_gray"
+                    android:text="" />
+            </LinearLayout>
+            <!-- 类型 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_style_large_black"
+                    android:text="类型：" />
+
+                <TextView
+                    android:id="@+id/typeTv"
+                    style="@style/common_text_style_large_gray"
+                    android:text="" />
+            </LinearLayout>
+            <!-- 附加信息 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/common_text_style_large_black"
+                    android:text="附件信息：" />
+
+                <TextView
+                    android:id="@+id/extraTv"
+                    style="@style/common_text_style_large_gray"
+                    android:text="" />
+            </LinearLayout>
+            
+            <!-- 自定义字段 -->
+            <LinearLayout
+                android:id="@+id/customLl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

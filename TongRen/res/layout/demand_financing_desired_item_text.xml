@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/demand_layout_item_bg"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/financing_desired_padding_top_bot"
+        android:paddingLeft="@dimen/financing_desired_padding_left_right"
+        android:paddingRight="@dimen/financing_desired_padding_left_right"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/financing_desired_padding_top_bot" >
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="#808080"
+            android:textSize="@dimen/financing_desired_txt_size" />
+
+        <TextView
+            android:id="@+id/conterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="83dip"
+            android:textColor="#1f1f1f"
+            android:textSize="@dimen/financing_desired_txt_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/demand_right_arrow" />
+    </RelativeLayout>
+    <include layout="@layout/demand_item_division_line" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/home_ab_share_qrcode"
+        android:icon="@drawable/forward_share"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title=""/>
+
+</menu>

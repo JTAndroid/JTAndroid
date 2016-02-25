@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/me_need_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/searchPll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/me_need_txt_search_top_bot"
+        android:paddingLeft="@dimen/me_need_txt_search_left_right"
+        android:paddingRight="@dimen/me_need_txt_search_left_right"
+        android:paddingTop="@dimen/me_need_txt_search_top_bot" >
+
+        <LinearLayout
+            android:id="@+id/searchLl"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/demand_me_need_search"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/me_need_txt_search_padding" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/demand_search" />
+
+            <EditText
+                android:id="@+id/searchEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/me_need_search"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="@dimen/me_need_txt_left"
+                android:paddingRight="0dp"
+                android:singleLine="true"
+                android:textColor="#1f1f1f"
+                android:textCursorDrawable="@null"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/meNeedLv"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:divider="@color/me_need_listview"
+        android:dividerHeight="1px" >
+    </com.tr.ui.common.view.XListView>
+
+    <include
+        android:id="@+id/treeTreeLableV"
+        layout="@layout/demand_me_need_tree_label" />
+
+    <include
+        android:id="@+id/treeLabelDeleteV"
+        layout="@layout/demand_me_need_tree_label_delete"
+        android:visibility="gone" />
+
+</LinearLayout>

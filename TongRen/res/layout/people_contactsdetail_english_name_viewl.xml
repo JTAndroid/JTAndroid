@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.tr.ui.relationship.viewfrg.ScrollViewFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="First Name"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="3"
+              android:layout_marginLeft="20dp"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </LinearLayout>
+<include layout="@layout/demand_item_division_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+         android:orientation="horizontal"
+           android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+ >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="1"
+            android:text="Last Name"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:layout_weight="3"
+              android:layout_marginLeft="20dp"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </LinearLayout>
+<include layout="@layout/demand_item_division_line" />
+</LinearLayout>

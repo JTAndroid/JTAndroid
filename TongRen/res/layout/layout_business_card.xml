@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <include layout="@layout/layout_business_card_header" />
+    <!-- 金桐昵称 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gintong_nikename"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_edit_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="昵称"
+            android:textColor="@color/text_flow_more"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+    <!-- 手机号 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:hint="待完善"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+    <!-- 邮箱 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_email"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_uesr_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:hint="待完善"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+    <!-- 工作区域 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_area"
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/text_work_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:hint="待完善"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</LinearLayout>

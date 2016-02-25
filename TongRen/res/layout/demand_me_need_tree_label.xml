@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:id="@+id/treeLl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/demand_layout_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:paddingBottom="@dimen/me_need_top_bot"
+        android:paddingLeft="@dimen/me_need_left_right"
+        android:paddingRight="@dimen/me_need_left_right"
+        android:paddingTop="@dimen/me_need_top_bot" >
+
+        <TextView
+            android:id="@+id/titleTree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/kno_category_log"
+            android:text="@string/me_need_tree"
+            android:textColor="@color/me_need_txt_black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/financing_desired_tv_margin_left"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            
+            android:paddingRight="@dimen/financing_desired_tv_margin_right"
+            android:textSize="@dimen/financing_desired_txt_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demand_right_arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/demand_item_division_line" />
+
+    <LinearLayout
+        android:id="@+id/labelLl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/demand_layout_item_bg"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/me_need_top_bot"
+        android:paddingLeft="@dimen/me_need_left_right"
+        android:paddingRight="@dimen/me_need_left_right"
+        android:paddingTop="@dimen/me_need_top_bot" >
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+             android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/kno_tag_log"
+            android:text="@string/me_need_label"
+            android:textColor="@color/me_need_txt_black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/financing_desired_tv_margin_left"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:paddingRight="@dimen/financing_desired_tv_margin_right"
+            android:textSize="@dimen/financing_desired_txt_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demand_right_arrow" />
+    </LinearLayout>
+
+</LinearLayout>

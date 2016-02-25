@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/groupTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/groupIndicatorIv"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:text="测试文字"
+        android:textColor="@android:color/black"
+         />
+
+    <ImageView
+        android:id="@+id/groupIndicatorIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrow_down_grey" />
+    	
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  
+         android:orientation="vertical"   android:layout_margin="10dp" android:background="@drawable/establish_bj">
+         <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  android:gravity="center_vertical" android:paddingRight="10dp">
+             <TextView  style="@style/item_text_title_m" android:text="工作时间" android:padding="10dp" android:layout_alignParentLeft="true" 
+                 android:id="@+id/timeTitle"/>
+             <TextView style="@style/item_text_content" android:id="@+id/timeEnd" android:layout_alignParentRight="true" android:text="结束时间" android:clickable="true"/>
+             <TextView style="@style/item_text_content" android:id="@+id/time__" android:layout_toLeftOf="@+id/timeEnd" android:text="--"/>   
+             <TextView style="@style/item_text_content" android:id="@+id/timeStart" android:layout_toLeftOf="@+id/time__" android:text="开始时间" android:clickable="true"/> 
+         </RelativeLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/company1" >
+             <TextView  style="@style/item_text_title_m" android:text="单位名称 " android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/company" />
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/companyIndustry1">
+             <TextView  style="@style/item_text_title_m" android:text="单位行业" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true"  android:id="@+id/companyIndustry"/>
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/references1">
+             <TextView  style="@style/item_text_title_m" android:text="证明人" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/references"/>
+         </LinearLayout>
+         
+          <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/tel1">
+             <TextView  style="@style/item_text_title_m" android:text="联系电话" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/tel"/>
+         </LinearLayout>
+         
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/department1">
+             <TextView  style="@style/item_text_title_m" android:text="部门" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/department"/>
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/position1">
+             <TextView  style="@style/item_text_title_m" android:text="职务" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	     android:singleLine="true" android:id="@+id/position"/>
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" /> 
+         <!-- <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" 
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/description1">
+             <TextView  style="@style/item_text_title_m2" android:text="描述" android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content" android:layout_width="fill_parent"  android:padding="10dp" android:gravity="right" 
+           	      android:id="@+id/description" android:text="laskjflskdjflakjalksdjflaskdjfalskdfjalsdjfalskdjfalskjdfa;lskdjfalskdjfa;lkdjfa;lskjdflaksjdflaskjdfalskjdflasjfdlaskjfslakfjalkjdfalkfj"/>
+         </LinearLayout> -->
+         <LinearLayout
+            android:id="@+id/description1" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:clickable="true"
+             >
+
+            <TextView
+                android:id="@+id/keyTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:textSize="14sp" 
+                android:text="描述"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5" >
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/item_text_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+         
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="同事关系 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add"  android:clickable="true" android:id="@+id/addworkmate"/>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/workmateList" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:divider="@drawable/establish_fengexian" />
+
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title"  android:text="自定义字段 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:clickable="true" android:id="@+id/addNew" />
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/customList" android:layout_width="fill_parent" android:layout_height="wrap_content"  android:divider="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal"  >
+             <CheckBox android:id="@+id/isCurrentStatus"   style="@style/item_comm"  android:paddingLeft="0dp" 
+			 android:layout_alignParentRight="true" /> 
+			 <TextView style="@style/item_text_title_m" android:text="将本工作经历作为当前身份" />
+         </LinearLayout>
+         
+ 
+     </LinearLayout>
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true" android:src="@drawable/establish_deletplate" android:clickable="true" android:id="@+id/delNew" />
+     </RelativeLayout>
+</FrameLayout>

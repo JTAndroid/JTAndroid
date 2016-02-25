@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+<!--  <include android:layout_height="match_parent" android:layout_width="wrap_content" layout="@layout/people_vertical_image" android:layout_alignBottom="@+id/tv_content" android:id="@+id/include1"/> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <!--
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="9dp"
+        android:layout_weight=".1"
+        android:background="@drawable/img_su"
+        android:contentDescription="@string/str_vertical" />
+        -->
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#F98512"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight=".15"
+            android:background="@drawable/people_img_su"
+            android:contentDescription="@string/str_vertical" />
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/people_green"
+            android:contentDescription="@string/str_content_icon" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/people_img_su"
+            android:contentDescription="@string/str_vertical" />
+    </LinearLayout>
+-
+
+    <LinearLayout
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/people_white_bg"
+        android:orientation="vertical" >
+-
+
+        <RelativeLayout
+            android:id="@+id/time_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <!-- 加载数据ui -->
+
+            <ImageView
+                android:id="@+id/timeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20.5dp"
+                android:background="@drawable/people_time" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="20.5dp"
+                android:layout_toRightOf="@+id/timeImage"
+                android:textColor="#1F1F1F"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/moreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_toLeftOf="@+id/goTv"
+                android:text="更多"
+                android:textColor="#6c7072"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/goTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/people_right_arrow" />
+        </RelativeLayout>
+-
+
+        <LinearLayout
+            android:id="@+id/bNavigatorLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal" >
+
+            <!-- 加载数据ui -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/people_address_positioning" />
+
+            <TextView
+                android:id="@+id/meeting_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:textColor="#3C6FA9"
+                android:textSize="14sp" />
+        </LinearLayout>
+-
+
+        <LinearLayout
+            android:id="@+id/meeting_dec_Ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal" >
+
+            <!-- 加载数据ui -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/people_qualification" />
+
+            <TextView
+                android:id="@+id/meeting_dec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:ellipsize="end"
+                android:maxEms="18"
+                android:singleLine="true"
+                android:textColor="#353535"
+                android:textSize="14sp" />
+        </LinearLayout>
+-
+
+        <RelativeLayout
+            android:id="@+id/contactsName_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:visibility="gone" >
+
+            <!-- 加载数据ui -->
+
+            <ImageView
+                android:id="@+id/contactsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/people_contacts_image" />
+
+            <TextView
+                android:id="@+id/contactsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/contactsImage"
+                android:text="人脉 : "
+                android:textColor="#353535"
+                android:textSize="14sp" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/contactsName_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/contactsName"
+                android:divider="@drawable/establish_fengexian" >
+            </com.tr.ui.widgets.BasicListView2>
+        </RelativeLayout>
+-
+
+        <RelativeLayout
+            android:id="@+id/organ_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/organ_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="组织:"
+                android:textColor="#353535"
+                android:textSize="14sp" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/organ_Lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/organ_Tv"
+                android:divider="@drawable/establish_fengexian" >
+            </com.tr.ui.widgets.BasicListView2>
+        </RelativeLayout>
+-
+
+        <RelativeLayout
+            android:id="@+id/know_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/know_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="知识:"
+                android:textColor="#353535"
+                android:textSize="14sp" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/know_Lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/know_Tv"
+                android:divider="@drawable/establish_fengexian" >
+            </com.tr.ui.widgets.BasicListView2>
+        </RelativeLayout>
+-
+
+        <RelativeLayout
+            android:id="@+id/regi_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/regi_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="事件:"
+                android:textColor="#353535"
+                android:textSize="14sp" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/regi_Lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/regi_Tv"
+                android:divider="@drawable/establish_fengexian" >
+            </com.tr.ui.widgets.BasicListView2>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

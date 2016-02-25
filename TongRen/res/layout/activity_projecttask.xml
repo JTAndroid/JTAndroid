@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/project_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/addTaskLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_sociality_selector"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/addtask" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="添加任务"
+            android:textColor="@color/project_blue" />
+    </LinearLayout>
+	<View 
+	    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="@color/project_bg"/>
+    <com.tr.ui.common.view.MyXListView
+        android:id="@+id/projectTaskLv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    </com.tr.ui.common.view.MyXListView>
+
+    
+
+</LinearLayout>

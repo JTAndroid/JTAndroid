@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="268dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/people_popbox"
+    android:orientation="vertical" >
+
+        <!--  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:text="尊敬的用户："
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="9dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:lineSpacingExtra="7dp"
+            android:gravity="center"
+            android:text="您好,感谢您申请组织，如未验证邮箱请立即登录验证，验证成功后我们会在第一时间审核您的资料，审核结果会通过短信和邮件的形式发送给您，请注意查收。"
+            android:textColor="#606060"
+            android:textSize="12sp" />
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="如有问题欢迎来电咨询（4000-7000-11）"
+            android:paddingBottom="35dp"
+            android:textColor="#606060"
+            android:textSize="12sp" />
+		<View 
+		     android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="#e3e3e3"/>
+		<RelativeLayout 
+		    android:id="@+id/alera_organ_Rl"
+		     android:layout_width="match_parent"
+    	android:layout_height="44dp"
+    	>
+		<TextView 
+		    android:text="确定"
+		    android:textSize="14sp"
+		    android:textColor="#1f1f1f"
+		    android:layout_centerInParent="true"
+		     android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+		</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

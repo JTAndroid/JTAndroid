@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/kno_category_oper_down_bg"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+    
+    <!-- <TextView 
+        android:id="@+id/addTv"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="添加子目录"
+        android:textColor="@color/white"/>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:background="#ff858585"/>
+
+    <TextView 
+        android:id="@+id/modTv"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="修改"
+        android:textColor="@color/white"/>
+    
+    <View 
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:background="#ff858585"/> -->
+    
+    <TextView 
+        android:id="@+id/delTv"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"/>
+</LinearLayout>

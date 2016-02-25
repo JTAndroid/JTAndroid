@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_border"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/infoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:paddingLeft="19dp"
+            android:paddingRight="19dp"
+            android:paddingTop="18dp"
+            android:text="关闭后会提高你的流量，建议仅在录音质量较差或无法录音时修改。确定修改？"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <include layout="@layout/demand_item_division_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="11.5dp"
+                android:text="取消"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp" >
+            </TextView>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/confirmTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="11.5dp"
+                android:text="确定"
+                android:textColor="#1f1f1f"
+                android:textSize="14sp" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

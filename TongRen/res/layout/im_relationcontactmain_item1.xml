@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android" 
+    style="@style/layout_item_wfillv" android:orientation="vertical" android:paddingLeft="@dimen/layout_form_margin_left"
+    android:paddingRight="@dimen/layout_form_margin_left">
+    <!-- 分割线 -->
+       
+         <!-- 排序的用户item -->
+        <FrameLayout style="@style/layout_item_wfillh" android:id="@+id/imorglistitem"  >
+        	<LinearLayout style="@style/layout_item_listh" android:id="@+id/im_groupslist" >
+            	<FrameLayout style="@style/layout_item_v"><!-- 嵌套的小图标 -->
+            	    <ImageView android:id="@+id/contactitem_avatar_iv" style="@style/item_image_header"  android:src="@drawable/ic_default_avatar"/>
+            	    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/im_relation_icontag"
+            	        android:layout_gravity="bottom|right" android:layout_marginBottom="@dimen/image_header_margin" android:id="@+id/contactitem_icontag"/>
+            	</FrameLayout>
+            	<LinearLayout style="@style/layout_item_v" >
+            	    <TextView style="@style/item_text_title"  android:id="@+id/imcontactname"  android:text="1111"  />
+            	    <TextView style="@style/item_text_content"  android:id="@+id/imcontactcomefrom"  android:text="1111"  />
+            	</LinearLayout>
+        	</LinearLayout>
+        	<TextView android:id="@+id/contactitem_catalog" android:layout_marginLeft="0dp" android:textSize="@dimen/text_size_s"
+        	    style="@style/item_text_title" android:layout_marginTop="1dp" android:text="H" />	
+        </FrameLayout>
+         <ImageView style="@style/layout_item_wfillh" android:layout_height="1px" android:background="@color/item_gray"/>
+     </LinearLayout>   

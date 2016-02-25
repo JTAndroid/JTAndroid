@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/file_item_bg"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 文件名 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_rec_index" />
+
+        <TextView
+            android:id="@+id/fileNameTv"
+            style = "@style/common_text_style_large_black"
+            android:layout_marginLeft="5dp"
+            android:text="文件名"/>
+    </LinearLayout>
+
+    <!-- 创建时间 -->
+    <TextView
+        android:id="@+id/createTimeTv"
+        style = "@style/common_text_style_middle_gray"
+        android:layout_marginLeft="5dp"
+        android:text="2014-04-01 14:38:40"/>
+
+</LinearLayout>

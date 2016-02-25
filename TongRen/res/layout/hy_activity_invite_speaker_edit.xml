@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hy_activity_main_bg_color">
+    
+    <include layout="@layout/hy_layout_title_right_1textbtn"/>
+    <ExpandableListView android:id="@+id/hy_actInviteSpeakerEdit_friExpandlistview"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_marginTop="8dp"
+    	android:clipChildren="true"
+    	android:clickable="true"
+		android:divider="@color/hy_split_line_cc"
+		android:dividerHeight="1px"
+		android:childDivider="@color/hy_split_line_cc"
+		android:cacheColorHint="@color/transparent"
+		android:focusable="false"
+		android:descendantFocusability="afterDescendants"
+		android:scrollbarFadeDuration="0"
+    	android:fastScrollEnabled="false"
+    	android:scrollbars="none"
+    	android:background="@color/white"/>
+</LinearLayout>

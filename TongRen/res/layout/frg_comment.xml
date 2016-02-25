@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" 
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/commentLv"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/comment_microphone" 
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/contentEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            style="@style/commen_font_type_1"
+            android:background="@drawable/comment_content" 
+            android:textCursorDrawable="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/sendTv"
+            style="@style/commen_font_type_1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="发送" />
+    </LinearLayout>
+
+</LinearLayout>

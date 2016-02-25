@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/fragment_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <com.tr.ui.widgets.CustomViewPager
+        android:id="@+id/homeVPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

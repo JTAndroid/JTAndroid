@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/mainHeaderLayout"
+        layout="@layout/layout_drawer_main_header" />
+
+    <RadioGroup
+        android:id="@+id/bottomRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/action_bar_bg"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RadioButton
+            android:id="@+id/gintongMainRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/button_inlet_dynamic_bg"
+            android:gravity="center"
+            android:text="金桐"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/messageMainRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/button_inlet_gam_bg"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/contactsMainRb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/button_inlet_find_bg"
+            android:gravity="center"
+            android:text="通讯录"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/mainContentFl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottomRg"
+        android:layout_below="@id/mainHeaderLayout"
+        android:background="@color/DeepSkyBlue" >
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent" >
+
+    <!-- 手机号 -->
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_phone_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="请输入您的手机号"
+        edittextview:text_label="手机" />
+    <!-- 邮箱 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="请输入您的邮箱"
+        edittextview:text_label="邮箱" />
+    <!--微信号 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="请输入您的微信号"
+        edittextview:text_label="微信" />
+    <!-- QQ号 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_qq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="请输入您的QQ"
+        edittextview:text_label="QQ" />
+    <!-- 微博 -->
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/text_weibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_hint_label="请输入您的微博"
+        edittextview:text_label="微博" />
+
+</LinearLayout>

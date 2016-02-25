@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+     android:background="#fff"
+    android:orientation="vertical" >
+    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/locationNameTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    edittextview:text_hint_label="输入位置名称，必填"
+                                    edittextview:MaxLength="50"
+                                    edittextview:text_label="位置地址" />
+    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/locationAreaTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    edittextview:text_hint_label="选择所在地区，必填"
+                                    edittextview:MaxLength="50"
+                                     edittextview:isChoose="true"
+                                    edittextview:text_label="所在地区" />
+    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/locationAddressTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    edittextview:text_hint_label="街道门牌信息，必填"
+                                    edittextview:MaxLength="50"
+                                    edittextview:text_label="详细地址" />
+    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/locationTypeTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    edittextview:text_hint_label="选填"
+                                    edittextview:MaxLength="50"
+                                     edittextview:isChoose="true"
+                                     android:visibility="gone"
+                                    edittextview:text_label="所属类别" />
+    <com.tr.ui.people.cread.view.MyEditTextView
+                                    android:id="@+id/locationPhoneTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    edittextview:text_hint_label="商家或机构联系电话，选填"
+                                    edittextview:MaxLength="50"
+                                    edittextview:text_label="联系电话" />
+
+</LinearLayout>

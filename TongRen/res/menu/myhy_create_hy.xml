@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_myhy_create_hy"
+        android:orderInCategory="10"
+        android:showAsAction="never"
+        android:title="我创建的会议"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:icon="@drawable/search_menu"
+        /> 
+
+</menu>

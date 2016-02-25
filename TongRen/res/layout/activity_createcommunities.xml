@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/im_gray"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_item_avatar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesSurnameEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:MaxLength="20"
+            edittextview:text_hint_label="必填2-20字"
+            edittextview:text_label="社群名称" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesNumberEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+            android:inputType="number"
+            edittextview:MaxLength="50"
+            edittextview:text_hint_label="系统唯一,群号只能输入数字和字母"
+            edittextview:text_label="社\u2000群\u2000号" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesIntroduceEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:text_hint_label="介绍社群的内容、条件、规则等，吸引有共同兴趣的小伙伴"
+            edittextview:text_label="社群介绍" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesCommonalityEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:text_hint_label="介绍群的条件，新人须知等"
+            edittextview:text_label="社群公告" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesTagEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:isChoose="true"
+            edittextview:text_label="社群标签" />
+
+        <include
+            android:id="@+id/commumitiesLabelIC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/people_include_view"
+            android:visibility="gone" />
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesRelevanceEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:isChoose="true"
+            edittextview:text_label="群\u2000关\u2000联" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/people_communities_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="人脉"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/person_communities_Line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3" />
+
+                    <com.tr.ui.widgets.BasicListView2
+                        android:id="@+id/people_communities_conn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/establish_fengexian" >
+                    </com.tr.ui.widgets.BasicListView2>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/organization_communities_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="组织"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/organization_communities_Line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3" />
+
+                    <com.tr.ui.widgets.BasicListView2
+                        android:id="@+id/organization_communities_conn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/establish_fengexian" >
+                    </com.tr.ui.widgets.BasicListView2>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/knowledge_communities_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="知识"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/knowledge_communities_Line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3" />
+
+                    <com.tr.ui.widgets.BasicListView2
+                        android:id="@+id/knowledge_communities_conn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/establish_fengexian" >
+                    </com.tr.ui.widgets.BasicListView2>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requirement_communities_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="事件"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:id="@+id/requirement_communities_Line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#e3e3e3" />
+
+                    <com.tr.ui.widgets.BasicListView2
+                        android:id="@+id/requirement_communities_conn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/establish_fengexian" >
+                    </com.tr.ui.widgets.BasicListView2>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f1f1f1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.tr.ui.people.cread.view.MyEditTextView
+            android:id="@+id/commumitiesPermissionEtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edittextview:edttext_inputtype="number"
+            edittextview:isChoose="true"
+            edittextview:text_label="权限设置" />
+    </LinearLayout>
+
+</ScrollView>

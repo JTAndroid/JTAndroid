@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/conference_create_next"
+        android:title="开始"
+        android:menuCategory="system"
+        android:showAsAction="always|withText"
+        android:orderInCategory="0"/>
+</menu>

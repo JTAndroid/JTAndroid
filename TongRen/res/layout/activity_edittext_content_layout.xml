@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/im_gray"
+    android:orientation="vertical" >
+      <EditText
+        android:id="@+id/EditTextInfo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+         android:textColor="#303030"
+        android:hint="议题名称..."
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:textCursorDrawable="@null"
+        android:text="" />
+</LinearLayout>

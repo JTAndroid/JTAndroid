@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+     <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="#22292c"
+   		 android:layout_height="49dp">
+   		  <RelativeLayout 
+        android:id="@+id/quit_society_Rl"
+        android:padding="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:focusable="false"
+        android:clickable="false"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/people_left_arrow"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/society_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="社会活动"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        />
+
+    
+    <TextView 
+        android:id="@+id/finish_society_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:text="@string/_finish"
+        android:onClick="finish"
+         android:textColor="#ffffff"
+        android:textSize="13sp"
+         />
+	  
+	</RelativeLayout>
+    <ScrollView 
+         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout 
+	    android:orientation="vertical"
+	    android:background="#ffffff"
+	    android:id="@+id/society_main_Ll"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <LinearLayout 
+	    android:orientation="horizontal"
+	    android:background="#f1f1f1"
+	    android:layout_width="match_parent"
+        android:layout_height="10dp">
+     </LinearLayout>
+    <include layout="@layout/people_include_continueadd"/>
+	 <LinearLayout 
+	    android:orientation="vertical"
+	    android:id="@+id/society_Ll"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <LinearLayout 
+	    android:orientation="horizontal"
+	    android:background="#f1f1f1"
+	    android:padding="5dp"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     </LinearLayout>
+	<com.tr.ui.people.cread.view.MyEditTextView
+	    android:id="@+id/activity_Type_Etv"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        edittextview:text_label="活动类型"  
+  		 edittextview:isChoose="true"
+	    />
+	<com.tr.ui.people.cread.view.MyEditTextView
+	    android:id="@+id/introducer_Etv"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        edittextview:text_label="介绍人"  
+	    />
+	<com.tr.ui.people.cread.view.MyEditTextView
+	    android:id="@+id/fellow_villager_Etv"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        edittextview:text_label="老乡"  
+	    />
+	
+	<com.tr.ui.people.cread.view.MyEditTextView
+	    android:id="@+id/custom_activity_Etv"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        edittextview:text_label="自定义字段"  
+         edittextview:addMore_Text="自定义"
+         edittextview:isChoose="true"
+         edittextview:isAddMore_hint="true"
+          edittextview:isReadOnly="true"
+	    />
+	</LinearLayout>		
+	 <include layout="@layout/people_include_delete"/>
+	</LinearLayout>		
+</ScrollView>
+</LinearLayout>

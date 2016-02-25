@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+        <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="#22292c"
+   		 android:layout_height="49dp">
+   		 <RelativeLayout 
+        android:id="@+id/quit_physical_Rl"
+        android:padding="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView 
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+         android:background="@drawable/people_left_arrow"
+        />
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/physical_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="身体状况"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        />
+
+      <TextView 
+        android:id="@+id/finish_physical_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:clickable="true"
+        android:enabled="true"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/_finish"
+        android:onClick="finish"
+         android:textColor="#ffffff"
+        android:textSize="13sp"
+         />
+   
+	  
+	</RelativeLayout>
+	<GridView 
+	    android:id="@+id/physical_Gv"
+	     android:numColumns="3"
+	     android:padding="15dp"
+	     android:background="#ffffff"
+	      android:listSelector="@drawable/people_label_bg_click"
+	      android:verticalSpacing="15dp"
+        android:horizontalSpacing="15dp"
+	     android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+	    
+	</GridView>
+       
+
+</LinearLayout>

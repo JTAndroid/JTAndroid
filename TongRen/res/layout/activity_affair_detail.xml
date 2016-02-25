@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <View 
+        android:id="@+id/headerVi"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"/>
+
+    <!-- 导航区 -->
+	<!--  
+    <LinearLayout
+        android:id="@+id/tabParentLl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/req_detail_tab_bg"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/tabContentRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tabContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/req_detail_ic_tab_content_on"
+                    android:drawablePadding="5dp"
+                    android:text="内容"
+                    android:textColor="@color/commen_text_color_3"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabTraceRl"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tabTraceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/aff_det_ic_trace_off"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="跟踪"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/indicatorVi"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:background="@drawable/req_detail_tab_indicator" />
+    </LinearLayout>
+    -->
+    
+    <!-- 导航区 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffe2e2e2" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffffffff" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/tabParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/tabContentRl"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tabContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/req_detail_ic_tab_content_on"
+                        android:drawablePadding="5dp"
+                        android:text="内容"
+                        android:textColor="@color/commen_text_color_3"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tabTraceRl"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tabTraceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/aff_det_ic_trace_off"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="跟踪"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/indicatorVi"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_alignBottom="@id/tabParentLl"
+                android:background="@drawable/req_detail_tab_indicator" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/tab_divider" 
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+        <!-- 指示条 -->
+
+        
+    </LinearLayout>
+
+    <!-- 内容区 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

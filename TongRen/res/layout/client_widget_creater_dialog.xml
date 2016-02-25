@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/containerLl_creater"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/people_text_view_borders"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/client_edit_creater"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/jointView_creater"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        
+        
+           <TextView
+            android:id="@+id/client_linked_creater"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="对接"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <View
+            android:id="@+id/deletFriendView_creater"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+
+     
+        <TextView
+            android:id="@+id/client_docking_creater"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        <TextView
+            android:id="@+id/client_change2affairs"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="转换为事务"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        
+
+        <TextView
+            android:id="@+id/client_invite_to_join_creater"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="邀请加入"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        
+
+        <TextView
+            android:id="@+id/client_myclient_report"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="举报"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

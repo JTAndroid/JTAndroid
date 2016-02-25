@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  
+         android:orientation="vertical"  android:background="@drawable/establish_bj" android:layout_margin="10dp" >
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  android:gravity="center_vertical"
+             android:orientation="horizontal" android:id="@+id/area1"  android:clickable="true" android:paddingRight="10dp" >
+             <TextView  style="@style/item_text_title_m" android:text="地区" android:padding="10dp"/>
+             <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none"  >
+                 <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal"  >
+                     <TextView  style="@style/item_text_content"  android:id="@+id/area" android:clickable="true"   />
+                 </LinearLayout>
+             </HorizontalScrollView>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/industry1" android:paddingRight="10dp">
+             <TextView  style="@style/item_text_title_m" android:text="行业 " android:padding="10dp"/>
+             <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none">
+                 <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                     <TextView  style="@style/item_text_content"  android:id="@+id/industry" android:clickable="true"/>
+                 </LinearLayout>
+             </HorizontalScrollView>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/type1" android:paddingRight="10dp">
+             <TextView  style="@style/item_text_title_m" android:text="类型 " android:padding="10dp"/>
+             <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="none">
+                 <LinearLayout  android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                     <TextView  style="@style/item_text_content" android:clickable="true" android:id="@+id/type"/>
+                 </LinearLayout>
+             </HorizontalScrollView>
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+             android:orientation="horizontal" android:clickable="true" android:id="@+id/otherInformation1" android:paddingRight="10dp">
+             <TextView  style="@style/item_text_title_m" android:text="附加信息 " android:padding="10dp"/>
+           	 <TextView  style="@style/item_text_content"  android:padding="10dp"
+           	     android:id="@+id/otherInformation"/>
+         </LinearLayout>
+         
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+             <TextView  style="@style/item_text_title" android:text="自定义字段 " android:padding="10dp"/>
+           	 <ImageView  android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/establish_add" android:clickable="true"
+           	     android:id="@+id/addNew" />
+         </LinearLayout>
+         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content"  android:background="@drawable/establish_fengexian" />
+         <com.tr.ui.widgets.BasicListView2 android:id="@+id/customList" android:layout_width="fill_parent" android:layout_height="wrap_content"  
+             android:divider="@drawable/establish_fengexian" android:paddingRight="10dp" />
+
+     </LinearLayout>
+     <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+             android:layout_alignParentRight="true" android:src="@drawable/establish_deletplate" android:id="@+id/delNew" />
+     </RelativeLayout>
+</FrameLayout>

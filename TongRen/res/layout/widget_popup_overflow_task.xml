@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/editTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="修改"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+        <TextView
+            android:id="@+id/rejectTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="驳回"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffdcdcdc"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#fff6f6f6"/>
+
+
+        <TextView
+            android:id="@+id/refreshTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/overflow_item_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="刷新"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="14sp" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

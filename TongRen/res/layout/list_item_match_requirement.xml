@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/commen_list_bg">
+    <TextView 
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="@style/common_text_style_large_black"
+        android:text="寻珠三角优质房地产融资项目..."
+        android:singleLine="true"
+        android:ellipsize="end"/>
+	<TextView 
+	    android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        style="@style/common_text_style_middle_gray"
+        android:text="14-03-09"/>
+</LinearLayout>

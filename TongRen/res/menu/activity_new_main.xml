@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/home_new_menu_search"
+        android:icon="@drawable/jt_dt_search"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title="搜索"/>
+    <item
+        android:id="@+id/home_new_menu_more"
+        android:icon="@drawable/ic_actionbar_more"
+        android:orderInCategory="102"
+        android:showAsAction="always"
+        android:title="功能列表">
+        <!-- <menu>
+            <item
+                android:id="@+id/home_scan"
+                android:icon="@drawable/home_sweep"
+                
+                android:showAsAction="always|withText"
+                android:title="扫一扫"/>
+            <item
+                android:id="@+id/invite_friends"
+                android:icon="@drawable/home_invitation_with_heart"
+                android:showAsAction="always|withText"
+                android:title="邀请好友"/>
+            <item
+                android:id="@+id/onekeyback"
+                android:icon="@drawable/industry_love"
+                android:showAsAction="always|withText"
+                android:title="行业偏好"/>
+            <item
+                android:id="@+id/test"
+                android:showAsAction="always|withText"
+                android:title="通讯录"
+                android:visible="false"/>
+            <item
+                android:id="@+id/test2recommend"
+                android:showAsAction="always|withText"
+                android:title="测试到注册推荐人脉页"
+                android:visible="false"/>
+        </menu>  -->
+    </item>
+	<item
+        android:id="@+id/menu_save"
+        android:visible="false"
+        android:orderInCategory="103"
+        android:showAsAction="always"
+        android:title="保存"/>
+</menu>

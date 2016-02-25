@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commen_list_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/myhy_img_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:visibility="gone"
+        android:background="@drawable/my_conference_calendar_icon" />
+
+    <TextView
+        android:id="@+id/hy_myhy_archives_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/myhy_img_calendar"
+        android:singleLine="true"
+        android:text="11月8日"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/hy_myhy_archives_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/hy_myhy_archives_month"
+        android:singleLine="true"
+        android:text="凯峰盛会"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#1f1f1f"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/hy_myhy_archives_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="3"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <!-- 搜索 -->
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FFF1F1F1"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <EditText 
+            android:id="@+id/keywordEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_search_bg"
+            android:drawableLeft="@drawable/related_res_search"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:hint="请输入关键字"
+            android:textColorHint="#ff8d8d8d"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:imeOptions="actionSearch"/>
+        <ImageView 
+            android:id="@+id/addIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/related_res_add_bg"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+    
+    <!-- 目录列表和提示消息 -->
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshSrl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView 
+            	android:id="@+id/listView"
+        		android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+        		android:divider="#FFEFEFEF" 
+        		android:dividerHeight="1dp"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+        
+        <TextView 
+            android:id="@+id/tipTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="没有数据"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    
+</LinearLayout>

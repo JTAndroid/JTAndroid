@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="50dip"
+    android:paddingTop="10dp"
+    android:background="@color/wheat"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ItemTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="聊天标题"
+        android:textSize="20dip" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:paddingTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ItemImageHeadIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/refresh" />
+
+        <TextView
+            android:id="@+id/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊天内容"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TextSourceFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="主持人：巴菲特"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/TextPublishTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:text="1小时前"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+  
+
+</LinearLayout>

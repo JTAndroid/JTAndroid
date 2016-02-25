@@ -1,0 +1,78 @@
+<!-- 左侧文本消息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+	<TextView
+	    android:id="@+id/timeTv"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:background="@drawable/chat_time_bg"
+	    android:text=" "
+	    android:textColor="@color/chat_time_font_color"
+	    android:textSize="@dimen/text_size_ss" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <!-- 头像 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal">
+	
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp" >
+
+
+            <ImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:src="@drawable/hy_ic_default_friend_avatar" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxEms="5"
+            android:text=" "
+            android:textColor="@color/chat_right_font_color"
+            android:textSize="@dimen/text_size_s" />
+
+    </LinearLayout>
+
+    <!-- 文字 -->
+
+    <TextView
+        android:id="@+id/textTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/chat_duifang"
+        android:gravity="center_vertical"
+        android:maxWidth="200dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text=" "
+        android:textColor="@color/chat_left_font_color"
+        android:textSize="@dimen/text_size_m" />
+
+</LinearLayout>
+</LinearLayout>

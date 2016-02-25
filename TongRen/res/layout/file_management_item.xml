@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/file_root_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/file_listview_item"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/fileManagementInclude_item_suspension"
+        layout="@layout/suspension_layout" />
+
+</LinearLayout>

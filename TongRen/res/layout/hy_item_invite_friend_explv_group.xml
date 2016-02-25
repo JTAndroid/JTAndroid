@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="9.6dp"
+    android:paddingBottom="9.6dp">
+    <CheckBox android:id="@+id/hy_itemInvitefriend_expLvGroup_checkbox"
+   	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="left|center_vertical"
+   		android:background="@null"
+   		android:button="@drawable/hy_selector_check"/>
+    <ImageView android:id="@+id/hy_itemInvitefriend_expLvGroup_avatar"
+        android:layout_width="43.2dp"
+        android:layout_height="43.2dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/hy_icon_meeting_detail_invest" 
+        android:clickable="true"/>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp">
+        <TextView 
+	        android:id="@+id/hy_itemInvitefriend_expLvGroup_nameText"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_toLeftOf="@+id/hy_itemInvitefriend_expLvGroup_expIcon"
+	   		android:layout_marginRight="8dp"
+	   		android:singleLine="true"
+	   		android:ellipsize="end"
+	   		android:textColor="@color/hy_listitem_nametext_font_color"
+	   		android:textSize="@dimen/hy_list_nametext_font"
+	   		android:text="名称"/>
+        <ImageView android:id="@+id/hy_itemInvitefriend_expLvGroup_expIcon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	        android:background="@drawable/hy_selector_button_expand" 
+	        android:clickable="false"/>
+    </RelativeLayout>
+</LinearLayout>

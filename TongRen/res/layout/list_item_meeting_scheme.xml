@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/establish_bj"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/subjectLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/subjectKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="主题名称"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subjectValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="会议主题会义主题会议主题会义主题会议主题会义主题会议主题会义主题"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            
+            
+           <!--  <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/subjectKeyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="主题名称"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/subjectAddIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/subjectKeyTv"
+                    android:src="@drawable/establish_add" />
+                
+            </RelativeLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+            
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/subjectLv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" /> -->
+            
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:id="@+id/startTimeLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/startTimeKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="开始时间"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/startTimeValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="2014年4月9日"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:id="@+id/endTimeLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/endTimeKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="结束时间"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/endTimeValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="2014年4月9日"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:id="@+id/addressLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/addressKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="地址"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/addressValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="北京海淀上地清河"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:id="@+id/descriptionLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/descriptionKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="内容"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/descriptionValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="从前有座山,山里有个庙.从前有座山,山里有个庙.从前有座山,山里有个庙.从前有座山,山里有个庙."
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <LinearLayout
+                android:id="@+id/participaterLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/participaterKeyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="参与人"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/participaterValueTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="李刚 李刚 李刚 李刚 李刚 李刚 李刚 李刚 李刚 李刚"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            
+            <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/participaterKeyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="参与人"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/participaterAddIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/participaterKeyTv"
+                    android:src="@drawable/establish_add" />
+                
+            </RelativeLayout>
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+            
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/participaterLv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" /> -->
+
+            <ImageView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/establish_fengexian" />
+
+            <RelativeLayout
+                android:id="@+id/customTitleRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 >
+
+                <TextView
+                    android:id="@+id/customTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                	android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="自定义字段"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_m" />
+
+                <ImageView
+                    android:id="@+id/customAddIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:layout_toRightOf="@+id/customTv"
+                    android:src="@drawable/establish_add" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/establish_fengexian" />
+
+            <com.tr.ui.widgets.BasicListView2
+                android:id="@+id/customLv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:divider="@drawable/establish_fengexian"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <ImageView 
+        android:id="@+id/deletPlateIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/establish_deletplate"
+        android:layout_gravity="right"
+        />
+
+</FrameLayout>

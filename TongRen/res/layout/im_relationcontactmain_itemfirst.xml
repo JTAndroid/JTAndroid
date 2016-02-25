@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_relationcontactmain_itemfirst"
+    style="@style/layout_item_wfillv"
+    android:descendantFocusability="blocksDescendants" >
+
+    <!-- 关系界面的item -->
+
+    <LinearLayout
+        android:id="@+id/connections"
+        style="@style/layout_item_wfillv" >
+
+        <LinearLayout
+            android:id="@+id/im_new_contactlist"
+            style="@style/layout_item_listh"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/layout_form_margin_left" 
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/im_relation_new_contact" 
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:textColor = "@color/text_black"
+                android:textSize = "@dimen/text_size_l"
+        		android:singleLine="true"
+                android:layout_marginLeft="5dp"
+                android:text="@string/im_new_contactlist" />
+
+            <TextView
+                android:id="@+id/cnsSizeTagNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/remind_big_1"
+                android:gravity="center"
+                android:text="999"
+                android:textColor="#ffffffff"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+        <!-- 分割线 -->
+
+        <ImageView
+            android:id="@+id/groupDivisionLineIv"
+            style="@style/layout_item_wfillh"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/layout_form_margin_left"
+            android:layout_marginRight="@dimen/layout_form_margin_left"
+            android:background="@drawable/common_list_divider_yellow" 
+            android:contentDescription="@null"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/im_groupslist"
+            style="@style/layout_item_listh"
+            android:clickable="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="@dimen/layout_form_margin_left" 
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/im_relation_group" 
+                android:contentDescription="@null"/>
+
+            <TextView
+                style="@style/item_text_title"
+                android:layout_marginLeft="5dp"
+                android:text="@string/im_groupslist" />
+
+            <TextView
+                android:id="@+id/cnsSizeTagGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/remind_big_1"
+                android:gravity="center"
+                android:text="999"
+                android:textColor="#ffffffff"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 我加入的机构title -->
+
+    <!-- <LinearLayout
+        android:id="@+id/joinorgtitle"
+        style="@style/layout_item_wfillh"
+        android:layout_height="wrap_content"
+        android:background="@color/list_category_divider"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/item_text_title"
+            android:layout_margin="5dp"
+            android:clickable="false"
+			text="我的组织好友"     
+            />
+        
+        <ImageView 
+            android:id="@+id/myOrganizationFriendTitleExtendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kno_arrow_up"
+            />
+    </LinearLayout> -->
+    
+    
+    <!-- 我加入的机构 title -->
+    <LinearLayout
+        android:id="@+id/joinorgtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_category_divider"
+        android:visibility="visible" 
+        android:gravity="center_vertical"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:clickable="false"
+            android:text="我的组织好友"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            />
+        
+        <ImageView 
+            android:id="@+id/myOrganizationFriendTitleExtendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kno_arrow_up"
+            />
+        
+    </LinearLayout>
+    
+    
+    
+    
+    <!-- join in list -->
+
+    <ListView
+        android:id="@+id/groupjoin"
+        style="@style/layout_item_wfillh"
+        android:divider="@null"
+        android:listSelector="#00000000" 
+        android:visibility="gone"
+        />
+    
+
+    <ImageView
+        android:id="@+id/groupDivisionLineIv2"
+        style="@style/layout_item_wfillh"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/layout_form_margin_left"
+        android:layout_marginRight="@dimen/layout_form_margin_left"
+        android:background="@drawable/common_list_divider_yellow" 
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        style="@style/layout_item_wfillv"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/layout_form_margin_left"
+        android:paddingRight="@dimen/layout_form_margin_left"
+        android:visibility="gone" >
+
+        <!-- 分割线 -->
+
+        <ImageView
+            style="@style/layout_item_wfillh"
+            android:layout_height="1px"
+            android:background="@drawable/common_list_divider_yellow" />
+        <!-- 排序的用户item -->
+
+        <FrameLayout
+            android:id="@+id/imorglistitem"
+            style="@style/layout_item_wfillh" >
+
+            <LinearLayout
+                style="@style/layout_item_listh"
+                android:layout_marginLeft="20dp" >
+
+                <FrameLayout style="@style/layout_item_v" >
+
+                    <!-- 嵌套的小图标 -->
+
+                    <ImageView
+                        android:id="@+id/contactitem_avatar_iv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_default_avatar" />
+
+                    <ImageView
+                        android:id="@+id/contactitem_icontag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/im_relation_icontag" />
+                </FrameLayout>
+
+                <LinearLayout style="@style/layout_item_v" >
+
+                    <TextView
+                        android:id="@+id/imcontactname"
+                        style="@style/item_text_title" />
+
+                    <TextView
+                        android:id="@+id/imcontactcomefrom"
+                        style="@style/item_text_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contactitem_catalog"
+                style="@style/item_text_title"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="0dp"
+                android:text="H"
+                android:textSize="@dimen/text_size_s" />
+        </FrameLayout>
+    </LinearLayout>
+    
+    <!-- 我的个人好友标题    start     -->
+    <LinearLayout
+        android:id="@+id/myFeopleFriendTitleLl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_category_divider"
+        android:visibility="visible" 
+        android:gravity="center_vertical"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:clickable="false"
+            android:text="我的个人好友"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            />
+        
+        <ImageView 
+            android:id="@+id/myFeopleFriendTitleExtendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kno_arrow_up"
+            />
+        
+        
+        
+    </LinearLayout>
+    
+    <!-- 我的个人好友标题    start     -->
+
+</LinearLayout>

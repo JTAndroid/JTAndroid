@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            style="@style/layout_item_wfillv"
+            android:layout_width="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/catalog_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:id="@+id/title_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e0e0e0" />
+                <!-- 拼音索引标识 -->
+
+                <TextView
+                    android:id="@+id/contactitem_catalog"
+                    android:layout_width="fill_parent"
+                    android:layout_height="24dp"
+                    android:background="#ebebeb"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="H"
+                    android:textColor="@color/actionbar_title_default"
+                    android:textSize="@dimen/sidebar_text_size" />
+
+                <View
+                    android:id="@+id/title_bottom_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e0e0e0" />
+            </LinearLayout>
+            <!-- 分割线 -->
+
+            <View
+                android:id="@+id/top_line"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="61dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="bottom"
+                android:background="#e0e0e0" />
+
+            <!-- 排序的用户item -->
+
+            <FrameLayout style="@style/layout_item_wfillh" >
+
+                <LinearLayout
+                    android:id="@+id/im_groupslist"
+                    style="@style/layout_item_listh"
+                    android:background="@null" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="58.5dp" > <!-- 嵌套的小图标 -->
+
+                        <com.tr.ui.widgets.CircleImageView
+                            android:id="@+id/contactitem_avatar_iv"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/ic_default_avatar" />
+                        <!-- tag -->
+
+                        <ImageView
+                            android:id="@+id/contactitem_icontag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginBottom="@dimen/image_header_margin" />
+                    </FrameLayout>
+
+                    <!-- 名字 和 来源 start -->
+
+                    <LinearLayout
+                        style="@style/layout_item_v"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/imcontactname"
+                            style="@style/item_text_title"
+                            android:text="1111" />
+
+                        <TextView
+                            android:id="@+id/imcontactcomefrom"
+                            style="@style/item_text_content"
+                            android:text="1111"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                    <!-- 名字 和 来源 end -->
+
+
+                    <!-- 多选框 -->
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        style="@style/item_comm"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="15dp"
+                        android:button="@drawable/checkbox_style"
+                        android:focusable="false" />
+                </LinearLayout>
+            </FrameLayout>
+            <!-- 分割线 -->
+
+            <View
+                android:id="@+id/bottom_line"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="61dp"
+                android:layout_height="0.5dp"
+                android:layout_gravity="bottom"
+                android:background="#e0e0e0"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

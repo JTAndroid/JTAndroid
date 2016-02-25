@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_senior_management_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:id="@+id/iv_gcback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/senior_management_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="高层治理"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/eidt_senior_management_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="280dp"
+            android:clickable="true"
+            android:enabled="true"
+            android:padding="10dp"
+            android:src="@drawable/org_delete" />
+
+        <TextView
+            android:id="@+id/finish_senior_management_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="save"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#f1f1f1"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/edit_seniormanager_main_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <com.tr.ui.people.cread.view.MyAddMordView
+                android:id="@+id/edit_seniormanager_MAMV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                edittextview:text_MyAddMordView_label="高管信息" />
+
+
+            <LinearLayout
+                android:id="@+id/edit_senoirmanager_Ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical" >
+				<View 
+				    android:background="#f1f1f1"
+				     android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/eidt_name_Etv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="姓名" />
+
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/eidt_date_Etv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="入职日期" />
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/eidt_xueli_Etv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="最高学历" />
+
+
+                <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/eidt_position_Etv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    edittextview:text_label="职务" />
+				 <com.tr.ui.people.cread.view.MyEditTextView
+                    android:id="@+id/eidt_custom_Etv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    edittextview:isChoose="true"
+                    edittextview:isAddMore_hint="true"
+                    edittextview:text_label="自定义" />
+                <com.tr.ui.people.cread.view.MyDeleteView
+                    android:id="@+id/edit_seniormanager_delete_Mdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </com.tr.ui.people.cread.view.MyDeleteView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

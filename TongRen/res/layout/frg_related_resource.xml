@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff1f1f1"
+    android:orientation="vertical" >
+
+    <!-- 搜索 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/keywordEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/related_res_search_bg"
+            android:drawableLeft="@drawable/related_res_search"
+            android:drawablePadding="10dp"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#ff8d8d8d"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/addIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/related_res_add_bg" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 下拉刷新 -->
+
+       <!--  <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshSrl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="50dp" >
+
+            <ExpandableListView
+                android:id="@+id/resourceElv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:childDivider="#ffcccccc"
+                android:divider="#ffcccccc"
+                android:dividerHeight="0.3dp" />
+        </android.support.v4.widget.SwipeRefreshLayout> -->
+
+        <com.tr.ui.widgets.pulltorefreshExpandableListView.PullToRefreshLayout
+            android:id="@+id/refresh_view"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.tr.ui.widgets.pulltorefreshExpandableListView.PullableExpandableListView
+                android:id="@+id/resourceElv"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:childDivider="@null"
+                android:divider="@null"
+                android:dividerHeight="0dp"  />
+
+            <include layout="@layout/load_more" 
+                android:visibility="gone"
+                />
+        </com.tr.ui.widgets.pulltorefreshExpandableListView.PullToRefreshLayout>
+
+        <!-- 编辑 -->
+
+        <EditText
+            android:id="@+id/tagEt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:hint="关联关系"
+            android:imeOptions="actionDone"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e0e0e0"
+            android:layout_above="@id/tagEt"/>
+    </RelativeLayout>
+
+</LinearLayout>

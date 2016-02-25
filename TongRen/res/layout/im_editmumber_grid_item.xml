@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/desktop_news_count_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/im_detai_grid_item_image"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_default_avatar" />
+
+            <RelativeLayout
+                android:id="@+id/rl_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.tr.ui.widgets.CircleImageView
+                    android:id="@+id/im_detai_grid_item_tagIv"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/detail_create" />
+
+                <TextView
+                    android:id="@+id/im_detai_grid_item_tagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="3dp"
+                    android:text="创建者"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/im_detail_grid_delete_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/skyblue_platform_checked" >
+            </ImageView>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/im_detail_grid_item_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="张三"
+            android:textColor="#808080"
+            android:textSize="13sp" >
+        </TextView>
+    </LinearLayout>
+
+</FrameLayout>

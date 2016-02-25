@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@color/white"
+    android:padding="10dp">
+    
+    <TextView 
+        android:id="@+id/sourceTv"
+        style="@style/common_text_style_middle_black"
+        android:text="[站内知识]"/>
+    
+    <TextView 
+        android:id="@+id/titleTv"
+        style="@style/common_text_style_middle_gray"
+        android:text="钢铁是怎样炼成的"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/list_item_sociality_selector" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:layout_marginLeft="10.5dp"
+        android:background="@drawable/list_item_sociality_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/image_rl"
+            android:layout_width="48dp"
+            android:layout_height="48dp" >
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/conference_sociality_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/meeting_logo_a" />
+
+            <FrameLayout
+                android:id="@+id/conference_push_data_num_control"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/push_data_num" />
+
+                <TextView
+                    android:id="@+id/conference_push_data_num"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="88"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/image_rl" >
+
+            <LinearLayout
+                android:id="@+id/ccontent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/conference_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/hy_status_doing"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/conference_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/conference_status"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/the_last_time_of_conference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12.5dp"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/conference_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/image_rl"
+                android:layout_below="@id/ccontent_ll"
+                android:layout_toRightOf="@id/image_rl"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="63.5dp"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="63.5dp"
+        android:background="#e0e0e0" />
+
+</RelativeLayout>

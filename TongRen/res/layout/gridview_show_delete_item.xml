@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="55dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/image_gv_rl"
+        android:layout_width="55dp"
+        android:layout_height="55dp" >
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/peopleIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_people_avatar"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/registrationIv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/hy_registration"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/deleteFl"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/createrelatiodel"
+                android:contentDescription="image" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/addBtIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kno_add_pic"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/deleteBtIv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/delete_button"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:text="sssss"
+        android:textColor="#4d4d4d"
+        android:textSize="12sp" />
+
+    <com.tr.ui.widgets.DrawableCenterTextView
+        android:layout_gravity="center"
+        android:id="@+id/locationTv"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/hy_icon_meeting_attendee_location"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="#808080"
+        android:textSize="12sp" />
+
+</LinearLayout>

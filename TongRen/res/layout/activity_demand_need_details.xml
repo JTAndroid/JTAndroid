@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+ <FrameLayout
+        android:id="@+id/mCommonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        >
+        <!-- android:layout_height="@dimen/retion_title_height" --> 
+
+        <ImageView
+            android:id="@+id/demand_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:background="@drawable/auth_title_back_white" />
+
+        <LinearLayout
+            android:id="@+id/demand_layoutTitle_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/demandHomeBackIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/people_left_arrow" />
+
+            <TextView
+                android:id="@+id/demandtypeTv"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="详情"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/hy_title_text_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <FrameLayout 
+                android:id="@+id/demandCommentRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp">
+			
+			<ImageView
+                android:id="@+id/demandCommentRedPointIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:src="@drawable/push_data_num" />
+			<ImageView
+                android:id="@+id/demandCommentIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comment_underthe100_full" />
+			<TextView 
+			     android:id="@+id/demandCommentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/auth_title_back"
+                android:textSize="9sp"
+                />
+			</FrameLayout>
+            <ImageView
+                android:id="@+id/demandShareIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@drawable/forward_share_white_full" />
+
+            <ImageView
+                android:id="@+id/demandMoreIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/more" />
+        </LinearLayout>
+    </FrameLayout>
+    <View
+        android:id="@+id/headerVi"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/need_etails_title_height"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/needDetailsTv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/need_etails"
+            android:textColor="@color/need_etails_txt"
+            android:textSize="@dimen/need_etails_txt" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/find_project_v_top_bot"
+            android:layout_marginTop="@dimen/find_project_v_top_bot"
+            android:background="@drawable/demand_find_project_dividing_line" />
+
+        <TextView
+            android:id="@+id/commentTv"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="评论(..)"
+            android:textColor="@color/need_etails_txt"
+            android:textSize="@dimen/need_etails_txt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cursor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+         >
+
+        <TextView
+            android:layout_width="66dp"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            android:background="#F98512" />
+    </LinearLayout>
+    <include layout="@layout/demand_item_division_line"/>
+
+    <com.tr.ui.demand.MyView.MyViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+<!--     <android.support.v4.view.ViewPager
+        android:id="@+id/contentVp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" /> -->
+
+</LinearLayout>

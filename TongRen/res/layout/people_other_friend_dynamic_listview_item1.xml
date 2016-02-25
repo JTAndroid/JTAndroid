@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView
+        android:id="@+id/person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phonecontacts"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余佳文"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/person"
+        android:layout_alignParentTop="true"
+        android:paddingTop="15dp"
+        android:textColor="#000000"/>
+    
+    <TextView
+        android:id="@+id/request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转发了知识"
+        android:layout_toRightOf="@id/name"
+        android:paddingTop="15dp"
+        android:paddingLeft="5dp"/>
+    
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="金融服务方案横跨了并购"
+        android:layout_below="@id/person"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"/>
+    
+    <TextView
+        android:id="@+id/news_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跨了并购顾问和并购融资两大，领其多元化并购顾问，并购融资是方"
+        android:layout_below="@+id/news_title"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+    <TextView
+        android:id="@+id/news_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12分钟前"
+        android:layout_below="@+id/news_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+      <LinearLayout
+          android:id="@+id/detail"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/news_content"
+          android:paddingTop="10dp">
+           <ImageView
+               android:layout_width="15dp"
+               android:layout_height="15dp"
+               android:src="@drawable/relation_home_sendmessage"/>
+           <TextView
+              android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="15"
+               android:paddingLeft="5dp"
+               android:paddingRight="5dp"/>
+          </LinearLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/news_time"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="10dp"
+              android:background="#eeeeee" >
+
+              <TextView
+                  android:id="@+id/zhangdai"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="张岱：这个需求不错，在哪儿看的" />
+
+              <TextView
+                  android:id="@+id/qinguochao"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/zhangdai"
+                  android:text="秦国超：这个需求不错，在哪儿看的" />
+
+              <LinearLayout
+                  android:id="@+id/linearLayout1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/qinguochao"
+                  android:orientation="horizontal" >
+
+                  <ImageView
+                      android:layout_width="15dp"
+                      android:layout_height="15dp"
+                      android:src="@drawable/relation_home_sendmessage" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_toRightOf="@+id/linearLayout1"
+                  android:paddingLeft="10dp"
+                  android:text="查看全部评论"
+                  android:textColor="#28a9d0"
+                  android:textSize="12sp" />
+              </LinearLayout>
+
+
+          </RelativeLayout>
+
+</RelativeLayout>

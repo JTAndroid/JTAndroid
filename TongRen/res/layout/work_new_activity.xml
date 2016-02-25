@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hy_activity_main_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutWork"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutLead"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onButtomMenuLeadClick"
+                    android:background="@drawable/common_bg" >
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="1px"
+		                android:background="#e3e3e3"
+		                android:orientation="vertical" >
+		            </LinearLayout>
+		            
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_work_lead" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="负责人"
+                            android:textColor="#707070"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutMember"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onButtomMenuMemberClick"
+                    android:background="@drawable/common_bg" >
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="1px"
+		                android:background="#e3e3e3"
+		                android:orientation="vertical" >
+		            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_work_member" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="成员"
+                            android:textColor="#707070"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutRelation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onButtomMenuReleationClick"
+                    android:background="@drawable/common_bg" >
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="1px"
+		                android:background="#e3e3e3"
+		                android:orientation="vertical" >
+		            </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_work_relation" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="关联"
+                            android:textColor="#707070"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
+                <!-- <RelativeLayout
+                    android:id="@+id/RelativeLayoutAddr"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onButtomMenuAddrClick"
+                    android:background="@drawable/common_bg" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_work_location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="地点"
+                            android:textColor="#707070"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
+                
+                <RelativeLayout
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="#e3e3e3" >
+                </RelativeLayout> -->
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutMore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:onClick="onButtomMenuMoreClick"
+                    android:background="@drawable/common_bg" >
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="1px"
+		                android:background="#e3e3e3"
+		                android:orientation="vertical" >
+		            </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/IV_tri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_work_tri"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentTop="true" 
+                        android:visibility="gone"/>
+                        
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_work_more" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="更多"
+                            android:textColor="#707070"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#e3e3e3"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

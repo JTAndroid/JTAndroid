@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/hy_itemPhotoAlbumBooth_sleTextBg"
+        android:layout_width="150dp"
+        android:layout_height="102dp" />
+
+    <ImageView
+        android:id="@+id/hy_itemPhotoAlbumBooth_photo"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="1dp"
+        android:scaleType="centerCrop" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/hy_itemPhotoAlbumBooth_check"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp" />
+
+</FrameLayout>

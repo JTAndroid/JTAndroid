@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">金桐</string>
+    <string name="drop_dowm">下拉刷新</string>
+    <string name="release_update">松开刷新</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="pullup_to_load">上划查看更多</string>
+    <string name="release_to_load">松开刷新数据</string>
+    <string name="loading">正在加载。。。</string>
+    <string name="seen_more">更多</string>
+    <string name="str_yesterday">昨天</string>
+    <string name="image_contentDescription">通用图片描述</string>
+
+    <!-- 网络部分 -->
+    <string name="session">sessionID</string>
+    <string name="userid">jtUserID</string>
+    <string name="nick">jtNickName</string>
+    <string name="neterr_sync">操作失败</string>
+    <string name="netok_sync">操作成功</string>
+    <string name="net_return_ok">true</string>
+    <string name="net_return_err">false</string>
+    <string name="automati_updates1">从不</string>
+    <string name="automati_updates2">仅WI-FI</string>
+    <!-- im 相关的定义 -->
+
+
+    <!-- 关系界面 -->
+    <string name="im_new_contactlist">新的关系</string>
+    <string name="im_groupslist">群</string>
+    <string name="im_myinorg">我加入的机构</string>
+
+    <!-- 关系详情界面 -->
+    <string name="im_relation_info_title">用户基本信息</string>
+    <string name="im_relation_outinvest_title">投资意向</string>
+    <string name="im_relation_Requirement_title">发布的需求</string>
+    <string name="im_relation_share_title">分享的知识</string>
+    <string name="im_relation_connection_title">匹配的关系</string>
+    <string name="im_relation_work_title">工作经历</string>
+    <string name="im_relation_education_title">教育经历</string>
+    <string name="im_relation_att_title">附件</string>
+
+    <!-- group创建 -->
+    <string name="im_group_time">会议时间（必选）</string>
+    <string name="im_group_persons">参与人员（可选）</string>
+
+    <!-- editTExt hint -->
+    <string name="search_hint">搜索</string>
+    <string name="im_group_bankroll">金额(单选)</string>
+    <string name="im_group_invest">基本信息</string>
+    <string name="im_group_trade">个人情况</string>
+    <string name="im_group_area">其他资料</string>
+    <string name="im_group_description">简单描述一下路演情况（必填）</string>
+
+    <!-- used for user register -->
+    <string name="account_caption">请输入中国大陆手机号或常用邮箱，可用于登陆和找回密码，注册后全网可用</string>
+    <string name="password_caption">密码长度为6&#8211;14位</string>
+    <string name="verify_code_caption">请输入验证码</string>
+    <string name="des_forget_password">忘记密码？</string>
+    <string name="des_agree_agreement"><u>注册即表示同意《金桐网服务协议》</u></string>
+
+    <!-- 时间处理 -->
+    <string name="str_yearago">年前</string>
+    <string name="str_monthago">月前</string>
+    <string name="str_daysago">天前</string>
+    <string name="str_hoursago">小时前</string>
+    <string name="str_minsago">分钟前</string>
+    <string name="str_secondago">秒前</string>
+    <string name="str_again_send_title">重发</string>
+    <string name="str_again_send_hint">确认重发该消息？</string>
+    <string name="str_ok">确定</string>
+    <string name="str_cancel">取消</string>
+
+    <!-- 知识详情 -->
+    <string name="str_comment_success_hint">回复评论成功</string>
+    <string name="str_comment_failure_hint">回复评论失败</string>
+
+    <!-- 友盟key -->
+    <!-- 正式key -->
+    <string name="umeng_key_official">536dd0fc56240b4f0702a785</string>
+    <!-- 开发key -->
+    <string name="umeng_key_develop">5386d35356240b1d4100d7b2</string>
+
+    <!-- 百度推送key -->
+    <!-- 正式key -->
+    <string name="push_key_official">bHUYSh5T1i7RdCKgBgAlQf3k</string>
+    <!-- 开发key -->
+    <string name="push_key_develop">6HbOpGal30IWavitywFTp81B</string>
+    <!-- 环信qa key -->
+    <string name="huanxin_push_key_qa">gintong#gintongqa</string>
+    <!-- 环信online key -->
+    <string name="huanxin_push_key_online">gintong#gintongonline</string>
+
+    <!-- 百度地图key -->
+    <!-- 正式key -->
+    <string name="map_key_official">6ZS2N1v5PAyDuPQop5WhdANs</string>
+    <!-- 开发key -->
+    <string name="map_key_develop">OKKSTuWA2HxHYfcoEuG0hVnh</string>
+
+    <!-- 会议 start -->
+    <string name="hy_meeting">会议</string>
+    <string name="hy_square">广场</string>
+    <string name="hy_title">标题</string>
+    <string name="hy_confirm">确认</string>
+    <string name="hy_cancel">取消</string>
+    <string name="hy_launch">发起</string>
+    <string name="hy_save_draft">存草稿</string>
+    <string name="hy_check_all">全选</string>
+    <string name="hy_layout_title">填写报名信息</string>
+    <!-- 会议 end -->
+    <!-- 下拉listview -->
+    <string name="xlistview_header_hint_normal">下划刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">上划查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- 融资需求 -->
+    <string name="financing_esired_label">标签</string>
+    <string name="financing_esired_custom">自定义</string>
+    <string name="financing_esired_more">点击填写更多</string>
+    <string name="financing_esired_contacts">人脉</string>
+    <string name="financing_esired_relevance">关联</string>
+    <string name="financing_esired_tree">目录</string>
+    <string name="financing_esired_jurisdiction">权限</string>
+
+    <!-- 找项目 -->
+    <string name="find_project_area">区域</string>
+    <string name="find_project_type">类型</string>
+    <string name="find_project_vocation">行业</string>
+    <string name="find_project_price">金额</string>
+
+    <!-- 用户举报 -->
+    <string name="report_message_sham_phone">联系电话虚假</string>
+    <string name="report_message_sham_message">虚假，违法信息</string>
+    <string name="report_message_sham_price">价格虚假</string>
+    <string name="report_message_sham_other">其它</string>
+    <string name="report_message_reason">您的举报内容...</string>
+    <string name="report_message_phone_hint">输入您的手机号码，以便我们尽快与您联系</string>
+    <string name="report_message_submit">提交</string>
+
+    <!-- 我的需求 -->
+    <string name="me_need_tree">目录</string>
+    <string name="me_need_label">评价(标签)</string>
+    <string name="me_need_delete">删除</string>
+    <string name="me_need_search">搜索</string>
+    <string name="me_need_text">我的需求</string>
+    <string name="me_need_all">全部</string>
+    <string name="me_need_my_create">我创建的</string>
+    <string name="me_need_my_save">已保存的</string>
+    <string name="me_need_collect">已收藏的</string>
+
+    <!-- 需求详情 -->
+    <string name="need_etails">需求详情</string>
+    <string name="need_etails_lable_txt">标签:</string>
+    <string name="need_etails_project">项目介绍</string>
+    <string name="need_etails_linkman">联系人</string>
+    <string name="need_etails_relevance_relation">关联关系</string>
+    <string name="need_etails_relevance_relation_contacts_txt">人脉</string>
+    <string name="need_etails_relevance_relation_organization_txt">组织</string>
+    <!-- 权限 -->
+    <string name="need_limits_txt">选择"跳过",则默认为全选</string>
+
+    <!-- 评论 -->
+    <string name="need_etails_all_comment">全部评论</string>
+
+    <style name="MMTabButton">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:paddingTop">8.0dip</item>
+    </style>
+    <!-- 标签 -->
+    <string name="add_label">添加标签</string>
+    <string name="home_exit">再按一次退出金桐</string>
+    <string name="register_name_digits">,.;[]=-`?:"{}+_()\/*0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <!--
+     	<string name="home_exit">再按一次退出金桐</string>
+	<string name="register_name_digits">,.;[]=-`?:"{}+_()\/*0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>  
+    -->
+
+
+    <!-- 人脉模块 -->
+    <string name="action_settings">Settings</string>
+    <string name="_finish">完成</string>
+    <string name="_businessCard">拍摄名片</string>
+    <string name="_dec">基本信息</string>
+    <string name="_creadContacts">创建人脉</string>
+    <string name="_custom_Text_Tv">自定义文本</string>
+    <string name="_moreDec">点击填写更多信息</string>
+    <string name="_custom_field_Etv">自定义</string>
+    <string name="_custom_field_Etv_hint">东风浩荡</string>
+    <string name="_custom_field_Tv">自定义字段</string>
+    <string name="_address_Etv">详细地址</string>
+    <string name="_area_Etv">地区</string>
+    <string name="_company_Etv">公司</string>
+    <string name="_email_Etv">邮箱</string>
+    <string name="_phone_Etv">电话</string>
+    <string name="_post_Etv">职位</string>
+    <string name="_classify_Etv">人脉分类</string>
+    <string name="_gender_Etv">性别</string>
+    <string name="_name_Etv">名</string>
+    <string name="_surname_Etv">姓</string>
+    <string name="_Addmore_Tv">添加其它模块</string>
+    <string name="str_vertical">竖线</string>
+    <string name="str_content_icon">内容标志</string>
+    <string name="title_activity_evaluation">EvaluationActivity</string>
+    <string name="title_activity_evaluation_person">EvaluationPersonActivity</string>
+    <string name="title_activity_contacts_edition">ContactsEditionActivity</string>
+    <string name="title_activity_personalhomepage">PersonalhomepageActivity</string>
+    <string name="title_activity_othershome_page">OthershomePageActivity</string>
+    <string name="title_activity_new_create">NewCreateActivity</string>
+    <string name="title_activity_choose_time">ChooseTimeActivity</string>
+    <string name="title_activity_metting_address_map">MettingAddressMapActivity</string>
+    <string name="title_activity_meeting_content">MeetingContentActivity</string>
+
+    <!-- 客户详情 -->
+    <string name="_newnotice">最新公告</string>
+    <string name="_news">最新资讯</string>
+    <string name="_orgsmry">客户概况</string>
+    <string name="_relationmsg">关联信息</string>
+    <string name="_gaochengzhili">高层治理</string>
+    <string name="_gudongyanjiu">股东研究</string>
+    <string name="_caiwufenxi">财务分析</string>
+    <string name="_tonghangjingzhen">同业竞争</string>
+    <string name="_hangyedongtai">行业动态</string>
+    <string name="_yanjiubaogao">研究报告</string>
+
+    <!-- 高层治理 -->
+    <string name="_gaoguanxinxi">高管信息</string>
+    <string name="_dongshihui">董事会</string>
+    <string name="_jianshihui">监事会</string>
+    <string name="_gaoguan">高管</string>
+    <string name="_xiangguanmiaosu">相关描述</string>
+
+    <!-- 更改手机号 -->
+    <string name="note">提示：如果您的手机号已停用，且号码确认无误，请拨打客服热线：4000-7000-11</string>
+
+    <!-- 自定义弹窗 -->
+    <string name="dialog_text">字段填写的数据也将一同被删除确认删除此字段？</string>
+    <!-- People工作经历 -->
+    <string name="work_experience">工作经历</string>
+    <string name="work_data">工作时间</string>
+    <string name="work_company">单位名称</string>
+    <string name="work_industry">单位行业</string>
+    <string name="work_certifier">证明人</string>
+    <string name="work_certifierphone">证明电话</string>
+    <string name="work_department">部门</string>
+    <string name="work_position">职位</string>
+    <string name="work_colleague">同事</string>
+    <string name="work_custom">自定义</string>
+    <string name="work_experience_Tv">将本工作经历当做为当前身份</string>
+
+    <!-- 事务的ActionBar标题 -->
+    <string name="aff_create">创建</string>
+    <string name="aff_list">列表</string>
+    <string name="aff_time">时间</string>
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+
+    <!-- 更多里的条目 -->
+    <string name="chat_launch">发起畅聊</string>
+    <string name="invite_friends">添加朋友</string>
+    <string name="add_group">群号加群</string>
+    <string name="richscan">扫一扫</string>
+    <string name="help">帮助</string>
+    <string name="creat_community">创建社群</string>
+    <string name="my_community">我的社群</string>
+    <string name="filter_label">标签筛选</string>
+    <string name="create_project">创建项目</string>
+    <!-- 主页 -->
+    <string name="gintong_nikename">金桐昵称：</string>
+    <string name="phone_number">手\u2000机\u2000号：</string>
+    <string name="user_email">邮\u3000\u3000箱：</string>
+    <string name="work_area">工作区域：</string>
+    <string name="my_dynamic">我的动态</string>
+    <string name="other_dynamic">他的动态</string>
+    <string name="to_docking">与他对接</string>
+    <string name="maxcard">二维码名片</string>
+    <string name="evaluate">评价</string>
+    <string name="edit">编辑</string>
+    <string name="education_experience">教育经历</string>
+    <string name="other">其他</string>
+    <string name="personal_description">个人描述</string>
+    <string name="add_personal_description">+添加个人描述</string>
+    <string name="avatar">头像</string>
+    <string name="full_name">姓名</string>
+    <string name="not_null">必填</string>
+    
+    <string name="birthdate">出生日期</string>
+    <string name="native_place">籍\u3000\u3000贯</string>
+    <string name="hobbies">兴趣爱好</string>
+    <string name="be_skilled_in">擅长技能</string>
+    <string name="yes_null">选填</string>
+    <string name="share">分享</string>
+    <string name="tip_off">举报</string>
+    <!-- 社群 -->
+    <string name="community_label">群标签</string>
+    <string name="community_member">群成员</string> 
+    <string name="community_people">群人脉</string> 
+    <string name="community_company">群企业</string> 
+    <string name="community_knowledge">群知识</string> 
+    <string name="community_demand">群需求</string> 
+    <string name="see_more">查看更多</string>
+    <string name="see_more_community_member">查看更多群成员</string> 
+    <string name="group_notice">群消息提醒</string> 
+    <string name="group_chat_name">群聊名称</string> 
+    <string name="management_group_members">管理群成员</string> 
+    <string name="group_show_member_name">显示群成员昵称</string> 
+    <string name="group_self_nickname">我在本群的昵称</string> 
+    <string name="empty_chat_record">清空聊天记录</string> 
+    <string name="find_chat_record">查找聊天记录</string> 
+    <string name="dissolve_group">解散该群</string> 
+    <string name="open">开启</string> 
+    <string name="silent">无声</string> 
+    <string name="close">关闭</string> 
+    <string name="state_tip">隐身后社群将不会被搜索到，也不会出现在发现>社群里，其他小伙伴只能通过社群号找到并申请加入</string> 
+    <string name="desc_tip">简要描述您的工作内容、职责范围、项目经历或获得成绩等</string> 
+	<string name="login_only_can_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
+	<string name="common_text_empty">当前暂无内容</string>
+	<string name="Monday">星期一</string>
+	<string name="Tuesday">星期二</string>
+	<string name="Wednesday">星期三</string>
+	<string name="Thursday">星期四</string>
+	<string name="Friday">星期五</string>
+	<string name="Saturday">星期六</string>
+	<string name="Sunday">星期天</string>
+	<string name="web_logon_tv">网页版金桐登录验证</string>
+	<string name="web_logon_ok">确定登录</string>
+	<string name="web_logon_cancel">取消登录</string>
+	<string name="web_logon_volidate">登录验证</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_bg"
+    android:orientation="horizontal" 
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center_vertical">
+<CheckBox
+        android:id="@+id/selectCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/kno_checkbox_bg" 
+        android:button="@null"
+        android:focusable="false"
+		android:focusableInTouchMode="false"/>
+    <ImageView
+        android:id="@+id/foldIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/kno_category_unfold" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="咨询"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+<CheckBox
+        android:id="@+id/selectCb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/kno_checkbox_bg" 
+        android:button="@null"
+        android:focusable="false"
+		android:focusableInTouchMode="false"/>
+    
+
+</LinearLayout>

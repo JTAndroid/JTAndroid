@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- style="?attr/actionButtonStyle" -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:focusable="true"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+	    android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:background="@drawable/related_res_search_bg"
+   		android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/home_search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:src="@drawable/delete_input_content"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/home_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/home_search_iv"
+            android:background="@color/all_transparent"
+            android:drawableLeft="@drawable/related_res_search"
+            android:drawablePadding="10dp"
+            android:gravity="left|center"
+            android:hint="请输入关键字"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#ff8d8d8d"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/home_search_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="搜索"
+        android:textColor="@drawable/home_search_text_color_selector"
+        android:textSize="@dimen/text_size_l" />
+
+</LinearLayout>

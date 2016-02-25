@@ -1,0 +1,828 @@
+/*
+ * Copyright (C) 2015 Emanuel Moecklin
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.utils.note.rteditor;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.text.Layout;
+import android.text.Layout.Alignment;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.widget.Toast;
+
+import com.tr.R;
+import com.utils.note.rteditor.RTEditText.RTEditTextListener;
+import com.utils.note.rteditor.RTOperationManager.TextChangeOperation;
+import com.utils.note.rteditor.RTToolbar.RTToolbarListener;
+import com.utils.note.rteditor.api.RTApi;
+import com.utils.note.rteditor.api.media.RTAudio;
+import com.utils.note.rteditor.api.media.RTImage;
+import com.utils.note.rteditor.effects.AbsoluteSizeEffect;
+import com.utils.note.rteditor.effects.AlignmentEffect;
+import com.utils.note.rteditor.effects.BackgroundColorEffect;
+import com.utils.note.rteditor.effects.BoldEffect;
+import com.utils.note.rteditor.effects.BulletEffect;
+import com.utils.note.rteditor.effects.Effect;
+import com.utils.note.rteditor.effects.Effects;
+import com.utils.note.rteditor.effects.ForegroundColorEffect;
+import com.utils.note.rteditor.effects.ItalicEffect;
+import com.utils.note.rteditor.effects.NumberEffect;
+import com.utils.note.rteditor.effects.StrikethroughEffect;
+import com.utils.note.rteditor.effects.SubscriptEffect;
+import com.utils.note.rteditor.effects.SuperscriptEffect;
+import com.utils.note.rteditor.effects.UnderlineEffect;
+import com.utils.note.rteditor.spans.AudioSpan;
+import com.utils.note.rteditor.spans.ImageSpan;
+import com.utils.note.rteditor.spans.LinkSpan;
+import com.utils.note.rteditor.utils.Constants;
+import com.utils.note.rteditor.utils.Constants.MediaAction;
+import com.utils.note.rteditor.utils.Selection;
+//import com.onegravity.rteditor.media.choose.MediaChooserActivity;
+
+/**
+ * The RTManager manages the different components:
+ * the toolbar(s), the editor(s) and the Activity/Fragment(s) via the RTProxy.
+ * <p>
+ * Note: the transient modifier is "misused" here to mark variables that
+ * are not saved and restored in onSaveInstanceState / onCreate.
+ */
+public class RTManager implements RTToolbarListener, RTEditTextListener {
+
+    /*
+     * Identifies the link dialog / fragment
+     */
+    private static final String ID_01_LINK_FRAGMENT = "ID_01_LINK_FRAGMENT";
+
+    /*
+     * The toolbar(s) may automatically be shown or hidden when a rich text
+     * editor gains or loses focus depending on the ToolbarVisibility setting.
+     */
+    public enum ToolbarVisibility {
+        /*
+         * Toolbar(s) are shown/hidden automatically depending on whether an
+         * editor that uses rich text gains/loses focus.
+         * toolbar依赖于编辑器是否使用rich text获取/失去焦点 自动显示/隐藏
+         *
+         * This is the default.
+         */
+        AUTOMATIC,
+
+        /*
+         * Toolbar(s) are always shown.
+         */
+        SHOW,
+
+        /*
+         * Toolbar(s) are never shown.
+         */
+        HIDE;
+    }
+
+    //toolbar默认状态
+    private ToolbarVisibility mToolbarVisibility = ToolbarVisibility.AUTOMATIC;
+
+    /*
+     * To set the visibility of the toolbar(s) we call setToolbarVisibility(boolean).
+     * To change the visibility we start an animation. Before the animation ends
+     * setToolbarVisibility() could have been called multiple times with different
+     * visibility parameters. We need to make sure once (one of) the animation
+     * ends we use the newest visibility status (that's what this variable stands for).
+     *
+     * We do clear the animation with each call to setToolbarVisibility but if the
+     * animation has already started the onAnimationEnd is still called.
+     * 
+     * toolbar是否显示。调用setToolbarVisibility(boolean)
+     */
+    private boolean mToolbarIsVisible;
+
+    /*
+     * When an Activity is started (e.g. to pick an image),
+     * we need to know which editor gets the result
+     */
+    private int mActiveEditor = Integer.MAX_VALUE;
+
+    /*
+     * This defines what Selection link operations are applied to
+     * (inserting, editing, removing links).
+     */
+    private Selection mLinkSelection;
+
+    /*
+     * We need these to delay hiding the toolbar after a focus loss of an editor
+     */
+
+    transient private Handler _activityHandler;
+    transient private Handler mHandler;
+    transient private boolean mIsPendingFocusLoss;
+    transient private boolean mCancelPendingFocusLoss;
+
+    /*
+     * Map the registered editors by editor id (RTEditText.getId())
+     */
+    transient private Map<Integer, RTEditText> mEditors;
+
+    /*
+     * Map the registered toolbars by toolbar id (RTToolbar.getId())
+     */
+    transient private Map<Integer, RTToolbar> mToolbars;
+
+    /*
+     * That's our link to "the outside world" to perform operations that need
+     * access to a Context or an Activity
+     */
+    transient private RTApi mRTApi;
+
+    /*
+     * The RTOperationManager is used to undo/redo operations
+     */
+    transient private RTOperationManager mOPManager;
+
+    // ****************************************** Lifecycle Methods *******************************************
+
+    /**
+     * @param rtApi              The proxy to "the outside world"
+     * @param savedInstanceState If the component is being re-initialized after previously
+     *                           being shut down then this Bundle contains the data it most
+     *                           recently supplied in onSaveInstanceState(Bundle).
+     */
+    public RTManager(RTApi rtApi, Bundle savedInstanceState) {
+        mRTApi = rtApi;
+
+        mHandler = new Handler();
+        mEditors = new ConcurrentHashMap<Integer, RTEditText>();
+        mToolbars = new ConcurrentHashMap<Integer, RTToolbar>();
+        mOPManager = new RTOperationManager();
+
+        if (savedInstanceState != null) {
+            String tmp = savedInstanceState.getString("mToolbarVisibility");
+            if (tmp != null) {
+                mToolbarVisibility = ToolbarVisibility.valueOf(tmp);
+            }
+            mToolbarIsVisible = savedInstanceState.getBoolean("mToolbarIsVisible");
+            mActiveEditor = savedInstanceState.getInt("mActiveEditor");
+            mLinkSelection = (Selection) savedInstanceState.getSerializable("mLinkSelection");
+        }
+
+    }
+
+    /**
+     * Called to retrieve per-instance state before being killed so that the
+     * state can be restored in the constructor.
+     *
+     * @param outState Bundle in which to place your saved state.
+     */
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("mToolbarVisibility", mToolbarVisibility.name());
+        outState.putBoolean("mToolbarIsVisible", mToolbarIsVisible);
+        outState.putInt("mActiveEditor", mActiveEditor);
+        if (mLinkSelection != null) {
+            outState.putSerializable("mLinkSelection", mLinkSelection);
+        }
+    }
+
+    /**
+     * Perform any final cleanup before the component is destroyed.
+     *
+     * @param isSaved True if the text is saved, False if it's dismissed. This is
+     *                needed to decide whether media (images etc.) are to be
+     *                deleted.
+     */
+    public void onDestroy(boolean isSaved) {
+
+        for (RTEditText editor : mEditors.values()) {
+            editor.unregister();
+            editor.onDestroy(isSaved);
+        }
+        mEditors.clear();
+
+        for (RTToolbar toolbar : mToolbars.values()) {
+            toolbar.removeToolbarListener();
+        }
+        mToolbars.clear();
+
+        mRTApi = null;
+    }
+
+    /**
+     * Must be called from the Activity's onActivityResult method to be able to
+     * process the rich text editor specific calls (e.g. when picking an image
+     * to insert).
+     *
+     * @param requestCode The integer request code originally supplied to
+     *                    startActivityForResult(), allowing you to identify who this
+     *                    result came from.
+     * @param resultCode  The integer result code returned by the child activity through
+     *                    its setResult().
+     * @param data        An Intent, which can return result data to the caller (various
+     *                    data can be attached to Intent "extras").
+     * @return True if the call was consumed in this component, False otherwise
+     */
+    public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK && data != null) {
+
+//            if (requestCode == MediaAction.PICK_PICTURE.requestCode() ||
+//                    requestCode == MediaAction.CAPTURE_PICTURE.requestCode()) {
+//
+//                RTImage image = (RTImage) data.getSerializableExtra(Constants.RESULT_MEDIA);
+//                insertImage(image);
+//                return true;
+//
+//            }
+
+        }
+
+        return false;
+    }
+
+    // ****************************************** Public Methods *******************************************
+
+    /**
+     * Register a rich text editor.
+     * <p>
+     * Before using the editor it needs to be registered to an RTManager. Using
+     * means any calls to the editor (setText will fail if the editor isn't
+     * registered)! Must be called from the ui thread.
+     *
+     * @param editor The rich text editor to register.
+     */
+    public void registerEditor(RTEditText editor, boolean useRichTextEditing) {
+        mEditors.put(editor.getId(), editor);
+        editor.register(this, mRTApi);
+        editor.setRichTextEditing(useRichTextEditing, false);
+
+        updateToolbarVisibility();
+    }
+
+    /**
+     * Unregister a rich text editor.
+     * <p>
+     * This method may be called before the component is destroyed to stop any
+     * interaction with the editor. Not doing so may result in (asynchronous)
+     * calls coming through when the Activity/Fragment is already stopping its
+     * operation.
+     * <p>
+     * Must be called from the ui thread.
+     * <p>
+     * Important: calling this method is obsolete once the onDestroy(boolean) is
+     * called
+     *
+     * @param editor The rich text editor to unregister.
+     */
+    public void unregisterEditor(RTEditText editor) {
+        mEditors.remove(editor.getId());
+        editor.unregister();
+
+        updateToolbarVisibility();
+    }
+
+    /**
+     * Register a toolbar.
+     * <p>
+     * Only after doing that can it be used in conjunction with a rich text editor.
+     * Must be called from the ui thread.
+     *
+     * @param toolbarContainer The ViewGroup containing the toolbar.
+     *                         This container is used to show/hide the toolbar if needed (e.g. if the RTEditText field loses/gains focus).
+     *                         We can't use the toolbar itself because there could be multiple and they could be embedded in a complex layout hierarchy.
+     * @param toolbar          The toolbar to register.
+     */
+    public void registerToolbar(ViewGroup toolbarContainer, RTToolbar toolbar) {
+        mToolbars.put(toolbar.getId(), toolbar);
+        toolbar.setToolbarListener(this);
+        toolbar.setToolbarContainer(toolbarContainer);
+
+        updateToolbarVisibility();
+    }
+
+    /**
+     * Unregister a toolbar.
+     * <p>
+     * This method may be called before the component is destroyed to
+     * stop any interaction with the toolbar. Not doing so may result
+     * in (asynchronous) calls coming through when the Activity/Fragment
+     * is already stopping its operation.
+     * <p>
+     * Must be called from the ui thread.
+     * <p>
+     * Important: calling this method is obsolete once the
+     * onDestroy(boolean) is called
+     *
+     * @param toolbar The toolbar to unregister.
+     */
+    public void unregisterToolbar(RTToolbar toolbar) {
+        mToolbars.remove(toolbar.getId());
+        toolbar.removeToolbarListener();
+        updateToolbarVisibility();
+    }
+
+    /**
+     * Set the auto show/hide toolbar mode.
+     */
+    public void setToolbarVisibility(ToolbarVisibility toolbarVisibility) {
+        if (mToolbarVisibility != toolbarVisibility) {
+            mToolbarVisibility = toolbarVisibility;
+            updateToolbarVisibility();
+        }
+    }
+
+    private void updateToolbarVisibility() {
+        boolean showToolbars = mToolbarVisibility == ToolbarVisibility.SHOW;
+
+        if (mToolbarVisibility == ToolbarVisibility.AUTOMATIC) {
+            RTEditText editor = getActiveEditor();
+            showToolbars = editor != null && editor.usesRTFormatting();
+        }
+
+        for (RTToolbar toolbar : mToolbars.values()) {
+            setToolbarVisibility(toolbar, showToolbars);
+        }
+    }
+
+    private void setToolbarVisibility(final RTToolbar toolbar, final boolean visible) {
+        mToolbarIsVisible = visible;
+
+        final ViewGroup toolbarContainer = toolbar.getToolbarContainer();
+        int visibility = View.VISIBLE;
+        synchronized (toolbarContainer) {
+            visibility = toolbarContainer.getVisibility();
+        }
+
+        // only change visibility if we actually have to
+        if ((visibility == View.GONE && visible) || (visibility == View.VISIBLE && !visible)) {
+
+            AlphaAnimation fadeAnimation = visible ? new AlphaAnimation(0.0f, 1.0f) : new AlphaAnimation(1.0f, 0.0f);
+            fadeAnimation.setDuration(400);
+            fadeAnimation.setAnimationListener(new AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    synchronized (toolbarContainer) {
+                        toolbarContainer.setVisibility(mToolbarIsVisible ? View.VISIBLE : View.GONE);
+                    }
+                }
+            });
+
+            toolbarContainer.startAnimation(fadeAnimation);
+        } else {
+            toolbarContainer.clearAnimation();
+        }
+    }
+
+    // ****************************************** RTToolbar.RTToolbarListener *******************************************
+
+    @Override
+    /* @inheritDoc */
+    public <T> void onEffectSelected(Effect<T> effect, T value) {
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            editor.applyEffect(effect, value);
+        }
+    }
+
+    @Override
+    /* @inheritDoc */
+    public void onClearFormatting() {
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            int selStartBefore = editor.getSelectionStart();
+            int selEndBefore = editor.getSelectionEnd();
+            Spannable oldSpannable = editor.cloneSpannable();
+            for (Effect<?> effect : Effects.FORMATTING_EFFECTS) {
+                effect.clearFormattingInSelection(editor);
+            }
+            int selStartAfter = editor.getSelectionStart();
+            int selEndAfter = editor.getSelectionEnd();
+            Spannable newSpannable = editor.cloneSpannable();
+            mOPManager.executed(editor, new TextChangeOperation(oldSpannable, newSpannable,
+                    selStartBefore, selEndBefore,
+                    selStartAfter, selEndAfter));
+        }
+    }
+
+    @Override
+    /* @inheritDoc */
+    public void onUndo() {
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            mOPManager.undo(editor);
+        }
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onRedo() {
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            mOPManager.redo(editor);
+        }
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onCreateLink() {
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            String url = null;
+            String linkText = null;
+
+            LinkSpan[] links = Effects.LINK.getSpans(editor.getText(), new Selection(editor));
+            if (links.length == 0) {
+                // default values if no link is found at selection
+                linkText = editor.getSelectedText();
+                try {
+                    // if this succeeds we have a valid URL and will use it for the link
+                    new URL(linkText);
+                    url = linkText;
+                } catch (MalformedURLException ignore) {
+                }
+                mLinkSelection = editor.getSelection();
+            } else {
+                // values if a link already exists
+                url = links[0].getURL();
+                linkText = getLinkText(editor, links[0]);
+            }
+
+//            mRTApi.openDialogFragment(ID_01_LINK_FRAGMENT, LinkFragment.newInstance(linkText, url));
+        }
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onPickImage() {
+        onPickCaptureImage(MediaAction.PICK_PICTURE);
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onCaptureImage() {
+        onPickCaptureImage(MediaAction.CAPTURE_PICTURE);
+    }
+
+
+    public void setActivityHandler(Handler handler){
+        _activityHandler = handler;
+    }
+    @Override
+    public void onStartAudioRecode() {
+        if(_activityHandler != null){
+            Message msg = Message.obtain();
+            msg.what = Constants.START_AUDIO_RECODE;
+            _activityHandler.sendMessage(msg);
+        }
+    }
+
+    private void onPickCaptureImage(MediaAction mediaAction) {
+        RTEditText editor = getActiveEditor();
+        if (editor != null && mRTApi != null) {
+//            mActiveEditor = editor.getId();
+//
+//            Intent intent = new Intent(RTApi.getApplicationContext(), MediaChooserActivity.class)
+//                    .putExtra(MediaChooserActivity.EXTRA_MEDIA_ACTION, mediaAction.name())
+//                    .putExtra(MediaChooserActivity.EXTRA_MEDIA_FACTORY, mRTApi);
+//
+//            mRTApi.startActivityForResult(intent, mediaAction.requestCode());
+        }
+    }
+
+    public void insertAudio(String path,String audioPath){
+        RTEditText editor = getActiveEditor();
+        if (editor != null && mRTApi != null) {
+            mActiveEditor = editor.getId();
+        }
+        final RTAudio audio = mRTApi.createAudio(path, audioPath);
+        mRTApi.runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                RTEditText editor = mEditors.get(mActiveEditor);
+                if (audio != null && editor != null) {
+                    editor.append("\n");
+                    Selection selection = new Selection(editor);
+                    Editable str = editor.getText();
+
+                    // Unicode Character 'OBJECT REPLACEMENT CHARACTER' (U+FFFC)
+                    // see http://www.fileformat.info/info/unicode/char/fffc/index.htm
+                    str.insert(selection.start(), "\uFFFC");
+                    try {
+                        // now add the actual image and inform the RTOperationManager about the operation
+                        Spannable oldSpannable = editor.cloneSpannable();
+
+                        AudioSpan audioSpan = new AudioSpan(audio, false);
+                        str.setSpan(audioSpan, selection.start(), selection.end() + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        int selStartAfter = editor.getSelectionStart();
+                        int selEndAfter = editor.getSelectionEnd();
+                        editor.onAddMedia(audio);
+
+                        Spannable newSpannable = editor.cloneSpannable();
+
+                        mOPManager.executed(editor, new RTOperationManager.TextChangeOperation(oldSpannable, newSpannable,
+                                selection.start(), selection.end(), selStartAfter, selEndAfter));
+                        editor.append("\n");
+                    } catch (OutOfMemoryError e) {
+                        str.delete(selection.start(), selection.end() + 1);
+                        mRTApi.makeText(R.string.rte_add_image_error, Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+
+        });
+    }
+
+    private char getSelectLineStart(RTEditText edit){
+        Selection selection = edit.getSelection();
+        int end = selection.end();
+        Layout layout = edit.getLayout();
+        String text = edit.getText().toString();
+        if(!TextUtils.isEmpty(text) && layout != null){
+            int lineCount = layout.getLineCount();
+            for(int i = 0;i< lineCount - 1;i++){
+                if(layout.getLineStart(i)<= end && layout.getLineEnd(i) >= end){
+                    return text.charAt(layout.getLineStart(i));
+                }
+            }
+        }
+        return '\n';
+    }
+
+    /* called from onActivityResult() */
+    public void insertImage(String path) {
+        RTEditText editor = getActiveEditor();
+        if (editor != null && mRTApi != null) {
+            mActiveEditor = editor.getId();
+        }
+        final RTImage image = mRTApi.createImage(path);
+        mRTApi.runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                RTEditText editor = mEditors.get(mActiveEditor);
+                if (image != null && editor != null) {
+                    editor.append("\n");
+                    Selection selection = new Selection(editor);
+                    Editable str = editor.getText();
+
+                    // Unicode Character 'OBJECT REPLACEMENT CHARACTER' (U+FFFC)
+                    // see http://www.fileformat.info/info/unicode/char/fffc/index.htm
+                    str.insert(selection.start(), "\uFFFC");
+
+                    try {
+                        // now add the actual image and inform the RTOperationManager about the operation
+                        Spannable oldSpannable = editor.cloneSpannable();
+
+                        ImageSpan imageSpan = new ImageSpan(image, false);
+                        str.setSpan(imageSpan, selection.start(), selection.end() + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                        int selStartAfter = editor.getSelectionStart();
+                        int selEndAfter = editor.getSelectionEnd();
+                        editor.onAddMedia(image);
+
+                        Spannable newSpannable = editor.cloneSpannable();
+
+                        mOPManager.executed(editor, new RTOperationManager.TextChangeOperation(oldSpannable, newSpannable,
+                                selection.start(), selection.end(), selStartAfter, selEndAfter));
+                        editor.append("\n");
+                    } catch (OutOfMemoryError e) {
+                        str.delete(selection.start(), selection.end() + 1);
+                        mRTApi.makeText(R.string.rte_add_image_error, Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+
+        });
+    }
+
+    private RTEditText getActiveEditor() {
+        for (RTEditText editor : mEditors.values()) {
+            if (editor.hasFocus()) {
+                return editor;
+            }
+        }
+        return null;
+    }
+
+    // ****************************************** RTEditText.RTEditTextListener *******************************************
+
+    @Override
+	/* @inheritDoc */
+    public void onFocusChanged(RTEditText editor, boolean focused) {
+        if (editor.usesRTFormatting()) {
+            synchronized (this) {
+                // if a focus loss is pending then we cancel it
+                if (mIsPendingFocusLoss) {
+                    mCancelPendingFocusLoss = true;
+                }
+            }
+            if (focused) {
+                changeFocus();
+            } else {
+                mIsPendingFocusLoss = true;
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        changeFocus();
+                    }
+                }, 10);
+            }
+        }
+    }
+
+    private void changeFocus() {
+        synchronized (this) {
+            if (!mCancelPendingFocusLoss) {
+                updateToolbarVisibility();
+            }
+            mCancelPendingFocusLoss = false;
+            mIsPendingFocusLoss = false;
+        }
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onSelectionChanged(RTEditText editor, int start, int end) {
+        if (editor == null) return;
+
+        // default values
+        boolean isBold = false;
+        boolean isItalic = false;
+        boolean isUnderLine = false;
+        boolean isStrikethrough = false;
+        boolean isSuperscript = false;
+        boolean isSubscript = false;
+        boolean isBullet = false;
+        boolean isNumber = false;
+        List<Alignment> alignments = null;
+        List<Integer> sizes = null;
+        List<Integer> fontColors = null;
+        List<Integer> bgColors = null;
+
+        // check if effect exists in selection
+        boolean isEmpty = (start == end);
+        for (Effect<?> effect : Effects.ALL_EFFECTS) {
+            if (effect.existsInSelection(editor, isEmpty ? Spanned.SPAN_INCLUSIVE_EXCLUSIVE : Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)) {
+                if (effect instanceof BoldEffect) {
+                    isBold = true;
+                } else if (effect instanceof ItalicEffect) {
+                    isItalic = true;
+                } else if (effect instanceof UnderlineEffect) {
+                    isUnderLine = true;
+                } else if (effect instanceof StrikethroughEffect) {
+                    isStrikethrough = true;
+                } else if (effect instanceof SuperscriptEffect) {
+                    isSuperscript = true;
+                } else if (effect instanceof SubscriptEffect) {
+                    isSubscript = true;
+                } else if (effect instanceof BulletEffect) {
+                    isBullet = true;
+                } else if (effect instanceof NumberEffect) {
+                    isNumber = true;
+                } else if (effect instanceof AlignmentEffect) {
+                    alignments = Effects.ALIGNMENT.valuesInSelection(editor, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                } else if (effect instanceof AbsoluteSizeEffect) {
+                    sizes = Effects.FONTSIZE.valuesInSelection(editor, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                } else if (effect instanceof ForegroundColorEffect) {
+                    fontColors = Effects.FONTCOLOR.valuesInSelection(editor, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                } else if (effect instanceof BackgroundColorEffect) {
+                    bgColors = Effects.BGCOLOR.valuesInSelection(editor, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+            }
+        }
+
+        // update toolbar(s)
+        for (RTToolbar toolbar : mToolbars.values()) {
+            toolbar.setBold(isBold);
+            toolbar.setItalic(isItalic);
+            toolbar.setUnderline(isUnderLine);
+            toolbar.setStrikethrough(isStrikethrough);
+            toolbar.setSuperscript(isSuperscript);
+            toolbar.setSubscript(isSubscript);
+            toolbar.setBullet(isBullet);
+            toolbar.setNumber(isNumber);
+
+            // alignment (left, center, right)
+            if (alignments == null) {
+                toolbar.setAlignment(Layout.Alignment.ALIGN_NORMAL);
+            } else {
+                toolbar.setAlignments(alignments);
+            }
+
+            // text size
+            if (sizes == null) {
+                toolbar.setFontSize(Math.round(editor.getTextSize()));
+            } else if (sizes.size() == 1) {
+                toolbar.setFontSize(sizes.get(0));
+            } else {
+                toolbar.setFontSize(-1);
+            }
+
+            // font color
+            if (fontColors != null && fontColors.size() == 1) {
+                toolbar.setFontColor(fontColors.get(0));
+            } else {
+                toolbar.removeFontColor();
+            }
+
+            // background color
+            if (bgColors != null && bgColors.size() == 1) {
+                toolbar.setBGColor(bgColors.get(0));
+            } else {
+                toolbar.removeBGColor();
+            }
+        }
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onTextChanged(RTEditText editor, Spannable before, Spannable after,
+                              int selStartBefore, int selEndBefore, int selStartAfter, int selEndAfter) {
+
+        TextChangeOperation op = new TextChangeOperation(before, after,
+                selStartBefore, selEndBefore,
+                selStartAfter, selEndAfter);
+        mOPManager.executed(editor, op);
+
+    }
+
+    @Override
+	/* @inheritDoc */
+    public void onClick(RTEditText editor, LinkSpan span) {
+        if (editor != null) {
+            String linkText = getLinkText(editor, span);
+//            mRTApi.openDialogFragment(ID_01_LINK_FRAGMENT, LinkFragment.newInstance(linkText, span.getURL()));
+        }
+    }
+
+    @Override
+    public void onClick(RTEditText editor, AudioSpan span){
+        if(editor != null){
+            RTAudio audio = span.getAudio();
+            String audioPath = audio.getAudioPath();
+            Message msg = Message.obtain();
+            msg.what = Constants.START_AUDIO_PLAYER;
+            msg.obj = audioPath;
+            _activityHandler.sendMessage(msg);
+        }
+    }
+
+    private String getLinkText(RTEditText editor, LinkSpan span) {
+        Spannable text = editor.getText();
+        final int spanStart = text.getSpanStart(span);
+        final int spanEnd = text.getSpanEnd(span);
+        String linkText = null;
+        if (spanStart >= 0 && spanEnd >= 0 && spanEnd <= text.length()) {
+            linkText = text.subSequence(spanStart, spanEnd).toString();
+            mLinkSelection = new Selection(spanStart, spanEnd);
+        } else {
+            mLinkSelection = editor.getSelection();
+        }
+        return linkText;
+    }
+
+    public void setJustify(boolean is){
+        RTEditText editor = getActiveEditor();
+        if (editor != null) {
+            editor.setJustify(is);
+        }
+    }
+
+    @Override
+    public void onRichTextEditingChanged(RTEditText editor, boolean useRichText) {
+        updateToolbarVisibility();
+    }
+
+}

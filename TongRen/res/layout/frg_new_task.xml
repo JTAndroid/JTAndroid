@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/parentLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        
+        <!-- 任务标题 -->
+        <EditText
+            android:id="@+id/titleEt"
+            style="@style/commen_font_type_4"
+            android:layout_width="fill_parent"
+            android:background="@null"
+            android:textCursorDrawable="@null"
+            android:hint="任务标题(必填)"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/commen_text_color_2" 
+            android:textColor="@color/commen_text_color_1"/>
+        
+        <!-- 分隔线 -->
+        <View 
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffc5c5c5"/>
+
+        <!-- 相关业务需求 -->
+        <TextView
+            android:id="@+id/relatedBReqTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_aff_item_bg"
+            android:text="关联业务需求"
+            android:textSize="16sp" 
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/new_req_next"/>
+        <!-- 关联项目 -->
+        <TextView
+            android:id="@+id/relatedProjTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_aff_item_bg"
+            android:text="关联项目"
+            android:textSize="16sp" 
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/new_req_next"/>
+        
+         <!-- 需求关键词 -->
+        <LinearLayout
+            android:id="@+id/keywordParentLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_req_keyword_bg"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+            
+            <LinearLayout
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:orientation="vertical">
+                <!-- 金额-->
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView 
+                        style="@style/commen_font_type_1"
+                        android:text="金额"/>
+                    <TextView 
+                        android:id="@+id/moneyTv"
+                        style="@style/commen_font_type_4"
+                        android:layout_marginLeft="8dp"/>
+                </LinearLayout>
+                <!-- 类型-->
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+                    <TextView 
+                        style="@style/commen_font_type_1"
+                        android:text="类型"/>
+                    <TextView 
+                        android:id="@+id/typeTv"
+                        style="@style/commen_font_type_4"
+                        android:layout_marginLeft="8dp"/>
+                </LinearLayout>
+                <!-- 行业 -->
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+                    <TextView 
+                        style="@style/commen_font_type_1"
+                        android:text="行业"/>
+                    <TextView 
+                        android:id="@+id/tradeTv"
+                        style="@style/commen_font_type_4"
+                        android:layout_marginLeft="8dp"/>
+                </LinearLayout>
+                <!-- 地区 -->
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+                    <TextView 
+                        style="@style/commen_font_type_1"
+                        android:text="地区"/>
+                    <TextView 
+                        android:id="@+id/areaTv"
+                        style="@style/commen_font_type_4"
+                        android:layout_marginLeft="8dp"/>
+                </LinearLayout>
+        	</LinearLayout>
+        	<ImageView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:src="@drawable/new_req_next"
+        	    android:contentDescription="@null"/>
+        </LinearLayout>
+
+        <!-- 需求简短描述 -->
+        <EditText
+            android:id="@+id/briefEt"
+            style="@style/commen_font_type_1"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="left|top"
+            android:hint="简短描述一下任务"
+            android:textColorHint="@color/commen_text_color_2"
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"
+            android:background="@drawable/new_req_brief_bg"/>
+        
+        <!-- 附件标题 -->
+		<TextView 
+		    style="@style/commen_font_type_1"
+		    android:layout_marginTop="20dp"
+		    android:text="附件"/> 
+        
+        <!-- 添加附件 -->
+        <com.tr.ui.widgets.FileUploaderLinearLayout 
+            android:id="@+id/uploaderLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+        
+        <!-- 负责人 -->
+        <TextView
+            android:id="@+id/hostTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_req_item_bg"
+            android:drawableLeft="@drawable/new_aff_ic_host"
+            android:drawableRight="@drawable/new_req_next"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="负责人" 
+            android:textSize="16sp"
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"/>
+
+        <!-- 参与者 -->
+        <TextView
+            android:id="@+id/participantTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_req_item_bg"
+            android:drawableLeft="@drawable/new_aff_ic_participant"
+            android:drawableRight="@drawable/new_req_next"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="参与者" 
+            android:textSize="16sp"
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"/>
+
+        <!-- 完成期限 -->
+        <TextView
+            android:id="@+id/deadlineTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_req_item_bg"
+            android:drawableLeft="@drawable/new_aff_ic_deadline"
+            android:drawableRight="@drawable/new_req_next"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="完成期限" 
+            android:textSize="16sp"
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"/>
+        
+        <!-- 相关机构与联系人 -->
+        <TextView
+            android:id="@+id/connsTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_req_item_bg"
+            android:drawableLeft="@drawable/new_aff_ic_partner"
+            android:drawableRight="@drawable/new_req_next"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="相关机构和人脉（可选）" 
+            android:textSize="16sp"
+            android:textColor="@color/commen_text_color_1"
+            android:padding="10dp"/>
+        
+        <!-- 任务进度 -->
+        <TextView
+            android:id="@+id/progressTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/new_req_triangle_down"
+            android:gravity="center_vertical"
+            android:text="选择任务进度" 
+            android:textSize="16sp"
+            android:textColor="@color/commen_text_color_2"
+            android:padding="10dp"/>
+        
+        <!-- 下划线  -->
+        <View 
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffc5c5c5"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentRl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView 
+        android:id="@+id/columnTv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/kno_column_bg"
+        android:text="咨询"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:button="@null"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="5dp"/>
+    
+    <ImageView 
+        android:id="@+id/deleteIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/kno_column_delete"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:contentDescription="@null"/>
+
+</RelativeLayout>

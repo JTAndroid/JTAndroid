@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout 
+	    android:id="@+id/hy_layout_fillinInfo_labelclick"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="9dp"
+	    android:paddingBottom="9dp"
+	    android:background="@drawable/hy_selector_label_color"
+	    android:clickable="false"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:id="@+id/hy_layout_fillinInfo_title"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_marginLeft="@dimen/hy_label_toscreen_leftright_slide"
+	    	android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+	   		android:textColor="#4d4d4d"
+	   		android:textSize="@dimen/hy_input_title_text_font"
+	   		android:text="填写信息"/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="vertical"
+	    	android:layout_marginTop="9dp"
+	    	android:id="@+id/hy_layout_fillinInfo_selected_layout"
+	    	android:visibility="visible">
+	        
+		    <com.tr.ui.widgets.hy.MyGridView android:id="@+id/hy_layout_fillinInfo_selected_gridview"
+		       	android:layout_width="match_parent"
+		   		android:layout_height="wrap_content"
+		   		android:layout_marginLeft="@dimen/hy_label_toscreen_leftright_slide"
+	    		android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+		   		android:clickable="false"
+		   		android:clipChildren="true"
+		   		android:scrollbars="none"
+		   		android:background="@null"
+		   		android:numColumns="4"
+		   		android:stretchMode="columnWidth"
+		   		android:horizontalSpacing="12dp"
+		   		android:verticalSpacing="12dp"
+		   		android:cacheColorHint="@color/transparent"
+		   		android:listSelector="@color/transparent"/>
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginTop="9dp"
+		        android:background="@drawable/dash_line" />
+	    </LinearLayout>
+	    
+	    <com.tr.ui.widgets.hy.MyGridView android:id="@+id/hy_layout_fillinInfo_toselect_gridview"
+	       	android:layout_width="match_parent"
+	   		android:layout_height="wrap_content"
+	   		android:layout_marginLeft="@dimen/hy_label_toscreen_leftright_slide"
+	    	android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+	   		android:layout_marginTop="9dp"
+	   		android:clickable="false"
+		   	android:clipChildren="true"
+	   		android:scrollbars="none"
+	   		android:background="@null"
+	   		android:numColumns="4"
+	   		android:stretchMode="columnWidth"
+	   		android:horizontalSpacing="12dp"
+	   		android:verticalSpacing="12dp"
+	   		android:cacheColorHint="@color/transparent"
+	   		android:listSelector="@color/transparent"/>
+	    <include android:id="@+id/hy_layout_fillinInfo_add_layout"
+	        android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="9dp"
+			android:layout_marginLeft="@dimen/hy_label_toscreen_leftright_slide"
+	    	android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+			layout="@layout/hy_layout_input_1line_add_edittext"/>
+	</LinearLayout> 
+</FrameLayout>
+

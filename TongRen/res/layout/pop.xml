@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|right"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/relationshipTv"
+            style="@style/global_create_button"
+            android:text="人脉" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/clienteleTv"
+            style="@style/global_create_button"
+            android:text="客户"
+            android:visibility="visible" >
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/knowladageTv"
+            style="@style/global_create_button"
+            android:text="知识" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/demandTv"
+            style="@style/global_create_button"
+            android:text="需求" >
+        </TextView>
+        <TextView
+            android:id="@+id/affairsTv"
+            style="@style/global_create_button"
+            android:text="事务" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/mettingTv"
+            style="@style/global_create_button"
+            android:text="会议" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/chatTv"
+            style="@style/global_create_button"
+            android:text="群聊" >
+        </TextView>
+    </LinearLayout>
+
+</FrameLayout>

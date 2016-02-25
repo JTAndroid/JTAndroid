@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/auth_title_back" >
+
+        <ImageView
+            android:id="@+id/orgdata_rl_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="组织资料"
+            android:textColor="#1a1a1a"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/org_tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="完成"
+            android:textColor="#1a1a1a"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/data_main_Ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/data_Rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:background="#f1f1f1" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="基本信息"
+                            android:textColor="#1f1f1f"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/org_iv_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/org_edit_blue" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:background="#ffffff" >
+
+                        <com.tr.ui.widgets.CircleImageView
+                            android:id="@+id/org_line1_iv"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/org_default_portrait" />
+
+                        <TextView
+                            android:id="@+id/org_line1_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="48dp"
+                            android:layout_toRightOf="@id/org_line1_iv"
+                            android:text="组织简称"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toRightOf="@id/org_line1_tv"
+                            android:singleLine="true"
+                            android:text="红杉资本"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#e3e3e3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="#ffffff" >
+
+                        <TextView
+                            android:id="@+id/org_industry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="行         业"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/industry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:layout_toRightOf="@id/org_industry"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#e3e3e3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="#ffffff" >
+
+                        <TextView
+                            android:id="@+id/org_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="组织邮箱"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:layout_toRightOf="@id/org_email"
+                            android:singleLine="true"
+                            android:text="123456789@qq.com"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#e3e3e3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="#ffffff" >
+
+                        <TextView
+                            android:id="@+id/org_dail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="联系电话"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/dial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:layout_toRightOf="@id/org_dail"
+                            android:singleLine="true"
+                            android:text="13552234888"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/org_money_RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="#ffffff" >
+
+                        <TextView
+                            android:id="@+id/org_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="证券代码"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:layout_toRightOf="@id/org_money"
+                            android:singleLine="true"
+                            android:text="455677122235"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="#e3e3e3" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="#ffffff" >
+
+                        <TextView
+                            android:id="@+id/org_Intro_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="组织简介"
+                            android:textColor="#808080"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/org_Intro_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:layout_toRightOf="@id/org_Intro_name"
+                            android:singleLine="true"
+                            android:textColor="#353535"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="#e3e3e3" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/data_main_LLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

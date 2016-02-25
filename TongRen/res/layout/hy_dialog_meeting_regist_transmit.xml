@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="359dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/transmit_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="23dp"
+        android:text="转发到"
+        android:textColor="#1f1f1f"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/content_et"
+        android:layout_width="fill_parent"
+        android:layout_height="109dp"
+        android:layout_below="@id/transmit_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/hy_icon_meeting_transmit_edittext"
+        android:gravity="left"
+        android:hint="这一刻的想法..."
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:textColor="#8d8d8d"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_et"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/content_et"
+            android:background="#cccccc" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:padding="10dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@drawable/hy_explist_item_trans_meeting_line" />
+
+            <TextView
+                android:id="@+id/confirm_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cancel_btn"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#1f1f1f"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

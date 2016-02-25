@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/applyName_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="申请名称"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_m" />
+
+        <TextView
+            android:id="@+id/applyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/joint_columntype_select"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_ss" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <RelativeLayout
+        android:id="@+id/applyType_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="申请类型"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_m" />
+
+        <TextView
+            android:id="@+id/applyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/joint_columntype_select"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_ss" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_marginTop="10dp"
+        android:background="#e0e0e0" />
+
+    <RelativeLayout
+        android:id="@+id/startTime_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="开始时间"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_m" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/joint_columntype_select"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_ss" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <RelativeLayout
+        android:id="@+id/endTime_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="结束时间"
+            android:textColor="@color/text_flow_content"
+            android:textSize="@dimen/text_tongren_size_m" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/joint_columntype_select"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/text_tongren_size_ss" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_marginTop="10dp"
+        android:background="#e0e0e0" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#fff"
+        android:gravity="top|left"
+        android:hint="请输入申请内容"
+        android:padding="15dp"
+        android:textColor="@color/text_flow_content"
+        android:textSize="@dimen/text_tongren_size_m" />
+
+</LinearLayout>

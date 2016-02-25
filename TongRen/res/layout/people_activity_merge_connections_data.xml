@@ -1,0 +1,357 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e3e3e3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/merge_click_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="合并人脉资料"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/merge_completeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/local_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="99.5dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/people_deleteportrait" />
+
+        <ImageView
+            android:id="@+id/list_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="94.5dp"
+            android:src="@drawable/people_deleteportrait" />
+    </LinearLayout>
+
+    <!-- <com.handmark.pulltorefresh.library.PullToRefreshListView -->
+    <!-- android:id="@+id/mergeConnectionsDataPullListView" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="1" /> -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#e3e3e3" />
+
+    <RelativeLayout
+        android:id="@+id/history_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/classificationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="分类"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/history_personTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/classificationTv"
+            android:text="历史人物"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/history_merge_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/history_merge_delete"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/virtual_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/virtualTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="分类"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/virtual_personTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/virtualTv"
+            android:text="虚拟人物"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/virtual_merge_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/virtual_merge_delete"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/phone_relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="电话"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/phone_personTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/phoneTv"
+            android:text="9613810276350"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/phone_merge_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/phone_merge_delete"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/phone_relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/phoneTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="电话"
+            android:textColor="#808080"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/phone_personTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/phoneTv2"
+            android:text="9613810276350"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/phone_merge_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/phone_merge_delete2"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/company_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/company_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="公司"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/company_personTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/company_Tv"
+            android:text="北京金桐网投资有限公司"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/company_merge_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/company_merge_delete"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/company_relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13.5dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/companyeTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="公司"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/companye_personTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/companyeTv2"
+            android:text="北京金桐网投资有限公司"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/companye_merge_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/people_column_delete" />
+
+        <TextView
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/companye_merge_delete2"
+            android:background="#e3e3e3" />
+    </RelativeLayout>
+
+</LinearLayout>

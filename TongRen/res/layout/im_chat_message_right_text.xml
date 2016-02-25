@@ -1,0 +1,111 @@
+<!-- 右侧文字消息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+	<TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/chat_time_bg"
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_ss" 
+        android:text="2014-06-25 10:52"/>
+
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal" 
+    android:background="@color/white">
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical">
+
+        <!-- loading对话框和发送失败按钮 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <ProgressBar
+                android:id="@+id/sendingPb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/im_progressbar"
+                android:paddingRight="5dip" />
+            <ImageView
+                android:id="@+id/sendFailedIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingRight="5dip"
+                android:src="@drawable/chat_re"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 文字 -->
+        <TextView
+            android:id="@+id/textTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_ziji"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="1dp"
+            android:maxWidth="200dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="hello world"
+            android:textColor="@color/chat_right_font_color"
+            android:textSize="@dimen/text_size_m" />
+    </LinearLayout>
+    
+    <!-- 用户头像 -->
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp" >
+            <ImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/im_img_user" />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@null"
+                android:src="@drawable/im_user_avatar_border" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/chat_right_font_color"
+            android:textSize="@dimen/text_size_s" />
+    </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

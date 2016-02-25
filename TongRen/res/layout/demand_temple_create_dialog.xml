@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_border"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLength="10"
+            android:paddingBottom="13dp"
+            android:paddingTop="18dp"
+            android:text="添的模版名称"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/labelEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/demand_txt_transparency_bg"
+            android:hint="请在此处填写"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:textColor="#1f1f1f" />
+
+        <include layout="@layout/demand_item_division_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="14sp" >
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#f1f1f1" />
+
+            <TextView
+                android:id="@+id/confirmTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@color/black"
+                android:textSize="14sp" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

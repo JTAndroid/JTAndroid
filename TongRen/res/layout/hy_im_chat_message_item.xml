@@ -1,0 +1,980 @@
+<!-- 消息条目具体内容 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/im_message_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="15dp" >
+
+    <!-- 时间 -->
+    <!-- android:background="@drawable/chat_time_bg" -->
+
+    <TextView
+        android:id="@+id/letter_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text=""
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_ss"
+        android:visibility="visible" />
+
+    <!-- 系统消息 -->
+
+    <TextView
+        android:id="@+id/system_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/chat_time_font_color"
+        android:textSize="@dimen/text_size_s"
+        android:visibility="gone" />
+
+    <!-- 左侧消息 -->
+
+    <LinearLayout
+        android:id="@+id/left_letter_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 左侧头像 -->
+
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.tr.ui.widgets.CircleImageView
+                android:id="@+id/head"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/leftuserName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="测试"
+                android:textColor="@color/chat_right_font_color"
+                android:textSize="@dimen/text_size_s"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- 左侧文本消息 -->
+
+        <TextView
+            android:id="@+id/left_letter_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chat_duifang"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="1dp"
+            android:maxWidth="200dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="消息内容"
+            android:textColor="@color/chat_left_font_color"
+            android:textSize="@dimen/text_size_m"
+            android:visibility="gone" />
+
+        <!-- 左侧关系 -->
+
+        <RelativeLayout
+            android:id="@+id/leftCnsRl"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chat_duifang"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/leftCnsTitle"
+                    style="@style/item_text_title_black_m"
+                    android:layout_margin="5dp"
+                    android:text="名片" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffC9CBC6" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/leftCnsIcon"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/leftCnsIcon"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/leftCnsName1"
+                            style="@style/item_text_title_black_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="leftCnsName1"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/leftCnsName2"
+                            style="@style/item_text_title_black_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="leftCnsName2leftCnsName2"
+                            android:textColor="#8d8d8d"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/leftCnsName3"
+                            style="@style/item_text_title_black_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="leftCnsName2leftCnsName3"
+                            android:textColor="#8d8d8d"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 左侧语音 -->
+
+        <LinearLayout
+            android:id="@+id/leftVoiceLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftuserName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/leftVoiceDurationLl"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_duifang"
+                android:gravity="left|center_vertical" >
+
+                <ImageView
+                    android:id="@+id/leftVoiceIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:background="@drawable/chatfrom_voice_playing"
+                    android:contentDescription="@null"
+                    android:tag="1" />
+
+                <ProgressBar
+                    android:id="@+id/leftVoiceLoadingPb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/leftVoiceDurationTv"
+                style="@style/common_text_style_large_gray"
+                android:layout_marginLeft="8dp"
+                android:text="5&quot;" />
+        </LinearLayout>
+
+        <!-- 左侧图片 -->
+
+        <RelativeLayout
+            android:id="@+id/leftImageRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftuserName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/leftImageIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:maxHeight="200dip"
+                android:maxWidth="200dip"
+                android:src="@drawable/hy_chat_right_pic" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@id/leftImageIv"
+                android:layout_alignLeft="@id/leftImageIv"
+                android:layout_alignRight="@id/leftImageIv"
+                android:layout_alignTop="@id/leftImageIv"
+                android:background="@drawable/hy_chat_to_image_conver" />
+        </RelativeLayout>
+
+        <!-- 左侧视频 -->
+
+        <RelativeLayout
+            android:id="@+id/leftVideoRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftuserName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/leftVideoContainerLl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/leftVideoIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:maxHeight="200dp"
+                    android:maxWidth="200dp"
+                    android:src="@drawable/chat_duifang_video_and_pic" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@id/leftVideoContainerLl"
+                android:layout_alignLeft="@id/leftVideoContainerLl"
+                android:layout_alignRight="@id/leftVideoContainerLl"
+                android:layout_alignTop="@id/leftVideoContainerLl"
+                android:background="@drawable/chat_duifang_ex" />
+
+            <ImageView
+                android:id="@+id/leftPlayIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:src="@drawable/hy_icon_meeting_branch_video_play" />
+        </RelativeLayout>
+
+        <!-- 左侧分享 -->
+
+        <LinearLayout
+            android:id="@+id/leftShareLl"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftuserName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/leftShareTopLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_duifang_share_top"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/leftShareMsgTv"
+                    style="@style/common_text_style_large_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="说点什么..."
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- 内容部分 -->
+
+            <LinearLayout
+                android:id="@+id/leftShareBottomLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_duifang_share_bottom"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/leftShareImageIv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hy_chat_share_img" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <!-- 类型 -->
+
+                        <ImageView
+                            android:id="@+id/leftShareTypeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:padding="2dp"
+                            android:src="@drawable/hy_chat_type_knowledge" />
+                        <!-- 标题 -->
+
+                        <TextView
+                            android:id="@+id/leftShareTitleTv"
+                            style="@style/common_text_style_large_black"
+                            android:layout_alignTop="@id/leftShareTypeIv"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="\u3000\u3000标题标题标题标题标题标题标题" />
+                    </RelativeLayout>
+                    <!-- 内容 -->
+
+                    <TextView
+                        android:id="@+id/leftShareContentTv"
+                        style="@style/common_text_style_middle_gray"
+                        android:layout_marginTop="3dp"
+                        android:maxLines="2"
+                        android:text="内容" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/leftShareLinkIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/share_content_resource_background"
+                android:contentDescription="@null"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="来自微信"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 左侧文件 -->
+
+        <LinearLayout
+            android:id="@+id/leftFileLl"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftuserName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chat_duifang"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/leftFileTypeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:padding="2dp"
+                    android:src="@drawable/chat_ui_file" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/leftFileTypeIv"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/leftFileNameTv"
+                        style="@style/common_text_style_large_black"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="leftFileNameTvleftFileNameTvleftFileNameTvleftFileNameTv" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/leftFileSizeTv"
+                            style="@style/common_text_style_middle_gray"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="leftFileSizeTv" />
+
+                        <TextView
+                            android:id="@+id/leftFileStatusTv"
+                            style="@style/common_text_style_middle_gray"
+                            android:text="leftFileStatusTv" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/leftFileProgressPb"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/upload_process_drawable" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 右侧消息 -->
+
+    <RelativeLayout
+        android:id="@+id/right_letter_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 右侧头像 -->
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/right_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/rightuserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/right_head"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/right_head"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/chat_right_font_color"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/right_message_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rightuserName"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/right_head"
+            android:orientation="horizontal" >
+
+            <!-- 右侧图片 -->
+
+            <RelativeLayout
+                android:id="@+id/rightImageRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 图片 -->
+
+                <ImageView
+                    android:id="@+id/rightImageIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:maxHeight="200dip"
+                    android:maxWidth="200dip"
+                    android:src="@drawable/hy_chat_right_pic" />
+                <!-- 蒙层 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignBottom="@id/rightImageIv"
+                    android:layout_alignLeft="@id/rightImageIv"
+                    android:layout_alignRight="@id/rightImageIv"
+                    android:layout_alignTop="@id/rightImageIv"
+                    android:background="@drawable/chat_ziji_video_and_pic" />
+            </RelativeLayout>
+
+            <!-- 右侧分享 -->
+
+            <LinearLayout
+                android:id="@+id/rightShareLl"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/rightShareTopLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_ziji_share_top"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/rightShareMsgTv"
+                        style="@style/common_text_style_large_white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="说点什么..." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rightShareBottomLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_ziji_share_bottom"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/rightShareImageIv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hy_chat_share_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <ImageView
+                                android:id="@+id/rightShareTypeIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@null"
+                                android:padding="2dp"
+                                android:src="@drawable/hy_chat_type_knowledge" />
+
+                            <TextView
+                                android:id="@+id/rightShareTitleTv"
+                                style="@style/common_text_style_large_black"
+                                android:layout_alignTop="@id/rightShareTypeIv"
+                                android:layout_marginLeft="3dp"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="\u3000\u3000标题标题标题标题标题标题标题" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/rightShareContentTv"
+                            style="@style/common_text_style_middle_gray"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:singleLine="true"
+                            android:text="内容" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rightShareLinkIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/share_content_resource_background"
+                    android:contentDescription="@null"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="来自微信"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 右侧文件 -->
+
+            <LinearLayout
+                android:id="@+id/rightFileLl"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_ziji_content_white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/rightFileTypeIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/chat_ui_file" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/rightFileTypeIv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/rightFileTypeIv"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/rightFileNameTv"
+                            style="@style/common_text_style_large_black"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="FrightFileNameTvrightFileNameTvrightFileNameTv" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/rightFileSizeTv"
+                                style="@style/common_text_style_middle_gray"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="rightFileSizeTv" />
+
+                            <TextView
+                                android:id="@+id/rightFileStatusTv"
+                                style="@style/common_text_style_middle_gray"
+                                android:text="已发送测试" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- 下载进度 -->
+
+                <ProgressBar
+                    android:id="@+id/rightFileProgressPb"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/upload_process_drawable"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 右侧文本消息 -->
+
+            <TextView
+                android:id="@+id/right_letter_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_ziji"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="1dp"
+                android:maxWidth="250dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp"
+                android:text="我说句话侧是一下我说句话侧是一下我说句话侧是一下我说句话侧是一下我说句话侧是一下我说句话侧是一下我说句话侧是一下"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <!-- 右侧视频 -->
+
+            <RelativeLayout
+                android:id="@+id/rightVideoRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/rightVideoContainerLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/rightVideoIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@null"
+                        android:maxHeight="200dp"
+                        android:maxWidth="200dp"
+                        android:src="@drawable/hy_chat_right_pic" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/rightVideoContainerLl"
+                    android:layout_alignLeft="@id/rightVideoContainerLl"
+                    android:layout_alignRight="@id/rightVideoContainerLl"
+                    android:layout_alignTop="@id/rightVideoContainerLl"
+                    android:background="@drawable/chat_ziji_video_and_pic" />
+
+                <ImageView
+                    android:id="@+id/rightPlayIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/hy_icon_meeting_branch_video_play" />
+            </RelativeLayout>
+
+            <!-- 右侧关系 -->
+
+            <RelativeLayout
+                android:id="@+id/rightCnsRl"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_ziji_xiaoxi"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/rightCnsTitle"
+                        style="@style/item_text_title_black_m"
+                        android:layout_margin="5dp"
+                        android:text="名片"
+                        android:textColor="#8d8d8d"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="#ff4dc5f1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp" >
+
+                        <ImageView
+                            android:id="@+id/rightCnsIcon"
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:scaleType="centerCrop"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/rightCnsIcon"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/rightCnsName1"
+                                style="@style/item_text_title_black_m"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="rightCnsName1"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/rightCnsName2"
+                                style="@style/item_text_title_black_m"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="rightCnsName2"
+                                android:textColor="#8d8d8d"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/rightCnsName3"
+                                style="@style/item_text_title_black_m"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="rightCnsName3"
+                                android:textColor="#8d8d8d"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 右侧语音 -->
+
+            <LinearLayout
+                android:id="@+id/rightVoiceLl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/rightVoiceDurationLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_ziji"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ProgressBar
+                        android:id="@+id/rightVoiceLoadingPb"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/rightVoiceIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/chat_right_voice_playing"
+                        android:contentDescription="@null"
+                        android:tag="0" />
+
+                    <TextView
+                        android:id="@+id/rightVoiceDurationTv"
+                        style="@style/common_text_style_large_gray"
+                        android:singleLine="true"
+                        android:text="18&quot;"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- loading对话框和发送失败按钮 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_message_ll" >
+
+            <ProgressBar
+                android:id="@+id/send_message_progress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/im_progressbar"
+                android:paddingRight="5dip"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/send_message_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingBottom="2dip"
+                android:paddingRight="5dip"
+                android:src="@drawable/chat_re"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_blank_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

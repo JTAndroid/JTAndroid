@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/choose_reminder_time_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="时间"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/choose_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/ReminderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:text="提醒"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/addReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="94dp"
+            android:layout_marginTop="14dp"
+            android:maxLength="18"
+            android:inputType="number"
+            android:background="@null"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <RelativeLayout
+            android:id="@+id/addMinute_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginBottom="1dp"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/addMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:text="分钟"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addHour_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/addMinute_Rl"
+            android:layout_marginBottom="1dp"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/addHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:text="小时"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addDay_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/addHour_Rl"
+            android:layout_marginBottom="1dp"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/addDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:text="天"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addNoReminder_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/addDay_Rl"
+            android:layout_marginBottom="1dp"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/addNoReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:text="不提醒"
+                android:textColor="#808080"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+
+                <RadioButton
+                    android:id="@+id/checkedMinute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/checkedHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/noChecked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+
+                <RadioButton
+                    android:id="@+id/checkedDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/people_check_the_number"
+                    android:button="@null" />
+            </RadioGroup>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

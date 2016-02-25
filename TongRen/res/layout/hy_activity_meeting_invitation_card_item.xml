@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_item_press_gray_selector"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/cardTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/hy_invitation_card_time_bg"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:text="2014年12月29日  12：00"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e1e1e1e1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/meetingNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="会议名称"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/meetingCardCb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/meetingTimeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2014年12月29日  12：00"
+            android:textColor="#bebebe"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/meetingPicIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:contentDescription="hy_invitation_card_default_pic"
+            android:src="@drawable/meeting_invition_logo_b" />
+
+        <TextView
+            android:id="@+id/meetingDescTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="2"
+            android:text="会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述会议描述"
+            android:textColor="#1f1f1f" />
+    </LinearLayout>
+
+</LinearLayout>

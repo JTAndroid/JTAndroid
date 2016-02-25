@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_RL"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/action_bar_bg" >
+
+        <ImageView
+            android:id="@+id/meet_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/meet_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="活动"
+            android:textColor="#1a1a1a"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="25dp"
+            android:src="@drawable/more" />
+
+        <ImageView
+            android:id="@+id/search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/more_iv"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/jt_dt_search" />
+    </RelativeLayout>
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/meet_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@null" />
+
+</LinearLayout>

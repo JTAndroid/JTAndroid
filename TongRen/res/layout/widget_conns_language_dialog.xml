@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/conns_popup_bg">
+
+    <!-- 操作控件 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="取消" />
+        <TextView
+            android:id="@+id/okTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="确定" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider" />
+
+    <!-- 内容区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp" >
+		<!-- 语种-->
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/languageWv"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+		<!-- 等级-->
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/levelWv"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" 
+            android:layout_marginLeft="5dp"/>
+        <!-- 发送 -->
+		<ImageView
+            android:id="@+id/sendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/conns_send_bg" />
+    </LinearLayout>
+
+</LinearLayout>

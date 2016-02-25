@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
+
+        <LinearLayout
+            android:id="@+id/friendParentLl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/req_detail_friend_bg"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <!-- 用户头像 -->
+
+            <ImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_default_avatar" />
+            <!-- 项目名称和作者 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <!-- 项目名称 -->
+
+                <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text=""
+                    android:textColor="#ff000000"
+                    android:textSize="16sp" />
+                <!-- 发布信息 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <!-- 发布者 -->
+
+                    <TextView
+                        android:id="@+id/publisherTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                    <!-- 发布日期 -->
+
+                    <TextView
+                        android:id="@+id/publishTimeTv"
+                        style="@style/commen_font_type_6"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 加好友 -->
+
+            <TextView
+                android:id="@+id/friendTv"
+                style="@style/commen_font_type_6"
+                android:drawableTop="@drawable/ic_friend"
+                android:text="加好友" 
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <!-- 项目信息 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aff_det_keyword_top"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="整体执行信息"
+                android:textColor="#ffffffff"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aff_det_pro_info"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/ruler1Tv"
+                            style="@style/commen_font_type_1"
+                            android:text="整体完成进度："
+                            android:visibility="invisible" />
+
+                        <TextView
+                            style="@style/commen_font_type_1"
+                            android:layout_alignRight="@id/ruler1Tv"
+                            android:text="负责人：" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/hostTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/ruler1Tv"
+                            style="@style/commen_font_type_1"
+                            android:text="整体完成进度："
+                            android:visibility="invisible" />
+
+                        <TextView
+                            style="@style/commen_font_type_1"
+                            android:layout_alignRight="@id/ruler1Tv"
+                            android:text="完成期限：" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/deadlineTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/commen_font_type_1"
+                        android:text="整体完成进度：" />
+
+                    <TextView
+                        android:id="@+id/progressTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/ruler1Tv"
+                            style="@style/commen_font_type_1"
+                            android:text="整体完成进度："
+                            android:visibility="invisible" />
+
+                        <TextView
+                            style="@style/commen_font_type_1"
+                            android:layout_alignRight="@id/ruler1Tv"
+                            android:text="项目成员：" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/memberTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/ruler1Tv"
+                            style="@style/commen_font_type_1"
+                            android:text="整体完成进度："
+                            android:visibility="invisible" />
+
+                        <TextView
+                            style="@style/commen_font_type_1"
+                            android:layout_alignRight="@id/ruler1Tv"
+                            android:text="执行方式：" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/exeModeTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/ruler1Tv"
+                            style="@style/commen_font_type_1"
+                            android:text="整体完成进度："
+                            android:visibility="invisible" />
+
+                        <TextView
+                            style="@style/commen_font_type_1"
+                            android:layout_alignRight="@id/ruler1Tv"
+                            android:text="维护人：" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/maintainerTv"
+                        style="@style/commen_font_type_4"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 附件 -->
+
+            <com.tr.ui.widgets.FileDownloadLinearLayout
+                android:id="@+id/downloaderLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:orientation="vertical"/>
+
+            <!-- 相关任务 -->
+
+            <LinearLayout
+                android:id="@+id/relatedTaskParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/relatedTaskTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_title_bg"
+                    android:drawableRight="@drawable/req_match_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="相关任务"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/relatedTaskLv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00ffffff"
+                    android:divider="@drawable/commen_list_divider"
+                    android:listSelector="#00ffffff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/commen_list_bottom" />
+            </LinearLayout>
+            
+            <!-- 相关客户和人脉 -->
+
+            <LinearLayout
+                android:id="@+id/relatedConnsParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_title_bg"
+                    android:drawableRight="@drawable/req_match_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="相关客户和人脉"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/relatedConnsLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/aff_det_match_rel_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_bottom" />
+            </LinearLayout>
+
+            <!-- 匹配需求 -->
+
+            <LinearLayout
+                android:id="@+id/matchReqParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/matchReqTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_title_bg"
+                    android:drawableRight="@drawable/req_match_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="匹配需求"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/matchReqLv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00ffffff"
+                    android:divider="@drawable/commen_list_divider"
+                    android:listSelector="#00ffffff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_bottom" />
+            </LinearLayout>
+
+            <!-- 匹配关系 -->
+
+            <LinearLayout
+                android:id="@+id/matchConnsParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_title_bg"
+                    android:drawableRight="@drawable/req_match_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="匹配关系"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/matchConnsLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/aff_det_match_rel_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_default_avatar"
+                        android:gravity="center_horizontal"
+                        android:text="张三"
+                        android:textColor="@color/commen_text_color_2"
+                        android:textSize="14sp"
+                        android:visibility="invisible" 
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_bottom" />
+            </LinearLayout>
+
+            <!-- 匹配知识 -->
+
+            <LinearLayout
+                android:id="@+id/matchKnoParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/matchKnoTv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_title_bg"
+                    android:drawableRight="@drawable/req_match_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="适合此项目的知识"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/matchKnoLv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00ffffff"
+                    android:divider="@drawable/commen_list_divider"
+                    android:listSelector="#00ffffff" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/commen_list_bottom" />
+            </LinearLayout>
+
+            <!-- 备注 -->
+
+            <TextView
+                android:id="@+id/memoTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/aff_det_memo_bg"
+                android:gravity="top|left"
+                android:padding="10dp"
+                android:textColor="@color/commen_text_color_2"
+                android:textSize="14sp"/>
+
+            <!-- 附件 -->
+            <!--
+            <LinearLayout
+                android:id="@+id/attachmentParentLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/commen_font_type_1"
+                    android:gravity="right"
+                    android:text="附件" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/commen_text_color_3" />
+
+                <com.tr.ui.widgets.FileDownloadLinearLayout
+                    android:id="@+id/downloaderLl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout> -->
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

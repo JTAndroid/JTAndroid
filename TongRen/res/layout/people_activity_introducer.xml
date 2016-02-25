@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="#22292c"
+   		 android:layout_height="49dp">
+    <ImageButton 
+        android:id="@+id/quit_hobby_Ib"
+        android:layout_marginLeft="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/people_left_arrow"
+        />
+    <TextView 
+        android:id="@+id/hobby_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="描述"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        />
+
+      <TextView 
+        android:id="@+id/finish_hobby_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/_finish"
+        android:onClick="finish"
+         android:textColor="#ffffff"
+        android:textSize="13sp"
+         />
+   
+	  
+	</RelativeLayout>
+
+</LinearLayout>

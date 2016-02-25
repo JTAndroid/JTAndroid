@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/relation_home_menu_share"
+        android:icon="@drawable/forward_share_white_full"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title=""/>
+    <item
+        android:id="@+id/ic_action_overflow"
+        android:icon="@drawable/ic_action_overflow_know"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="添加">
+       <!--  <menu>
+
+            
+        //我的主页:编辑  对接
+		//他人主页:好友:解除好友关系 对接 加入黑名单 ;非好友:消息 加好友 评价 黑名单
+           
+
+
+            我的主页
+            <item
+                android:visible="false"
+                android:id="@+id/connection_edit"
+                android:showAsAction="always|withText"
+                android:title="编辑"/>
+            <item
+                android:visible="false"
+                android:id="@+id/connection_join"
+                android:showAsAction="always|withText"
+                android:title="对接"/>
+
+            他人主页: 好友
+            <item
+                android:visible="false"
+                android:id="@+id/connection_deletefri"
+                android:showAsAction="always|withText"
+                android:title="解除好友关系"/>
+            <item
+                android:visible="false"
+                android:id="@+id/connection_blacknumber"
+                android:showAsAction="always|withText"
+                android:title="加入黑名单"/>
+
+            他人主页: 非好友
+            <item
+                android:visible="false"
+                android:id="@+id/connection_message"
+                android:showAsAction="always|withText"
+                android:title="消息"/>
+            <item
+                android:visible="false"
+                android:id="@+id/connection_addfri"
+                android:showAsAction="always|withText"
+                android:title="加为好友"/>
+            <item
+                android:visible="false"
+                android:id="@+id/connection_evaluation"
+                android:showAsAction="always|withText"
+                android:title="评价"/>
+        </menu> -->
+    </item>
+
+</menu>

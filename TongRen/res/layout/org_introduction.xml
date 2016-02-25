@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f1">
+    
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="49dp"
+	    android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/org_intro_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="组织简介"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+        
+        <TextView
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="完成"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    
+    <EditText
+        android:id="@+id/editText"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textColor="#353535"
+		android:lineSpacingExtra="3.5dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="25dp"
+        />
+</LinearLayout>

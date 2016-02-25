@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_checked="true" android:drawable="@color/white"></item>
+     <item  android:drawable="@color/str_fous_list_item_tv"></item>
+</selector>
+

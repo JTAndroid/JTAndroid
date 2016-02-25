@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_item_v"
+    android:background="#f7f7f7"
+    android:gravity="center_horizontal" >
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/image"
+        style="@style/layout_item_v"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/item_text_title_m"
+		android:layout_marginTop="6dp"        
+        android:text="知识" />
+
+</LinearLayout>

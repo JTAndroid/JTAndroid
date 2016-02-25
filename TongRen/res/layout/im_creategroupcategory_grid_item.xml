@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/item_text_title_m"
+    android:id="@+id/text"
+    android:padding="5dp"
+    android:singleLine="true"
+    android:background="@color/item_yellow"
+    android:gravity="center" >
+</TextView>

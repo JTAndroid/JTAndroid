@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.11.3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <include layout="@layout/hy_layout_title_right_1iconbtn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="#f9f9f9"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hy_tv_invite_by_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:text="会议名称"
+            android:textColor="#1f1f1f"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/hy_iv_invite_by_face"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/hy_barcode_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="扫描上面的二维码，加入会议"
+            android:textColor="#8d8d8d"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/hy_btn_invite_by_face"
+        android:layout_width="161dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="复制会议邀请链接"
+        android:textColor="#3d3d3d"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

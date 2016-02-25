@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+    
+	       <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="@drawable/auth_title_back"
+   		 android:layout_height="49dp">
+   		  <RelativeLayout 
+        android:id="@+id/quit_classify_Rl"
+        android:padding="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+         android:background="@drawable/people_left_arrow"
+        />
+    	</RelativeLayout>
+    <TextView 
+        android:id="@+id/classify_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择分类"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="@color/text_black"
+        />
+	</RelativeLayout>
+    <ListView 
+        android:layout_marginTop="10dp"
+        android:id="@+id/classify_Lv"
+        android:background="#ffffff"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+	
+</LinearLayout>

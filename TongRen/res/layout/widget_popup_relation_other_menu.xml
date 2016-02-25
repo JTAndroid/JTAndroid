@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/containerLl"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_border"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!--
+          <TextView
+            android:id="@+id/jointTv"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="对接"
+            android:textColor="@drawable/overflow_text_color"
+            android:textSize="15sp" />        -->
+
+
+        <TextView
+            android:id="@+id/addFriendTv"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="加好友"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/blackNumView"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+  <TextView
+            android:id="@+id/reportTv"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="举报"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        <TextView
+            android:id="@+id/blackNumTv"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="加黑名单"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

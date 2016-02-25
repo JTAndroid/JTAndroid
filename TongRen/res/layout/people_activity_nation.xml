@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/quit_nation_Ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:background="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/nation_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="民族"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/nation_Lv"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

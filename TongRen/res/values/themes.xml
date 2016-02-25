@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="CustomThemeL2" parent="android:Theme.Holo.Light">
+        <item name="android:homeAsUpIndicator">@drawable/home_back</item>
+        <item name="android:actionBarStyle">@style/YOURTHEME.ActionBarStyle</item>
+    </style>
+
+    <style name="YOURTHEME.ActionBarStyle" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/YOURTHEME.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="YOURTHEME.ActionBar.TitleTextStyle" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#1a1a1a</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+           <RelativeLayout 
+	     android:layout_width="match_parent"
+	     android:background="#22292c"
+   		 android:layout_height="49dp">
+    <ImageView 
+        android:id="@+id/quit_nationality_Ib"
+        android:layout_marginLeft="11dp"
+         android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:background="@drawable/people_left_arrow"
+        />
+    <TextView 
+        android:id="@+id/nationality_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="国籍"
+        android:layout_centerInParent="true"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        />
+	</RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+          <RelativeLayout
+        android:id="@+id/infoRowContainer_china"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/people_listitem_selector"
+        android:paddingLeft="15dip" >
+
+        <TextView
+            android:id="@+id/cityName_china"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="中国"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="#1f1f1f"
+            android:textSize="14dip"
+            android:textStyle="bold" />
+        <TextView 
+		    android:textColor="#808080"
+		    android:textSize="12sp"
+		    android:text="默认"
+		    android:layout_alignParentRight="true"
+		    android:paddingRight="10dp"
+		     android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+		     android:paddingTop="14dp"
+            android:paddingBottom="14dp"/>
+      
+    </RelativeLayout>
+		
+        <com.tr.ui.people.cread.nationality.liucanwen.citylist.widget.ContactListViewImpl
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/people_line"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="#00000000"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</RelativeLayout>

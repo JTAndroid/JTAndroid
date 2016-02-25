@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/hy_selector_listitem_bg">
+    <!-- 
+    <CheckBox android:id="@+id/hy_item_shareCheck_checkbox"
+   	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="left|center_vertical"
+   		android:background="@null"
+   		android:button="@drawable/hy_selector_check"/>
+     -->
+     <ImageView android:id="@+id/hy_item_shareCheck_checkbox"
+   	    android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:layout_gravity="left|center_vertical"
+   		android:src="@drawable/hy_check_norm"
+   		android:clickable="false"
+   		android:button="@drawable/hy_selector_check"/>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/hy_title_action_bar_to_side">
+        <TextView 
+	        android:id="@+id/hy_item_shareCheck_nameText"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentLeft="true"
+	   		android:layout_centerVertical="true"
+	   		android:layout_toLeftOf="@+id/hy_item_shareCheck_rightText"
+	   		android:textColor="@color/hy_listitem_nametext_font_color"
+	   		android:textSize="@dimen/hy_list_nametext_font"
+	   		android:text="名称"
+	   		android:singleLine="true"/>
+        <TextView 
+	        android:id="@+id/hy_item_shareCheck_rightText"
+	       	android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_alignParentRight="true"
+	   		android:layout_centerVertical="true"
+	        android:layout_marginLeft="4dp"
+	        android:gravity="right"
+	   		android:textColor="@color/hy_listitem_righttext_font_color"
+	   		android:textSize="@dimen/hy_list_righttext_font"
+	   		android:text="time"
+	   		android:singleLine="true"/>
+    </RelativeLayout>
+</LinearLayout>

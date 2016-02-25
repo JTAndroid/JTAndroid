@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/conns_popup_bg">
+
+    <!-- 操作控件 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="取消" />
+        <TextView
+            android:id="@+id/okTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="确定" />
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider" />
+
+    <!-- 内容区 -->
+    <GridView
+        android:id="@+id/itemGv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"
+        android:verticalSpacing="8dp" />
+
+</LinearLayout>

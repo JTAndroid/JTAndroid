@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demand_main_bg"
+    android:orientation="vertical" >
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/chooseXlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/demand_create_top"
+        android:background="@color/demand_main_bg"
+        android:divider="@color/demand_main_bg"
+        android:dividerHeight="1px"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+</LinearLayout>

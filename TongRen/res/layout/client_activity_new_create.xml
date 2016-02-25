@@ -1,0 +1,591 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+		
+        <ImageView
+            android:id="@+id/addmeetBackIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/relation_home_back" />
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加会面"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/addMetting_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="完成"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="#ffffff" >
+
+                <EditText
+                    android:id="@+id/client_shuodianshenm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="说点什么吧..."
+                    android:textColor="#1e1e1e"
+                    android:background="@null"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/tell_text_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="13dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/people_voice" />
+
+                <ImageView
+                    android:id="@+id/tell_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@+id/tell_text_image"
+                    android:src="@drawable/people_voicechange" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/plusImage_Rl"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="#f1f1f1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="7dp"
+                    android:text="关联"
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/plusImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/column_add_blue" />
+            </RelativeLayout>
+
+          
+				<LinearLayout 
+				    android:orientation="vertical"
+				      android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+              <LinearLayout
+                            android:id="@+id/people_meeting_Ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="#FFF"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="人脉"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/people_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+                            <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                            
+                        </LinearLayout>
+
+                        
+                        <LinearLayout
+                            android:id="@+id/organization_meeting_Ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="#FFF"
+                            android:layout_gravity="bottom|right"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="组织"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/organization_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+                              <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                            
+                        </LinearLayout>
+
+                      
+                        <LinearLayout
+                            android:id="@+id/knowledge_meeting_Ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="#FFF"
+                            android:layout_gravity="bottom|right"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="知识"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/knowledge_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+                              <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                            
+                        </LinearLayout>
+
+                      
+                        <LinearLayout
+                            android:id="@+id/requirement_meeting_Ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="#FFF"
+                            android:layout_gravity="bottom|right"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="事件"
+                                android:textColor="#1f1f1f"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="#e3e3e3" />
+
+                            <com.tr.ui.widgets.BasicListView2
+                                android:id="@+id/requirement_meeting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@drawable/establish_fengexian" >
+                            </com.tr.ui.widgets.BasicListView2>
+                            <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#e3e3e3" />
+                        </LinearLayout>
+
+                       
+	</LinearLayout>
+ 
+
+            <TextView
+                android:id="@+id/backLine6"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f1f1f1"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/timeRelativeLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                >
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="时间"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/times_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                    android:text=""
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvLine1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#f1f1f1"
+                />
+
+            <RelativeLayout
+                android:id="@+id/repeatRelativeLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                 >
+
+                <TextView
+                    android:id="@+id/repeat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="重复"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/monthly_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                    android:text=""
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvLine2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e3e3e3"
+               />
+
+            <RelativeLayout
+                android:id="@+id/remindRelativeLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                >
+
+                <TextView
+                    android:id="@+id/remind_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="提醒"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/remind_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                    android:text=""
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvLine3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e3e3e3"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/scheduleRelativeLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                 >
+
+                <TextView
+                    android:id="@+id/schedule_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="日程分类"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/schedule_classification_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                     />
+
+                <TextView
+                    android:id="@+id/schedule_classification_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/schedule_classification_image"
+                    android:text=""
+                    android:textColor="#353535" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#f1f1f1"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="备注"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/remark_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                    android:text=""
+                    android:textColor="#353535"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvLine4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#e3e3e3"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="#ffffff"
+                android:visibility="gone"
+               >
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="地点"
+                    android:textColor="#808080"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/address_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="103dp"
+                    android:visibility="gone"
+                    android:src="@drawable/people_maptip" />
+
+                <TextView
+                    android:id="@+id/address_info_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/address_image"
+                    android:text=""
+                    android:textColor="#353535" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <LinearLayout
+                    android:id="@+id/time_LinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/people_time_clock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="时间"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/color_LinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/people_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="颜色"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+              
+
+                <LinearLayout
+                    android:id="@+id/remark_LinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/people_remark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:text="备注"
+                        android:textColor="#1f1f1f"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+          
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

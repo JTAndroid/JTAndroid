@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/conns_popup_bg">
+
+    <!-- 操作控件 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="取消" />
+        <TextView
+            android:id="@+id/okTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/conns_btn_bg"
+            android:gravity="center"
+            android:text="确定" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider" />
+
+    <!-- 内容区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp" >
+        <TextView 
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="40dp"
+           style="@style/common_text_style_large_gray"
+           android:text="活动"
+           android:gravity="center"
+           android:background="@drawable/wheel_val"/>
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/activityWv"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1.5" 
+            android:layout_marginLeft="5dp"/>
+        <ImageView
+            android:id="@+id/sendIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/conns_send_bg" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider" />
+
+    <!-- 自定义 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" >
+        <EditText
+            android:id="@+id/customEt"
+            style="@style/common_text_style_large_gray"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_border"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true" 
+            android:textColorHint="@color/common_light_gray"
+            android:hint="自定义活动名称"/>
+        <TextView
+            android:id="@+id/customTv"
+            style="@style/common_text_style_large_orange"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="自定义" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <!-- 打开popupwindow基准view -->
+
+    <View
+        android:id="@+id/suggestion_headerVi"
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/suggestion_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/list_item_sociality_selector" >
+
+        <TextView
+            android:id="@+id/style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="反馈类型"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/suggestion_style_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/style"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="无"
+            android:textColor="#bebebe"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/joint_columntype_select" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="问题/建议"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/suggestion_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="left|top"
+            android:hint="至少10个字符..."
+            android:maxLength="1000"
+            android:minLines="5"
+            android:textColor="#000000"
+            android:textColorHint="#bebebe"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="联系方式"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/suggestion_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:hint="手机号码/邮箱/QQ"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#bebebe"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/commit_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sign_in_normal"
+        android:text="反馈"
+        android:textColor="#000000" />
+
+</LinearLayout>

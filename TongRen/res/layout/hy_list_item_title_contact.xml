@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by d.c 2014.10.29 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <com.tr.ui.widgets.CircleImageView
+        android:id="@+id/hy_contact_iv_logo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+         />
+
+    <TextView
+        android:id="@+id/hy_contact_tv_name"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text=" "
+        android:textColor="#4d4d4d"
+        android:textSize="13sp" />
+
+</LinearLayout>

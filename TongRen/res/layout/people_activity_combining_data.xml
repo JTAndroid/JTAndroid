@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/click_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/people_left_arrow" />
+
+        <TextView
+            android:id="@+id/combining_dataTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合并资料"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+        
+        <TextView
+            android:id="@+id/combining_data_yesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    
+    
+    <ListView
+        android:layout_weight="1"
+        android:id="@+id/combiningDataPullListView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="0dp"/>
+    
+    
+
+ </LinearLayout>

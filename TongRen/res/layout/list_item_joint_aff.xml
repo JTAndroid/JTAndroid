@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/common_bg"
+    android:gravity="center_vertical">
+    <!-- 项目名称 -->
+    <TextView 
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:textColor="#4d4d4d"
+        android:text="北京西三环购买3000万别墅"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+    <!-- 发布者 -->
+    <TextView 
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="#ff8d8d8d"
+        android:padding="10dp"/>
+
+</LinearLayout>

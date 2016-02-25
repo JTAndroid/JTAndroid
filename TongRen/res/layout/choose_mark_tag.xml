@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/markTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="为你推荐相应偏好标签内容"
+        android:textColor="@color/text_flow_content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/goToMain"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_circle_noclick"
+        android:gravity="center"
+        android:text="开启金桐之旅"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/text_white"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/flowlayout"
+        android:layout_below="@id/markTv"
+        android:layout_above="@id/goToMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_centerInParent="true"
+        android:layout_gravity="center">
+    </FrameLayout>
+
+</RelativeLayout>

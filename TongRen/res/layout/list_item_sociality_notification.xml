@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/list_item_sociality_selector" >
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="48dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp" >
+
+            <ImageView
+                android:id="@+id/sociality_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/meeting_notice_logo_a" />
+
+            <FrameLayout
+                android:id="@+id/notification_push_data_num_control"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/push_data_num" />
+
+                <TextView
+                    android:id="@+id/notification_push_data_num"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:gravity="center"
+                    android:text="88"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sociality_gv"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/ll" >
+
+        <TextView
+            android:id="@+id/notification_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知"
+            android:textColor="#1a1a1a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ll"
+            android:layout_below="@id/notification_name"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/the_last_time_of_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ll"
+        android:layout_marginRight="12.5dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#999999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/ll"
+        android:background="#e0e0e0" />
+
+</RelativeLayout>

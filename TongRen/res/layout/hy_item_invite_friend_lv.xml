@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hy_itemInvitefriend_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hy_selector_listitem_bg"
+    android:orientation="vertical"
+    android:paddingLeft="15dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/hy_itemInvitefriend_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:clickable="false"
+            android:src="@drawable/hy_ic_default_friend_avatar" />
+
+        <TextView
+            android:id="@+id/hy_itemInvitefriend_nameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/hy_listitem_nametext_font_color"
+            android:textSize="@dimen/hy_list_nametext_font" />
+
+        <ImageView
+            android:id="@+id/hy_itemInvitefriend_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:button="@drawable/hy_selector_check"
+            android:clickable="false"
+            android:src="@drawable/demand_me_need_checkbox_default" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="51dp"
+        android:background="#e0e0e0"/>
+
+</LinearLayout>

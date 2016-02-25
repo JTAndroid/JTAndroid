@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_apply"
+        android:showAsAction="withText|always"
+        android:orderInCategory="100"
+        android:menuCategory="system"
+        android:title="新建申请">
+    </item>
+</menu>

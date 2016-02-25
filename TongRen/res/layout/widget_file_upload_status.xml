@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 加载条 -->
+
+    <ProgressBar
+        android:id="@+id/progressPb"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="34dp"
+        android:layout_centerVertical="true"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/upload_process_drawable" />
+
+    <!-- 文件信息 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <!-- 文件名 -->
+
+        <TextView
+            android:id="@+id/fileNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="文件名 "
+            android:textColor="#ff000000"
+            android:textSize="14sp" />
+
+        <!-- 文件大小 -->
+
+        <TextView
+            android:id="@+id/fileSizeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="100K"
+            android:textColor="#ff8a8a8a"
+            android:textSize="14sp" />
+
+        <!-- 点击重试 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/commen_font_type_6"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="上上上" 
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/retryTv"
+                style="@style/commen_font_type_6"
+                android:layout_centerInParent="true"
+                android:text="重试" />
+        </RelativeLayout>
+
+        <!-- 取消按钮 -->
+
+        <ImageView
+            android:id="@+id/cancelIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/file_upload_cancel" />
+    </LinearLayout>
+
+</RelativeLayout>

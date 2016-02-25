@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffefefef"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/social_share_search_bg" >
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/social_share_search_bg_inside"
+            android:drawableLeft="@drawable/social_share_search_icon"
+            android:drawablePadding="5dp"
+            android:hint="搜索"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="#ff8d8d8d"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/white"
+        android:text="创建新畅聊"
+        android:textColor="@color/text_black"
+        android:id="@+id/createNewIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/right_arrow"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffefefef"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="最近"
+        android:textColor="#ff666666" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.tr.ui.common.view.XListView
+            android:id="@+id/socialLv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#ffe3e3e3"
+            android:dividerHeight="0.5dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/tipTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="没有搜索到任何结果"
+            android:visibility="gone" />
+
+        <!--
+      	   去掉万能创建键
+         <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/home_global_creat_buttom"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/float_menu_normal" />
+        </FrameLayout>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

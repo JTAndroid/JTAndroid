@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create by roffee -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/hy_layout_picker_1line_text_labelclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hy_selector_label_color"
+        android:clickable="true"
+        android:paddingBottom="9dp"
+        android:paddingLeft="@dimen/hy_label_toscreen_leftright_slide"
+        android:paddingRight="10dp"
+        android:paddingTop="9dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/hy_layout_picker_1line_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:text="标题："
+                android:textColor="@color/hy_input_title_text_color"
+                android:textSize="@dimen/hy_input_title_text_font" />
+
+            <ImageView
+                android:id="@+id/hy_layout_picker_1line_text_arrowright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/hy_ic_arror_right" />
+
+            <TextView
+                android:id="@+id/hy_layout_picker_1line_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/hy_lable_content_totitile_gap"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/hy_label_toscreen_leftright_slide"
+                android:layout_toLeftOf="@+id/hy_layout_picker_1line_text_arrowright"
+                android:layout_toRightOf="@+id/hy_layout_picker_1line_text_title"
+                android:ellipsize="end"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="text"
+                android:textColor="@color/hy_input_content_text_color"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

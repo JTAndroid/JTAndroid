@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/goKnowDetailCommentRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/knowledge_details_title_bg"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/knoDetailsItemTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/knowArrowIv"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@drawable/establish_frame_line" />
+
+    <com.tr.ui.adapter.KnoDetailsNoScrollGv
+        android:id="@+id/knoDetailsItemGv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:numColumns="5"
+        android:paddingLeft="10dp"
+        android:stretchMode="columnWidth" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tr.ui.widgets.BasicListView
+            android:id="@+id/knoDetailsItemLv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

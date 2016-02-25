@@ -1,0 +1,199 @@
+{
+    "indexAdvertiseList": [
+        {
+            "type": "list",
+            "list": [
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/43939108.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/43939108.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/43939108.jpg"
+                    },
+                    "title": "加人脉",
+                    "alt": "gtw://contactList"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/79025285.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/79025285.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/79025285.jpg"
+                    },
+                    "title": "找客户",
+                    "alt": "gtw://organizationList"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/72797484.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/72797484.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/72797484.jpg"
+                    },
+                    "title": "聚活动",
+                    "alt": "gtw://activityList"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/26483624.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/26483624.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/26483624.jpg"
+                    },
+                    "title": "看知识",
+                    "alt": "gtw://knowledgesList"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55397453.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55397453.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55397453.jpg"
+                    },
+                    "title": "金桐脑",
+                    "alt": "gtw://gintongRecommend"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/16212300.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/16212300.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/16212300.jpg"
+                    },
+                    "title": "找需求",
+                    "alt": "gtw://demandList"
+                }
+            ]
+        },
+        {
+            "type": "banner",
+            "list": [
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/42850983.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/42850983.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/42850983.jpg"
+                    },
+                    "title": "社群",
+                    "alt": "gtw://community"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/68592540.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/68592540.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/68592540.jpg"
+                    },
+                    "title": "事务",
+                    "alt": "gtw://transcation"
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "list": [
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/39391068.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/39391068.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/39391068.jpg"
+                    },
+                    "title": "找资金",
+                    "alt": "gtw://demandList?demandType=2"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/81731332.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/81731332.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/81731332.jpg"
+                    },
+                    "title": "找项目",
+                    "alt": "gtw://demandList?demandType=1"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/8944667.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/8944667.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/8944667.jpg"
+                    },
+                    "title": "看股票",
+                    "alt": "http://m.stockstar.com/?from=ucapp"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57538780.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57538780.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57538780.jpg"
+                    },
+                    "title": "桐人项目",
+                    "alt": "gtw://demandList/project/recommend"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/%E7%BA%BF%E7%B4%A2%402x.png",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/%E7%BA%BF%E7%B4%A2%402x.png",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/%E7%BA%BF%E7%B4%A2%402x.png"
+                    },
+                    "title": "线索",
+                    "alt": "www.cluer.cn"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/%E6%A1%90%E7%9B%9F%E6%B4%BB%E5%8A%A8%402x.png",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/%E6%A1%90%E7%9B%9F%E6%B4%BB%E5%8A%A8%402x.png",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/%E6%A1%90%E7%9B%9F%E6%B4%BB%E5%8A%A8%402x.png"
+                    },
+                    "title": "桐盟",
+                    "alt": "http://test.etongmeng.com/html5/activity/discover.html"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/%E9%87%91%E6%A1%90%E6%99%BA%E5%BA%93%402x.png",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/%E9%87%91%E6%A1%90%E6%99%BA%E5%BA%93%402x.png",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/%E9%87%91%E6%A1%90%E6%99%BA%E5%BA%93%402x.png"
+                    },
+                    "title": "金桐智库",
+                    "alt": "http://zhiku.gintong.com/gintong-textminer-web-svn/front/jinrong"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55680865.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55680865.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/55680865.jpg"
+                    },
+                    "title": "万年历",
+                    "alt": "http://baidu365.duapp.com/uc/Calendar.html"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57699475.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57699475.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/57699475.jpg"
+                    },
+                    "title": "查快递",
+                    "alt": "http://m.kuaidi100.com/uc/index.html"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/36996932.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/36996932.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/36996932.jpg"
+                    },
+                    "title": "算房贷",
+                    "alt": "http://m.leju.com/touch/tools/house_loan.html"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/95912362.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/95912362.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/95912362.jpg"
+                    },
+                    "title": "抢车票",
+                    "alt": "http://m.tieyou.com"
+                },
+                {
+                    "images": {
+                        "small": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/2456298.jpg",
+                        "large": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/2456298.jpg",
+                        "medium": "http://7xp3i9.com1.z0.glb.clouddn.com/16-1-8/2456298.jpg"
+                    },
+                    "title": "下厨房",
+                    "alt": "http://m.xiachufang.com"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/me_need_menu_height"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dip"
+        android:background="#f7f7f7"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/me_need_menu_padding"
+        android:paddingRight="@dimen/me_need_menu_padding" >
+
+        <TextView
+            android:id="@+id/searchAllTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/me_need_menu_txt_top_bot"
+            android:paddingLeft="@dimen/me_need_menu_txt_left"
+            android:paddingTop="@dimen/me_need_menu_txt_top_bot"
+            android:text="@string/me_need_text"
+            android:textColor="#1a1a1a" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e0e0e0" />
+
+        <TextView
+            android:id="@+id/searchMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/me_need_menu_txt_top_bot"
+            android:paddingLeft="@dimen/me_need_menu_txt_left"
+            android:paddingTop="@dimen/me_need_menu_txt_top_bot"
+            android:text="@string/me_need_my_create"
+            android:textColor="#1a1a1a" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e0e0e0" />
+
+        <TextView
+            android:id="@+id/searchSaveTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/me_need_menu_txt_top_bot"
+            android:paddingLeft="@dimen/me_need_menu_txt_left"
+            android:paddingTop="@dimen/me_need_menu_txt_top_bot"
+            android:text="@string/me_need_my_save"
+            android:textColor="#1a1a1a" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e0e0e0" />
+
+        <TextView
+            android:id="@+id/collectCollectTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/me_need_menu_txt_top_bot"
+            android:paddingLeft="@dimen/me_need_menu_txt_left"
+            android:paddingTop="@dimen/me_need_menu_txt_top_bot"
+            android:text="@string/me_need_collect"
+            android:textColor="#1a1a1a" />
+    </LinearLayout>
+
+</LinearLayout>

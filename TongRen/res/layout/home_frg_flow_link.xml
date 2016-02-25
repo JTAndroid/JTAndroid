@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flow_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/flow_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/personll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/personTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="人脉"
+                android:textColor="@color/text_flow_name"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e6e6e6" />
+
+            <com.tr.ui.widgets.HorizontalListView
+                android:id="@+id/personGv"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:background="#fff"
+                android:scrollbars="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/orgall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/orgaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="组织"
+                android:textColor="@color/text_flow_name"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e6e6e6" />
+
+            <com.tr.ui.widgets.HorizontalListView
+                android:id="@+id/orgaGv"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:background="#fff"
+                android:scrollbars="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/knowll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/knowTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="知识"
+                android:textColor="@color/text_flow_name"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e6e6e6" />
+
+            <com.tr.ui.widgets.NoScrollListview
+                android:id="@+id/knowLv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thingll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/thingTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="事件"
+                android:textColor="@color/text_flow_name"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="10dp"
+                android:background="#e6e6e6" />
+
+            <com.tr.ui.widgets.NoScrollListview
+                android:id="@+id/thingLv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/home_frg_regions_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false"
+        android:fadingEdgeLength="0.0sp"
+        android:scrollbars="none" />
+
+    <com.tr.ui.widgets.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="10dp" />
+
+</FrameLayout>

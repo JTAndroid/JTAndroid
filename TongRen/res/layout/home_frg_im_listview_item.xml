@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/HomeFrgIMItemLayoutRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/HomeFrgIMItemLayoutRoot111"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_dt_style"
+        android:orientation="vertical" >
+
+        <!-- android:background="@drawable/jt_dt_list_bg_1" "@color/new_req_unselect" -->
+        <!-- 标题 -->
+
+        <LinearLayout
+            android:id="@+id/HomeFrgIMItemLayoutRoot11"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@color/home_dt_darkgrey_title_bg"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/HFI_IM_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="乐蜂网路演群"
+                android:textColor="@color/home_dt_darkgrey_title"
+                android:textSize="@dimen/text_size_m" />
+
+            <TextView
+                android:id="@+id/HFI_IM_Compere"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="主持人："
+                android:textColor="@color/home_dt_darkgrey_title"
+                android:textSize="@dimen/text_size_m" />
+        </LinearLayout>
+
+        <!-- 中间部分， 头像和最后一句话 -->
+
+        <LinearLayout
+            android:id="@+id/HomeFrgIMItemLayoutRoot_fourimage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp" >
+
+            <!-- 头像部分，最多九张头像 -->
+            <!-- 头像部分，相对布局， 1张图和4张时不同 -->
+
+            <RelativeLayout
+                android:id="@+id/HomeFrgIMItemLayoutRoot_oneimage"
+                android:layout_width="52dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="0dp" >
+
+                <ImageView
+                    android:id="@+id/HFI_IMAGE_Head"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_default_avatar"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:id="@+id/HomeFrgIMItemLayoutHeadRoot"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <!-- 第一行头像 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <ImageView
+                            android:id="@+id/HFI_IMAGE_11"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="fitXY"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_default_avatar" />
+
+                        <ImageView
+                            android:id="@+id/HFI_IMAGE_12"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="fitXY"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_default_avatar" />
+                    </LinearLayout>
+
+                    <!-- 第二行头像 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <ImageView
+                            android:id="@+id/HFI_IMAGE_21"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_default_avatar" />
+
+                        <ImageView
+                            android:id="@+id/HFI_IMAGE_22"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_default_avatar" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <TextView
+	                android:id="@+id/HFI_IM_NEW_COUNT"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_alignParentTop="true"
+	                android:background="@drawable/home_im_bg_new_message"
+	                android:text="9"
+	                android:textColor="@color/white"
+	                android:textSize="@dimen/text_size_ss" />
+                   
+            </RelativeLayout>
+
+             <LinearLayout
+                        android:id="@+id/HomeFrgIMItemLayoutHeadRoot333333"
+                        android:paddingTop="5dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                         >
+            <TextView
+                android:id="@+id/HFI_IM_CONTENT"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="bottom"
+                android:ellipsize="end"
+                android:text="999999999999999999999999999"
+               	android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:textColor="@color/home_dt_darkgrey_font"
+                android:textSize="@dimen/text_size_l" />
+            <TextView
+                android:id="@+id/HFI_IM_MESSAGE_CREATE_TIME"
+                android:layout_marginTop="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="11ssssssssssss"
+                android:visibility="visible"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/home_dt_font_comment_content"
+                android:textSize="@dimen/text_size_m" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:id="@+id/HomeFrgIMTimeBG_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/jt_dt_line_1" />
+
+        <!-- 最下面一行， 时间和主持人 -->
+
+        <RelativeLayout
+            android:id="@+id/HomeFrgIMTimeBG"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/HFI_IMAGE_IM_TIME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/jt_ct_time_icon" />
+
+            <TextView
+                android:id="@+id/HFI_IM_TIME"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/HFI_IMAGE_IM_TIME"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dp"
+                android:text="一小时前"
+                android:textColor="@color/home_ct_orange_font_time"
+                android:textSize="@dimen/text_size_m" />
+
+         
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

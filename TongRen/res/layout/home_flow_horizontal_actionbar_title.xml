@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/mainpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="事务"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/flowpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_toRightOf="@id/mainpage"
+        android:ellipsize="end"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        android:text="项目"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/gintongpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/flowpage"
+        android:ellipsize="end"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        android:text="组织"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/mainBottomLine"
+        android:layout_width="28dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="26.5dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/actionbar_line_color" />
+
+</RelativeLayout>

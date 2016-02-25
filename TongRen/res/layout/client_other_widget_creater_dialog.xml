@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/containerLl_big_happy"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/people_text_view_borders"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+       
+      <LinearLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:id="@+id/ll_save">
+        <TextView
+            android:id="@+id/client_save"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+           
+            android:text="保        存"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        </LinearLayout>
+ <LinearLayout 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:id="@+id/ll_collect">
+        <TextView
+            android:id="@+id/client_collect"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+           
+            android:text="收        藏"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/client_report_big_happy"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="对         接"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+        
+                     
+        <TextView
+            android:id="@+id/client_findbody_big_happy"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="查看发布人"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+         <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#E3E3E3" />
+         <TextView
+            android:id="@+id/client_report"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:text="举          报"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

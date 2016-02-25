@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/establish_frame_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#fafafa"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/activity_inlet_dynamic_fl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:layout_marginTop="1.5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/activity_inlet_dynamic_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_inlet_dynamic_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_inlet_dynamic_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#666666"
+                        android:textSize="11.6sp"
+                        android:text="首页" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inlet_dynamic_remind"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/main_tab_unread_tv"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="26dp"
+                    android:background="@drawable/update_num_bg"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="7sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+		<!-- 社交变为消息 -->
+        <FrameLayout
+            android:id="@+id/activity_inlet_gam_fl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:layout_marginTop="1.5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/activity_inlet_gam_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_inlet_gam_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_inlet_gam_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#666666"
+                        android:textSize="11.6sp"
+                        android:text="消息" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center" >
+
+                <FrameLayout
+                    android:id="@+id/inlet_gam_remind_fl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="28dp"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/unread_num_bg"
+                        android:background="@drawable/push_data_num" />
+
+                    <TextView
+                        android:id="@+id/inlet_gam_remind_num_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <!-- 创建 -->
+        <FrameLayout
+            android:id="@+id/activity_inlet_create_fl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:layout_marginTop="1.5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/activity_inlet_create_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/create" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inlet_create_remind"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="26dp"
+                    android:background="@drawable/update_num_bg"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="7sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+		<!-- 事务 -->
+        <FrameLayout
+            android:id="@+id/activity_inlet_aff_fl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:layout_marginTop="1.5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/activity_inlet_aff_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_inlet_tongren_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_inlet_aff_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#666666"
+                        android:textSize="11.6sp"
+                        android:text="桐人" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center" >
+
+                <FrameLayout
+                    android:id="@+id/aff_red_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="28dp"
+                    android:visibility="visible"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/bottom_aff_red_dot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:background="@drawable/alarm2x" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        
+
+        <FrameLayout
+            android:id="@+id/activity_inlet_me_fl"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="bottom|center"
+                android:layout_marginTop="1.5dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/activity_inlet_me_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_inlet_me_bg" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_inlet_me_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="我的"
+                        android:textColor="#666666"
+                        android:textSize="11.6sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inlet_me_remind"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="26dp"
+                    android:background="@drawable/update_num_bg"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="7sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

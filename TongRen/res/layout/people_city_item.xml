@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sectionTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dip"
+        android:layout_marginTop="7dp"
+        android:background="#f1f1f1"
+        android:paddingLeft="15dip"
+        android:text="A"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/infoRowContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/people_listitem_selector"
+        android:paddingLeft="15dip" >
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="广州"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="#1f1f1f"
+            android:textSize="14dip"
+            android:textStyle="bold" />
+      
+    </RelativeLayout>
+
+</LinearLayout>

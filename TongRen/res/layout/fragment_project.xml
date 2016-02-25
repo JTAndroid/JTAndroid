@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rootLl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/transparent_line" />
+
+        <LinearLayout
+            android:id="@+id/findProjectLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_sociality_selector"
+            android:orientation="horizontal" >
+
+            <com.tr.ui.widgets.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/tongren_recommendproject" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:text="项目推荐"
+                android:textColor="@color/projecttextcolor1"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arrow_right_grey" />
+        </LinearLayout>
+        <View
+        android:layout_width="match_parent"
+        android:background="#e0e0e0"
+        android:layout_height="@dimen/common_listview_dividing_line" />
+
+        <LinearLayout
+            android:id="@+id/myCreateProjectLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/myCreateProjectTabLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_project_selector"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/myCreateProjectTv"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="我创建的项目"
+                    android:textColor="@color/projecttextcolor1"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/myCreateProjectIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow_down_grey"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.tr.ui.widgets.NoScrollListview
+                android:id="@+id/myCreateProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.tr.ui.widgets.NoScrollListview>
+
+            <TextView
+                android:id="@+id/showMyCreateButExpireProject"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="已隐藏过期项目"
+                android:textColor="@color/projecttextcolor"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myAcceptProjectLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/myAcceptProjectTabLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_project_selector"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/myAcceptProjectTv"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#f6f6f6"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="我承接的项目"
+                    android:textColor="@color/projecttextcolor1"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/myAcceptProjectIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/arrow_down_grey"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.tr.ui.widgets.NoScrollListview
+                android:id="@+id/myAcceptProject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.tr.ui.widgets.NoScrollListview>
+
+            <TextView
+                android:id="@+id/showMyAcceptButExpireProject"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="已隐藏过期项目"
+                android:textColor="@color/projecttextcolor"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/project_empty"
+        layout="@layout/activity_common_empty"
+        android:visibility="gone" />
+
+</LinearLayout>

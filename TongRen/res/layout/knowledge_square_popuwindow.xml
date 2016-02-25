@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/know_square_popu"
+        android:layout_width="@dimen/know_popu_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_border"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/know_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:id="@+id/know_update_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_delete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:id="@+id/know_delete_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="评论"
+            android:visibility="gone"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+             android:visibility="gone"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_collection"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="收藏"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:id="@+id/saveline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/change2work"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="转换为事务"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:id="@+id/know_change2work_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_ecologicalDocking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="对接"
+             android:visibility="gone"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comminute_line"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+             android:visibility="gone"
+            android:background="@color/knowledge_popuwindow_line" />
+
+        <TextView
+            android:id="@+id/know_font"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:gravity="center"
+            android:text="字体"
+            android:textColor="@color/knowledge_popuwindow_tv"
+            android:textSize="@dimen/know_popu_fontsize" />
+
+        <LinearLayout
+            android:id="@+id/dddddddddddddddddddd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/know_popu_item"
+            android:background="@color/knowledge_popuwindow_font_bg"
+            android:gravity="center" >
+
+            <FrameLayout
+                android:id="@+id/frame_small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:background="@null" >
+
+                <TextView
+                    android:id="@+id/font_left_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="小"
+                    android:textSize="@dimen/know_popu_fontsize" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_middle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null" >
+
+                <TextView
+                    android:id="@+id/font_center_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/know_popu_font_bg_checked"
+                    android:gravity="center"
+                    android:text="中"
+                    android:textColor="@color/knowledge_popuwindow_font_checked"
+                    android:textSize="@dimen/know_popu_fontsize" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_big"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@null" >
+
+                <TextView
+                    android:id="@+id/font_right_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="大"
+                    android:textSize="@dimen/know_popu_fontsize" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

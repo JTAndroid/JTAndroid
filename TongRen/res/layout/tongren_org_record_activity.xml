@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical" >
+
+    <include layout="@layout/transparent_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="#f39b75"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="星期二"
+            android:textColor="@color/text_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="2015年12月01日"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/text_tongren_size_m" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#fff" >
+
+            <LinearLayout
+                android:id="@+id/begin_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/beginTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上班"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_tongren_size_m" />
+
+                <TextView
+                    android:id="@+id/beginTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/beginTv"
+                    android:text="09:00"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/currentBT_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/currentBeginTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/currentBeginTime_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/currentBeginTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/beginRecord_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="22dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/beginRecordTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+
+                <TextView
+                    android:id="@+id/beginRecordTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_flow_content"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addBegin"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_record_begin_style"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addressBegin_ll"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/addressBeginTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+
+            <TextView
+                android:id="@+id/addressBeginDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beginTv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#fff" >
+
+            <LinearLayout
+                android:id="@+id/end_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/endTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下班"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_tongren_size_m" />
+
+                <TextView
+                    android:id="@+id/endTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/endTv"
+                    android:text="18:00"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/currentET_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/currentEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/end_ll"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/currentEndTime_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/end_ll"
+                    android:textColor="@color/text_black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/endRecord_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/endRecordTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/text_tongren_size_ss" />
+
+                <TextView
+                    android:id="@+id/endRecordTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_flow_content"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addEnd"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_record_end_style"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/addressEnd_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/addressEndTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_flow_content"
+                android:textSize="@dimen/text_tongren_size_m" />
+
+            <TextView
+                android:id="@+id/addressEndDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beginTv"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_tongren_size_m" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_listview_dividing_line"
+        android:background="#e0e0e0" />
+
+</LinearLayout>

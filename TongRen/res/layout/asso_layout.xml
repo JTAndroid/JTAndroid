@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/assoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginLeft="@dimen/need_etails_relevance_relation_txt_left"
+            android:gravity="center_vertical"
+            android:text="@string/need_etails_relevance_relation"
+            android:textColor="@color/need_etails_relevance_relation_txt_color"
+            android:textSize="@dimen/need_etails_relevance_relation_txt"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e3e3e3" />
+
+        <LinearLayout
+            android:id="@+id/contactsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+             android:visibility="gone" 
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/need_etails_relevance_relation_contacts_txt_left"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/need_etails_relevance_relation_txt_left"
+                    android:paddingTop="@dimen/need_etails_relevance_relation_contacts_txt_top_bot"
+                    android:text="@string/need_etails_relevance_relation_contacts_txt"
+                    android:textColor="@color/need_etails_relevance_relation_txt_color"
+                    android:textSize="@dimen/need_etails_relevance_relation_txt_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/demand_rightarrow"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <include layout="@layout/relevance_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contactsLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <com.tr.ui.widgets.HorizontalListView
+                android:id="@+id/contacts_horizontalListView1"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                 >
+            </com.tr.ui.widgets.HorizontalListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/organizationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+             android:visibility="gone" 
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/need_etails_relevance_relation_contacts_txt_left"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/need_etails_relevance_relation_txt_left"
+                    android:paddingTop="@dimen/need_etails_relevance_relation_contacts_txt_top_bot"
+                    android:text="@string/need_etails_relevance_relation_organization_txt"
+                    android:textColor="@color/need_etails_relevance_relation_txt_color"
+                    android:textSize="@dimen/need_etails_relevance_relation_txt_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="13dp"
+                    android:src="@drawable/demand_rightarrow"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <include layout="@layout/relevance_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/organizationLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone" 
+            android:orientation="vertical" >
+
+            <com.tr.ui.widgets.HorizontalListView
+                android:id="@+id/organization_horizontalListView2"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                >
+            </com.tr.ui.widgets.HorizontalListView>
+        </LinearLayout>
+
+        <LinearLayout
+             android:id="@+id/knowledge_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/demand_layout_item_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/knowledgeheadTitleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="20dip"
+                    android:text="知识"
+                    android:textColor="#1F1F1F"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/relevance_line" />
+            </LinearLayout>
+
+            <com.tr.ui.widgets.BasicListView
+                android:id="@+id/knowledge_needDetailsLabelInfoItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </com.tr.ui.widgets.BasicListView>
+        </LinearLayout>
+
+        <LinearLayout
+             android:id="@+id/affria_Ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/demand_layout_item_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/affria_headTitleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="20dip"
+                    android:text="事件"
+                    android:textColor="#1F1F1F"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/relevance_line" />
+            </LinearLayout>
+
+            <com.tr.ui.widgets.BasicListView
+                android:id="@+id/affria_needDetailsLabelInfoItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </com.tr.ui.widgets.BasicListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

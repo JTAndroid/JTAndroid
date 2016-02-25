@@ -1,0 +1,377 @@
+<!-- 创建需求 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demand_main_bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/demandScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/demand_create_item_top"
+            android:paddingTop="@dimen/demand_create_item_top" >
+
+            <!-- 标题 等基本信息字段 -->
+
+            <LinearLayout
+                android:id="@+id/demand_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <include
+                    android:id="@+id/demandTitleIC"
+                    layout="@layout/demand_include_view1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandIntroIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandTypeIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandIndustryIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandAreaIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandAmountIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/demandCustomBLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:divider="@null" ></LinearLayout>
+
+                <include
+                    android:id="@+id/demandCustomIC"
+                    layout="@layout/demand_include_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="@dimen/demand_create_item_top"
+                    android:background="@color/demand_line_bg" />
+
+                <!-- 联系人 -->
+
+                <include
+                    android:id="@+id/demandUserIC"
+                    layout="@layout/demand_include_view1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandPhoneIC"
+                    layout="@layout/demand_include_view1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <include
+                    android:id="@+id/demandCodeIC"
+                    layout="@layout/demand_include_code" />
+            </LinearLayout>
+
+            <!-- 四大组件 信息 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/demand_associatedTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/demand_main_bg"
+                    android:padding="10dp"
+                    android:text="关联关系"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/demand_create_item_text_size"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/demandContactsIc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/demand_include_associated"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/demandOrganizationIc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/demand_include_associated"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/demandKnowledgeIc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/demand_include_associated"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/demandEventIc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/demand_include_associated"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/demandTreeIC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/demand_create_item_top"
+                layout="@layout/demand_include_view"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/demandLabelIC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/demand_create_item_top"
+                layout="@layout/demand_include_view"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/placeLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/placeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/demand_main_bg"
+                    android:padding="10dp"
+                    android:text="权限控制"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/demand_create_item_text_size" />
+
+                <RelativeLayout
+                    android:id="@+id/noPermissionRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/noPermissionTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="独乐"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/noPermissionContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/noPermissionTitleTv"
+                        android:text="（不可见、不可对接、不可分享）"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13sp" />
+
+                    <CheckBox
+                        android:id="@+id/noPermissionSwitchCb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/iphone_checkbox_bg_selector"
+                        android:button="@null" />
+                </RelativeLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <!-- 小乐 -->
+
+                <RelativeLayout
+                    android:id="@+id/lowPermissionRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lowPermissionTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小乐"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lowPermissionContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lowPermissionTitleTv"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="（不可见、可对接、不可分享）"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/lowPermissionRightArrowsIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_right_grey" />
+                </RelativeLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <!-- 中乐 -->
+
+                <RelativeLayout
+                    android:id="@+id/middlePermissionRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/middlePermissionTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中乐"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/middlePermissionContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/middlePermissionTitleTv"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="（可见、可对接、不可分享）"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/middlePermissionRightArrowsIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_right_grey" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/demand_line_bg" />
+
+                <!-- 大乐 -->
+
+                <RelativeLayout
+                    android:id="@+id/highPermissionRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/highPermissionTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="大乐"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/highPermissionContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/highPermissionTitleTv"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="（可见、可对接、可分享）"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/highPermissionRightArrowsIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow_right_grey" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/demand_item_bottom" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        
+        <RadioGroup
+            android:id="@+id/tabRgp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/peoRbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/related_res_tab_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="人"
+                android:textColor="@drawable/related_res_tab_text_color"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/orgRbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/related_res_tab_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="组织"
+                android:textColor="@drawable/related_res_tab_text_color"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/knoRbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/related_res_tab_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="知识"
+                android:textColor="@drawable/related_res_tab_text_color"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/affRbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/related_res_tab_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="事件"
+                android:textColor="@drawable/related_res_tab_text_color"
+                android:textSize="16sp" />
+        </RadioGroup>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/related_tab_divider_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/related_res_tab_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/related_res_tab_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/related_res_tab_divider" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/resourceVp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation"/>
+        
+    
+</LinearLayout>

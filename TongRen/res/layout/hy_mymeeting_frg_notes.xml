@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 20141103 zhang nian -->
+<!-- 我的会议-笔记页面布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hy_myhy_ll_notes"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e3e3e3"
+    android:orientation="vertical" >
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/myhy_relative" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentTop="true" -->
+    <!-- android:background="#e3e3e3" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/hy_myhy_notes_tv_year" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_marginLeft="125px" -->
+    <!-- android:layout_marginRight="60px" -->
+    <!-- android:text="2014年" -->
+    <!-- android:textColor="#8d8d8d" -->
+    <!-- android:textSize="50px" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/hy_myhy_notes_left_logo" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_toRightOf="@id/hy_myhy_notes_tv_year" -->
+    <!-- android:background="@drawable/hy_arrow_right" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/hy_myhy_notes_right_logo" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_marginLeft="30dp" -->
+    <!-- android:background="@drawable/hy_arrow_left" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/myhy_note_btn_delete" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:layout_gravity="center_vertical" -->
+    <!-- android:layout_margin="10dip" -->
+    <!-- android:background="@drawable/button_delete_sector" -->
+    <!-- android:text="删除" -->
+    <!-- android:textColor="@color/white" -->
+    <!-- android:textSize="18sp" -->
+    <!-- android:visibility="invisible" /> -->
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/white"
+        android:listSelector="#00000000"
+         >
+    </ListView>
+<include 
+    android:id="@+id/hy_mymetting_notes_footer"
+    layout="@layout/hy_mymetting_pulldown_footer"/>
+</RelativeLayout>

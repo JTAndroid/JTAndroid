@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/phone_call_notebook"
+        android:actionLayout="@layout/frgsociality_custom_menu_layout"
+        android:icon="@null"
+        android:orderInCategory="100"
+        android:showAsAction="always"/>
+</menu>

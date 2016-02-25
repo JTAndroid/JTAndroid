@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#f1f1f1f1"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="10dp"
+                android:text="参会人" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#e1e1e1e1" />
+
+            <com.tr.ui.widgets.BasicGridView
+                android:id="@+id/attendPeopleGV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:columnWidth="55dp"
+                android:horizontalSpacing="3dp"
+                android:numColumns="5"
+                android:padding="10dp"
+                android:verticalSpacing="3dp" >
+            </com.tr.ui.widgets.BasicGridView>
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
+                android:padding="10dp"
+                android:text="分会场设置" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#e1e1e1e1" />
+
+            <include 
+                android:id="@+id/topicLayout"
+                layout="@layout/hy_speaker_topic_item_layout" />
+            <View 
+                android:layout_height="45dp"
+                android:layout_width="match_parent"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_margin="8dp"
+        android:id="@+id/endMeetingFl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <com.tr.ui.widgets.DrawableCenterTextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/red_view_border"
+            android:drawableLeft="@drawable/end"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="结束议题"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+</RelativeLayout>

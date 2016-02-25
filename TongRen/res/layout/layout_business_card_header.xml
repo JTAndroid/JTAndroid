@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.tr.ui.widgets.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circle_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_people_avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/circle_avatar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/alert_text_org"
+            android:textSize="16sp" />
+
+        <include layout="@layout/layout_user_state"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/home_page_company_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/need_etails_comment_txt_time"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_edit_card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/icon_edit"
+        android:drawablePadding="3dp"
+        android:gravity="center_vertical"
+        android:text="@string/edit"
+        android:textColor="@color/text_flow_more"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

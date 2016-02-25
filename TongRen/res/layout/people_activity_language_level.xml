@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:background="#fff"
+    android:layout_height="wrap_content">
+ 
+		<TextView 
+    	    android:text="语种"
+    	    android:textColor="#1f1f1f"
+    	    android:textSize="17sp"
+    	    android:layout_marginTop="10dp"
+    	    android:background="#ffffff"
+    	    android:paddingTop="15dp"
+    	    android:gravity="center"
+    	    android:layout_marginLeft="59dp"
+    	    android:paddingBottom="15dp"
+    	     android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"/>	
+    		<TextView 
+    	    android:text="等级"
+    	    android:textColor="#1f1f1f"
+    	    android:textSize="17sp"
+    	    android:layout_marginTop="10dp"
+    	    android:background="#ffffff"
+    	    android:paddingTop="15dp"
+    	     android:gravity="center"
+    	     android:layout_marginLeft="144dp"
+    	    android:paddingBottom="15dp"
+    	     android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"/>	
+    		</LinearLayout>
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e3e3e3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <LinearLayout
+            android:id="@+id/linear_language_wheel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            >
+		
+            <NumberPicker
+                android:id="@+id/language"
+                android:layout_width="65dp"
+                android:layout_height="166.5dp"
+                android:background="#FFF" 
+                android:layout_marginRight="55dp"
+                android:layout_marginLeft="41dp"/>
+
+
+            <NumberPicker
+                android:id="@+id/level"
+                android:layout_width="174dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="166.5dp"
+                 />
+
+
+        </LinearLayout>
+    
+</LinearLayout>

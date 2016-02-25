@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1" >
+
+    <!-- 个人电话注册 -->
+
+    <RelativeLayout
+        android:id="@+id/person"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal" >
+
+        <LinearLayout
+            android:id="@+id/register_by_phone_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_item_input_phone_number" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#e3e3e3" />
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/activity_input_verifycode" />
+
+            <include
+                android:id="@+id/person_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_item_input_new_password" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#e3e3e3" />
+
+            <include
+                android:id="@+id/person_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/user_act_register_organdpersonal_login_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_by_email_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/register_by_phone_ll"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="邮箱注册"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/register_by_email_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册即表示同意"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/gintong_aggreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《金桐网用户协议》"
+            android:textColor="#F39800"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 个人邮箱注册 -->
+
+    <RelativeLayout
+        android:id="@+id/personmail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <!-- 账号 -->
+
+        <LinearLayout
+            android:id="@+id/register_by_mail_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#e3e3e3" />
+
+            <include
+                android:id="@+id/person_accountEt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_item_email_acount" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#e3e3e3" />
+
+            <include
+                android:id="@+id/person_password_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_item_input_new_password" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#e3e3e3" />
+
+            <include
+                android:id="@+id/person_login_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/user_act_register_organdpersonal_login_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_gintong_by_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/register_by_mail_ll"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机注册"
+                android:textColor="#808080"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/register_by_email_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 组织注册 -->
+
+    <RelativeLayout
+        android:id="@+id/organizationall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 账号 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#e3e3e3" />
+
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_item_email_organization_name" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e3e3e3" />
+
+                <include
+                    android:id="@+id/organzation_accountEt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_item_email_acount" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#e3e3e3" />
+
+                <include
+                    android:id="@+id/organization_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_item_input_new_password" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#e3e3e3" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/organzation_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/user_act_register_organdpersonal_login_item" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

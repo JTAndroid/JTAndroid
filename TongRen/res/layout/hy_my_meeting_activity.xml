@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的会议-首页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myConferenceRelativeLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87CEEB"
+    android:orientation="vertical"
+     >
+	<LinearLayout
+        android:id="@+id/myConferenceLinearLayoutRoot"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:orientation="horizontal"
+        android:background="#1E90FF" >
+        
+		<TextView
+            android:id="@+id/txtAllConferenceList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/req_detail_tab_bg"
+            android:gravity="center"
+            android:text="会议"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_l" />
+		<TextView
+            android:id="@+id/txtAllRelationship"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/req_detail_tab_bg"
+            android:gravity="center"
+            android:text="人脉"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_l" />
+		<TextView
+            android:id="@+id/txtAllArchList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/req_detail_tab_bg"
+            android:gravity="center"
+            android:text="知识"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_l" />
+		 <TextView
+            android:id="@+id/txtAllNeed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/req_detail_tab_bg"
+            android:gravity="center"
+            android:text="需求"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_l" /> 
+		
+		<TextView
+            android:id="@+id/txtAllNoteList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/req_detail_tab_bg"
+            android:gravity="center"
+            android:text="笔记"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_l" />
+	</LinearLayout>
+    	<View
+			android:id="@+id/myConfCursor"
+			android:layout_width="wrap_content"
+			android:layout_height="3dp"
+			android:layout_alignBottom="@id/myConferenceLinearLayoutRoot"
+			android:background="@drawable/jt_dt_tap_d_bg" />
+
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/myconferenceVPager"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_below="@id/myConferenceLinearLayoutRoot"
+	        android:layout_gravity="center"
+	        android:background="@color/white"
+	        android:flipInterval="30"
+	        android:persistentDrawingCache="animation" />
+
+</RelativeLayout>

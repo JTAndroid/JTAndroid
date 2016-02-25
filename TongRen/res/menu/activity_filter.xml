@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/filter_select_all"
+        android:orderInCategory="10"
+        android:showAsAction="always"
+        android:title="全选"
+        android:visible="false"/>
+    
+    <item
+        android:id="@+id/filter_reverse_selection"
+        android:orderInCategory="11"
+        android:showAsAction="always"
+        android:title="取消"
+        android:visible="false"/>
+    
+    <item
+        android:id="@+id/filter_confirm_selection"
+        android:orderInCategory="12"
+        android:showAsAction="always"
+        android:title="确定"
+        android:visible="false"/>
+
+</menu>

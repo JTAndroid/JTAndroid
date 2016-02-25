@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/project_new_menu_msg"
+        android:icon="@drawable/jt_dt_search"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:visible="false"
+        android:title="消息列表"/>
+    <item
+        android:id="@+id/project_new_menu_more"
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:visible="false"
+        android:title="功能列表">
+    </item>
+</menu>

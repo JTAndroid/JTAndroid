@@ -1,0 +1,48 @@
+<!-- 上传本地电话本 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_form"
+    android:gravity="center_horizontal" >
+
+    
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/darkgrey"
+        android:textSize="14sp"
+        android:text="导入您的手机通讯录, 将给您带来更多好友\n现在就开始导入吧" />
+
+    <ImageView
+        style="@style/item_comm"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/sync_tg" />
+
+    <TextView
+        android:id="@+id/btn_ok"
+        style="@style/item_text_title_yellow"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/sign_in"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="导入手机通讯录"
+         />
+<!--         android:background="@drawable/sign_in_selector" -->
+
+    <!-- <TextView
+        android:id="@+id/info"
+        style="@style/item_text_title_yellow"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="了解详情" /> -->
+
+</LinearLayout>

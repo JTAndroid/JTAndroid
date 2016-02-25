@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_view_border"
+    android:orientation="vertical" 
+    >
+    <!-- android:background="@color/white" -->
+    
+    
+    
+    <TextView 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+        android:padding="10dp"
+		android:textSize="16sp"
+        android:text="请选择电话"
+        android:textColor="@color/black"
+        />
+    
+    <!-- 分隔线 -->
+    <include layout="@layout/widget_common_divider_color_e3e3e3" />
+
+    <!-- 内容区 -->
+
+    <ListView
+        android:id="@+id/mainLv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:cacheColorHint="#00000000"
+        android:divider="#e3e3e3"
+        android:dividerHeight="0.5dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eva_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context="com.tr.ui.relationship.viewfrg.ScrollViewFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.tr.ui.widgets.KnoTagGroupView
+            android:id="@+id/eva_add_new_evaluation_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/client_eva_add_evaluation_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/relation_evaluation_add"
+                android:ellipsize="end"
+                android:imeOptions="actionSend"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:text="    "
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/client_eva_tag_edit_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/relation_evaluation_edit"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="编辑"
+                android:imeOptions="actionSend"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+        </com.tr.ui.widgets.KnoTagGroupView>
+
+        <LinearLayout
+            android:id="@+id/eva_moreEvaluationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#F1F1F1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#F1F1F1"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/hy_home_tile_expand_normal"
+                android:padding="10dp"
+                android:text="查看评价人"
+                android:textColor="#5A5A5A" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

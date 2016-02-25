@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@color/im_gray" >
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/gridlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <!-- 选择参与者 -->
+
+            <com.tr.ui.widgets.IMEditMumberGrid
+                android:id="@+id/myGrid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:columnWidth="66dp"
+                android:gravity="center"
+                android:horizontalSpacing="15dp"
+                android:numColumns="auto_fit"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="15dp" />
+            <!-- 分割线 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/im_gray" />
+
+            <LinearLayout
+                android:id="@+id/im_detai_other"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/im_detail_interval"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <!-- 畅聊名称 -->
+
+                    <RelativeLayout
+                        android:id="@+id/im_detail_layout_im_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval"
+                        android:layout_marginTop="@dimen/im_detail_interval" >
+
+                        <TextView
+                            android:id="@+id/im_detail_name_tag11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="畅聊名称"
+                            android:textColor="@color/hy_input_title_text_color"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/im_detail_txt_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toLeftOf="@+id/image_right_arrow"
+                            android:gravity="left|center_vertical"
+                            android:maxWidth="200dp"
+                            android:paddingRight="7dp"
+                            android:singleLine="true"
+                            android:text="金桐"
+                            android:textColor="@color/home_dt_font_comment_content"
+                            android:textSize="@dimen/im_font_normal" />
+
+                        <ImageView
+                            android:id="@+id/image_right_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/joint_columntype_select"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!-- 分割线 会议主题 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_subject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/im_detail_layout_subject333"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval" >
+
+                        <TextView
+                            android:id="@+id/im_detail_subject_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="畅聊名称"
+                            android:textColor="@color/hy_input_title_text_color"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/im_detail_txt_subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toLeftOf="@+id/image_right_arrow2"
+                            android:gravity="left|center_vertical"
+                            android:maxWidth="200dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:text="讨论未日计划"
+                            android:textColor="@color/home_dt_font_comment_content"
+                            android:textSize="@dimen/im_font_normal" />
+
+                        <ImageView
+                            android:id="@+id/image_right_arrow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/joint_columntype_select" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 分割线 人数上限 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_max"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <LinearLayout
+                        android:id="@+id/im_detail_max"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/im_detail_name_tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="人数上限"
+                            android:textColor="@color/home_dt_darkgrey_font"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/im_detail_txt_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text="40人"
+                            android:textColor="@color/home_dt_font_comment_content"
+                            android:textSize="@dimen/im_font_normal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 分割线 是否置顶 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_stick"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval"
+                        android:background="@color/white"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="畅聊置顶"
+                            android:textColor="@color/home_dt_darkgrey_font"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+
+                        <ToggleButton
+                            android:id="@+id/im_detail_tbtn_stick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/im_toggle_style"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="ToggleButton"
+                            android:textOff=""
+                            android:textOn="" >
+                        </ToggleButton>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 分割线 新消息通知 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_notify"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:layout_marginTop="@dimen/im_detail_interval"
+                        android:background="@color/white" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:text="新消息通知"
+                            android:textColor="@color/home_dt_darkgrey_font"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+
+                        <ToggleButton
+                            android:id="@+id/im_detail_tbtn_notify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/im_toggle_style"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:gravity="right|center_vertical"
+                            android:paddingRight="10dp"
+                            android:text="ToggleButton"
+                            android:textOff=""
+                            android:textOn="" >
+                        </ToggleButton>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 清除记录 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_clean"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <LinearLayout
+                        android:id="@+id/im_detail_layout_clearff"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/im_detail_interval" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:singleLine="true"
+                            android:text="清空聊天记录"
+                            android:textColor="@color/hy_input_title_text_color"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 查找聊天记录 -->
+
+                <LinearLayout
+                    android:id="@+id/im_detail_layout_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_leftmenu_click_style"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/jt_dt_line_1" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="@dimen/im_detail_interval_tobottom"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/im_detail_interval" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/im_detail_paddingleft"
+                            android:singleLine="true"
+                            android:text="查找聊天记录"
+                            android:textColor="@color/hy_input_title_text_color"
+                            android:textSize="@dimen/im_font_normal"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 分割线 退出登录 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/im_gray" />
+
+            <!-- 退出登录接口 -->
+
+            <LinearLayout
+                android:id="@+id/im_detail_layout_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/im_detail_exit_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/im_detail_exit_style"
+                    android:text="退出并解散讨论"
+                    android:textColor="@color/home_dt_darkgrey_font2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

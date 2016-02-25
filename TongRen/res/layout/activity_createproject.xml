@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectNameEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_label="项目名称" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectDescribeEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_label="项目描述" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectAveragesEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_label="酬劳" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectTimeEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_label="需求时间" />
+
+   <!--  <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectFinishEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_label="需求截止时间" />
+ -->
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectPeriodEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_label="项目周期" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectAreaEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_label="区域" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectIndustryEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:isChoose="true"
+        edittextview:text_label="行业" />
+
+    <!-- <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/projectDocumentEtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:MaxLength="50"
+        edittextview:text_label="项目文档" /> -->
+
+</LinearLayout>

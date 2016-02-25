@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <!--  <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="0"
+        android:showAsAction="always"
+        android:title="编辑"/> -->
+    
+    <item
+        android:id="@+id/action_type"
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="10"
+        android:showAsAction="always"
+        android:title=""
+        >
+
+       <!-- 二级菜单 -->
+        <!-- 
+        <menu>
+            <item
+                android:id="@+id/action_favorites"
+                
+                android:showAsAction="always|withText"
+                android:icon="@drawable/action_favorites"
+                android:title="我收藏的"/>
+            <item
+                android:id="@+id/action_share_to_me"
+                android:showAsAction="always|withText"
+                android:icon="@drawable/action_share_to_me"
+                android:title="分享给我的"/>
+            <item
+                android:id="@+id/action_creat"
+                android:showAsAction="always|withText"
+                android:icon="@drawable/action_creat"
+                android:title="我创建的"/>
+        </menu> -->
+        <!-- <menu>
+            <item
+                android:id="@+id/createKnowledge"
+                android:showAsAction="always|withText"
+                android:title="创建知识"/>
+            <item
+                android:id="@+id/editKnowledge"
+                android:showAsAction="always|withText"
+                android:title="编辑"/>
+        </menu> -->
+    </item>
+    
+    <item
+        android:id="@+id/action_check_all"
+        android:orderInCategory="20"
+        android:showAsAction="always"
+        android:title="全选"
+        android:visible="false"
+        />
+
+</menu>

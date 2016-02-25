@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+<CheckBox
+        android:id="@+id/selectCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/kno_checkbox_bg" 
+        android:button="@null"
+        android:focusable="false"
+        android:visibility="gone"
+		android:focusableInTouchMode="false"/>
+        <com.tr.ui.widgets.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/contactAvatarIv"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+
+        <LinearLayout
+            android:id="@+id/NameCompanyLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contactNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:drawableLeft="@drawable/contactpeopletag"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:text="姓名"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/contactCompanyOfferTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="公司名称+职位"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 好友操作：发短信   打电话 -->
+
+        <LinearLayout
+            android:id="@+id/communicationLl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/sendSmsIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/send_ems_bg_selector2"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/callIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/call_bg_selector2"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="65dp"
+        android:background="#e3e3e3" />
+
+</LinearLayout>

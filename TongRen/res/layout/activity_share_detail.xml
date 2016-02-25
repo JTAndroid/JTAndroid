@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    
+    <WebView 
+        android:id="@+id/contentWv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <ScrollView 
+        android:id="@+id/contentSv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView 
+        	android:id="@+id/contentTv"
+        	style="@style/common_text_style_large_black"
+        	android:padding="5dp"/>
+    </ScrollView>
+
+</RelativeLayout>

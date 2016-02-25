@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="61.5dp"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/senior_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp"
+                    android:paddingTop="14dp"
+                    android:text="沈南鹏" />
+
+                <TextView
+                    android:id="@+id/senior_duty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="31dp"
+                    android:paddingTop="14dp"
+                    android:text="董事长"
+                    android:layout_toRightOf="@id/senior_name"
+                    android:textColor="#808080"
+                    android:textSize="11sp" />
+				
+                <TextView
+                    android:id="@+id/senior_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/senior_name"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="11dp"
+                    android:text="最终控股人"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+				<TextView 
+				    android:id="@+id/senior_item_data"
+				    android:text=""
+				    android:textColor="#808080"
+				    android:textSize="12sp"
+				    android:layout_alignBottom="@+id/senior_data"
+				     android:layout_toRightOf="@+id/senior_data"
+				     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_gubili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/senior_item_data"
+                    android:layout_toRightOf="@id/senior_item_data"
+                    android:paddingLeft="40dp"
+                    android:text="持股比例 :"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+                <TextView 
+                    android:id="@+id/senior_education"
+                    android:text="30%"
+                     android:textColor="#808080"
+                    android:textSize="12sp"
+                     android:layout_toRightOf="@id/tv_gubili"
+                     android:layout_alignBottom="@+id/senior_item_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+</LinearLayout>

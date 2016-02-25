@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@color/white"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+    
+    <!-- 头像 -->
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp" >
+        <com.tr.ui.widgets.CircleImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_know_people" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/im_user_avatar_border" />
+    </RelativeLayout>
+
+    <!-- 内容 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+        
+        <TextView 
+            style="@style/common_text_style_large_black"
+            android:text="深圳市腾讯科技有限公司"/>
+        
+        <TextView 
+            style="@style/common_text_style_middle_gray"
+            android:layout_marginTop="5dp"
+            android:text="CEO：马化腾"/>
+        
+    </LinearLayout>
+</LinearLayout>

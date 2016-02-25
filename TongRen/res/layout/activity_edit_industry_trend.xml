@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <RelativeLayout
+            android:id="@+id/quit_industry_trends_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="11dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/people_left_arrow"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/industry_trends_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="配置行业标签"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/edit_industry_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="save"
+            android:padding="10dp"
+            android:text="保存"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+             
+          <LinearLayout
+              android:id="@+id/ll_industry_trend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:id="@+id/rl_industry_label"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#f1f1f1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="10dp"
+                    android:text="最多可配置10个行业标签"
+                    android:textColor="#808080"
+                    android:textSize="12sp" />
+                                
+            </RelativeLayout>   
+            <View 
+                android:background="#f1f1f1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/_xiangguanmiaosu"
+                    android:textColor="#1f1f1f"
+                    android:textSize="13sp" />
+			<View 
+			    android:background="#e3e3e3"
+			    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+           
+     <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_family_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        edittextview:text_label="家庭状况" />
+          <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_field_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        edittextview:text_label="字段名称" />
+            
+              <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/eidt_industry_Etv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        edittextview:JustLabel="true"
+        edittextview:text_label="描述字段" />
+            
+            
+            </LinearLayout>                    
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="268dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popbox"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/siness_message"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择电话"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:id="@+id/siness_messageRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/siness_message_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:text="商务电话"
+            android:textColor="#808080"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/siness_message_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="13978653273"
+            android:textColor="#3996FD"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:id="@+id/maincontacts_main_message"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/message_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:text="主要手机"
+            android:textColor="#808080"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/message_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="13199146675"
+            android:textColor="#3996FD"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

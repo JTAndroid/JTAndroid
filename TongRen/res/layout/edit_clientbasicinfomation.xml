@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:edittextview="http://schemas.android.com/apk/res/com.tr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#22292c" >
+
+        <ImageView
+            android:id="@+id/client_edit_basic_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑基本信息"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/client_edit_basic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="完成"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1" />
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/edit_basic_rl_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/people_portrait" />
+
+        <TextView
+            android:id="@+id/edit_basicinfomation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/edit_basic_rl_iv"
+            android:text="客户简称"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/client_edit_basicinfomation_edittext"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_basicinfomation_name"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@id/edit_basic_rl_iv"
+            android:background="@null"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/editText_line"
+            android:layout_width="190dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/edit_basicinfomation_edittext"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/edit_basic_rl_iv"
+            android:background="#e3e3e3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/editText_line"
+            android:layout_marginTop="7dp"
+            android:background="#e3e3e3" />
+    </LinearLayout>
+
+ 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e3e3e3" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/basic_org_type_Etv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:isChoose="true"
+        edittextview:text_hint_label="请选择"
+        edittextview:text_label="客户类型" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/industry_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="行        业"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/client_industry_EditText"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="39dp"
+            android:layout_toRightOf="@id/industry_name"
+            android:background="@null"
+            android:singleLine="true"
+            android:textColor="#353535"
+            android:textSize="14sp" />
+        
+
+        <ImageView
+            android:id="@+id/client_industry_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/right_arrow" />
+        
+     
+    </RelativeLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e3e3e3" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/basic_org_market_Etv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:isChoose="true"
+        edittextview:text_label="上市信息" />
+
+    <RelativeLayout
+        android:id="@+id/rl_stockNum"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/edit_org_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="证券代码"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/edit_client_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="39dp"
+            android:layout_toRightOf="@id/edit_org_money"
+            android:text=""
+            android:textColor="#353535"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e3e3e3" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/client_edit_basic_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:text_label="客户邮箱" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/client_edit_basic_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:text_label="联系电话" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:id="@+id/client_edit_basic_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:isChoose="true"
+        edittextview:text_label="客户描述" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f1f1f1" />
+
+    <com.tr.ui.people.cread.view.MyEditTextView
+        android:visibility="gone"
+        android:id="@+id/client_edit_basic_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        edittextview:isAddMore_hint="true"
+        edittextview:isChoose="true"
+        edittextview:text_label="自定义" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/relevance_Tv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:drawableLeft="@drawable/people_associate"
+            android:drawablePadding="5dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="关联"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/catalogue_Tv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:drawableLeft="@drawable/people_contents"
+            android:drawablePadding="5dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="目录"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_Tv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:drawableLeft="@drawable/people_label"
+            android:drawablePadding="5dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="标签"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/jurisdiction_Tv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/people_textviewshape"
+            android:drawableLeft="@drawable/people_competence"
+            android:drawablePadding="5dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="权限"
+            android:textColor="#1f1f1f"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>
