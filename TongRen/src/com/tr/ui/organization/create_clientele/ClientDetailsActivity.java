@@ -654,8 +654,8 @@ public class ClientDetailsActivity extends SwipeBackActivity implements
 				jtFile.fileName = mjCustomer.customer.name;
 			}
 			jtFile.setmUrl(mjCustomer.customer.picLogo);
-			jtFile.setmSuffixName(mjCustomer.customer.name);
-			jtFile.setReserved1(mjCustomer.customer.discribe);
+			jtFile.setmSuffixName(mjCustomer.customer.discribe);
+//			jtFile.setReserved1(mjCustomer.customer.discribe);//Reserved1字段后台有字数限制，iOS及前段都把discribe传到mSuffixName里
 			jtFile.virtual = mjCustomer.customer.virtual;
 			jtFile.mModuleType = 8;
 			jtFile.mFileSize = 0;

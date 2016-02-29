@@ -862,11 +862,11 @@ public class OrgMyHomePageActivity extends SwipeBackActivity implements
 				if (StringUtils.isEmpty(org_customer.customer.shotName)) {
 					jTFile.fileName =org_customer.customer.name;
 				}
-				jTFile.setmSuffixName(org_customer.customer.name);
+				jTFile.setmSuffixName(org_customer.customer.discribe);
 				// if (customer.industrys.size() != 0) {
 				// jTFile.setReserved1(customer.industrys.toString());
 				// }
-				jTFile.setReserved1(org_customer.customer.discribe);
+//				jTFile.setReserved1(org_customer.customer.discribe);//Reserved1字段后台有字数限制，iOS及前段都把discribe传到mSuffixName里
 				jTFile.mModuleType =9;
 				jTFile.mFileSize = 0;
 				jTFile.setmType(JTFile.TYPE_ORGANIZATION);

@@ -13,6 +13,7 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -28,13 +29,17 @@ import com.tr.ui.common.view.XListView;
 import com.tr.ui.common.view.XListView.IXListViewListener;
 import com.tr.ui.tongren.adapter.OrgAdapter;
 import com.tr.ui.tongren.home.OrganizationActivity;
+import com.tr.ui.tongren.home.RecommendProjectActivity;
 import com.tr.ui.tongren.model.project.Organization;
+import com.tr.ui.widgets.NoScrollListview;
+import com.tr.ui.widgets.RefreshScrollView;
+import com.tr.ui.widgets.RefreshScrollView.OnRefreshScrollViewListener;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
 
-public class OrganizationFragment extends JBaseFragment implements IBindData{
+public class OrganizationFragment extends JBaseFragment implements IBindData,OnClickListener{
 
-	private XListView orgXlv;
+	private NoScrollListview orgXlv;
 	private OrgAdapter orgAdapter;
 	private List<Organization> orgs = new ArrayList<Organization>();
 	private List<Organization> orgs_myCreate = new ArrayList<Organization>();
@@ -53,8 +58,19 @@ public class OrganizationFragment extends JBaseFragment implements IBindData{
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View orgView = inflater.inflate(R.layout.fragment_organization, null);
-		initView(orgView);
-		return orgView;
+		RefreshScrollView refreshScrollView = new RefreshScrollView(getActivity());
+		refreshScrollView.setupContainer(getActivity(), orgView);
+		refreshScrollView.setEnableRefresh(true);
+		
+		refreshScrollView.setOnRefreshScrollViewListener(new OnRefreshScrollViewListener() {
+			
+			@Override
+			public void onRefresh() {
+				getData();
+			}
+		});
+		initView(refreshScrollView);
+		return refreshScrollView;
 	}
 	
 	private boolean mIsVisibleToUser;
@@ -71,11 +87,9 @@ public class OrganizationFragment extends JBaseFragment implements IBindData{
 		empty = (RelativeLayout) orgView.findViewById(R.id.empty);
 		common_text_empty = (TextView) empty.findViewById(R.id.common_text_empty);
 		common_image_empty = (ImageView) empty.findViewById(R.id.common_image_empty);
-		orgXlv = (XListView) orgView.findViewById(R.id.orgXlv);
+		orgXlv = (NoScrollListview) orgView.findViewById(R.id.orgXlv);
 		orgAdapter = new OrgAdapter(getActivity(), orgs);
 		orgXlv.setAdapter(orgAdapter);
-		orgXlv.setPullRefreshEnable(true);
-		orgXlv.setPullLoadEnable(false);
 		orgXlv.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -93,20 +107,15 @@ public class OrganizationFragment extends JBaseFragment implements IBindData{
 				}
 			}
 		});
-		
-		orgXlv.setXListViewListener(new IXListViewListener() {
+		LinearLayout reCommendll = (LinearLayout) orgView.findViewById(R.id.reCommendll);
+		reCommendll.setOnClickListener(new OnClickListener() {
 			
 			@Override
-			public void onRefresh() {
-				getData();
-			}
-			
-			@Override
-			public void onLoadMore() {
-				
+			public void onClick(View v) {
+				Intent intent = new Intent(getActivity(), RecommendProjectActivity.class);
+				startActivityForResult(intent, TongRenFragment.REQ_PROJECT);
 			}
 		});
-		
 	}
 
 	private void getData() {
@@ -115,7 +124,6 @@ public class OrganizationFragment extends JBaseFragment implements IBindData{
 
 	@Override
 	public void bindData(int tag, Object object) {
-		orgXlv.stopRefresh();
 		switch (tag) {
 		case EAPIConsts.TongRenRequestType.TONGREN_REQ_GETMYCREATEORGANIZATIONS:// 创建
 			orgs.clear();
@@ -188,6 +196,12 @@ public class OrganizationFragment extends JBaseFragment implements IBindData{
 		}
 		TongRenReqUtils.doRequestOrg(getActivity(), this, jsonObj, handler,
 				requestType);// 创建
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
