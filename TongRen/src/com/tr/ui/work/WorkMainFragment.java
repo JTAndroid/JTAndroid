@@ -699,14 +699,14 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 				mPos = 0;
 			mAdapter.setItemList(mAffarListShow.mAffarList);
 
-			ListViewWork.post(new Runnable() //
-					{ //
-						public void run() //
-						{ //
-							ListViewWork.setSelection(mPos); //
-						} //
-					});
-			ListViewWork.setSelection(mPos);
+//			ListViewWork.post(new Runnable() //
+//					{ //
+//						public void run() //
+//						{ //
+//							ListViewWork.setSelection(mPos); //
+//						} //
+//					});
+//			ListViewWork.setSelection(mPos);
 			mAdapter.notifyDataSetChanged();
 
 		}
