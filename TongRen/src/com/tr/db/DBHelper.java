@@ -35,7 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	 * @最后一次修改日期 2015/06/08
 	 * @author gushi
 	 */
-	public final static int DATABASE_VERSION = 39;
+	public final static int DATABASE_VERSION = 40;
 
 	// 数据对象（状态恢复）
 	public final static String TABLE_APP_CONNECTIONS = "app_connections";
@@ -235,6 +235,9 @@ public class DBHelper extends SQLiteOpenHelper {
 					"INTEGER NOT NULL DEFAULT 0");
 			addColumn(db, TABLE_APP_CONNECTIONS_BACK, COLUMN_CON_GENDER,
 					"INTEGER NOT NULL DEFAULT 0");
+			break;
+		case 40:
+			db.execSQL("CREATE TABLE IF NOT EXISTS filedownlog (id integer primary key autoincrement, downpath varchar(100), threadid INTEGER, downlength INTEGER)");
 			break;
 		default:
 			throw new IllegalStateException("Don't know how to upgrade to "
