@@ -267,7 +267,6 @@ public class LoginActivity extends JBaseFragmentActivity {
 		// username and password
 		userNameEt = (EditText) findViewById(R.id.userNameEt);
 		userNameEt.setText(mMainApp.getAppData().getUserName());
-		userNameEt.setInputType(InputType.TYPE_CLASS_NUMBER);
 		passwordEt = (EditText) findViewById(R.id.passwordEt);
 		passwordEt.setText(mMainApp.getAppData().getPassword());
 
