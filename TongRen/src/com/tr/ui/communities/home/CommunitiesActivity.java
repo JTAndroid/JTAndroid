@@ -29,6 +29,8 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.CommunityReqUtil;
+import com.tr.api.ConferenceReqUtil;
+import com.tr.model.CommunityStateResult;
 import com.tr.navigate.ENavigate;
 import com.tr.ui.base.JBaseActivity;
 import com.tr.ui.common.view.XListView;
@@ -86,6 +88,7 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 	private long communityId;
 	private String notice;
 	private String key;
+	private MenuItem newmessageItem;
 
 	@Override
 	public void initJabActionBar() {
@@ -107,6 +110,13 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 
 	private void getBundle() {
 
+	}
+	
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		ConferenceReqUtil.getCommunityState(this, this, null, App.getUserID());
 	}
 
 	/**
@@ -274,7 +284,8 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_new_main, menu);
 		menu.findItem(R.id.home_new_menu_more).setIcon(R.drawable.ic_action_overflow);
-		menu.findItem(R.id.home_new_menu_search).setIcon(R.drawable.tongren_message_normal);
+		newmessageItem = menu.findItem(R.id.home_new_menu_search);
+		newmessageItem.setIcon(R.drawable.tongren_message_normal);
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -338,11 +349,11 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 
 	@Override
 	public void bindData(int tag, Object object) {
-		HashMap<String, Object> dataMap = (HashMap<String, Object>) object;
 
 		switch (tag) {
 		case CommunityReqType.TYPE_MAIN_COMMUNITY_LIST:// 所有的社群列表
 			onLoad();
+			HashMap<String, Object> dataMap = (HashMap<String, Object>) object;
 			if (dataMap != null) {
 				List<ImMucinfo> list = (List<ImMucinfo>) dataMap.get("result");
 				if(index == 0){
@@ -369,8 +380,9 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 
 			break;
 		case EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_LABELS:// 获取标签详情
-			if (null != dataMap) {
-				CommunityLabels communityLabels = (CommunityLabels) dataMap.get("result");
+			HashMap<String, Object> community_labels = (HashMap<String, Object>) object;
+			if (null != community_labels) {
+				CommunityLabels communityLabels = (CommunityLabels) community_labels.get("result");
 				hotLabeList = communityLabels.getHotLabel() != null ? communityLabels.getHotLabel() : new ArrayList<Label>();
 				Label label = new Label();
 				label.setName("全部");
@@ -380,8 +392,9 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 			}
 			break;
 		case CommunityReqType.TYPE_EXIST_COMMUNITYNO:
-			if (dataMap != null) {
-				boolean isExist = (Boolean) dataMap.get("isExist");
+			HashMap<String, Object> communityno = (HashMap<String, Object>) object;
+			if (communityno != null) {
+				boolean isExist = (Boolean) communityno.get("isExist");
 				if(isExist){
 					CommunityReqUtil.getCommunityByCommunityNo(this, this, communityNO, Long.valueOf(App.getUserID()), null);
 				}else{
@@ -394,9 +407,11 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 			}
 			break;
 		case CommunityReqType.TYPE_GET_COMMUNITY_BY_COMMUNITYNO:
-			if (dataMap != null) {
-				CommunityApply commuapply = (CommunityApply) dataMap.get("result");
-				Notification noti = (Notification) dataMap.get("notification");
+			HashMap<String, Object> community_communityno = (HashMap<String, Object>) object;
+			
+			if (community_communityno != null) {
+				CommunityApply commuapply = (CommunityApply) community_communityno.get("result");
+				Notification noti = (Notification) community_communityno.get("notification");
 				if(commuapply == null && noti != null){
 					dismissLoadingDialog();
 					showToast(noti.getNotifInfo());
@@ -424,14 +439,35 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 			break;
 		case EAPIConsts.CommunityReqType.TYPE_GET_NOTICE:// 社群公告
 			dismissLoadingDialog();
-			if (null != dataMap) {
-				notice = (String) dataMap.get("notice");
+			HashMap<String, Object> NOTICE = (HashMap<String, Object>) object;
+			
+			if (null != notice) {
+				notice = (String) NOTICE.get("notice");
 				showNoticeDialog();
 			} else {
 				Intent intent = new Intent(this, JoinCommumitiesAvtivity.class);
 				intent.putExtra(GlobalVariable.COMMUNITY_ID, communityId);
 				intent.putExtra("req_number_community", community);
 				startActivity(intent);
+			}
+			break;
+		case EAPIConsts.ConferenceReqType.CONFERENCE_REQ_COMMUNITY_STATE:
+			ArrayList<CommunityStateResult> mCommunityStateResultList = (ArrayList<CommunityStateResult>) object;
+			if (mCommunityStateResultList != null
+					&& mCommunityStateResultList.size() > 0) {
+				for (CommunityStateResult iterable_element : mCommunityStateResultList) {
+					if (iterable_element.getNewMessageRemind() == 0
+							&& iterable_element.getNewCount() > 0) {
+						// 显示红点
+						newmessageItem.setIcon(R.drawable.tongrenmessagered);
+						break;
+					} else {
+						// 隐藏
+						newmessageItem.setIcon(R.drawable.tongren_message_normal);
+					}
+				}
+			} else {
+				newmessageItem.setIcon(R.drawable.tongren_message_normal);
 			}
 			break;
 		default:

@@ -2195,6 +2195,14 @@ public class EAPIConsts {
 		public static final String EXIST_COMMUNITYNO="community/existCommunityNo.json";
 		//42 批量创建社群通知
 		public static final String CREATE_BATCH_COMMUNITY_NOTICES="community/notice/createBatchCommunityNotices.json";
+		//43 社群首页全局搜索
+		public static final String SEARCH_HOMEPAGE="community/searchhomepage.json";
+		//44 社群批量删除成员
+		public static final String KICK_MUTIPLEMEMBERS_FOR_COMMUNITY="mobile/im/kickMutipleMembersForCommunity.action";
+		//45获取社群的未读消息
+		public static final String GET_COMMUNITY_NEWCOUNT_BY_USERID="meeting/getCommunityNewCountByUserId/";
+		//46获取登录用户的具有未读消息的社群列表
+		public static final String GET_COMMUNITY_LIST="meeting/getCommunityList.json";
 	}
 	/**
 	 *社群请求api接口
@@ -2287,7 +2295,11 @@ public class EAPIConsts {
 		//42.批量创建社群通知
 		public static final int TYPE_CREATE_BATCH_COMMUNITY_NOTICES = Community_REQ_BASE + 42;
 		//社群群聊踢人(批量)
-				public static final int  TYPE_KICK_FROM_MUC_FOR_BATCH = Community_REQ_BASE + 43;
+		public static final int  TYPE_KICK_FROM_MUC_FOR_BATCH = Community_REQ_BASE + 43;
+		//45获取社群的未读消息
+		public static final int TYPE_GET_COMMUNITY_NEWCOUNT_BY_USERID = Community_REQ_BASE + 45;
+		//46获取登录用户的具有未读消息的社群列表
+		public static final int TYPE_GET_COMMUNITY_LIST = Community_REQ_BASE + 46;
 	}
 	
 	public static class handler {

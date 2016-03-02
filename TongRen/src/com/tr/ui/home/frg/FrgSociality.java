@@ -53,6 +53,7 @@ import com.tr.api.ConferenceReqUtil;
 import com.tr.api.ConnectionsReqUtil;
 import com.tr.api.IMReqUtil;
 import com.tr.db.SocialityDBManager;
+import com.tr.model.CommunityStateResult;
 import com.tr.model.SimpleResult;
 import com.tr.model.conference.MListSociality;
 import com.tr.model.conference.MSociality;
@@ -264,7 +265,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 		ConnectionsReqUtil.getNewConnectionsCount(getActivity(),
 				FrgSociality.this, new JSONObject(), null);
 		
-		CommunityReqUtil.doGetCommunityListByUserId(getActivity(), this, App.getUserID(), null);
+		ConferenceReqUtil.getCommunityState(getActivity(), this, null, App.getUserID());
 	}
 
 	private boolean mIsVisibleToUser;
@@ -508,20 +509,26 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				}
 				deleteClickPosition = -1;
 			}
-			if(tag == EAPIConsts.CommunityReqType.TYPE_GET_NOTICE_LIST_BY_USERID){
+			if(tag == EAPIConsts.ConferenceReqType.CONFERENCE_REQ_COMMUNITY_STATE){
 				if (object != null) {
-					HashMap<String, Object> dataBox = (HashMap<String, Object>) object;
-					communityNotifylist = (ArrayList<CommunityNotify>) dataBox.get("list");
-					Collections.sort(communityNotifylist, new ComparatorNotify());//排序
 					if(community == null){
 						community = new MSociality();
 					}
-//					if(communityNotifylist!=null){
-//						if(communityNotifylist.size()>0){
-//							community.setNewCount(communityNotifylist.size());
-//							adapter.notifyDataSetChanged();
-//						}
-//					}
+					int newcount = 0;
+					ArrayList<CommunityStateResult> mCommunityStateResultList = (ArrayList<CommunityStateResult>) object;
+					if (mCommunityStateResultList != null
+							&& mCommunityStateResultList.size() > 0) {
+						for (CommunityStateResult iterable_element : mCommunityStateResultList) {
+							if (iterable_element.getNewMessageRemind() == 0
+									&& iterable_element.getNewCount() > 0) {
+								// 显示红点
+								newcount += iterable_element.getNewCount();
+							}
+						}
+						community.setNewCount(newcount);
+					} else {
+						community.setNewCount(0);
+					}
 				}
 			}
 //			isFirstLoadData = false;

@@ -46,7 +46,7 @@ import com.utils.http.IBindData;
 
 public class FragCommunitySystemMessage extends JBaseFragment implements IBindData{
 	
-	private ArrayList<CommunityNotify> communityNotifylist;
+	private ArrayList<CommunityNotify> communityNotifylist = new ArrayList<CommunityNotify>();
 	private CommumitiesNotificationAdapter adapter;
 	private XListView commumitiesnotificationLv;
 	private TextView NoContent;
@@ -56,7 +56,6 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		communityNotifylist = (ArrayList<CommunityNotify>) getArguments().get("communityNotifylist");
 	}
 
 	@Override
@@ -67,6 +66,12 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 		initData();
 		return view;
 
+	}
+	
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
 	}
 	
 	private void initView(View view) {
@@ -89,17 +94,9 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 	
 	private void initData() {
 		adapter = new CommumitiesNotificationAdapter(getActivity());
-		if(communityNotifylist!=null){
-			if(communityNotifylist.size()>0){
-				NoContent.setVisibility(View.GONE);
-				adapter.setData(communityNotifylist);
-			}else{
-				CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunitySystemMessage.this, App.getUserID(), null);
-			}
-		}else{
-			CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunitySystemMessage.this, App.getUserID(), null);
-		}
+		adapter.setData(communityNotifylist);
 		commumitiesnotificationLv.setAdapter(adapter);
+		CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunitySystemMessage.this, App.getUserID(), null);
 	}
 	
 	@Override

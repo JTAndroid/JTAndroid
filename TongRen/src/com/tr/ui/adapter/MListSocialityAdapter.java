@@ -226,7 +226,7 @@ public class MListSocialityAdapter extends BaseAdapter {
 			} else {
 				holder.cnsSizeTvNew_control.setVisibility(View.VISIBLE);
 				holder.cnsSizeTvNew.setVisibility(View.VISIBLE);
-				holder.cnsSizeTvNew.setText(String.valueOf(mSociality.getNewCount()));
+				holder.cnsSizeTvNew.setText((mSociality.getNewCount() > 99 ? 99 : mSociality.getNewCount()) + "");
 			}
 		}
 		
@@ -241,7 +241,7 @@ public class MListSocialityAdapter extends BaseAdapter {
 			} else {
 				holder.cnsSizeTvNew_control.setVisibility(View.VISIBLE);
 				holder.cnsSizeTvNew.setVisibility(View.VISIBLE);
-				holder.cnsSizeTvNew.setText(String.valueOf(mSociality.getNewCount()));
+				holder.cnsSizeTvNew.setText((mSociality.getNewCount() > 99 ? 99 : mSociality.getNewCount()) + "");
 			}
 		}
 		
