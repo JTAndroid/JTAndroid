@@ -58,6 +58,8 @@ public class ProjectTaskActivtiy extends JBaseActivity implements OnClickListene
 	private List<Task> myCompleteTaskList = new ArrayList<Task>();
 	private LinearLayout rootLl;
 	private String projectAcceptId;
+	private int status;
+	private View view_task;
 	@Override
 	public void initJabActionBar() {
 		jabGetActionBar = jabGetActionBar();
@@ -75,6 +77,7 @@ public class ProjectTaskActivtiy extends JBaseActivity implements OnClickListene
 		organizationId = getIntent().getStringExtra("organizationId");
 		projectName =  getIntent().getStringExtra("projectName");
 		projectAcceptId = getIntent().getStringExtra("projectAcceptId");
+		status = getIntent().getIntExtra("projectstatus", 0);
 		addTaskLl.setOnClickListener(this);
 		completeTaskSumTv.setOnClickListener(this);
 		projectTaskAdapter = new ProjectTaskAdapter(this);
@@ -116,8 +119,14 @@ public class ProjectTaskActivtiy extends JBaseActivity implements OnClickListene
 		
 		if (tongRenInfoType == TongRenInfoType.PROJECT) {
 			if (App.getUserID().equals(projectAcceptId)) {
-				addTaskLl.setVisibility(View.VISIBLE);
+				if (status == 3) {
+					view_task.setVisibility(View.GONE);
+					addTaskLl.setVisibility(View.GONE);
+				}else{
+					addTaskLl.setVisibility(View.VISIBLE);
+				}
 			}else{
+				view_task.setVisibility(View.GONE);
 				addTaskLl.setVisibility(View.GONE);
 			}
 			ProjectAndOrganizationId projectAndOrganizationId = new ProjectAndOrganizationId();
@@ -150,6 +159,7 @@ public class ProjectTaskActivtiy extends JBaseActivity implements OnClickListene
 	}
 	private void initView() {
 		addTaskLl = (LinearLayout) findViewById(R.id.addTaskLl);
+		view_task = findViewById(R.id.view_task);
 		completeTaskSumTv  = (TextView) View.inflate(this, R.layout.bottom_task_complete, null);
 		projectTaskLv = (MyXListView) findViewById(R.id.projectTaskLv);
 		projectTaskLv.addFooterView(completeTaskSumTv);
