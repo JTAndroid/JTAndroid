@@ -105,6 +105,9 @@ public class ImageLoader {
 	public static void load(ImageView view, int type, String url, int resImage) {
 		try {
 			typeBitmapSize = type;
+			if(view != null && StringUtils.isEmpty(url)){
+				view.setImageResource(resImage);
+			}
 			if (view == null || StringUtils.isEmpty(url)) {
 				return;
 			}
@@ -238,7 +241,7 @@ public class ImageLoader {
 						bitmap = decodeSampledBitmapFromFd(path, 70, 70);
 					}
 				} else if(typeBitmapSize == INDEX_BITMAP){
-						bitmap = decodeSampledBitmapFromFd(path, view.getWidth() * 3, view.getHeight() * 3);
+						bitmap = decodeSampledBitmapFromFd(path, view.getWidth(), view.getHeight());
 				}else {
 					if (mContext != null) {
 						bitmap = decodeSampledBitmapFromFd(path,

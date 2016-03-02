@@ -15,11 +15,16 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tr.R;
 import com.tr.model.home.MainImagesItem;
 import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
+import com.utils.common.Util.DensityUtil;
 
 public class MainMiddleAdapter extends BaseAdapter {
 	private Context mContext;
 	private String IMAGE_ITEM = "imgage_item";
 	private List<MainImagesItem> list;
+	private static final int[] imagesTop = new int[] {
+		R.drawable.image_contacts, R.drawable.image_customer,
+		R.drawable.image_activitys, R.drawable.image_knowledges,
+		R.drawable.image_tong_ren, R.drawable.image_demands };
 
 	public MainMiddleAdapter(Context context, List<MainImagesItem> list) {
 		this.mContext = context;
@@ -62,19 +67,22 @@ public class MainMiddleAdapter extends BaseAdapter {
 		}
 		ImageView image_logo = ViewHolder
 				.get(convertView, R.id.image_item_find_iv);
+		LayoutParams params = image_logo.getLayoutParams();
 		if (position == 4) {//桐人模块UI单独处理
-			LayoutParams params = image_logo.getLayoutParams();
 			params.height = params.WRAP_CONTENT;
 			params.width = params.WRAP_CONTENT;
-			image_logo.setLayoutParams(params);
+		}else{
+			params.height = DensityUtil.dip2px(mContext, 50);
+			params.width = DensityUtil.dip2px(mContext, 50);
 		}
-		if (TextUtils.isEmpty(this.list.get(position).getImages().getLarge())) {
-			// image_logo.setBackgroundResource(this.list.get(position).getImages().getResourceID());
-			int resourceID = this.list.get(position).getImages()
-					.getResourceID();
-			image_logo.setImageDrawable(mContext.getResources().getDrawable(
-					resourceID));
-		} else {
+		image_logo.setLayoutParams(params);
+//		if (TextUtils.isEmpty(this.list.get(position).getImages().getLarge())) {
+//			// image_logo.setBackgroundResource(this.list.get(position).getImages().getResourceID());
+//			int resourceID = this.list.get(position).getImages()
+//					.getResourceID();
+//			image_logo.setImageDrawable(mContext.getResources().getDrawable(
+//					resourceID));
+//		} else {
 //			ImageLoader.getInstance().displayImage(
 //					this.list.get(position).getImages().getLarge(), image_logo);
 			/**
@@ -85,8 +93,11 @@ public class MainMiddleAdapter extends BaseAdapter {
 			/**
 			 * com.tr.image.ImageLoader 网络更新有问题 APP1.1需要进行修改
 			 */
-			com.tr.image.ImageLoader.load(image_logo, com.tr.image.ImageLoader.INDEX_BITMAP, this.list.get(position).getImages().getLarge());
-		}
+			com.tr.image.ImageLoader.load(image_logo,
+					com.tr.image.ImageLoader.INDEX_BITMAP,
+					this.list.get(position).getImages().getLarge(),
+					imagesTop[position]);
+//		}
 		return convertView;
 	}
 
