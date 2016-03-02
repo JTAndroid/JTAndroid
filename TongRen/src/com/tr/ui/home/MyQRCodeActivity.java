@@ -109,9 +109,17 @@ public class MyQRCodeActivity extends JBaseActivity {
 			iv_qrcode.setImageBitmap(bitmap);
 			//有头像时设置头像，无头像时设置默认头像
 			if (!StringUtils.isEmpty(userAvatar)) {
-				ImageLoader.load(iv_avatar, userAvatar, R.drawable.head_pic_default);
+				if (isCommunity) {
+					ImageLoader.load(iv_avatar, userAvatar, R.drawable.avatar_community);
+				}else{
+					ImageLoader.load(iv_avatar, userAvatar, R.drawable.head_pic_default);
+				}
 			} else {
-				iv_avatar.setImageResource(R.drawable.head_pic_default);
+				if (isCommunity) {
+					iv_avatar.setImageResource(R.drawable.avatar_community);
+				}else{
+					iv_avatar.setImageResource(R.drawable.head_pic_default);
+				}
 			}
 		} catch (WriterException e) {
 			e.printStackTrace();
