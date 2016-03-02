@@ -25,8 +25,6 @@ import android.widget.TextView;
 import com.tr.R;
 import com.tr.api.TongRenReqUtils;
 import com.tr.ui.base.JBaseFragment;
-import com.tr.ui.common.view.XListView;
-import com.tr.ui.common.view.XListView.IXListViewListener;
 import com.tr.ui.tongren.adapter.OrgAdapter;
 import com.tr.ui.tongren.home.OrganizationActivity;
 import com.tr.ui.tongren.home.RecommendProjectActivity;

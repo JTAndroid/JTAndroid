@@ -538,7 +538,7 @@ public class FrgConnections extends JBaseFragment implements OnScrollListener {
 
 			if (position != 0) {
 
-				Connections connections = cnsCacheData.get(position - 1);
+				Connections connections = listConnections.get(position - 1);
 				/** 个人好友和机构好友 FILTER_FRIEND_ALL = 5 */
 				if (ConnectionsCacheData.FILTER_FRIEND_ALL == type) {
 					// 是人的时候

@@ -9,21 +9,12 @@ import java.util.List;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.ActionBar.LayoutParams;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -35,28 +26,22 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import android.widget.Toast;
 
 import com.tr.App;
 import com.tr.R;
-import com.tr.api.DemandReqUtil;
 import com.tr.api.WorkReqUtil;
 import com.tr.model.work.BUAffar;
 import com.tr.model.work.BUAffarList;
@@ -64,14 +49,10 @@ import com.tr.navigate.ENavigate;
 import com.tr.ui.base.JBaseFragment;
 import com.tr.ui.common.view.XListView;
 import com.tr.ui.common.view.XListView.IXListViewListener;
-import com.tr.ui.demand.MeNeedActivity;
-import com.tr.ui.home.MainActivity;
 import com.tr.ui.home.utils.HomeCommonUtils;
 import com.tr.ui.tongren.TongRenFragment;
 import com.tr.ui.tongren.TongRenFragment.CurrentTongRenFrgTitle;
-import com.tr.ui.widgets.viewpagerheaderscroll.TouchCallbackLayout.TouchEventListener;
 import com.tr.ui.work.CalendarLayout.OnDayClickListener;
-import com.tr.ui.work.CalendarView.ActionType;
 import com.tr.ui.work.CalendarView.OnMonthChangeListener;
 import com.tr.ui.work.CalendarView.OnTakeBackDayClickListener;
 import com.tr.ui.work.WorkDatePickerDialog.OnDayChangeListener;
@@ -469,6 +450,12 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 
 	}
 
+	public void setAllRedGone() {
+		if(null!=bottom_aff_red_dot){
+			bottom_aff_red_dot.setVisibility(View.GONE);
+		}
+		mAdapter.setAllRedGone(true);
+	}
 	/** 获取每月事务数量 */
 	public void getMonthAffarDate(String inDate) {
 		WorkReqUtil.getAffarMonthDateByDate(getActivity(), this, mUserID + "",
@@ -699,14 +686,14 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 				mPos = 0;
 			mAdapter.setItemList(mAffarListShow.mAffarList);
 
-//			ListViewWork.post(new Runnable() //
-//					{ //
-//						public void run() //
-//						{ //
-//							ListViewWork.setSelection(mPos); //
-//						} //
-//					});
-//			ListViewWork.setSelection(mPos);
+			ListViewWork.post(new Runnable() //
+					{ //
+						public void run() //
+						{ //
+							ListViewWork.setSelection(mPos); //
+						} //
+					});
+			ListViewWork.setSelection(mPos);
 			mAdapter.notifyDataSetChanged();
 
 		}
@@ -890,6 +877,7 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 		}
 		switch (tag) {
 		case WorkReqType.AFFAIR_LIST_GET: {
+			dismissLoadingDialog();
 			// 事务列表
 			Log.d("xmx", "showType:" + mShowType);
 			if (mShowType == 0) {

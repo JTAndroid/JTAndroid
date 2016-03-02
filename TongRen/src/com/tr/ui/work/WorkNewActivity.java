@@ -10,14 +10,10 @@ import java.util.List;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -30,8 +26,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
-import android.view.inputmethod.InputMethodManager;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
@@ -69,8 +65,6 @@ import com.tr.ui.work.WorkNewAffarDealDialog.OnDealChoseListener;
 import com.tr.ui.work.WorkPhoneChoseDialog.OnPhoneChangeListener;
 import com.utils.common.EConsts;
 import com.utils.common.GlobalVariable;
-import com.utils.common.Util;
-import com.utils.common.Util.DensityUtil;
 import com.utils.http.EAPIConsts.WorkReqType;
 import com.utils.http.IBindData;
 import com.utils.log.ToastUtil;
@@ -189,7 +183,7 @@ public class WorkNewActivity extends JBaseActivity implements
 			mAffarId = "";
 
 		initView();
-		initData();
+//		initData();
 
 	}
 
@@ -197,8 +191,10 @@ public class WorkNewActivity extends JBaseActivity implements
 	public void onResume() {
 		super.onResume();
 		mButtonClick=0;
-		if (mOperateType.equals("s"))
-			initData();
+		if (mOperateType.equals("s")){
+			showLoadingDialog();
+			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,mUserId + "", mAffarId, null);
+		}
 		String location=(String) App.getApp().getParam("location");
 		if(!TextUtils.isEmpty(location)){
 			mAffar.location = location;
@@ -236,14 +232,12 @@ public class WorkNewActivity extends JBaseActivity implements
 
 		Log.d("xmx", "initData");
 
-		if (mOperateType.equals("c")) {
+		if (mOperateType.equals("c")) {//创建
 
 			resetWorkView();
-		} else if (mOperateType.equals("s")) {
-			showLoadingDialog();
-			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,
-					mUserId + "", mAffarId, null);
-		} else {
+		} else if (mOperateType.equals("s")) {//查看
+			//查看动作放在了onResume里执行
+		} else {//编辑
 			resetWorkView();
 		}
 	}
@@ -531,11 +525,11 @@ public class WorkNewActivity extends JBaseActivity implements
 				view = flater.inflate(R.layout.work_new_releation_show_cell,
 						null);
 				ImageView red_dot = (ImageView) view.findViewById(R.id.red_dot);
-				if (mAffar.logIsNew.equals("0")) {
+//				if (mAffar.logIsNew.equals("0")) {//20160219产品取消日志未读提示
 					red_dot.setVisibility(View.GONE);
-				}else {
-					red_dot.setVisibility(View.VISIBLE);
-				}
+//				}else {
+//					red_dot.setVisibility(View.VISIBLE);
+//				}
 				resetShowViewRela(view, "日志", mAffar.logTotal + "");
 				view.setOnClickListener(mLineLogShowClick);
 			}

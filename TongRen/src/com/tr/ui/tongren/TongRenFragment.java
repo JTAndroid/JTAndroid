@@ -19,6 +19,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.FrameLayout.LayoutParams;
+import android.widget.Toast;
 
 import com.tr.App;
 import com.tr.R;
@@ -29,6 +31,9 @@ import com.tr.ui.home.frg.FrgFlow.FlowSelectType;
 import com.tr.ui.home.utils.HomeCommonUtils;
 import com.tr.ui.tongren.adapter.TongRenFrgPagerAdapter;
 import com.tr.ui.widgets.CustomViewPager;
+import com.tr.ui.widgets.title.menu.popupwindow.ActionItem;
+import com.tr.ui.widgets.title.menu.popupwindow.TitlePopup;
+import com.tr.ui.widgets.title.menu.popupwindow.TitlePopup.OnPopuItemOnClickListener;
 import com.tr.ui.work.WorkMainFragment;
 import com.utils.common.EUtil;
 import com.utils.display.DisplayUtil;
@@ -49,12 +54,14 @@ public class TongRenFragment extends JBaseFragment implements
 	private int flag = 0;
 	private MenuItem create;
 	private MenuItem msg;
+	private MenuItem more;
 	private int mTpye;
 	public final static int REQ_ORG = 200;
 	public final static int REQ_PROJECT = 1000;
 	private OrganizationFragment organizationFragment;
 	private ProjectFragment projectFragment;
-
+	private TitlePopup titlePopup;
+	private View affair_top_line;
 	/** first：桐人第一页（事务）；second：桐人第二页（项目）；third：桐人第三页（组织） */
 	public enum CurrentTongRenFrgTitle {
 		first, second, third
@@ -94,6 +101,7 @@ public class TongRenFragment extends JBaseFragment implements
 	@Override
 	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
+		affair_top_line = view.findViewById(R.id.affair_top_line);
 		tongRenVPager = (CustomViewPager) view.findViewById(R.id.tongRenVPager);
 		workMainFragment = new WorkMainFragment(affRemind);
 		tongRenfragments.add(workMainFragment);
@@ -107,8 +115,30 @@ public class TongRenFragment extends JBaseFragment implements
 		tongRenVPager.setOffscreenPageLimit(0);
 		tongRenVPager.setOnPageChangeListener(this);
 		tongRenVPager.setCurrentItem(0);
+		
+		titlePopup = new TitlePopup(getActivity(), LayoutParams.WRAP_CONTENT,
+				LayoutParams.WRAP_CONTENT);
+		titlePopup.addAction(new ActionItem(getActivity(), "全部消息已读"));
+		titlePopup.setItemOnClickListener(onPopupItemClick);
 	}
+	private OnPopuItemOnClickListener onPopupItemClick = new OnPopuItemOnClickListener(){
 
+		@Override
+		public void onItemClick(ActionItem item, int position) {
+			// TODO Auto-generated method stub
+			switch (position) {
+			case 0://全部消息已读
+				Toast.makeText(getActivity(), "全部消息已读", Toast.LENGTH_SHORT).show();
+//				affRemind.setVisibility(View.GONE);
+				workMainFragment.setAllRedGone();
+				break;
+
+			default:
+				break;
+			}
+		}
+		
+	};
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		menu.findItem(R.id.home_new_menu_more).setVisible(false);
@@ -118,6 +148,7 @@ public class TongRenFragment extends JBaseFragment implements
 		calendar = menu.findItem(R.id.affairs_new_menu_calendar);
 		list = menu.findItem(R.id.affairs_new_menu_list);
 		msg = menu.findItem(R.id.tongren_new_menu_msg);
+		more = menu.findItem(R.id.affair_menu_more);
 	}
 
 	// **
@@ -129,15 +160,18 @@ public class TongRenFragment extends JBaseFragment implements
 		if (mTpye == 1||mTpye==2) {
 			create.setVisible(false);
 			calendar.setVisible(false);
+			more.setVisible(false);
 			list.setVisible(false);
 			msg.setVisible(true);
 		} else {
 			if (flag % 2 == 0) {
+				more.setVisible(true);
 				calendar.setVisible(false);
 				list.setVisible(true);
 				msg.setVisible(false);
 				create.setVisible(false);
 			} else {
+				more.setVisible(false);
 				calendar.setVisible(true);
 				list.setVisible(false);
 				msg.setVisible(false);
@@ -173,6 +207,9 @@ public class TongRenFragment extends JBaseFragment implements
 				getActivity().startActivityForResult(intent, TongRenFragment.REQ_ORG);
 			}
 			
+			break;
+		case R.id.affair_menu_more://事务actionBar更多按钮
+			titlePopup.show(affair_top_line);
 			break;
 		default:
 			break;
@@ -215,6 +252,7 @@ public class TongRenFragment extends JBaseFragment implements
 			}
 		}
 	};
+	
 	/**
 	 * 选择当前为（first事务，second项目，third组织）
 	 * 
