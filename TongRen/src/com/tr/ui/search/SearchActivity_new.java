@@ -357,7 +357,7 @@ public class SearchActivity_new extends JBaseFragmentActivity implements IBindDa
 						break;
 					case TYPE_KNOWLEDGE:
 						ENavigate.startKnowledgeOfDetailActivity(SearchActivity_new.this,
-								Integer.valueOf(dataHolder.getId().trim()),1 /*dataHolder.getType()*/,false);
+								Integer.valueOf(dataHolder.getId().trim()), dataHolder.getType(),false);
 						break;
 					case TYPE_METTING:
 						ENavigate.startSquareActivity(mContext,
