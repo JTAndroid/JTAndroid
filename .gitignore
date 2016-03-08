@@ -26,11 +26,13 @@ bin
 /dynamicgrid/target/*
 /dynamicgrid/.settings/*
 /dynamicgrid/.settings/org.eclipse.core.resources.prefs
+/dynamicgrid/bin/*
+/dynamicgrid/gen/*
 
 /indicator_library/.classpath
 /indicator_library/.project
-/indicator_library/bin
-/indicator_library/gen
+/indicator_library/bin/*
+/indicator_library/gen/*
 
 /wheel_library/.classpath
 /wheel_library/.project
