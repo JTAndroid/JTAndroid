@@ -423,6 +423,7 @@ public class ProjectDetailfragment extends JBaseFragment implements IBindData, O
 			taskIntent.putExtra("projectId", projectId);
 			taskIntent.putExtra("projectName", "项目-"+projectDetailName.getText().toString());
 			taskIntent.putExtra("projectAcceptId", projectAcceptId);
+			taskIntent.putExtra("projectstatus", status);
 			taskIntent.putExtra(EAPIConsts.TongRenRequestType.TongRenInfoType, TongRenInfoType.PROJECT);
 			getActivity().startActivityForResult(taskIntent,PROJECTTASK_REQUESTCODE);
 			break;

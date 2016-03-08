@@ -372,6 +372,6 @@ public class FileUtils {
 	/** 将url转成文件名 **/
     public static String convertUrlToFileName(String url) {
         String str = url.replace("/", "");
-        return File.separator+ str + ICON_CATCH;
+        return str + ICON_CATCH;
     }
 }

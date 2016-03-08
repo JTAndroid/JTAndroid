@@ -19,12 +19,14 @@ import com.tr.model.obj.MUCMessage;
 import com.tr.navigate.ENavConsts;
 import com.tr.navigate.ENavigate;
 import com.tr.ui.communities.home.CommunityChatSettingActivity;
+import com.tr.ui.communities.model.CommunityDetailRes;
 import com.tr.ui.communities.model.ImMucinfo;
 import com.tr.ui.home.utils.HomeCommonUtils;
 import com.tr.ui.im.ChatRecordSearchActivity;
 import com.utils.common.EUtil;
 import com.utils.common.GlobalVariable;
 import com.utils.http.EAPIConsts;
+import com.utils.http.EAPIConsts.CommunityReqType;
 import com.utils.string.StringUtils;
 
 import android.content.Intent;
@@ -51,9 +53,12 @@ public class CommunityChatActivity extends ChatBaseActivity {
 					mucDetail.getTitle(), false, null, true, true);
 			adapter.setData(mucDetail, this, thatMucID);
 			getChatHistory(thatMucID, searchMessagefromIndex + 1, isBackward);// 获取群聊聊天记录
-		} else {
+		} else if(community != null){
 			CommunityReqUtil.doGetCommunityMemberList(this, community.getId(),
 					this, handler);
+		} else{
+			long communityId = getIntent().getLongExtra("communityId", 0);
+			CommunityReqUtil.doGetCommunityDetail(this, communityId, Long.parseLong(App.getApp().getUserID()), this, null);
 		}
 	}
 
@@ -296,6 +301,17 @@ public class CommunityChatActivity extends ChatBaseActivity {
 		if (object != null) {
 			List<IMBaseMessage> newList = new ArrayList<IMBaseMessage>();
 			switch (tag) {
+			case CommunityReqType.TYPE_GET_COMMUNITY_DETAIL:// 社群详情
+				HashMap<String, Object> community_detail = (HashMap<String, Object>) object;
+				if (null != community_detail) {
+//					exist = (Boolean) community_detail.get("exist");
+					CommunityDetailRes communityDetailRes = (CommunityDetailRes) community_detail.get("result");
+					community = communityDetailRes.getCommunity();
+					applyType = communityDetailRes.getSet().getApplayType();
+					CommunityReqUtil.doGetCommunityMemberList(this, community.getId(),
+							this, handler);
+				}
+				break;
 			case EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_MEMBER_LIST:
 				HashMap<String, Object> dataBox = (HashMap<String, Object>) object;
 				mucDetail = (MUCDetail) dataBox.get("mucDetail");

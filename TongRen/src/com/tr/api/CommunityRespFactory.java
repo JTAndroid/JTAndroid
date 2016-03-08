@@ -20,6 +20,7 @@ import com.tr.ui.communities.model.CommunityDetailRes;
 import com.tr.ui.communities.model.CommunityKickFromForBatch;
 import com.tr.ui.communities.model.CommunityLabels;
 import com.tr.ui.communities.model.CommunityNotify;
+import com.tr.ui.communities.model.CommunitySocialList;
 import com.tr.ui.communities.model.CommunityUserSetting;
 import com.tr.ui.communities.model.CreatePrecondition;
 import com.tr.ui.communities.model.ImMucinfo;
@@ -423,6 +424,7 @@ public class CommunityRespFactory {
 				return dataBox;
 			}
 			break;
+			//42 批量创建通知
 		case EAPIConsts.CommunityReqType.TYPE_CREATE_BATCH_COMMUNITY_NOTICES:
 			strKey = "notifCode";
 			notifCode = (String) notification.opt(strKey);
@@ -431,6 +433,21 @@ public class CommunityRespFactory {
 				return dataBox;
 			}
 			return null;
+			//45获取社群的未读消息
+		case EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_NEWCOUNT_BY_USERID:
+			break;
+			//46获取登录用户的具有未读消息的社群列表
+		case EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_LIST:
+			strKey = "notifCode";
+			notifCode = (String) notification.opt(strKey);
+			if (notifCode.contains("1")) {
+				CommunitySocialList csl = gson.fromJson(jsonObject.toString(), CommunitySocialList.class);
+				if(csl !=null){
+					dataBox.put("CommunitySocialList", csl);
+					return dataBox;
+				}
+			}
+			break;
 		}
 		return null;
 	}

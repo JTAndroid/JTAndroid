@@ -22,6 +22,13 @@ public class GintongMainAdapter extends BaseAdapter {
 	private Context mContext;
 	private String IMAGE_ITEM = "imgage_item";
 	private List<MainImagesItem> list;
+	private static final int[] imagesBottom = new int[] {
+		R.drawable.image_capital, R.drawable.image_project,
+		R.drawable.image_stock, R.drawable.image_gt_project,
+		R.drawable.image_clue, R.drawable.image_tongmeng_activity,
+		R.drawable.image_gintong_think_tank, R.drawable.image_perpetual_calendar,
+		R.drawable.image_express_delivery, R.drawable.image_housing_loan,
+		R.drawable.image_ticket, R.drawable.image_kitchen };
 
 	public GintongMainAdapter(Context context, List<MainImagesItem> list) {
 		this.mContext = context;
@@ -67,10 +74,10 @@ public class GintongMainAdapter extends BaseAdapter {
 		}else {
 			mGridViewItemHolder  = (GridViewItemHolder) convertView.getTag();
 		}
-		if (TextUtils.isEmpty(this.list.get(position).getImages().getLarge())) {
-			int resourceID = this.list.get(position).getImages().getResourceID();
-			mGridViewItemHolder.image_item_find_iv.setImageDrawable(mContext.getResources().getDrawable(resourceID));
-		} else {
+//		if (TextUtils.isEmpty(this.list.get(position).getImages().getLarge())) {
+//			int resourceID = this.list.get(position).getImages().getResourceID();
+//			mGridViewItemHolder.image_item_find_iv.setImageDrawable(mContext.getResources().getDrawable(resourceID));
+//		} else {
 			/**
 			 * 第三方在个别手机上容易使图片背景变黑
 			 */
@@ -78,8 +85,8 @@ public class GintongMainAdapter extends BaseAdapter {
 			/**
 			 * com.tr.image.ImageLoader 网络更新有问题 ，APP1.1需要进行修改
 			 */
-			com.tr.image.ImageLoader.load(mGridViewItemHolder.image_item_find_iv, com.tr.image.ImageLoader.INDEX_BITMAP, this.list.get(position).getImages().getLarge());
-		}
+			com.tr.image.ImageLoader.load(mGridViewItemHolder.image_item_find_iv, com.tr.image.ImageLoader.INDEX_BITMAP, this.list.get(position).getImages().getLarge(), imagesBottom[position]);
+//		}
 		return convertView;
 	}
 	

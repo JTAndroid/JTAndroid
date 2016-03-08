@@ -2224,6 +2224,23 @@ public class EUtil {
 			return false;
 		}
 	}
+	
+	public static long getFileSize(Context context, JTFile jtFile) {
+		if (jtFile == null) {
+			return 0;
+		}
+		File file = null;
+		if (jtFile.mType == JTFile.TYPE_FILE) {
+			file = new File(EUtil.getAppCacheFileDir(context), jtFile.mFileName);
+		} else {
+			file = new File(EUtil.getAppFileDir(context), jtFile.mFileName);
+		}
+		if (file.exists() /* by d.c && file.length() == jtFile.mFileSize */) {
+			return file.length();
+		} else {
+			return 0;
+		}
+	}
 
 	/**
 	 * 文件是否已存在，但未下载完成（返回已下载的文件信息）

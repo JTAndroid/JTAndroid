@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import m.framework.utils.Utils;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,45 +20,48 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.CommunityReqUtil;
+import com.tr.image.ImageLoader;
 import com.tr.navigate.ENavConsts;
 import com.tr.navigate.ENavigate;
 import com.tr.ui.base.JBaseFragment;
 import com.tr.ui.common.view.XListView;
 import com.tr.ui.common.view.XListView.IXListViewListener;
-import com.tr.ui.communities.home.CommumitiesNotificationActivity;
-import com.tr.ui.communities.home.CommunitiesDetailsActivity;
 import com.tr.ui.communities.im.CommunityChatActivity;
 import com.tr.ui.communities.model.CommunityNotify;
-import com.tr.ui.communities.model.ImMucinfo;
-import com.tr.ui.communities.model.Notification;
+import com.tr.ui.communities.model.CommunitySocial;
+import com.tr.ui.communities.model.CommunitySocialList;
+import com.tr.ui.widgets.CircleImageView;
 import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
 import com.utils.common.GlobalVariable;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
+import com.utils.string.StringUtils;
+import com.utils.time.TimeUtil;
 
 public class FragCommunityMessage extends JBaseFragment implements IBindData{
 	
-	private ArrayList<CommunityNotify> communityNotifylist;
-	private CommumitiesNotificationAdapter adapter;
+	private ArrayList<CommunitySocial> communitySociallist = new ArrayList<CommunitySocial>();
+	private CommumitieSocialAdapter adapter;
 	private XListView commumitiesnotificationLv;
 	private TextView NoContent;
-	private CommunityNotify mCommunityNotify;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		communityNotifylist = (ArrayList<CommunityNotify>) getArguments().get("communityNotifylist");
 	}
 
 	@Override
@@ -77,7 +82,7 @@ public class FragCommunityMessage extends JBaseFragment implements IBindData{
 			
 			@Override
 			public void onRefresh() {
-				CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
+				CommunityReqUtil.doGetCommunityList(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
 			}
 			
 			@Override
@@ -88,97 +93,71 @@ public class FragCommunityMessage extends JBaseFragment implements IBindData{
 	}
 	
 	private void initData() {
-		adapter = new CommumitiesNotificationAdapter(getActivity());
-		if(communityNotifylist!=null){
-			if(communityNotifylist.size()>0){
-				NoContent.setVisibility(View.GONE);
-				adapter.setData(communityNotifylist);
-			}else{
-				CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
-			}
-		}else{
-			CommunityReqUtil.doGetCommunityListByUserId(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
-		}
+		adapter = new CommumitieSocialAdapter(getActivity());
+		adapter.setData(communitySociallist);
 		commumitiesnotificationLv.setAdapter(adapter);
+		
+		commumitiesnotificationLv.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {
+				CommunitySocial communitySocial = adapter.getItem(position-1);
+				communitySocial.setNewCount(0);
+				adapter.notifyDataSetChanged();
+				Intent intent = new Intent(getActivity(), CommunityChatActivity.class);
+				intent.putExtra("communityId", Long.valueOf(communitySocial.getId()));
+				startActivity(intent);
+			}
+		});
+		
+		CommunityReqUtil.doGetCommunityList(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
 	}
 	
 	@Override
 	public void bindData(int tag, Object object) {
 		commumitiesnotificationLv.stopRefresh();
 		switch(tag){
-		case EAPIConsts.CommunityReqType.TYPE_GET_NOTICE_LIST_BY_USERID:
+		case EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_LIST:
 			if (object != null) {
 				HashMap<String, Object> dataBox = (HashMap<String, Object>) object;
-				communityNotifylist = (ArrayList<CommunityNotify>) dataBox.get("list");
-				if(communityNotifylist!=null){
-					if(communityNotifylist.size()>0){
-						Collections.sort(communityNotifylist, new ComparatorNotify());//排序
-						NoContent.setVisibility(View.GONE);
-						adapter.setData(communityNotifylist);
-						adapter.notifyDataSetChanged();
-					}else{
-						NoContent.setVisibility(View.VISIBLE);
-					}
+				CommunitySocialList csl = (CommunitySocialList) dataBox.get("CommunitySocialList");
+				communitySociallist = (ArrayList<CommunitySocial>) csl.getListCommunity();
+				if(!communitySociallist.isEmpty()){
+					NoContent.setVisibility(View.GONE);
+					adapter.setData(communitySociallist);
+					adapter.notifyDataSetChanged();
 				}else{
 					NoContent.setVisibility(View.VISIBLE);
 				}
-			}
-			break;
-		case EAPIConsts.CommunityReqType.TYPE_HANDLE_APPLY:
-			if(object != null){
-				HashMap<String, Object> dataBox = (HashMap<String, Object>) object;
-				Notification notif = (Notification) dataBox.get("notification");
-				if(notif.getNotifCode().equals("0001")){
-//					communityNotifylist.get(mIndex).setAcceptStatus(acceptStatus);
-					adapter.notifyDataSetChanged();
-				}
-			}
-			break;
-		case EAPIConsts.CommunityReqType.TYPE_ASSIGNMENT_COMUNITY:
-			HashMap<String, Object> dataBox= (HashMap<String, Object>) object;
-			boolean isResponse = (Boolean) dataBox.get("isResponse");
-			if (isResponse) {
-				showToast("转让成功");
-				CommunityReqUtil.doHandleApply(getActivity(), this, mCommunityNotify.getId(), 1, new Date().getTime(), null);
 			}else{
-				showToast("转让失败");
-			}
-			break;
-		case EAPIConsts.CommunityReqType.TYPE_INVITE2MUC:
-			if (null != object) {
-				CommunityReqUtil.doHandleApply(getActivity(), this, mCommunityNotify.getId(), 1, new Date().getTime(), null);
+				NoContent.setVisibility(View.VISIBLE);
 			}
 			break;
 		}
 		
 	}
 	
-	class CommumitiesNotificationAdapter extends BaseAdapter {
+	class CommumitieSocialAdapter extends BaseAdapter {
 		private Context mContext;
-		private ArrayList<CommunityNotify> communityNotifylist = new ArrayList<CommunityNotify>();
-		private DisplayImageOptions options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.ic_default_avatar) // 设置图片下载期间显示的图片
-				.showImageForEmptyUri(R.drawable.ic_default_avatar) // 设置图片Uri为空或是错误的时候显示的图片
-				.showImageOnFail(R.drawable.ic_default_avatar) // 设置图片加载或解码过程中发生错误显示的图片
-				.cacheInMemory(true) // 设置下载的图片是否缓存在内存中
-				.cacheOnDisc(true) // 设置下载的图片是否缓存在SD卡中
-				.build();
+		private ArrayList<CommunitySocial> communitySociallist = new ArrayList<CommunitySocial>();
 
-		public CommumitiesNotificationAdapter(Context context) {
+		public CommumitieSocialAdapter(Context context) {
 			this.mContext = context;
 		}
 		
-		public void setData(ArrayList<CommunityNotify> communityNotifylist){
-			this.communityNotifylist = communityNotifylist;
+		public void setData(ArrayList<CommunitySocial> communitySociallist){
+			this.communitySociallist = communitySociallist;
 		}
 
 		@Override
 		public int getCount() {
-			return communityNotifylist.size();
+			return communitySociallist.size();
 		}
 
 		@Override
-		public CommunityNotify getItem(int position) {
-			return communityNotifylist.get(position);
+		public CommunitySocial getItem(int position) {
+			return communitySociallist.get(position);
 		}
 
 		@Override
@@ -188,309 +167,79 @@ public class FragCommunityMessage extends JBaseFragment implements IBindData{
 
 		@Override
 		public View getView(final int position, View convertView, ViewGroup parent) {
-			final CommunityNotify communityNotify = getItem(position);
+			final CommunitySocial communitySocial = getItem(position);
 			if (convertView == null)
-				convertView = View.inflate(mContext, R.layout.adapter_commumitiesnotification, null);
-			ImageView notice_item_image = ViewHolder.get(convertView, R.id.notice_item_image);// 头像
-			TextView notice_item_name = ViewHolder.get(convertView, R.id.notice_item_name);// 名字
+				convertView = View.inflate(mContext, R.layout.list_item_community_chat, null);
 			
-			LinearLayout layout_apply_invite = ViewHolder.get(convertView, R.id.layout_apply_invite);// <!-- 申请或邀请  通过或拒绝 -->
-			TextView notice_attendType = ViewHolder.get(convertView, R.id.notice_attendType);//加入方式
-			TextView notice_item_notice = ViewHolder.get(convertView, R.id.notice_item_notice);//加入群名称
+			GridView sociality_gv = ViewHolder.get(convertView, R.id.sociality_gv);// 头像
+			FrameLayout chat_push_data_num_gv_control = ViewHolder.get(convertView, R.id.chat_push_data_num_gv_control);
+			TextView chat_push_data_num_gv = ViewHolder.get(convertView, R.id.chat_push_data_num_gv);
+			TextView chat_name = ViewHolder.get(convertView, R.id.chat_name); 
+			TextView the_last_time_of_chat = ViewHolder.get(convertView, R.id.the_last_time_of_chat); 
+			TextView chat_content = ViewHolder.get(convertView, R.id.chat_content); 
 			
-			LinearLayout layout_transfer = ViewHolder.get(convertView, R.id.layout_transfer);// <!--转让群 -->
-			TextView notice_item_transfer = ViewHolder.get(convertView, R.id.notice_item_transfer);//转让者
-			
-			LinearLayout layout_transfer_refuse = ViewHolder.get(convertView, R.id.layout_transfer_refuse);// <!--转让群 回复状态-->
-			TextView notice_item_transfer_refuse = ViewHolder.get(convertView, R.id.notice_item_transfer_refuse);//转让者
-			TextView notice_item_notice_refuse = ViewHolder.get(convertView, R.id.notice_item_notice_refuse);//转让通过或拒绝
-			
-			LinearLayout layout_transfer_self_refuse = ViewHolder.get(convertView, R.id.layout_transfer_self_refuse);//自己操作后的效果
-			TextView notice_item_transfer_self_text = ViewHolder.get(convertView, R.id.notice_item_transfer_self_text);
-			TextView notice_item_transfer_self_refuse = ViewHolder.get(convertView, R.id.notice_item_transfer_self_refuse);
-			TextView notice_item_transfer_self_refuse_person = ViewHolder.get(convertView, R.id.notice_item_transfer_self_refuse_person);
-			TextView notice_item_notice_self_refuse = ViewHolder.get(convertView, R.id.notice_item_notice_self_refuse);
-			
-			
-			TextView notice_applyReason = ViewHolder.get(convertView, R.id.notice_applyReason);//申请理由
-
-			LinearLayout layout_choice = ViewHolder.get(convertView, R.id.layout_choice);
-			LinearLayout ownerll = ViewHolder.get(convertView, R.id.ownerll);//群主显示忽略、同意布局
-			TextView notice_item_refuse = ViewHolder.get(convertView, R.id.notice_item_refuse);// 忽略
-			TextView notice_item_agree = ViewHolder.get(convertView, R.id.notice_item_agree);// 同意
-			
-			final TextView notice_item_into = ViewHolder.get(convertView, R.id.notice_item_into);// 进入聊天
-			View bottom_line = ViewHolder.get(convertView, R.id.bottom_line);
-			
-			layout_transfer_self_refuse.setVisibility(View.GONE);
-			bottom_line.setVisibility(View.GONE);
-			layout_apply_invite.setVisibility(View.GONE);
-			layout_choice.setVisibility(View.GONE);
-			ownerll.setVisibility(View.GONE);
-			notice_item_into.setVisibility(View.GONE);
-			notice_applyReason.setVisibility(View.GONE);
-			layout_transfer.setVisibility(View.GONE);
-			layout_transfer_refuse.setVisibility(View.GONE);
-			notice_item_name.setText("");
-
-			switch(communityNotify.getNoticeType()){//通知类型：0加群 1转让群组 2禁言.
-			case 0://0加群 
-				switch(communityNotify.getAttendType()){//加入的方式：0邀请，1申请.
-				case 0://0邀请
-					layout_apply_invite.setVisibility(View.VISIBLE);
-					
-					ImageLoader.getInstance().displayImage(communityNotify.getCreatedUserLogo(), notice_item_image,options);
-					notice_item_name.setText(communityNotify.getCreatedUserName());
-					notice_attendType.setText("邀请您加入");
-					notice_item_notice.setText(communityNotify.getCommunityName());
-					notice_item_notice.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-					
-					switch(communityNotify.getAcceptStatus()){// 0未答复 1接受 2拒绝.
-					case 0:
-						layout_choice.setVisibility(View.VISIBLE);
-						ownerll.setVisibility(View.VISIBLE);
-						break;
-					case 1:
-						if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-							ImageLoader.getInstance().displayImage(communityNotify.getUserLogo(), notice_item_image,options);
-							notice_item_name.setText(communityNotify.getApplicantName());
-							bottom_line.setVisibility(View.VISIBLE);
-							layout_apply_invite.setVisibility(View.GONE);
-							layout_transfer_self_refuse.setVisibility(View.VISIBLE);
-							notice_item_transfer_self_text.setText("邀请加入");
-							notice_item_transfer_self_refuse.setText(communityNotify.getCommunityName());
-							notice_item_transfer_self_refuse.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-							notice_item_transfer_self_refuse_person.setText("已同意");
-							notice_item_transfer_self_refuse_person.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-							notice_item_notice_self_refuse.setText("");
-						}else{
-							layout_choice.setVisibility(View.VISIBLE);
-							notice_item_into.setVisibility(View.VISIBLE);
-							notice_item_into.setText("已处理");
-							notice_item_into.setTextColor(mContext.getResources().getColor(R.color.text_hint));
-						}
-						break;
-					case 2:
-						if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-							ImageLoader.getInstance().displayImage(communityNotify.getUserLogo(), notice_item_image,options);
-							notice_item_name.setText(communityNotify.getApplicantName());
-							bottom_line.setVisibility(View.VISIBLE);
-							layout_apply_invite.setVisibility(View.GONE);
-							layout_transfer_self_refuse.setVisibility(View.VISIBLE);
-							notice_item_transfer_self_text.setText("邀请加入");
-							notice_item_transfer_self_refuse.setText(communityNotify.getCommunityName());
-							notice_item_transfer_self_refuse.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-							notice_item_transfer_self_refuse_person.setText("被拒绝");
-							notice_item_transfer_self_refuse_person.setTextColor(mContext.getResources().getColor(R.color.gintongyellow));
-							notice_item_notice_self_refuse.setText("");
-						}else{
-							layout_choice.setVisibility(View.VISIBLE);
-							notice_item_into.setVisibility(View.VISIBLE);
-							notice_item_into.setText("已处理");
-							notice_item_into.setTextColor(mContext.getResources().getColor(R.color.text_hint));
-						}
-						break;
-					}
-					break;
-				case 1://1申请.
-					layout_apply_invite.setVisibility(View.VISIBLE);
-					ImageLoader.getInstance().displayImage(communityNotify.getUserLogo(), notice_item_image,options);
-					notice_item_name.setText(communityNotify.getCreatedUserName());
-					notice_attendType.setText("申请加入");
-					notice_item_notice.setText(communityNotify.getCommunityName());
-					notice_item_notice.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-					
-					switch(communityNotify.getAcceptStatus()){// 0未答复 1接受 2拒绝.
-					case 0:
-						notice_applyReason.setVisibility(View.VISIBLE);
-						if(!TextUtils.isEmpty(communityNotify.getApplyReason())){
-							SpannableString spanusername = new SpannableString("加群理由："+communityNotify.getApplyReason());
-							spanusername.setSpan(new ForegroundColorSpan(0xffb6b6b6), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-							notice_applyReason.setText(spanusername);
-						}else{
-							SpannableString spanusername = new SpannableString("加群理由："+communityNotify.getCreatedUserName()+"申请加入群");
-							spanusername.setSpan(new ForegroundColorSpan(0xffb6b6b6), 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-							notice_applyReason.setText(spanusername);
-						}
-
-						layout_choice.setVisibility(View.VISIBLE);
-						ownerll.setVisibility(View.VISIBLE);
-						break;
-					case 1:
-						if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-							bottom_line.setVisibility(View.VISIBLE);
-							ImageLoader.getInstance().displayImage(communityNotify.getCommunityLogo(), notice_item_image,options);
-							notice_item_name.setText(communityNotify.getCommunityName());
-							notice_attendType.setText("您的加入申请");
-							notice_item_notice.setText("已通过");
-							notice_item_notice.setTextColor(mContext.getResources().getColor(R.color.text_flow_content));
-							layout_choice.setVisibility(View.VISIBLE);
-							notice_item_into.setVisibility(View.VISIBLE);
-							notice_item_into.setText("进入聊天");
-							notice_item_into.setTextColor(mContext.getResources().getColor(R.color.gintongyellow));
-						}else{
-							layout_choice.setVisibility(View.VISIBLE);
-							notice_item_into.setVisibility(View.VISIBLE);
-							notice_item_into.setText("已处理");
-							notice_item_into.setTextColor(mContext.getResources().getColor(R.color.text_hint));
-						}
-						break;
-					case 2:
-						if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-							bottom_line.setVisibility(View.VISIBLE);
-							ImageLoader.getInstance().displayImage(communityNotify.getCommunityLogo(), notice_item_image,options);
-							notice_item_name.setText(communityNotify.getCommunityName());
-							notice_attendType.setText("您的加入申请");
-							notice_item_notice.setText("被拒绝");
-							notice_item_notice.setTextColor(mContext.getResources().getColor(R.color.gintongyellow));
-						}else{
-							layout_choice.setVisibility(View.VISIBLE);
-							notice_item_into.setVisibility(View.VISIBLE);
-							notice_item_into.setText("已处理");
-							notice_item_into.setTextColor(mContext.getResources().getColor(R.color.text_hint));
-						}
-						break;
-					}
-					break;
-				}
-				break;
-			case 1://1转让群组 
-				ImageLoader.getInstance().displayImage(communityNotify.getCommunityLogo(), notice_item_image,options);
-				notice_item_name.setText(communityNotify.getCommunityName());
-				switch(communityNotify.getAcceptStatus()){// 0未答复 1接受 2拒绝.
-				case 0:
-					layout_transfer.setVisibility(View.VISIBLE);
-					notice_item_transfer.setText(communityNotify.getCreatedUserName());
-					layout_choice.setVisibility(View.VISIBLE);
-					ownerll.setVisibility(View.VISIBLE);
-					break;
-				case 1:
-					bottom_line.setVisibility(View.VISIBLE);
-					if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-						layout_transfer_refuse.setVisibility(View.VISIBLE);
-						notice_item_transfer_refuse.setText(communityNotify.getCreatedUserName());
-						notice_item_notice_refuse.setText("已通过");
-						notice_item_notice_refuse.setTextColor(mContext.getResources().getColor(R.color.text_flow_content));
-					}else{
-						layout_transfer_self_refuse.setVisibility(View.VISIBLE);
-						notice_item_transfer_self_text.setText("您已经");
-						notice_item_transfer_self_refuse.setText("同意了");
-						notice_item_transfer_self_refuse.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-						notice_item_transfer_self_refuse_person.setText(communityNotify.getCreatedUserName());
-						notice_item_transfer_self_refuse_person.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-						notice_item_notice_self_refuse.setText("的群转让申请");
-					}
-					break;
-				case 2:
-					bottom_line.setVisibility(View.VISIBLE);
-					if((communityNotify.getCreatedUserId()+"").equals(App.getUserID())){//自己创建的通知被别人拒绝
-						layout_transfer_refuse.setVisibility(View.VISIBLE);
-						notice_item_transfer_refuse.setText(communityNotify.getCreatedUserName());
-						notice_item_notice_refuse.setText("被拒绝");
-						notice_item_notice_refuse.setTextColor(mContext.getResources().getColor(R.color.gintongyellow));
-					}else{//别人创建的通知被自己拒绝
-						layout_transfer_self_refuse.setVisibility(View.VISIBLE);
-						notice_item_transfer_self_text.setText("您已经");
-						notice_item_transfer_self_refuse.setText("拒绝了");
-						notice_item_transfer_self_refuse.setTextColor(mContext.getResources().getColor(R.color.gintongyellow));
-						notice_item_transfer_self_refuse_person.setText(communityNotify.getCreatedUserName());
-						notice_item_transfer_self_refuse_person.setTextColor(mContext.getResources().getColor(R.color.text_flow_more));
-						notice_item_notice_self_refuse.setText("的群转让申请");
-					}
-					
-					break;
-				}
-				break;
-			case 2://2禁言.
-				break;
+			sociality_gv.setAdapter(new GridViewAdapter(communitySocial.getSocialDetail().getListImageUrl()));
+			if(communitySocial.getNewCount()==0){
+				chat_push_data_num_gv_control.setVisibility(View.GONE);
+			}else{
+				chat_push_data_num_gv_control.setVisibility(View.VISIBLE);
+				chat_push_data_num_gv.setText(communitySocial.getNewCount()+"");
 			}
-			
-			notice_item_refuse.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					CommunityReqUtil.doHandleApply(mContext, FragCommunityMessage.this, communityNotify.getId(), 2, new Date().getTime(), null);
-					communityNotify.setAcceptStatus(2);
-					notifyDataSetChanged();
-				}
-			});
-			
-			notice_item_agree.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					mCommunityNotify = communityNotify;
-					switch(communityNotify.getNoticeType()){//通知类型：0加群 1转让群组 2禁言.
-					case 0://0加群 
-						List<Long> list = new ArrayList<Long>();
-						switch(communityNotify.getAttendType()){//加入的方式：0邀请，1申请.
-						case 0:
-							list.add(Long.parseLong(App.getApp().getUserID()));
-							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunityMessage.this, null);
-							break;
-						case 1:
-							list.add(communityNotify.getCreatedUserId());
-							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunityMessage.this, null);
-							break;
-						}
-						break;
-					case 1:
-						CommunityReqUtil.doAssignmentCommunity(mContext, communityNotify.getCommunityId()+"", communityNotify.getApplicantId()+"", FragCommunityMessage.this, null);
-						break;
-					}
-					communityNotify.setAcceptStatus(1);
-					notifyDataSetChanged();
-				}
-			});
-			
-			notice_item_into.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					if(notice_item_into.getText().toString().equals("进入聊天")){
-						Intent intent = new Intent(mContext, CommunityChatActivity.class);
-						ImMucinfo community = new ImMucinfo();
-						community.setId(communityNotify.getCommunityId());
-						community.setPicPath(communityNotify.getCommunityLogo());
-						community.setTitle(communityNotify.getCommunityName());
-						intent.putExtra("community", community);
-						intent.putExtra(ENavConsts.EFromActivityName, "CommumitiesNotificationActivity");
-						startActivityForResult(intent, ENavigate.REQUSET_CODE_MUC);
-					}
-				}
-			});
-			
-			convertView.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View v) {
-					if(communityNotify.getNoticeType()==0){
-						if(communityNotify.getAcceptStatus()!=0){
-							Intent intent = new Intent(mContext, CommunitiesDetailsActivity.class);
-							intent.putExtra(GlobalVariable.COMMUNITY_ID, communityNotify.getCommunityId());
-							startActivity(intent);
-						}
-					}
-				}
-			});
+			chat_name.setText(communitySocial.getTitle());
+			chat_content.setText(communitySocial.getSocialDetail().getContent());
+			if(!TextUtils.isEmpty(communitySocial.getTime())){
+				the_last_time_of_chat.setText(TimeUtil.TimeFormat(communitySocial.getTime()));
+			}else{
+				the_last_time_of_chat.setText("");
+			}
 			
 			return convertView;
 		}
-	}
+		
+		class GridViewAdapter extends BaseAdapter {
+			List<String> imgs = null;
 
-	class ComparatorNotify implements Comparator{
+			private GridViewAdapter(List<String> imgs) {
+				this.imgs = imgs;
+			}
 
-		@Override
-		public int compare(Object lhs, Object rhs) {
-			CommunityNotify communityNotify1 = (CommunityNotify) lhs;
-			CommunityNotify communityNotify2 = (CommunityNotify) rhs;
-			int flag=communityNotify2.getUpdatedTime().compareTo(communityNotify1.getUpdatedTime());
-			if (flag == 0) {
-				return communityNotify2.getCreatedTime().compareTo(communityNotify1.getCreatedTime());
-			} else {
-				return flag;
+			@Override
+			public int getCount() {
+				return imgs.size() > 4 ? 4 : imgs.size();
+			}
+
+			@Override
+			public Object getItem(int position) {
+				return imgs.get(position);
+			}
+
+			@Override
+			public long getItemId(int position) {
+				return position;
+			}
+
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent) {
+				CircleImageView view = new CircleImageView(mContext);
+				ListView.LayoutParams params = new ListView.LayoutParams(Utils.dipToPx(mContext, 19), Utils.dipToPx(mContext, 19));
+				view.setLayoutParams(params);
+				try {
+					if (!StringUtils.isEmpty(imgs.get(position))) {
+						// ImageLoader.getInstance().displayImage(imgs.get(position),
+						// view, LoadImage.mDefaultHead);
+						// ImageLoader.load(view, imgs.get(position),
+						// R.drawable.ic_default_avatar);
+						ImageLoader.setContext(mContext);
+						ImageLoader.load(view, ImageLoader.MUCCHAT_BITMAP, imgs.get(position), R.drawable.chat_im_img_user);
+					} else {
+						view.setImageResource(R.drawable.chat_im_img_user);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				return view;
 			}
 		}
-		
 	}
+
 }

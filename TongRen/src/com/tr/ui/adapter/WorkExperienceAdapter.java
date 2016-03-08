@@ -134,24 +134,24 @@ public class WorkExperienceAdapter extends BaseAdapter {
 			// 工作简介没有
 			final TextView text_brief_introduction = ViewHolder.get(convertView, R.id.text_brief_introduction);
 			final TextView see_moreTv = ViewHolder.get(convertView, R.id.see_moreTv);
-//			see_moreTv.setOnClickListener(new OnClickListener() {
-//				
-//				@Override
-//				public void onClick(View v) {
-//					Message msg=mHandler.obtainMessage();
-//					msg.what=1;
-//					if(see_moreTv.getText().toString().equals("查看更多")){
-//						see_moreTv.setText("收起");
-//						text_brief_introduction.setEllipsize(null);
-//						text_brief_introduction.setSingleLine(false);
-//					}else{
-//						see_moreTv.setText("查看更多");
-//						text_brief_introduction.setEllipsize(TextUtils.TruncateAt.END); // 收缩
-//						text_brief_introduction.setMaxLines(3);
-//					}
-//					mHandler.sendMessage(msg);
-//				}
-//			});
+			see_moreTv.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Message msg=mHandler.obtainMessage();
+					msg.what=1;
+					if(see_moreTv.getText().toString().equals("查看更多")){
+						see_moreTv.setText("收起");
+						text_brief_introduction.setEllipsize(null);
+						text_brief_introduction.setSingleLine(false);
+					}else{
+						see_moreTv.setText("查看更多");
+						text_brief_introduction.setEllipsize(TextUtils.TruncateAt.END); // 收缩
+						text_brief_introduction.setMaxLines(3);
+					}
+					mHandler.sendMessage(msg);
+				}
+			});
 			String des = workExperience.getDesc();
 			if (TextUtils.isEmpty(des)) {
 				text_brief_introduction.setVisibility(View.GONE);

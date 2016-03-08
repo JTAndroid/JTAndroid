@@ -1,32 +1,30 @@
 package com.tr.ui.common;
 
 import java.io.File;
+import java.util.Map;
 
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tr.R;
 import com.tr.model.obj.JTFile;
 import com.tr.navigate.ENavigate;
-import com.tr.service.FileDownloadService;
-import com.tr.service.FileDownloadService.MyBinder;
 import com.tr.ui.base.JBaseActivity;
 import com.utils.common.EConsts;
 import com.utils.common.EUtil;
-import com.utils.common.FileDownloader;
 import com.utils.common.OpenFiles;
+import com.utils.file.downloader.DownloadProgressListener;
+import com.utils.file.downloader.FileDownloader;
+import com.utils.file.downloader.FileService;
 import com.utils.time.Util;
 
 /**
@@ -49,10 +47,51 @@ public class FilePreviewActivity extends JBaseActivity {
 	private ProgressBar progressPb;
 	private boolean isShowSaveButton;
 	
-	// 已下载文件管理器
-	private IntentFilter mFilter;
+	private FileDownloader loader;
+	
 	private JTFile mJTFile;
 	
+	private boolean cancelDownload = false;
+	
+	/**
+     * 当Handler被创建会关联到创建它的当前线程的消息队列，该类用于往消息队列发送消息
+     * 消息队列中的消息由当前线程内部进行处理
+     */
+    private Handler handler = new Handler(){
+
+        @Override
+        public void handleMessage(Message msg) {            
+            switch (msg.what) {
+            case 1:  
+            	if(!cancelDownload){
+                	progressPb.setProgress(msg.getData().getInt("size"));
+                    float num = (float)progressPb.getProgress()/(float)progressPb.getMax();
+                    int result = (int)(num*100);
+                    controlTv.setVisibility(View.GONE);
+                    statusLl.setVisibility(View.VISIBLE);
+                    progressTv.setText(result+ "%");
+                    
+                    if(result == 100){
+                        controlTv.setText("打开");
+        				controlTv.setVisibility(View.VISIBLE);
+        				statusLl.setVisibility(View.GONE);
+        				progressTv.setText("0%");
+        				progressPb.setProgress(0);
+                    }
+            	}
+                break;
+            case -1:
+                Toast.makeText(FilePreviewActivity.this, "下载失败", 1).show();
+				controlTv.setText("恢复下载");
+				controlTv.setVisibility(View.VISIBLE);
+				statusLl.setVisibility(View.GONE);
+				progressTv.setText("0%");
+				progressPb.setProgress(0);
+                break;
+            }
+        }
+    };
+    
 	@Override
 	public void initJabActionBar() {
 		jabGetActionBar().setTitle("文件详情");
@@ -97,17 +136,10 @@ public class FilePreviewActivity extends JBaseActivity {
 		typeIv.setBackgroundResource(fileSourceId);
 	}
 	
-	
 	private void initVars(){
 		isShowSaveButton = getIntent().getBooleanExtra("isShowSaveButton", true);
 		mJTFile = (JTFile) getIntent().getSerializableExtra(EConsts.Key.JT_FILE);
 		mJTFile.setmType(JTFile.TYPE_FILE); // 统一按文件类型处理
-		mFilter =  new IntentFilter();
-		mFilter.addAction(EConsts.Action.DOWNLOAD_START);
-		mFilter.addAction(EConsts.Action.DOWNLOAD_UPDATE);
-		mFilter.addAction(EConsts.Action.DOWNLOAD_SUCCESS);
-		mFilter.addAction(EConsts.Action.DOWNLOAD_FAILED);
-		mFilter.addAction(EConsts.Action.DOWNLOAD_CANCELED);
 	}
 
 	private void initControls(){
@@ -131,9 +163,22 @@ public class FilePreviewActivity extends JBaseActivity {
 	}
 	
 	private void doInit(){
-		
-		Intent intent = new Intent(this,FileDownloadService.class);
-		bindService(intent, mConn, BIND_AUTO_CREATE);
+        
+		FileService fileservice = new FileService(this);
+		int downlength = fileservice.getDownLength(mJTFile.mUrl);
+		if(downlength>0){//未下载完成
+			controlTv.setText("恢复下载");
+			controlTv.setVisibility(View.VISIBLE);
+			statusLl.setVisibility(View.GONE);
+		}else if (EUtil.getFileSize(FilePreviewActivity.this, mJTFile) == mJTFile.mFileSize) {
+			controlTv.setText("打开");
+			controlTv.setVisibility(View.VISIBLE);
+			statusLl.setVisibility(View.GONE);
+		}else{
+			controlTv.setText("开始下载");
+			controlTv.setVisibility(View.VISIBLE);
+			statusLl.setVisibility(View.GONE);
+		}
 	}
 	
 	private OnClickListener mClickListener = new OnClickListener(){
@@ -147,17 +192,21 @@ public class FilePreviewActivity extends JBaseActivity {
 					OpenFiles.open(FilePreviewActivity.this, EUtil.getAppCacheFileDir(FilePreviewActivity.this).getAbsolutePath() + File.separator + mJTFile.mFileName);
 				}
 				else{
-					Intent intent = new Intent(EConsts.Action.DOWNLOAD_START);
-					intent.setClass(FilePreviewActivity.this, FileDownloadService.class);
-					intent.putExtra(EConsts.Key.JT_FILE, mJTFile);
-					startService(intent);
+					if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+	                    download(mJTFile);
+	                }else{
+	                    Toast.makeText(FilePreviewActivity.this, "SDCard不可用", 1).show();
+	                }
 				}
 				break;
 			case R.id.cancelIv: // 取消按钮
-				Intent intent = new Intent(EConsts.Action.DOWNLOAD_CANCELED);
-				intent.setClass(FilePreviewActivity.this, FileDownloadService.class);
-				intent.putExtra(EConsts.Key.WEB_FILE_URL, mJTFile.mUrl);
-				startService(intent);
+				cancelDownload = true;
+				loader.cancleDownLoad();
+				controlTv.setText("恢复下载");
+				controlTv.setVisibility(View.VISIBLE);
+				statusLl.setVisibility(View.GONE);
+				progressTv.setText("0%");
+				progressPb.setProgress(0);
 				break;
 			case R.id.saveTv://保存目录
 				String fileIds;
@@ -172,119 +221,49 @@ public class FilePreviewActivity extends JBaseActivity {
 		}
 	};
 	
+	/**
+     * 主线程(UI线程)
+     * 对于显示控件的界面更新只是由UI线程负责，如果是在非UI线程更新控件的属性值，更新后的显示界面不会反映到屏幕上
+     * @param path
+     * @param savedir
+     */
+  private void download(final JTFile mJTFile) {
+	  cancelDownload = false;
+      new Thread(new Runnable() {            
+          @Override
+          public void run() {
+              loader = new FileDownloader(FilePreviewActivity.this, mJTFile, 3);
+              progressPb.setMax(loader.getFileSize());//设置进度条的最大刻度为文件的长度
+              try {
+                  loader.download(new DownloadProgressListener() {
+                      @Override
+                      public void onDownloadSize(int size) {//实时获知文件已经下载的数据长度
+                          Message msg = new Message();
+                          msg.what = 1;
+                          msg.getData().putInt("size", size);
+                          handler.sendMessage(msg);//发送消息
+                      }
+                  });
+              } catch (Exception e) {
+                  handler.obtainMessage(-1).sendToTarget();
+              }
+          }
+      }).start();
+  }
+	
 	@Override
 	public void onResume(){
 		super.onResume();
-		registerReceiver(mReceiver, mFilter);
 	}
 	
 	@Override
 	public void onPause(){
 		super.onPause();
-		unregisterReceiver(mReceiver);
 	}
 	
 	@Override
 	public void onDestroy(){
 		super.onDestroy();
-		unbindService(mConn);
 	}
 	
-	private ServiceConnection mConn = new ServiceConnection(){
-
-		@Override
-		public void onServiceConnected(ComponentName arg0, IBinder arg1) {
-			FileDownloadService service = ((MyBinder) arg1).getService();
-			boolean taskExist = false;
-			for (FileDownloader downloader : service.getListDownloader()) {
-				if (downloader.getJTFile().mUrl.equals(mJTFile.mUrl)) {
-					taskExist = true;
-					controlTv.setVisibility(View.GONE);
-					statusLl.setVisibility(View.VISIBLE);
-					progressTv.setText(downloader.getProgress() + "%");
-					progressPb.setProgress(downloader.getProgress());
-					break;
-				}
-			}
-			if (!taskExist) {
-				if (EUtil.isFileExist(FilePreviewActivity.this, mJTFile)) {
-					controlTv.setText("打开");
-					controlTv.setVisibility(View.VISIBLE);
-					statusLl.setVisibility(View.GONE);
-				} 
-				else if(EUtil.getFileDownloadInfo(FilePreviewActivity.this, mJTFile.mUrl) != null){
-					controlTv.setText("恢复下载");
-					controlTv.setVisibility(View.VISIBLE);
-					statusLl.setVisibility(View.GONE);
-				}
-				else{
-					controlTv.setText("开始下载");
-					controlTv.setVisibility(View.VISIBLE);
-					statusLl.setVisibility(View.GONE);
-				}
-			}
-		}
-
-		@Override
-		public void onServiceDisconnected(ComponentName arg0) {
-			
-		}
-	};
-	
-	private BroadcastReceiver mReceiver = new BroadcastReceiver(){
-
-		@Override
-		public void onReceive(Context content, Intent intent) {
-			if(intent == null || intent.getAction() == null){
-				return;
-			}
-			String url = intent.getStringExtra(EConsts.Key.WEB_FILE_URL);
-			if(url == null || !url.equals(mJTFile.mUrl)){
-				return;
-			}
-			String action = intent.getAction();
-			if(action.equals(EConsts.Action.DOWNLOAD_START)){
-				
-				controlTv.setVisibility(View.GONE);
-				statusLl.setVisibility(View.VISIBLE);
-				progressTv.setText("0%");
-				progressPb.setProgress(0);
-			}
-			else if(action.equals(EConsts.Action.DOWNLOAD_UPDATE)){
-				
-				int progress = intent.getIntExtra(EConsts.Key.PROGRESS_UPDATE, 0);
-				controlTv.setVisibility(View.GONE);
-				statusLl.setVisibility(View.VISIBLE);
-				progressTv.setText(progress + "%");
-				progressPb.setProgress(progress);
-			}
-			else if(action.equals(EConsts.Action.DOWNLOAD_SUCCESS)){
-				
-				JTFile jtfile = (JTFile) intent.getSerializableExtra(EConsts.Key.JT_FILE);
-				mJTFile = jtfile;
-				
-				controlTv.setText("打开");
-				controlTv.setVisibility(View.VISIBLE);
-				statusLl.setVisibility(View.GONE);
-				progressTv.setText("0%");
-				progressPb.setProgress(0);
-			}
-			else if(action.equals(EConsts.Action.DOWNLOAD_FAILED)){
-				
-				controlTv.setText("恢复下载");
-				controlTv.setVisibility(View.VISIBLE);
-				statusLl.setVisibility(View.GONE);
-				progressTv.setText("0%");
-				progressPb.setProgress(0);
-			}
-			else if(action.equals(EConsts.Action.DOWNLOAD_CANCELED)){
-				
-				controlTv.setText("恢复下载");
-				controlTv.setVisibility(View.VISIBLE);
-				statusLl.setVisibility(View.GONE);
-				progressTv.setText("0%");
-				progressPb.setProgress(0);
-			}
-		}
-	};
 }

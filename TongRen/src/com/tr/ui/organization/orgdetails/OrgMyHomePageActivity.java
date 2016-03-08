@@ -12,7 +12,6 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -52,11 +51,9 @@ import com.tr.model.obj.JTFile;
 import com.tr.model.user.OrganizationMini;
 import com.tr.navigate.ENavConsts;
 import com.tr.navigate.ENavigate;
-import com.tr.ui.base.JBaseFragmentActivity;
 import com.tr.ui.common.JointResourceFragment.ResourceType;
 import com.tr.ui.connections.viewfrg.ListViewFragment;
 import com.tr.ui.home.FrameWorkUtils;
-import com.tr.ui.home.frg.FrgFlow;
 import com.tr.ui.knowledge.swipeback.SwipeBackActivity;
 import com.tr.ui.organization.firstpage.OrganizationDataActivity;
 import com.tr.ui.organization.model.Customer;
@@ -88,7 +85,6 @@ import com.tr.ui.widgets.viewpagerheaderscroll.tools.ScrollableFragmentListener;
 import com.tr.ui.widgets.viewpagerheaderscroll.tools.ScrollableListener;
 import com.tr.ui.widgets.viewpagerheaderscroll.tools.ViewPagerHeaderHelper;
 import com.utils.common.EConsts;
-import com.utils.common.GlobalVariable;
 import com.utils.common.Util;
 import com.utils.http.EAPIConsts;
 import com.utils.http.EAPIConsts.OrganizationReqType;
@@ -862,11 +858,11 @@ public class OrgMyHomePageActivity extends SwipeBackActivity implements
 				if (StringUtils.isEmpty(org_customer.customer.shotName)) {
 					jTFile.fileName =org_customer.customer.name;
 				}
-				jTFile.setmSuffixName(org_customer.customer.name);
+				jTFile.setmSuffixName(org_customer.customer.discribe);
 				// if (customer.industrys.size() != 0) {
 				// jTFile.setReserved1(customer.industrys.toString());
 				// }
-				jTFile.setReserved1(org_customer.customer.discribe);
+//				jTFile.setReserved1(org_customer.customer.discribe);//Reserved1字段后台有字数限制，iOS及前段都把discribe传到mSuffixName里
 				jTFile.mModuleType =9;
 				jTFile.mFileSize = 0;
 				jTFile.setmType(JTFile.TYPE_ORGANIZATION);

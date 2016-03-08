@@ -32,7 +32,7 @@ public class WorkMainAdapter extends BaseAdapter {
 	private Activity mParentActivity;//全局
 	public List<BUAffar> mItemsList = null;//列表条目的集合
 	public BUAffarList mBuaffarList;//列表的集合
-
+	private boolean redGone=false;
 	public WorkMainAdapter(Activity activity, BUAffarList inData,
 			ListView inListView) {
 		this.mParentActivity = activity;
@@ -143,10 +143,10 @@ public class WorkMainAdapter extends BaseAdapter {
 					vi.statusIv.setImageResource(R.drawable.work_e);
 				}
 				
-				if (vItem.isNew.equals("0")) {
-					vi.iv_red.setVisibility(View.GONE);
-				}else {
+				if (!redGone&&vItem.isNew.equals("1")) {
 					vi.iv_red.setVisibility(View.VISIBLE);
+				}else {
+					vi.iv_red.setVisibility(View.GONE);
 				}
 
 				vi.TextViewDesc.setText(vItem.mLogDesc);
@@ -165,6 +165,10 @@ public class WorkMainAdapter extends BaseAdapter {
 
 		}
 		return infoView;
+	}
+	public void setAllRedGone(boolean gone){
+		this.redGone=gone;
+		notifyDataSetChanged();
 	}
 	/**时间的格式化*/
 	public String getDataStrByDate(String inDate) {

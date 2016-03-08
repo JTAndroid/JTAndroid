@@ -689,6 +689,26 @@ public class CommunityReqUtil extends ReqBase {
 	}
 	
 	/**
+	 * 获取登录用户的具有未读消息的社群列表
+	 * 
+	 * @param context
+	 * @param bind
+	 * @param currentUserId
+	 * @param handler
+	 */
+	public static void doGetCommunityList(Context context, IBindData bind, String currentUserId, Handler handler){
+		JSONObject jsonObject = new JSONObject();
+		try {
+			jsonObject.put("user_id", currentUserId);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		String requestStr = jsonObject.toString();
+		String url = EAPIConsts.CONFERENCE_URL + EAPIConsts.CommunityReqUrl.GET_COMMUNITY_LIST;
+		doExecute(context, bind, EAPIConsts.CommunityReqType.TYPE_GET_COMMUNITY_LIST, url, requestStr, handler);
+	}
+	
+	/**
 	 * 
 	 * @param context
 	 * @param bind
