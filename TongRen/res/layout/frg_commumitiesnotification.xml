@@ -7,11 +7,10 @@
 
     <com.tr.ui.common.view.XListView
         android:id="@+id/commumitiesnotificationLv"
-        android:layout_marginTop="-10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" 
-        android:dividerHeight="10dp"
-        android:listSelector="@null"/>
+        android:divider="@null"
+        android:scrollbars="none"/>
 
     <TextView
         android:id="@+id/NoContent"

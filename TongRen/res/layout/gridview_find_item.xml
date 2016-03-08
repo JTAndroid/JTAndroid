@@ -14,6 +14,7 @@
             android:id="@+id/image_item_find_iv"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:scaleType="fitXY"
             android:background="@null"
             android:layout_margin="15dp"/>
     </LinearLayout>

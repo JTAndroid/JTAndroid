@@ -3,6 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <View
+        android:id="@+id/affair_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/transparent" />
      <com.tr.ui.widgets.CustomViewPager
             android:id="@+id/tongRenVPager"
             android:layout_width="fill_parent"
