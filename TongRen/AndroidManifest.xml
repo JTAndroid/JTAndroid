@@ -1,0 +1,932 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="111" android:versionName="1.1.0 sim" package="com.tr">
+
+    <!-- dev(开发)、qa(QA )、sim(仿真)、beta(生产) --> 
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
+
+    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.tr"/>
+
+    <application android:allowBackup="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.tr.App" android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+
+        <!-- 百度推送key -->
+        <meta-data android:name="api_key" android:value="@string/push_key_official"/>
+
+        <!-- 百度地图key -->
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@string/map_key_official"/>
+
+        <!-- 环信IM sdk -->
+        <meta-data android:name="EASEMOB_APPKEY" android:value="@string/huanxin_push_key_qa"/>
+
+        <!-- 私聊聊天 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.ChatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged">
+        </activity>
+
+        <!-- 群组聊天 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.GroupChatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged">
+        </activity>
+
+        <!-- 聊天图片浏览 -->
+        <activity android:name="com.tr.ui.im.ChatImageBrowserActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 查找聊天记录 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.ChatRecordSearchActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        <!-- 主界面   去掉android:launchMode="singleTask"，这个引起程序按HOME键后，重新点击APP图标是重起应用程序，bug：ANDROID-4994 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.MainActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeLmy2" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.MainDrawerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 社群页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.communities.home.CommunitiesActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 我的社群页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.communities.home.MyCommunitiesActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 主页 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.HomePageActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 编辑名片信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.EditBusinessCardActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 隐私权限信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.PrivacyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 隐私权限谁可以看我的资料信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.LookMyDataPrivacyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 隐私权限资料名称的权限信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.MydataPrivacyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 隐私权限谁可以加我为好友信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.AddedfriendPrivacyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 隐私权限谁可以给我评价信息 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.home.EvaluationPrivacyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 编辑工作经历页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.EditEducationExperienceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 编辑教育经历页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.EditWorkExperienceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 编辑个人描述页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.EditDescActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 工作经历页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.MyWorkExperienceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 教育经历页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.MyEducationExperienceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- 其他页面 -->
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:label="@string/app_name" android:name="com.tr.ui.people.cread.OtherActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden|adjustPan"/>
+        <!-- android:theme="@style/CustomThemeL" -->
+        <!-- 主界面 动态回复 -->
+        <activity android:exported="true" android:name="com.tr.ui.home.DynamicCommentActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustResize|stateHidden|stateAlwaysHidden"/>
+
+        <!-- 图片详情 -->
+        <activity android:name="com.tr.ui.common.ImageDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 微信回调 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.tr.wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 图片浏览 -->
+        <activity android:name="com.tr.ui.common.ImageBrowserActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 分享界面 -->
+        <activity android:exported="true" android:name="com.tr.ui.share.ShareActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 社交分享界面 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:exported="true" android:name="com.tr.ui.share.SocialShareActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+
+        <!-- 地区选择 -->
+        <activity android:exported="true" android:name="com.tr.ui.user.modified.CountryCodeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 邀请好友 -->
+        <activity android:exported="true" android:name="com.tr.ui.home.InviteFriendByQRCodeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 分享详情 -->
+        <activity android:exported="true" android:name="com.tr.ui.share.ShareDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 邀请好友 -->
+        <activity android:exported="true" android:name="com.tr.ui.home.InviteFriendsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 二维码扫描 -->
+        <activity android:exported="true" android:launchMode="standard" android:name="com.zxing.android.CaptureActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 重置密码/输入验证码 -->
+        <activity android:exported="true" android:name="com.tr.ui.user.modified.InputVerifyCodeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 注册金桐 -->
+        <activity android:exported="true" android:name="com.tr.ui.user.modified.RegisterGintongAccountActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 新版注册金桐 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.user.modified.RegisterGintongAllPathActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 分享选项 -->
+        <activity android:name="com.tr.ui.im.IMCreateGroupCategoryActivity1" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 首页-搜索 -->
+        <activity android:name="com.tr.ui.search.SearchActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <activity android:name="com.tr.ui.search.SearchActivity_new" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateVisible|stateHidden|adjustPan">
+        </activity>
+        <activity android:name="com.tr.ui.search.SearchActivity_more" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+
+        <!-- 侧滑菜单-我发起的 -->
+        <activity android:name="com.tr.ui.mystart.MyStartActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 创建群 -->
+        <activity android:name="com.tr.ui.im.IMCreateGroupActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 创建群 选项 -->
+        <activity android:name="com.tr.ui.im.IMCreateGroupCategoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 群列表 -->
+        <activity android:name="com.tr.ui.relationship.GroupListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 修改密码成功 -->
+        <activity android:name="com.tr.ui.user.modified.ResetPasswordSuccessActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 新关系 -->
+        <activity android:name="com.tr.ui.relationship.NewConnectionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 新动态 -->
+        <activity android:name="com.tr.ui.connections.UserFeedActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 用户 设置查看权限 -->
+        <activity android:name="com.tr.ui.connections.UserConfigActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- @好友界面 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.AtInformFriendsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden">
+        </activity>
+        <!-- 创建群或其他的时候，选择人员 的选项 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.IMRelationSelectActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        <!-- 上传电话本 通讯录 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.relationship.SIMContactActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 添加人脉 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.user.modified.ProfessionAndCustomzationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 人脉资源 -->
+        <activity android:name="com.tr.ui.connections.detail.ConnsResourcesActivity" android:screenOrientation="portrait" android:theme="@style/ConnsTheme">
+        </activity>
+        <!-- 人脉需求 -->
+        <activity android:name="com.tr.ui.connections.detail.ConnsRequirementActivity" android:screenOrientation="portrait" android:theme="@style/ConnsTheme">
+        </activity>
+        <activity android:exported="true" android:label="@string/app_name" android:name="com.tr.ui.relationship.RelationDetails1Activity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL2">
+        </activity>
+        <!-- 详情的我发布的需求 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.relationship.MyRequirementSelectActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 个人详情 关系列表 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.relationship.DetailsRelationListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 个人详情 关系列表 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.relationship.MyKnowledgeSelecteActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 用户定制 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.customization.CustomizationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeH">
+        </activity>
+        <!-- 编辑用户 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.im.IMEditMemberActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 启动页面 -->
+        <activity android:name="com.tr.ui.user.SplashActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+            <!-- android:theme="@style/CustomThemeL"该样式是金桐名加黑色背景 在启动项action.MAIN之前显示，现抛弃 2015/08/18 登录：建议直接显示启动页，目前先显示黑底蓝线加log。4435 -->
+            <!-- <activity android:name="com.tr.ui.user.SplashActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"> -->
+
+
+            <!-- 启动项 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- 分享 -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="gintong"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <!-- 启动页面-引导页 -->
+        <activity android:name="com.tr.ui.user.modified.LoadingGuideActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 登录 -->
+        <activity android:name="com.tr.ui.user.modified.LoginActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeLmy2">
+        </activity>
+        <!-- 我的二维码页面 -->
+        <activity android:launchMode="singleTask" android:name="com.tr.ui.home.MyQRCodeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+
+        <!-- 服务协议 -->
+        <activity android:name="com.tr.ui.user.AgreementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 图片浏览 -->
+        <activity android:name="com.tr.ui.conference.square.ImagesBrowseActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 忘记密码 -->
+        <activity android:name="com.tr.ui.user.modified.ForgetPasswordActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.user.modified.ForgetPwdActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 重置密码 -->
+        <activity android:name="com.tr.ui.user.modified.ResetPasswordActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 验证邮箱 -->
+        <activity android:name="com.tr.ui.user.modified.SendVerifyEmailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 个人注册详情 -->
+        <activity android:name="com.tr.ui.user.modified.RegisterPersonalDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+
+        <!-- 机构注册详情 -->
+        <activity android:name="com.tr.ui.user.RegisterOrganizationDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 机构联系人 -->
+        <activity android:name="com.tr.ui.user.RegisterOrganizationContactActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 机构注册审核结果 -->
+        <activity android:name="com.tr.ui.user.AuditResultActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 知识详情 -->
+        <activity android:name="com.tr.ui.knowledge.NeturlKnowledgeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.knowledge.KnowledgePeopleInfoActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:exported="true" android:launchMode="standard" android:name="com.tr.ui.knowledge.KnowledgeOfDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="true" android:launchMode="standard" android:name="com.tr.ui.knowledge.KnowledegeCommentDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.knowledge.KnowledgeAffairActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.knowledge.KnowledgeMiniActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 云盘 -->
+        <activity android:name="com.tr.ui.cloudDisk.FileManagementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 录音 -->
+        <activity android:name="com.tr.ui.common.RecordingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 个性定制 -->
+        <activity android:name="com.tr.ui.user.PersonalizedActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 设置 -->
+        <activity android:name="com.tr.ui.user.UserSettingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 文件管理页面 -->
+        <activity android:name="com.tr.ui.user.FileManagementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 匹配需求 -->
+        <activity android:name="com.tr.ui.requirement.MatchRequirementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 匹配知识 -->
+        <activity android:name="com.tr.ui.knowledge.MatchKnowledgeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 选择事务 -->
+        <activity android:name="com.tr.ui.common.SearchAffairActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 选择需求 -->
+        <activity android:name="com.tr.ui.common.SearchRequirementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 文件预览 -->
+        <activity android:name="com.tr.ui.common.FilePreviewActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 创建知识 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.knowledge.CreateKnowledgeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <!-- 关联资源 -->
+        <activity android:name="com.tr.ui.common.RelatedResourceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 全局标签管理界面 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.knowledge.GlobalKnowledgeTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 知识权限选择界面 -->
+        <activity android:name="com.tr.ui.knowledge.KnowledgePermissionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 权限选择界面 -->
+        <activity android:name="com.tr.ui.knowledge.PermissionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 选择关系界面 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.knowledge.SelectConnectionsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 知识广场 界面 -->
+        <activity android:name="com.tr.ui.knowledge.KnowledgeSquareActivity" android:screenOrientation="portrait" android:theme="@style/ConnsTheme"/>
+        <!-- 全局知识目录 -->
+        <activity android:name="com.common.category.CategoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL2" android:windowSoftInputMode="stateHidden"/>
+        <!-- 全局知识栏目 -->
+        <activity android:name="com.tr.ui.knowledge.GlobalKnowledgeColumnActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 我的知识 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.knowledge.MyKnowledgeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 知识内容 -->
+        <activity android:name="com.tr.ui.knowledge.KnowledgeContentActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 资源对接 -->
+        <activity android:name="com.tr.ui.common.JointResourceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.common.MoreJointResourceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 资源对接栏目 -->
+        <activity android:name="com.tr.ui.common.JointColumnActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 编辑知识标签详情 -->
+        <activity android:name="com.tr.ui.knowledge.EditKnowledgeTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 社交右上角的通讯录 -->
+        <activity android:name="com.tr.ui.relationship.MyFriendAllActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 我的 好友(人脉) -->
+        <activity android:name="com.tr.ui.relationship.MyFriendAndPeopleListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 手机人脉&推荐人脉 -->
+        <activity android:name="com.tr.ui.user.modified.WantPeopleActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 帐号管理 -->
+        <activity android:name="com.tr.ui.user.AccountManagerActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 帐号信息管理 -->
+        <activity android:name="com.tr.ui.user.AccountInfoManagerActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 推荐联系人2 -->
+        <!-- 更改手机-解绑原手机 -->
+        <activity android:name="com.tr.ui.user.modified.UnBindingMobileActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.tr.ui.connections.revision20150122.PushPeople2Activity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 绑定邮箱 -->
+        <activity android:name="com.tr.ui.user.modified.BindingEmailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 解绑邮箱 -->
+        <activity android:name="com.tr.ui.user.modified.UnBindingEmailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 黑名单 -->
+        <activity android:name="com.tr.ui.user.BlackListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 绑定手机 -->
+        <activity android:name="com.tr.ui.user.modified.BindingMobileActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 显示金桐内部URL -->
+        <activity android:name="com.tr.ui.common.ViewWebURLActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 修改密码 -->
+        <activity android:name="com.tr.ui.user.modified.ChangePasswordActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- push service client -->
+        <receiver android:name="com.tr.imservice.TongRenPushMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <!-- push service -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+            <intent-filter android:priority="1000">
+
+                <!-- priority -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <!-- 推送消息Receiver -->
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+
+            <!-- modified -->
+            <intent-filter android:priority="1000">
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+
+        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
+        <service android:exported="true" android:name="com.baidu.android.pushservice.CommandService"/>
+
+        <!-- 下载服务 -->
+        <service android:enabled="true" android:exported="false" android:name="com.tr.service.FileDownloadService"/>
+        <!-- 会议畅聊下载服务 -->
+        <service android:enabled="true" android:exported="false" android:name="com.tr.service.HyChatFileDownloadService"/>
+
+        <!-- 获得联系人列表 服务 -->
+        <service android:enabled="true" android:exported="false" android:name="com.tr.service.GetConnectionsListService"/>
+        <!-- 环信监听网络服务 -->
+        <service android:name="com.tr.imservice.ReceiveMsgService"/>
+        <!-- umeng_key_dev -->
+        <!-- 开发版 -->
+        <!-- umeng_key_off -->
+        <!-- 正式版 -->
+        <meta-data android:name="UMENG_APPKEY" android:value="@string/umeng_key_official"/>
+        <!-- 20位以内的英文和数字为渠道定名 -->
+        <meta-data android:name="UMENG_CHANNEL" android:value="Channel ID"/>
+        <!-- 友盟下载服务 -->
+        <service android:name="com.umeng.common.net.DownloadingService" android:process=":DownloadingService">
+        </service>
+        <!-- 友盟自动更新 -->
+        <activity android:name="com.umeng.update.UpdateDialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <!-- 百度地图定位服务 -->
+        <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote">
+        </service>
+        <!-- 会议 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.conference.home.RTMeetingNoteActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.tr.ui.conference.square.SquareActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My"/>
+        <activity android:name="com.tr.ui.conference.initiatorhy.MeetingSpeakerListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.conference.initiatorhy.MeetingSpeakerTopicSettingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.conference.initiatorhy.EditTextContentActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.conference.home.MeetingBranchSettingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 邀请函列表 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingInvitationCardActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 邀请函详情 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingInvitationDetailActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 通知列表 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingNoticeActivity2" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 通知详情列表 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingNoticeDetialsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 新 会议广场 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingPiazzaActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 人脉客户 -->
+        <activity android:name="com.tr.ui.conference.square.RelationshipActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+        <!-- 主会场 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingMasterActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 分会场查看更多 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingBranchMoreActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 参会信息 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingAttendInfomationActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 会议相关 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingRelativeActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 参会人详情 -->
+        <activity android:name="com.tr.ui.conference.square.AttendeesActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 转发到会议 -->
+        <activity android:name="com.tr.ui.conference.square.TansmitMeetingListActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 需求资料 -->
+        <activity android:name="com.tr.ui.conference.square.RequirmentDataActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 必填资料 -->
+        <activity android:name="com.tr.ui.conference.square.SignupInfoActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 知识资料 -->
+        <activity android:name="com.tr.ui.conference.square.KnowLedgeDataActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 二维码名片 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingInviteFaceActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 其他邀请 -->
+        <activity android:name="com.tr.ui.conference.home.MeetingInviteOtherActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 导航 -->
+        <activity android:name="com.tr.baidumapsdk.BNavigatorActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 地图 -->
+        <activity android:name="com.tr.ui.conference.initiatorhy.LocationActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity"/>
+
+        <!-- 我的会议（改版） -->
+        <activity android:name="com.tr.ui.conference.myhy.ui.MyMeetingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 发起会议 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.CalendarTimeSelectionActivity" android:screenOrientation="portrait" android:theme="@style/HomeThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.ConferenceIntroduceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.InitiatorHYActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.CalendarActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.CalendarActivity2" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.InviteFriendActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.ShareActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.PhotoBrowseActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.PhotoAlbumBucketActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.initiatorhy.PhotoAlbumBoothActivity" android:screenOrientation="portrait" android:theme="@style/HYThemeActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 会议畅聊 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.im.MeetingChatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 会议记录展示 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.im.MChatRecordBrowserActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 会议畅聊文件预览 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.im.MChatFilePreviewActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 会议畅聊图片浏览 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.im.MChatImageBrowserActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 会议畅聊搜索聊天记录 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.conference.im.MChatRecordSearchActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 更多评价 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.connections.revision20150122.detail.RelationMoreEvaluationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 添加评价标签 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.connections.revision20150122.detail.EditRelationEvaluationTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!--  -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.connections.revision20150122.detail.ForwardToFriendActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 主页添加框架 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.connections.revision20150122.detail.RelationHomeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.mob.tools.MobUIShell" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.im.MeetListActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 需求模块的Activity 创建 -->
+        <!-- 创建需求界面： 选择投融资类型 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.CreateDemandActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.TemplateActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 创建需求详情 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.demand.NewDemandActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <!-- 找项目 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.FindProjectActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 金额选择 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.AmountOfMoneyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.CurrencyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 用户举报 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.ReportMessageActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 三级选择效果 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.choose.ChooseActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.choose.ChooseTwoActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.choose.ChooseThreeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 我的需求 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.MeNeedActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 我的需求详情 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.demand.NeedDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- 我的需求评论 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.demand.NeedCommentActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My" android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!-- 创建标签 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.CreateLabelActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 标签_筛选查看和管理 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.RedactLabelActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 介绍页面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.IntroduceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 权限控制 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.LimitsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 读取系统图片/视频 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.SelectPictureActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.HeadPortraitActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.BrowesPhotoVideo" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+
+        <!-- 添加附件 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.AccessoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 时间界面 -->
+        <activity android:name="com.tr.ui.people.contactsdetails.TimeActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme_Light" android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.ContactsDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.EvaluationActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.NewCreateActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.BeliefActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.HobbyActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.IndustryActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.LivingHabitActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.NativePlaceAtivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.PhysicalActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.TypeActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.ContinentActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.CountryActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.ProvinceActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.nationality.NationalityActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.NationActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.ClassifyActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.GenderActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.DegreeActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.OverseasActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.EducationBackgroundActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.WorkDataActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme_Light">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.EducationDataActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme_Light">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.LanguageLevelActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme_Light">
+        </activity>
+        <activity android:name="com.tr.ui.people.homepage.ContactsMainPageActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- 人脉模块 -->
+        <activity android:name="com.tr.ui.people.cread.NewConnectionsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.MoreModuleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.people.cread.ContactInformationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.EducationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.FinancingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.InvestmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.MeetingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.PersonalInformationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.people.contactsdetails.ContactsEditRelationEvaluationTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 意见反馈页面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.home.OnekeyBackActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.home.DemandAndPricesActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 我的需求根据条件标签查询界面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.DemandLableActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 我的需求根据条件目录查询界面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.demand.DemandCategoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 人脉 -->
+        <activity android:name="com.tr.ui.people.cread.CustomActivity" android:theme="@android:style/Theme.Black.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.people.cread.RemarkActivity" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.ResourceActivity"/>
+        <activity android:name="com.tr.ui.people.cread.SocietyActivity" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.SpecialistIdentityActivity" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.people.cread.SpecialistNeedsActivity" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <!-- <activity android:name="com.tr.ui.people.cread.WorkExperienceActivity" android:windowSoftInputMode="stateAlwaysHidden"/> -->
+        <activity android:name="com.tr.ui.people.cread.WorkExperienceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.people.cread.SocietyTypeActivity">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.InviteToJoinActivity">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.CombiningDataActivity">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.MergeConnectionsDataActivity">
+        </activity>
+
+        <!-- 人脉获取更多评价界面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.people.contactsdetails.ContactsRelationMoreEvaluationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <!-- 提醒时间界面 -->
+        <activity android:name="com.tr.ui.people.contactsdetails.ReminderTimeActivity" android:screenOrientation="portrait">
+        </activity>
+        <!-- 颜色界面 -->
+        <activity android:name="com.tr.ui.people.contactsdetails.ColorActivity" android:screenOrientation="portrait">
+        </activity>
+        <!-- 重复界面 -->
+        <activity android:name="com.tr.ui.people.contactsdetails.RepeatActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.contactsdetails.MeetingDetailsActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.people.homepage.PeopleCategoryLabelActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.knowledge.KnowledgeCategoryLabelActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.knowledge.KnowledgeCategoryLabelActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.people.contactsdetails.ReportActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!-- 组织模块 -->
+        <activity android:name="com.tr.ui.organization.create_clientele.AffiliatedEnterpriseActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.CreateClienteleActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MediaTypeOrgActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.tr.ui.organization.create_clientele.EmbranchmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.FinancialAnalysisActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.HorizontalCompetitionActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.IndustryTrendsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.LinkmanInformationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MarketActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MarkeyInformationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.OrgModuleActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.OrgTypeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ProfessionalQualificationsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ProfessionalTeamActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.RelevantPartiesActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ResearchReportActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ResourceNeedsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.SeniorManagementActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ShareholderActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MarkeyDataActivity" android:screenOrientation="portrait" android:theme="@style/ActivityTheme_Light"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.BankActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.organization.create_clientele.InstitutionActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name="com.tr.ui.organization.create_clientele.EnterpriseActivity" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.PeriodicalActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.PartnerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.InstitutionsResumeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ResearchInstitutionActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.TelecastActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MediaTypeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.MediaEditClientTypeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.AreaSurveyInput_Activity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.AreaSurveyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.FunctionalDepartmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.DepartmentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <!-- 创建组织 -->
+        <activity android:name="com.tr.ui.organization.create_clientele.CreateOrganizationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.firstpage.FindProjectActivityOrg" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 组织详情 -->
+        <activity android:name="com.tr.ui.organization.orgdetails.OrgMyHomePageActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My"/>
+        <!-- 组织详情   他人主页的更多评价页面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.orgdetails.orgfragment.OrgRelationMoreEvaluationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 客户详情   他人主页的更多评价页面 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.orgfragment.OrgClientMoreEvaluationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <!-- 评价标签 -->
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.orgdetails.OrgEditRelationEvaluationTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.orgdetails.ClientEditRelationEvaluationTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden"/>
+
+        <!-- 客户详情 -->
+        <activity android:name="com.tr.ui.organization.create_clientele.ClientDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL_My"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.NewNoticeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.orgfragment.NewsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.EditSeniorManagementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.Edit_Shareholder_Activity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ClientDataActivity" android:screenOrientation="portrait"/>
+        <!-- 客户资料 -->
+        <activity android:name="com.tr.ui.organization.orgdetails.EditCompetition_activity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.NewsZhedaActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.EditResearchReportActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.HightSubjectActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.create_clientele.ClientIntroductionActivity" android:screenOrientation="portrait"/>
+        <!-- 客户简介 -->
+        <activity android:name="com.tr.ui.organization.orgdetails.EditClientBasicInfomationActivity" android:screenOrientation="portrait">
+        </activity>
+        <!-- 客户简介编辑 -->
+
+
+        <!-- 组织举报 -->
+        <activity android:name="com.tr.ui.organization.orgdetails.EditIndustryTrendActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar"/>
+        <activity android:name="com.tr.ui.organization.orgdetails.OrganizationReportActivity" android:screenOrientation="portrait"/>
+
+        <!-- 组织详情中的融资界面 -->
+        <activity android:name="com.tr.ui.organization.orgdetails.OrgFinancingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.tr.ui.organization.firstpage.OrganizationDataActivity"/>
+        <activity android:name="com.tr.ui.organization.firstpage.OrganizationIntroductionActivity"/>
+        <activity android:name="com.tr.ui.organization.firstpage.EditBasicInfomationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateUnchanged"/>
+        <activity android:name="com.tr.ui.organization.firstpage.RelateDescriptionActivity"/>
+        <activity android:name="com.tr.ui.organization.firstpage.SelectModuleAndColumnActivity"/>
+        <activity android:name="com.tr.ui.organization.firstpage.AccessControlActivity"/>
+        <activity android:name="com.tr.ui.organization.firstpage.OrganizationAndCustomerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.tr.ui.organization.firstpage.BusinessAnalysisActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.tr.ui.organization.firstpage.FinancialProductsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tr.ui.organization.firstpage.OrganizationCategoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustPan|adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewTimeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewRemaindActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewRepeatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewColorActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkLogActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkAffarRelationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewInfoActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.work.WorkNewLocationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.tr.ui.work.WorkRemindClockActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="adjustUnspecified|stateHidden|stateAlwaysHidden"/>
+        <!-- 完善资料 -->
+        <activity android:name="com.tr.ui.user.modified.CompleteUserInfoActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeLmy2"/>
+
+        <receiver android:name="com.tr.ui.work.WorkRemindClockReceiver" android:process=":remote"/>
+
+        <!-- 发布动态 -->
+        <activity android:name="com.tr.ui.flow.CreateFlowActivtiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 谁可以看 -->
+        <activity android:name="com.tr.ui.flow.DynamicPermissionsSettingActvitiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 创建地址 -->
+        <activity android:name="com.tr.ui.flow.CreateLocationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 新动态 -->
+        <activity android:name="com.tr.ui.flow.FlowActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="adjustResize"/>
+        <!-- 位置详情 -->
+        <activity android:name="com.tr.ui.flow.FlowLocationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 地图 -->
+        <activity android:name="com.tr.ui.flow.FlowMapActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 地图 -->
+        <activity android:name="com.tr.ui.flow.ImageBrowserActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 关联 -->
+        <activity android:name="com.tr.ui.flow.FlowAssoActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 创建社群条件 -->
+        <activity android:name="com.tr.ui.communities.home.CommunitiesConditionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 创建社群 -->
+        <activity android:name="com.tr.ui.communities.home.CreateCommunityAvctivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群权限 -->
+        <activity android:name="com.tr.ui.communities.home.CommumitiesPermissionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群详情 -->
+        <activity android:name="com.tr.ui.communities.home.CommunitiesDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群详情点击更多的成员页面 -->
+        <activity android:name="com.tr.ui.communities.home.CommunityMembersActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群详情里的关联的四大组建更多页面 -->
+        <activity android:name="com.tr.ui.communities.home.CommunityRelevanceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群标签详情 -->
+        <activity android:name="com.tr.ui.communities.home.CommunityLabelsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群聊天页面详情 -->
+        <activity android:name="com.tr.ui.communities.im.CommunityChatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged"/>
+        <!-- 社群聊天页面设置详情 -->
+        <activity android:name="com.tr.ui.communities.home.CommunityChatSettingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 社群管理群成员 -->
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.communities.home.GroupMembersManagementActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
+        <!-- 申请加入群组 -->
+        <activity android:name="com.tr.ui.communities.home.JoinCommumitiesAvtivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 编辑社群设置 -->
+        <activity android:name="com.tr.ui.communities.home.CommunityEditSettingActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+       
+       	<activity android:name="com.tr.ui.communities.home.CommumitiesNotificationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+
+        <!-- 创建项目 -->
+        <activity android:name="com.tr.ui.tongren.home.CreateProjectActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 项目详情 -->
+        <activity android:name="com.tr.ui.tongren.home.ProjectDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 推荐项目 -->
+        <activity android:name="com.tr.ui.tongren.home.RecommendProjectActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 我要承接项目 -->
+        <activity android:name="com.tr.ui.tongren.home.ApplyUndertakeActivtiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 进度 -->
+        <activity android:name="com.tr.ui.tongren.home.ProjectOperationActivtiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 项目文档 -->
+        <activity android:name="com.tr.ui.tongren.home.ProjectAccessoryActivtiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 项目任务 -->
+        <activity android:name="com.tr.ui.tongren.home.ProjectTaskActivtiy" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 添加任务 -->
+        <activity android:name="com.tr.ui.tongren.home.AddTaskActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 任务详情 -->
+        <activity android:name="com.tr.ui.tongren.home.TaskDetailsActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 组织成员 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationMemberActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 推荐动态 -->
+        <activity android:name="com.tr.ui.home.OldFlowActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 桐人消息 -->
+        <activity android:name="com.tr.ui.tongren.TongRenMessageActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 组织详情 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 组织概况 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationSumupActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 组织成员 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationMemberActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 我的考勤 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationRecordActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 我的考勤 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationRecordHistoryActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 我的审批 -->
+        <activity android:name="com.tr.ui.tongren.home.OrganizationReviewActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.tongren.home.OrganizationNewApplyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.tongren.home.OrganizationApplyNameAndTypeActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 图表 -->
+        <activity android:name="com.tr.ui.people.homepage.ChartViewActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 项目申请 -->
+        <activity android:name="com.tr.ui.tongren.home.ProjectApplyActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 选择组织 -->
+        <activity android:name="com.tr.ui.tongren.home.SelectOrganizationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <!-- 注册 -->
+        <activity android:name="com.tr.ui.user.modified.RegisterActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.user.modified.RegisterSecondActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.user.modified.RegisterPersonalActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.user.modified.MarkTagActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+        <activity android:name="com.tr.ui.home.JointResourceActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL"/>
+    </application>
+
+    <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+    <!-- 录音文件下载相关 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+
+    <!-- 百度地图 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- 百度老权限  新版本不用声用这个权限了 -->
+    <!-- <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" /> -->
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <!-- 百度地图所需权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 百度推送禁用键盘权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+</manifest>
