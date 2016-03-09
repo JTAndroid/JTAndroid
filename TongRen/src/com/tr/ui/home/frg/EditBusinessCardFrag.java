@@ -214,9 +214,9 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 						text_phone_num.setText(person.contactInformationList.get(i).content);
 				}
 				if (person.contactInformationList.get(i).type.equalsIgnoreCase("4")) {
-					if (person.contactInformationList.get(i).subtype.equalsIgnoreCase("1")) {
+//					if (person.contactInformationList.get(i).subtype.equalsIgnoreCase("1")) {
 						text_email.setText(person.contactInformationList.get(i).content);
-					}
+//					}
 				}
 			}
 			List<Basic> bList = person.getContactInformationList();
