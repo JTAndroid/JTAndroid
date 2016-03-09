@@ -325,31 +325,6 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 	private void setMyClick(View view) {
 		view.setOnClickListener(this);
 	}
-private Handler handler=new Handler(){
-	public void handleMessage(android.os.Message msg) {
-		if(msg.what==1){
-			if(list_work_experience == null) return;
-
-		    ListAdapter listAdapter = list_work_experience.getAdapter(); 
-		    if (listAdapter == null) { 
-		        // pre-condition 
-		        return; 
-		    } 
-
-		    int totalHeight = 0; 
-		    for (int i = 0; i < listAdapter.getCount(); i++) { 
-		        View listItem = listAdapter.getView(i, null, list_work_experience); 
-		        listItem.measure(0, 0); 
-		        totalHeight += listItem.getMeasuredHeight(); 
-		    } 
-
-		    ViewGroup.LayoutParams params = list_work_experience.getLayoutParams(); 
-		    params.height = totalHeight + (list_work_experience.getDividerHeight() * (listAdapter.getCount() - 1)); 
-		    list_work_experience.setLayoutParams(params);
-		    scroll_view.invalidate();
-		}
-	};
-};
 	private void initView(View view) {
 		relation_home_waiting.setVisibility(View.GONE);
 		relation_home_addfriend.setVisibility(View.GONE);
@@ -400,9 +375,6 @@ private Handler handler=new Handler(){
 		setMyClick(text_edit_other);
           
 		workExperienceAdapter = new WorkExperienceAdapter(mContext, worklist);
-		workExperienceAdapter.parentView(scroll_view);
-		workExperienceAdapter.listView(list_work_experience);
-		workExperienceAdapter.setHandler(handler);
 		list_work_experience.setAdapter(workExperienceAdapter);
 		educationExperienceAdapter = new EducationExperienceAdapter(mContext,
 				educationlist);
@@ -420,6 +392,7 @@ private Handler handler=new Handler(){
 				null);
 	}
 
+	
 	/**
 	 * 编辑权限UI控制
 	 */
@@ -841,6 +814,7 @@ private Handler handler=new Handler(){
 	private void updateWorkList() {
 		worklist = (ArrayList<WorkExperience>) person.getWorkExperienceList();
 		workExperienceAdapter.addWorkExperience(worklist);
+
 	}
 
 	/**

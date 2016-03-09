@@ -1,5 +1,6 @@
 package com.tr.ui.work;
 
+import java.net.IDN;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -57,6 +58,7 @@ import com.tr.ui.work.CalendarView.OnMonthChangeListener;
 import com.tr.ui.work.CalendarView.OnTakeBackDayClickListener;
 import com.tr.ui.work.WorkDatePickerDialog.OnDayChangeListener;
 import com.utils.http.EAPIConsts.WorkReqType;
+import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
 import com.utils.log.ToastUtil;
 
@@ -146,6 +148,8 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 	private boolean isTakeBackDayClick = false;
 	/** 是否是第一开始事务 */
 	private boolean isFirstStart = true;
+	/** 所有未读事务消息的id集合 */
+	private ArrayList<String> isNewIds=new ArrayList<String>();
 
 	/** MainActivityt 传过来的事务提醒的控件 */
 	public WorkMainFragment(View view) {
@@ -454,7 +458,15 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 		if(null!=bottom_aff_red_dot){
 			bottom_aff_red_dot.setVisibility(View.GONE);
 		}
-		mAdapter.setAllRedGone(true);
+		if(isNewIds!=null&&!isNewIds.isEmpty()){
+			StringBuffer sb=new StringBuffer();
+			for(String str:isNewIds){
+				sb.append(str);
+			}
+			showLoadingDialog();
+			WorkReqUtil.doAllMesReaded(getActivity(), this, sb.toString(), App.getApp().getUserID(), null);
+		}
+//		mAdapter.setAllRedGone(true);
 	}
 	/** 获取每月事务数量 */
 	public void getMonthAffarDate(String inDate) {
@@ -634,6 +646,8 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 
 	/** 获取全部事务的数据 */
 	public void getAllDateData() {
+		if (mAdapter != null)
+			mAdapter.setAllRedGone(false);
 		if (mAffarListShow != null) {
 			mAffarListShow.mAffarList.clear();
 			mAdapter.setItemList(mAffarListShow.mAffarList);
@@ -876,6 +890,11 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 			isFirstStart = false;
 		}
 		switch (tag) {
+		case WorkReqType.AFFAIR_ALL_MES_READED:
+			Boolean result=(Boolean) object;
+			if(result)
+				mAdapter.setAllRedGone(true);
+			break;
 		case WorkReqType.AFFAIR_LIST_GET: {
 			dismissLoadingDialog();
 			// 事务列表
@@ -900,6 +919,20 @@ public class WorkMainFragment extends JBaseFragment implements IBindData,
 			// 所有事务列表
 			Log.d("xmx", "showType:" + mShowType);
 			mAList = (BUAffarList) object;
+			isNewIds.clear();
+			if (mAList != null && mAList.mAffarList != null) {
+
+				for (int i = 0; i < mAList.mAffarList.size(); i++) {
+					String isNew = mAList.mAffarList.get(i).isNew;// 是否有新事物通知
+					if (isNew.equals("1")) {
+						if (null != isNewIds && isNewIds.size() == 0)
+							isNewIds.add(String.valueOf(mAList.mAffarList.get(i).id));
+						else
+							isNewIds.add(","+ String.valueOf(mAList.mAffarList.get(i).id));
+					} 
+				}
+			}
+			Log.d("isNewIds.toString()", "isNewIds.toString():" + isNewIds.toString());
 			mBUAffarList = (BUAffarList) object;
 			getAllDateBack();
 			HashMap<String, Boolean> hashMap_all = calendarIsRed(mAList);

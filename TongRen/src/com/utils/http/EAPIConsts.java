@@ -45,6 +45,7 @@ public class EAPIConsts {
 	public static String AFFAIR_MODIFY_STATUS = "/affair/actionAffair.json"; // 事务状态修改
 
 	public static String AFFAIR_CHART = "/mobile/im/fetchMucIdForAffair"; // 事务聊天
+	public static String AFFAIR_ALL_MES_READED_URL = "/mobile/im/updateReadInfoFromAffair.action"; // 事务所有消息已读
 
 	public static String AFFAIR_CHAR_URL = "http://192.168.101.131:2222/ImServer";
 	
@@ -76,6 +77,7 @@ public class EAPIConsts {
 
 		public static final int AFFAIR_CHART = ReqBase + 9; // 事务畅聊
 		public static final int AFFAIR_LIST_GET_ALL = ReqBase + 10; // 获所有取事务列表
+		public static final int AFFAIR_ALL_MES_READED = ReqBase + 11; // 所有取事务列表消息已读
 
 	}
 

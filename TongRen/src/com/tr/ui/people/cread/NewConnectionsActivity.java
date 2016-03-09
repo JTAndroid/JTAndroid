@@ -382,32 +382,32 @@ public class NewConnectionsActivity extends BaseActivity implements
 				surname_Etv
 						.setText(people_details.people.peopleNameList.get(0).lastname);
 				name_Etv.setText(people_details.people.peopleNameList.get(0).firstname);
-				// 英文名
-				if (people_details.people.peopleNameList.size() > 1) {
-					for (int i = 1; i < people_details.people.peopleNameList
-							.size(); i++) {
-						if (i == 1) {
-							First_Etv.setVisibility(View.VISIBLE);
-							Last_Etv.setVisibility(View.VISIBLE);
-							surname_Etv.RotateUp();
-							First_Etv
-									.setText(people_details.people.peopleNameList
-											.get(1).firstname);
-							Last_Etv.setText(people_details.people.peopleNameList
-									.get(1).lastname);
-						} else {
-							MyEditTextView first = new MyEditTextView(context);
-							first.setTextLabel("First");
-							first.setText(people_details.people.peopleNameList
-									.get(i).firstname);
-							MyEditTextView last = new MyEditTextView(context);
-							last.setTextLabel("Last");
-							last.setText(people_details.people.peopleNameList
-									.get(i).lastname);
-						}
-
-					}
-				}
+				// 英文名 取消不要了
+//				if (people_details.people.peopleNameList.size() > 1) {
+//					for (int i = 1; i < people_details.people.peopleNameList
+//							.size(); i++) {
+//						if (i == 1) {
+//							First_Etv.setVisibility(View.VISIBLE);
+//							Last_Etv.setVisibility(View.VISIBLE);
+//							surname_Etv.RotateUp();
+//							First_Etv
+//									.setText(people_details.people.peopleNameList
+//											.get(1).firstname);
+//							Last_Etv.setText(people_details.people.peopleNameList
+//									.get(1).lastname);
+//						} else {
+//							MyEditTextView first = new MyEditTextView(context);
+//							first.setTextLabel("First");
+//							first.setText(people_details.people.peopleNameList
+//									.get(i).firstname);
+//							MyEditTextView last = new MyEditTextView(context);
+//							last.setTextLabel("Last");
+//							last.setText(people_details.people.peopleNameList
+//									.get(i).lastname);
+//						}
+//
+//					}
+//				}
 			}
 			// 设置头像，头像为从展示页面传递到编辑页的绝对路径
 			if (!TextUtils.isEmpty(people_details.people.portrait)) {

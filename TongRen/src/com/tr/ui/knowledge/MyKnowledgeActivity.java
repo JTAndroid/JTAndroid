@@ -130,7 +130,7 @@ public class MyKnowledgeActivity extends JBaseActivity implements IBindData{
 	private MenuItem checkAllItem;
 
 
-	public static String mCurKeyword = "";
+	public static String mCurKeyword = ""; 
 
 	private View moreView; // 加载更多页面
 	private TextView mvTextView;
