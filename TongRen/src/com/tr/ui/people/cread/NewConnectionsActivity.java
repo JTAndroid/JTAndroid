@@ -1407,7 +1407,8 @@ public class NewConnectionsActivity extends BaseActivity implements
 			// 中文名
 			PersonName zhongwenName = new PersonName();
 			zhongwenName.lastname = surname_Etv.getText();
-			zhongwenName.firstname = name_Etv.getText();
+//			zhongwenName.firstname = name_Etv.getText();
+			zhongwenName.firstname = "";
 
 			peopleNameList.add(zhongwenName);
 			if (!TextUtils.isEmpty(First_Etv.getText())
@@ -2406,7 +2407,7 @@ public class NewConnectionsActivity extends BaseActivity implements
 		switch (tag) {
 		case PeopleRequestType.PEOPLE_REQ_CREATE:
 			if (object != null) {
-				BaseResult result = (BaseResult) object;
+				BaseResult result = (BaseResult) object;//1653464
 				Log.v("TOUXIANG", "编辑页点击返回的obj---->" + result.toString());
 				if (result.success) {
 					if (eFromActivityType == 1) {// 创建，跳到详情页
