@@ -446,6 +446,7 @@ public class KnowledgeDetailFragment extends JBaseFragment implements
 		commentView = View
 				.inflate(mContext, R.layout.activity_industry_comment, null);
 		KnowDetailsLl.addView(commentView);
+		commentView.setVisibility(View.GONE);
 		/* 初始化评论控件 */
 		initComponents(commentView);
 	}
@@ -946,6 +947,7 @@ public class KnowledgeDetailFragment extends JBaseFragment implements
 		else if (KnoReqType.GetKnowledgeComment == tag) {// 获取知识评论
 			if (CommendType.GetKnowCommend.equals(knowActionForward)) {
 				if (object != null) {
+					commentView.setVisibility(View.VISIBLE);
 					CommentTitleLL.setVisibility(View.VISIBLE); 
 					bottomTv.setVisibility(View.VISIBLE); 
 					Map<String, Object> hm = ((Map<String, Object>) object);
@@ -959,6 +961,7 @@ public class KnowledgeDetailFragment extends JBaseFragment implements
 						tempList = null;
 					}
 				}else{
+					commentView.setVisibility(View.GONE);
 					CommentTitleLL.setVisibility(View.GONE); 
 					bottomTv.setVisibility(View.GONE);
 				}
