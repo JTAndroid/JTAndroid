@@ -115,7 +115,6 @@
     
     <!-- 完善组织信息页面距离左边宽度 -->
     <dimen name="organization_left">156dp</dimen>
-    <dimen name="retion_title_height">72dp</dimen>
     <!-- 界面窗体的magin -->
     <dimen name="layout_form_margin_left">15dp</dimen>
 
@@ -252,8 +251,6 @@
     <dimen name="itemSize">165dp</dimen>
 
     <!-- 详情页UI框架 -->
-    <dimen name="tabs_height">63dp</dimen>
-    <dimen name="viewpager_header_height">342dp</dimen>
     <dimen name="space_middle">36dp</dimen>
     <dimen name="listview_margin_buttom">75dp</dimen>
     <!--

@@ -262,8 +262,8 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 		if (TextUtils.isEmpty(userId)) {
 			userId = "0";
 		}
-		peopleDetialParam.id = Long.valueOf(userId);// ==id
-		peopleDetialParam.personType = type;// = personType//用户
+		peopleDetialParam.id = Long.valueOf(userId);// ==id260931
+		peopleDetialParam.personType = type;// = personType//用户2
 		PeopleReqUtil.doRequestWebAPI(mContext, this, peopleDetialParam, null,
 				PeopleRequestType.PEOPLE_REQ_GETPEOPLE);
 	}
@@ -895,9 +895,11 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 		// 个人用户
 		if (!StringUtils.isEmpty(personName)) {
 			text_name.setText(personName);
-		} else if (!StringUtils.isEmpty(firstName)) {
-			text_name.setText(firstName);
-		} else {
+		}
+//		else if (!StringUtils.isEmpty(firstName)) {
+//			text_name.setText(firstName);
+//		} 
+		else {
 			text_name.setText("");
 		}
 		home_page_company_name_tv.setText(person.getCompany()+" "+person.position);// 公司名称
