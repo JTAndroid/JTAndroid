@@ -269,7 +269,7 @@ public class EAPIConsts {
 	public final static String URL_HY_ONLINE_OTHER = "http://file.gintong.com/meeting/upload";
 
 	public static final String DynamicNews_URL_DEV = "http://192.168.120.155:3356/"; // DEV环境地址
-	public static final String DynamicNews_URL_SIMULATER = "http://192.168.101.15:3330/"; // 仿真环境地址
+	public static final String DynamicNews_URL_SIMULATER = "http://test.online.gintong.com/"; // 仿真环境地址
 	public static final String DynamicNews_URL_ONLINE = "http://gintong.com/"; // 域名线上地址
 	public static final String DynamicNews_URL_PERSON = ""; // 个人联调主脉
 	public static final String MAIN_PAGE_URL = ""; // 首页链接

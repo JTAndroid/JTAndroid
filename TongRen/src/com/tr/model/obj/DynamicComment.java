@@ -29,8 +29,8 @@ public class DynamicComment implements Serializable {
 	public static DynamicComment createFactory(JSONObject jsonObject) {
 		try {
 			DynamicComment self = new DynamicComment();
-			self.id = jsonObject.optLong("id");
-			self.dynamicId = jsonObject.optLong("dynamicId");
+			self.id = Long.parseLong(jsonObject.getString("id"));
+			self.dynamicId = Long.parseLong(jsonObject.getString("dynamicId"));
 			self.userId = jsonObject.optLong("userId");
 			self.userName = jsonObject.optString("userName");
 			self.comment = jsonObject.optString("comment");

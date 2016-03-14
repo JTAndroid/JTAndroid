@@ -17,8 +17,8 @@ public class DynamicApprove implements Serializable {
 	public static DynamicApprove createFactory(JSONObject jsonObject) {
 		try {
 			DynamicApprove self = new DynamicApprove();
-			self.id = jsonObject.optLong("id");
-			self.dynamicId = jsonObject.optLong("dynamicId");
+			self.id = Long.parseLong(jsonObject.getString("id"));
+			self.dynamicId = Long.parseLong(jsonObject.getString("dynamicId"));
 			self.userId = jsonObject.optLong("userId");
 			self.userName = jsonObject.optString("userName");
 			self.ctime = jsonObject.optLong("ctime");

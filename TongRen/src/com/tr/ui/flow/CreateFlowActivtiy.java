@@ -617,10 +617,10 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 					dynamicNewsRequest, null);
 			InitiatorDataCache.getInstance().inviteAttendSelectedMap
 					.clear();
-		} else {
+		} else if(TextUtils.isEmpty(editflowEt.getText().toString().trim())) {
 			dismissLoadingDialog();
 			ToastUtil.showToast(CreateFlowActivtiy.this,
-					"内容不得为空");
+					"请添加动态内容");
 		}
 	}
 
