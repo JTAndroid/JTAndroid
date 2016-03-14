@@ -664,6 +664,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 					UserParentCategoryLists.remove(UserParentCategoryLists.get(UserParentCategoryLists.size() - 1));
 				}
 				initMyActionBar((UserParentCategoryLists.size() == 0)?"文件":UserParentCategoryLists.get(UserParentCategoryLists.size() - 1).categoryname);
+				checkNum = 0;
 				clearAll();
 				doBackKey = true;
 				return ;
@@ -676,10 +677,12 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 						isShowCheckBox = false;
 						//隐藏底部按钮
 						showBottomControlsUI(false);
+						checkNum = 0;
 						clearAll();
 						return ;
 					}
 				}
+				checkNum = 0;
 				clearAll();
 				doBackKey = true;
 			}
@@ -744,6 +747,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 			if (isSearch) {
 				startGetData(UserCurrentCategoryID);
 				isSearch = false;
+				checkNum = 0;
 				clearAll();
 				return false;
 			} else {
@@ -767,6 +771,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 					UserParentCategoryLists.remove(UserParentCategoryLists.get(UserParentCategoryLists.size() - 1));
 				}
 				initMyActionBar((UserParentCategoryLists.size() == 0)?"文件":UserParentCategoryLists.get(UserParentCategoryLists.size() - 1).categoryname);
+				checkNum = 0;
 				clearAll();
 				doBackKey = true;
 				return false;
@@ -779,10 +784,12 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 						isShowCheckBox = false;
 						//隐藏底部按钮
 						showBottomControlsUI(false);
+						checkNum = 0;
 						clearAll();
 						return false;
 					}
 				}
+				checkNum = 0;
 				clearAll();
 				doBackKey = true;
 			}
@@ -811,6 +818,11 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 	 * @param checkNum
 	 */
 	private void showBottomRechristenUI(int checkNum){
+		if (checkNum == this.checkNum && checkNum != 0) {
+			showMenuItemUI(false);
+		}else{
+			showMenuItemUI(true);
+		};
 		if (checkNum == 0) {
 			delete_file_document.setVisibility(View.GONE);
 			delete_file_document_gray.setVisibility(View.VISIBLE);
@@ -1112,7 +1124,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 							num = 0;
 						}
 						initMyActionBar("已选"+(num)+"项");
-					}else if (!isSelectALL){
+					}else{
 						switch (doDetectionDataType(allCategoryDocumentLists.get(position))) {
 						case Document:
 							UserDocument userDocument = (UserDocument) allCategoryDocumentLists.get(position);
@@ -1226,7 +1238,9 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 			showRecomand(true);
 		}else {
 			showRecomand(false);
+		checkNum = allCategoryFileLists.size();
 		}
+		
 		mMakeFileManagementAdapter = new MakeFileManagementAdapter(allCategoryFileLists);
 		listview.setAdapter(mMakeFileManagementAdapter);
 		reCreateNameLists = allCategoryFileLists;
@@ -1311,7 +1325,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 				listview.setPullLoadEnable(false);
 				//显示全选取消按钮
 				if (!isChatSaveFile) {
-					showMenuItemUI(true);
+					showMenuItemUI(false);
 				}
 				// 显示底部(删除、重命名)按钮
 				showBottomControlsUI(true);
