@@ -300,7 +300,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 				break;
 			case JTFile.TYPE_CLIENT: // 客户
 				// imageIv.setBackgroundResource(R.drawable.default_portrait116);
-				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.mFileName) ? jtFile.mFileName
+				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.fileName) ? jtFile.fileName
 						: jtFile.getmSuffixName();// 标题:姓名
 				// forwardDynamicNews.type = DynamicNews.TYPE_CUSTOMER_CARD +
 				// "";// 转发类型
@@ -313,7 +313,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 
 				break;
 			case 10:// 用户
-				forwardDynamicNews.title = jtFile.mFileName;// 标题:姓名
+				forwardDynamicNews.title = jtFile.fileName;// 标题:姓名
 				forwardDynamicNews.type = DynamicNews.TYPE_USER_CARD + "";// 转发类型
 				forwardDynamicNews.lowType = "0";// 源类型
 				forwardDynamicNews.content = jtFile.reserved1;// 内容:职位
