@@ -202,6 +202,7 @@ public class EAPIConsts {
 	// 文件上传地址
 
 	// 附件：
+	public static final String FILE_URL_WEB_AVATAR = "http://file.online.gintong.com";
 	public static final String FILE_URL_SIMULATER = "http://file.online.gintong.com/mobile/upload";
 	public static final String FILE_URL_QA = "http://file.qatest.gintong.com/mobile/upload";
 	public static final String FILE_URL_DEV = "http://192.168.101.22:81/mobile/upload";

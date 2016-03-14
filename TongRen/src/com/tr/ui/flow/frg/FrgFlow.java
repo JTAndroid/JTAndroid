@@ -79,6 +79,7 @@ import com.tr.ui.people.model.Person;
 import com.tr.ui.widgets.CommonSmileyParser;
 import com.tr.ui.widgets.EditOrDeletePopupWindow;
 import com.tr.ui.widgets.MessageDialog;
+import com.tr.ui.widgets.SmileyParser;
 import com.tr.ui.widgets.SmileyView;
 import com.tr.ui.widgets.EditOrDeletePopupWindow.OnMeetingOptItemClickListener;
 import com.tr.ui.widgets.MessageDialog.OnDialogFinishListener;
@@ -143,6 +144,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 	
 	public static final int MIN_CLICK_DELAY_TIME = 1000;
     private long lastClickTime = 0;
+	private SmileyParser parser;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
@@ -154,6 +156,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 		initView(view);
 		initExpression(view);
 		startGetData();
+		parser = SmileyParser.getInstance(getActivity());
 		return view;
 	}
 	
@@ -681,7 +684,13 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 			if(type == FLOW_GT){
 				holder.flow_user_img_iv.setImageResource(R.drawable.gintong_smart_brain);
 			}else{
-				ImageLoader.load(holder.flow_user_img_iv, dn.getPicPath(), R.drawable.ic_default_avatar);
+				String avatar = dn.getPicPath();
+				if(dn.getPicPath().indexOf("/web1/pic/avatar")!=-1){//web端发布的动态
+					avatar = EAPIConsts.FILE_URL_WEB_AVATAR + dn.getPicPath();
+				}else{
+					avatar = dn.getPicPath();
+				}
+				ImageLoader.load(holder.flow_user_img_iv, avatar, R.drawable.ic_default_avatar);
 			}
 			holder.flow_user_name_tv.setText(TextUtils.isEmpty(dn.getCreaterName())?"":dn.getCreaterName());
 			//时间
@@ -709,7 +718,8 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 			holder.contentTv.setVisibility(View.GONE);
 			if(!TextUtils.isEmpty(dn.getContent())){
 				holder.contentTv.setVisibility(View.VISIBLE);
-				holder.contentTv.setText(dn.getContent());
+				CharSequence dd = parser.addSmileySpans(dn.getContent());
+				holder.contentTv.setText(dd);
 			}
 			if(dn.getContent().length()>100){
 				holder.moreTv.setVisibility(View.VISIBLE);

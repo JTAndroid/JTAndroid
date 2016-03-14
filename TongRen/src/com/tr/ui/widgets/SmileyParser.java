@@ -146,8 +146,11 @@ public class SmileyParser {
      */
     //根据文本替换成图片
     public CharSequence addSmileySpans(CharSequence text) {
-        SpannableStringBuilder builder = new SpannableStringBuilder(text);
-        Matcher matcher = mPattern.matcher(text);
+    	String smile = text.toString();
+    	smile = smile.replace("\\[", "[");//web端表情
+    	smile = smile.replace("\\]", "]");
+        SpannableStringBuilder builder = new SpannableStringBuilder(smile);
+        Matcher matcher = mPattern.matcher(smile);
         
         while (matcher.find()) {
             int resId = mSmileyToRes.get(matcher.group());
