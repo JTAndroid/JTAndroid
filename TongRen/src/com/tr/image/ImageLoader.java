@@ -359,7 +359,8 @@ public class ImageLoader {
 				reqHeight);
 		options.inJustDecodeBounds = false;
 		Bitmap src = BitmapFactory.decodeFile(pathName, options);
-		return createScaleBitmap(src, reqWidth, reqHeight);
+//		return createScaleBitmap(src, reqWidth, reqHeight);
+		return src;
 	}
 
 	// 如果是放大图片，filter决定是否平滑，如果是缩小图片，filter无影响
