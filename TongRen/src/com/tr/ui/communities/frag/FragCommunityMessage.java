@@ -74,6 +74,12 @@ public class FragCommunityMessage extends JBaseFragment implements IBindData{
 
 	}
 	
+	@Override
+	public void onResume() {
+		super.onResume();
+		CommunityReqUtil.doGetCommunityList(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
+	}
+	
 	private void initView(View view) {
 		NoContent = (TextView) view.findViewById(R.id.NoContent);
 		commumitiesnotificationLv = (XListView) view.findViewById(R.id.commumitiesnotificationLv);
@@ -107,11 +113,9 @@ public class FragCommunityMessage extends JBaseFragment implements IBindData{
 				adapter.notifyDataSetChanged();
 				Intent intent = new Intent(getActivity(), CommunityChatActivity.class);
 				intent.putExtra("communityId", Long.valueOf(communitySocial.getId()));
-				startActivity(intent);
+				startActivityForResult(intent, 0);
 			}
 		});
-		
-		CommunityReqUtil.doGetCommunityList(getActivity(), FragCommunityMessage.this, App.getUserID(), null);
 	}
 	
 	@Override

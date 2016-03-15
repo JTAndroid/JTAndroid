@@ -413,6 +413,10 @@ public class CommunityChatActivity extends ChatBaseActivity {
 			intent.putExtra(ENavConsts.EMucDetail, mucDetail);
 			startActivityForResult(intent, ENavigate.REQUSET_CODE_MUC);
 			break;
+		case android.R.id.home:
+			setResult(RESULT_OK);
+			finish();
+			break;
 		default:
 			break;
 		}
