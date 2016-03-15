@@ -229,8 +229,16 @@ public class ImageLoader {
 				+ FileUtils.convertUrlToFileName(url);
 		FileInputStream fis = null;
 		try {
+			File parent = new File(FileUtils.getIconDir());
+			if(!parent.exists()){
+				parent.mkdirs();
+			}
 			// 获取流
-			fis = new FileInputStream(new File(path));
+			File file = new File(path);
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			fis = new FileInputStream(file);
 			if (fis != null) {
 				if (typeBitmapSize == CHAT_BITMAP) {
 					if (mContext != null) {
@@ -241,14 +249,14 @@ public class ImageLoader {
 						bitmap = decodeSampledBitmapFromFd(path, 70, 70);
 					}
 				} else if(typeBitmapSize == INDEX_BITMAP){
-						bitmap = decodeSampledBitmapFromFd(path, view.getWidth(), view.getHeight());
+						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
 				}else {
 					if (mContext != null) {
 						bitmap = decodeSampledBitmapFromFd(path,
 								DisplayUtil.dip2px(mContext, typeBitmapSize),
 								DisplayUtil.dip2px(mContext, typeBitmapSize));
 					} else {
-						bitmap = decodeSampledBitmapFromFd(path, view.getWidth(), view.getHeight());
+						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
 					}
 				}
 
