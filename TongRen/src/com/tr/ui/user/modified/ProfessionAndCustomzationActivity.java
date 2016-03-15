@@ -167,6 +167,7 @@ public class ProfessionAndCustomzationActivity extends JBaseActivity implements 
 				holder = new ViewHolder();
 				holder.industryTv = (TextView) convertView.findViewById(R.id.industry_tv);
 				holder.selectIndustryCb = (CheckBox) convertView.findViewById(R.id.select_industry_cb);
+				holder.selectIndustryCb.setVisibility(View.VISIBLE);
 				convertView.setTag(holder);
 			}
 			else {

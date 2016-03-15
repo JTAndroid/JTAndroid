@@ -190,7 +190,9 @@ import com.tr.ui.user.modified.CountryCodeActivity;
 import com.tr.ui.user.modified.InputVerifyCodeActivity;
 import com.tr.ui.user.modified.LoadingGuideActivity;
 import com.tr.ui.user.modified.LoginActivity;
+import com.tr.ui.user.modified.ProfessionActivity;
 import com.tr.ui.user.modified.ProfessionAndCustomzationActivity;
+import com.tr.ui.user.modified.ProfessionSecondActivity;
 import com.tr.ui.user.modified.RegisterActivity;
 import com.tr.ui.user.modified.RegisterGintongAccountActivity;
 import com.tr.ui.user.modified.RegisterPersonalActivity;
@@ -3030,6 +3032,30 @@ public class ENavigate {
 				ProfessionAndCustomzationActivity.class);
 		intent.putExtra(ENavConsts.EProfessionAndCustomzation, type);
 		intent.putExtra(ENavConsts.KEY_FRG_SETTING_MINDUSTRYS, mMIndustrys);
+		fromActivity.startActivityForResult(intent, requestCode);
+	}
+	
+	/**
+	 * @param 职业一级选择目录
+	 * @param requestCode
+	 * @param type
+	 */
+	public static void startProfessionActivityForResult(
+			Activity fromActivity, int requestCode) {
+		Intent intent = new Intent(fromActivity,
+				ProfessionActivity.class);
+		fromActivity.startActivityForResult(intent, requestCode);
+	}
+	/**
+	 * @param 职业二级选择目录
+	 * @param requestCode
+	 * @param type
+	 */
+	public static void startProfessionSecondActivityForResult(
+			Activity fromActivity, int requestCode, int pid) {
+		Intent intent = new Intent(fromActivity,
+				ProfessionSecondActivity.class);
+		intent.putExtra(ENavConsts.EProfessionAndCustomzationSecond, pid);
 		fromActivity.startActivityForResult(intent, requestCode);
 	}
 

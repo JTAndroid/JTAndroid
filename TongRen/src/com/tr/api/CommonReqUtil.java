@@ -181,6 +181,17 @@ public class CommonReqUtil extends ReqBase {
 		String url = EAPIConsts.TMS_URL + EAPIConsts.ReqUrl.GetInterestIndustry;
 		doExecute(context, bind, EAPIConsts.CommonReqType.GetInterestIndustry, url, requestStr, handler);
 	}
+	//获取职业列表
+	public static void doPeopleInterestIndustry(Context context, IBindData bind, int pid, int index, int size,Handler handler) {
+		String requestStr = "";
+		HashMap<String, Object> params = new HashMap<String, Object>();
+		params.put("pid", pid);
+		params.put("index", index);
+		params.put("size", size);
+		requestStr = new Gson().toJson(params);
+		String url = EAPIConsts.TMS_URL + EAPIConsts.ReqUrl.PeopleInterestIndustry;
+		doExecute(context, bind, EAPIConsts.CommonReqType.GetPeopleProfessionList, url, requestStr, handler);
+	}
 
 	/** 获取首页数量信息
 	 * 

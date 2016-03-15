@@ -317,6 +317,8 @@ public class EConsts {
 		
 		public static final String IS_LOGIN_TIMEOUT = "is_login_timeout";
 		
+		public static final String PROFESSION = "profession";
+		
 	}
 
 	public static class Action {

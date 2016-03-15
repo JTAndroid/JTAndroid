@@ -782,6 +782,7 @@ public class EAPIConsts {
 		public static final String GET_TREATED_HTML = "http://211.103.198.53:2001/depoapp/"; // 获取处理后的网页(外网地址)
 		public static final String DELETE_FILE = "/file/delete.json"; // 删除附件
 		public static final String GET_PROFESSION_LIST = "/register/getInterestIndustry.json"; // 获取行业列表
+		public static final String PeopleInterestIndustry = "code/peopleIndustrysList.json";
 
 		// 关系
 		/** 获得 我的好友和人脉 列表 */
@@ -1253,6 +1254,7 @@ public class EAPIConsts {
 		public static final int GetJointResource_MY = ReqBase + 16; // 获取对接的资源
 		public static final int GetJointResource_FRIEND = ReqBase + 17; // 获取对接的资源
 		public static final int GetJointResource_GT = ReqBase + 18; // 获取对接的资源
+		public static final int GetPeopleProfessionList = ReqBase + 19; // 获取职业列表
 	}
 
 	// 用户、im模块之外的其他api
