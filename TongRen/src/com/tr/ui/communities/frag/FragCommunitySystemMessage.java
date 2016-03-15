@@ -40,6 +40,7 @@ import com.tr.ui.communities.im.CommunityChatActivity;
 import com.tr.ui.communities.model.CommunityNotify;
 import com.tr.ui.communities.model.ImMucinfo;
 import com.tr.ui.communities.model.Notification;
+import com.tr.ui.widgets.FlowLayout;
 import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
 import com.utils.common.GlobalVariable;
 import com.utils.http.EAPIConsts;
@@ -199,7 +200,7 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 			LinearLayout layout_transfer = ViewHolder.get(convertView, R.id.layout_transfer);// <!--转让群 -->
 			TextView notice_item_transfer = ViewHolder.get(convertView, R.id.notice_item_transfer);//转让者
 			
-			LinearLayout layout_transfer_refuse = ViewHolder.get(convertView, R.id.layout_transfer_refuse);// <!--转让群 回复状态-->
+			FlowLayout layout_transfer_refuse = ViewHolder.get(convertView, R.id.layout_transfer_refuse);// <!--转让群 回复状态-->
 			TextView notice_item_transfer_refuse = ViewHolder.get(convertView, R.id.notice_item_transfer_refuse);//转让者
 			TextView notice_item_notice_refuse = ViewHolder.get(convertView, R.id.notice_item_notice_refuse);//转让通过或拒绝
 			
