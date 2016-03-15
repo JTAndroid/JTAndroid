@@ -264,6 +264,7 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 		}
 		peopleDetialParam.id = Long.valueOf(userId);// ==id260931
 		peopleDetialParam.personType = type;// = personType//用户2
+		peopleDetialParam.view = 1;
 		PeopleReqUtil.doRequestWebAPI(mContext, this, peopleDetialParam, null,
 				PeopleRequestType.PEOPLE_REQ_GETPEOPLE);
 	}
