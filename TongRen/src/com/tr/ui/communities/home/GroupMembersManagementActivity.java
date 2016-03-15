@@ -494,6 +494,8 @@ public class GroupMembersManagementActivity extends JBaseActivity implements IBi
 								ConnectionsMini connectionsMini = groupMembersAdapter.getConnectionsMinis().get(i);
 								String connId = timeIdList.get(j);
 								if (connectionsMini.getId().equals(connId)) {
+									connectionsMinis.add(0,connectionsMini);
+								}else{
 									connectionsMinis.add(connectionsMini);
 								}
 							}
