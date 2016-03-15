@@ -112,6 +112,7 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 		super.onCreate(savedInstanceState);
 		this.mContext = getActivity();
 		mIndustrys = new PeopleProfession();
+		categoryList = new ArrayList<Long>();
 		tid = new ArrayList<Long>();
 		getBundle();
 		mMainApp = App.getApp();
