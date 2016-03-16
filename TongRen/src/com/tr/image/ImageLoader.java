@@ -240,25 +240,30 @@ public class ImageLoader {
 			}
 			fis = new FileInputStream(file);
 			if (fis != null) {
-				if (typeBitmapSize == CHAT_BITMAP) {
-					if (mContext != null) {
-						bitmap = decodeSampledBitmapFromFd(path,
-								DisplayUtil.dip2px(mContext, CHAT_BITMAP),
-								DisplayUtil.dip2px(mContext, CHAT_BITMAP));
-					} else {
-						bitmap = decodeSampledBitmapFromFd(path, 70, 70);
-					}
-				} else if(typeBitmapSize == INDEX_BITMAP){
-						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
-				}else {
-					if (mContext != null) {
-						bitmap = decodeSampledBitmapFromFd(path,
-								DisplayUtil.dip2px(mContext, typeBitmapSize),
-								DisplayUtil.dip2px(mContext, typeBitmapSize));
-					} else {
-						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
-					}
+				if(view.getMeasuredWidth()!=0){
+					bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
+				}else{
+					bitmap = decodeSampledBitmapFromFd(path, 1000, 1000);
 				}
+//				if (typeBitmapSize == CHAT_BITMAP) {
+//					if (mContext != null) {
+//						bitmap = decodeSampledBitmapFromFd(path,
+//								DisplayUtil.dip2px(mContext, CHAT_BITMAP),
+//								DisplayUtil.dip2px(mContext, CHAT_BITMAP));
+//					} else {
+//						bitmap = decodeSampledBitmapFromFd(path, 70, 70);
+//					}
+//				} else if(typeBitmapSize == INDEX_BITMAP){
+//						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
+//				}else {
+//					if (mContext != null) {
+//						bitmap = decodeSampledBitmapFromFd(path,
+//								DisplayUtil.dip2px(mContext, typeBitmapSize),
+//								DisplayUtil.dip2px(mContext, typeBitmapSize));
+//					} else {
+//						bitmap = decodeSampledBitmapFromFd(path, view.getMeasuredWidth(), view.getMeasuredHeight());
+//					}
+//				}
 
 			}
 			if (null != bitmap) {// 把bitmap转换成drawable

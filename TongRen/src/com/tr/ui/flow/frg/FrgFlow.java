@@ -997,6 +997,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 				ListView.LayoutParams params = new ListView.LayoutParams((mWidth-Utils.dipToPx(mContext, 36))/3, (mWidth-Utils.dipToPx(mContext, 36))/3);
 				view.setLayoutParams(params);
 				view.setPadding(Utils.dipToPx(mContext, 1), Utils.dipToPx(mContext, 1), Utils.dipToPx(mContext, 1), Utils.dipToPx(mContext, 1));
+				view.setCropToPadding(true);
 				view.setScaleType(ScaleType.CENTER_CROP);
 				try {
 					ImageLoader.load(view, dpps.get(position).getSourcePath(), R.drawable.frgflow_img_null);
