@@ -619,8 +619,8 @@ public class CategoryActivity extends JBaseActivity implements
 					for (UserCategory category : mListCategory) {
 						category.setVisiable(true); // 全部显示
 						category.setFolded(false); // 全部展开
-						doUpdate();
 					}
+					doUpdate();
 				} else {
 					searchCatetoryByKeyword(mKeyword);
 				}
@@ -1621,7 +1621,7 @@ public class CategoryActivity extends JBaseActivity implements
 	@Subscribe(threadMode = ThreadMode.MAIN)
 	public void onEventMainThread(AddCategoryEvent event) {
 		if(event.isBool()){
-			doUpdate();//添加目录更新UI	
+			doUpdate();//添加目录更新UI
 		}
 	}
 	@Subscribe
