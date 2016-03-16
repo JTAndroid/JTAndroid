@@ -1,12 +1,14 @@
 package com.common.evebusmodel;
 
 public class AddCategoryEvent {
-	private boolean bool;
+	public final boolean bool;
+	
 	public AddCategoryEvent(Boolean bool){
 		this.bool = bool;
 	}
-	
-	public boolean getBool(){
+
+	public boolean isBool() {
 		return bool;
 	}
+
 }

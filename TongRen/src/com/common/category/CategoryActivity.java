@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -202,6 +204,7 @@ public class CategoryActivity extends JBaseActivity implements
 		CLICK;
 	}
 	public Operate operate = Operate.CLICK;
+	private EventBus controlBus;
 	@Override
 	public void initJabActionBar() {
 		HomeCommonUtils.initLeftCustomActionBar(this, jabGetActionBar(),"目录" ,false,null,false, true);
@@ -212,10 +215,12 @@ public class CategoryActivity extends JBaseActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kno_act_category);
+		controlBus = new EventBus();
+		controlBus.register(CategoryActivity.this);
 		initVars();
 		initControls();
 		doUpdate();
-		EventBus.getDefault().register(this); //注册EventBus
+
 	}
 
 	
@@ -1612,14 +1617,28 @@ public class CategoryActivity extends JBaseActivity implements
 		return connectionsList;
 	}
 	
-	private void onEventMainThread(AddCategoryEvent event) {
-		doUpdate();//添加目录更新UI
-		Toast.makeText(this, "onEventMainThread()", Toast.LENGTH_LONG).show();
+	@Subscribe(threadMode = ThreadMode.MAIN)
+	public void onEventMainThread(AddCategoryEvent event) {
+		if(event.isBool()){
+			doUpdate();//添加目录更新UI	
+		}
+	}
+	@Subscribe
+	public void onEventPostThread() {
+
+	}
+	@Subscribe
+	public void onEventBackgroundThread() {
+
+	}
+	@Subscribe
+	public void onEventAsync() {
+
 	}
 	
 	@Override
 	protected void onDestroy() {
+		controlBus.unregister(CategoryActivity.this);
 		super.onDestroy();
-		EventBus.getDefault().unregister(this);//注销EventBus
 	}
 }
