@@ -9,7 +9,7 @@
                 android:id="@+id/taskNameMetv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                edittextview:MaxLength="15"
+                edittextview:MaxLength="200"
                 edittextview:text_label="名称" />
         <com.tr.ui.people.cread.view.MyEditTextView
                 android:id="@+id/taskTimeMetv"
