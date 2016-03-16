@@ -191,10 +191,6 @@ public class WorkNewActivity extends JBaseActivity implements
 	public void onResume() {
 		super.onResume();
 		mButtonClick=0;
-		if (mOperateType.equals("s")){
-			showLoadingDialog();
-			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,mUserId + "", mAffarId, null);
-		}
 		String location=(String) App.getApp().getParam("location");
 		if(!TextUtils.isEmpty(location)){
 			mAffar.location = location;
@@ -236,7 +232,8 @@ public class WorkNewActivity extends JBaseActivity implements
 
 			resetWorkView();
 		} else if (mOperateType.equals("s")) {//查看
-			//查看动作放在了onResume里执行
+			showLoadingDialog();
+			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,mUserId + "", mAffarId, null);
 		} else {//编辑
 			resetWorkView();
 		}
