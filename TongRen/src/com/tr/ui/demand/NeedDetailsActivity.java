@@ -55,7 +55,9 @@ import com.tr.ui.demand.util.OnNeedDetails;
 import com.tr.ui.demand.util.OnNeedRefresh;
 import com.tr.ui.demand.util.TextStrUtil;
 import com.tr.ui.home.FrameWorkUtils;
+import com.tr.ui.home.frg.JoinFrg_chart;
 import com.tr.ui.knowledge.swipeback.SwipeBackActivity;
+import com.utils.common.EConsts;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
 
@@ -121,7 +123,9 @@ public class NeedDetailsActivity extends SwipeBackActivity implements
 	private MyTopBarOnClick myTopBarOnClick;
 	private TextView demandCommentTv;
 	private NeedDetailsFragment needFragment;
-	private JointResourceMainFragment needJointResource;
+//	private JointResourceMainFragment needJointResource;
+	private JoinFrg_chart frgChart;
+	private boolean isFirstIn = true;
 	private ImageView demand_titlebar;
 
 	@Override
@@ -224,15 +228,15 @@ public class NeedDetailsActivity extends SwipeBackActivity implements
 		from = intent.getIntExtra(ENavConsts.DEMAND_DETAILS_FROM, 1);// 默认
 		dynamicType = intent.getIntExtra(ENavConsts.DEMAND_DETAILS_TYPE, 1);// 默认为创建
 	}
-	@Override
-	public void onBackPressed() {
-		 if(needJointResource.equals(fragment)) {  
-			 mPager.setCurrentItem(0);
-		    }  else{
-		    	super.onBackPressed();
-		    }
-		
-	}
+//	@Override
+//	public void onBackPressed() {
+//		 if(needJointResource.equals(fragment)) {  
+//			 mPager.setCurrentItem(0);
+//		    }  else{
+//		    	super.onBackPressed();
+//		    }
+//		
+//	}
 	/*
 	 * 初始化标签名
 	 */
@@ -328,11 +332,17 @@ public class NeedDetailsActivity extends SwipeBackActivity implements
 		} catch (Exception e) {
 			affairsMini.id=0;
 		}
-		needJointResource = new JointResourceMainFragment(
-				);
-		 needJointResource.setJointResourceResourceBase(ResourceType.Affair,affairsMini);
+//		needJointResource = new JointResourceMainFragment(
+//				);
+//		 needJointResource.setJointResourceResourceBase(ResourceType.Affair,affairsMini);
+		Bundle bundle = new Bundle();
+		bundle.putString(EConsts.Key.ID,demandId);
+		bundle.putInt(EConsts.Key.TYPE, 2);
+
+		frgChart = new JoinFrg_chart();
+		frgChart.setArguments(bundle);
 		fragmentList.add(needFragment);
-		fragmentList.add(needJointResource);
+		fragmentList.add(frgChart);
 
 		// 给ViewPager设置适配器
 		mPager.setAdapter(new MyFragmentPagerAdapter(
@@ -383,6 +393,10 @@ public class NeedDetailsActivity extends SwipeBackActivity implements
 			 * Toast.LENGTH_SHORT).show();
 			 */
 			if (arg0 == 1) {
+				if (isFirstIn) {
+					isFirstIn = false;
+					frgChart.getData();
+				}
 				demandtypeTv.setText("资源对接");
 				demandCommentIv .setVisibility(View.GONE);
 				demandMoreIv .setVisibility(View.GONE);

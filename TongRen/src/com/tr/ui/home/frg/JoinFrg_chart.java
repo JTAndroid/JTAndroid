@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -46,7 +48,10 @@ public class JoinFrg_chart extends JBaseFragment implements OnClickListener, IBi
 	private int org_size_my, know_size_my, people_size_my, demand_size_my;
 	private int org_size_gt, know_size_gt, people_size_gt, demand_size_gt;
 	private int org_size_friend, know_size_friend, people_size_friend, demand_size_friend;
-	private String userId;
+	private String targetId;
+	private int targetType;
+	private FrameLayout mCommonTitle;
+	private ImageView demandHomeBackIv;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +69,8 @@ public class JoinFrg_chart extends JBaseFragment implements OnClickListener, IBi
 	}
 	
 	private void initView(View view){
+		mCommonTitle = (FrameLayout) view.findViewById(R.id.mCommonTitle);
+		demandHomeBackIv = (ImageView) view.findViewById(R.id.demandHomeBackIv);
 		org_circle = (CircleProgressView) view.findViewById(R.id.org_circle);
 		know_circle = (CircleProgressView) view.findViewById(R.id.know_circle);
 		people_circle = (CircleProgressView) view.findViewById(R.id.people_circle);
@@ -84,17 +91,22 @@ public class JoinFrg_chart extends JBaseFragment implements OnClickListener, IBi
 		know_circle.setOnClickListener(this);
 		people_circle.setOnClickListener(this);
 		demand_circle.setOnClickListener(this);
+		demandHomeBackIv.setOnClickListener(this);
 	}
 	
 	public void getData(){
 		showLoadingDialog();
-		userId = getArguments().getString(EConsts.Key.ID);
+		targetId = getArguments().getString(EConsts.Key.ID);
+		targetType = getArguments().getInt(EConsts.Key.TYPE);
+		if(targetType == 1){
+			mCommonTitle.setVisibility(View.VISIBLE);
+		}
 		//我的
-		CommonReqUtil.doGetJointResource_new(getActivity(), this, userId, 4, 1, 20, 0, null);
+		CommonReqUtil.doGetJointResource_new(getActivity(), this, targetId, targetType, 1, 20, 0, null);
 		//好友的
-		CommonReqUtil.doGetJointResource_new(getActivity(), this, userId, 4, 2, 20, 0, null);
+		CommonReqUtil.doGetJointResource_new(getActivity(), this, targetId, targetType, 2, 20, 0, null);
 		//金桐脑的
-		CommonReqUtil.doGetJointResource_new(getActivity(), this, userId, 4, 3, 20, 0, null);
+		CommonReqUtil.doGetJointResource_new(getActivity(), this, targetId, targetType, 3, 20, 0, null);
 	}
 	
 	private void showChart(PieChart pieChart, PieData pieData) {
@@ -221,15 +233,18 @@ public class JoinFrg_chart extends JBaseFragment implements OnClickListener, IBi
 		case R.id.people_circle:
 		case R.id.demand_circle:
 			if ((org_size_my + know_size_my + people_size_my + demand_size_my) != 0) {
-				ENavigate.startJointResourceActivity(getActivity(), userId,
+				ENavigate.startJointResourceActivity(getActivity(), targetId,
 						ResourceType_new.People, 0);
 			} else if ((org_size_friend + know_size_friend + people_size_friend + demand_size_friend) != 0) {
-				ENavigate.startJointResourceActivity(getActivity(), userId,
+				ENavigate.startJointResourceActivity(getActivity(), targetId,
 						ResourceType_new.People, 1);
 			} else {
-				ENavigate.startJointResourceActivity(getActivity(), userId,
+				ENavigate.startJointResourceActivity(getActivity(), targetId,
 						ResourceType_new.People, 2);
 			}
+			break;
+		case R.id.demandHomeBackIv:
+			getActivity().finish();
 			break;
 		}
 	}
