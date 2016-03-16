@@ -505,6 +505,7 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 		case result_edit:// 编辑名片信息
 			person = (Person) intent.getSerializableExtra("people");
 			url = intent.getStringExtra("url");
+			App.getUser().setImage(url);
 			peopleDetails.people = person;
 			updateCardUI();
 			dismissLoadingDialog();
