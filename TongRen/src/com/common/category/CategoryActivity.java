@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.greenrobot.eventbus.EventBus;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,9 +36,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.common.category.CategoryAdapter.CategoryViewHolder;
 import com.common.constvalue.EnumConst.ModuleType;
+import com.common.evebusmodel.AddCategoryEvent;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.DemandReqUtil;
@@ -211,6 +215,7 @@ public class CategoryActivity extends JBaseActivity implements
 		initVars();
 		initControls();
 		doUpdate();
+		EventBus.getDefault().register(this); //注册EventBus
 	}
 
 	
@@ -1605,5 +1610,16 @@ public class CategoryActivity extends JBaseActivity implements
 		    connectionsList.add(connections);
 		}
 		return connectionsList;
+	}
+	
+	private void onEventMainThread(AddCategoryEvent event) {
+		doUpdate();//添加目录更新UI
+		Toast.makeText(this, "onEventMainThread()", Toast.LENGTH_LONG).show();
+	}
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		EventBus.getDefault().unregister(this);//注销EventBus
 	}
 }
