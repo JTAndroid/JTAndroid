@@ -141,7 +141,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			switch (msg.what) {
 			case 1:
 				listSocial = (List<MSociality>) msg.obj;
-				((MainActivity) getActivity()).updateNavigateNum(listSocial);
+				((MainActivity) getActivity()).updateNavigateNum(listSocial,community);
 				init();
 				mListView.stopRefresh();
 				dismissLoadingDialog();
@@ -150,7 +150,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				break;
 			case 2:
 				listSocial = (List<MSociality>) msg.obj;
-				((MainActivity) getActivity()).updateNavigateNum(listSocial);
+				((MainActivity) getActivity()).updateNavigateNum(listSocial,community);
 				adapter.notifyDataSetChanged();
 				mListView.stopRefresh();
 				isRunningTask = false;
@@ -305,7 +305,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					if (adapter != null && listSocial != null) {
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial);
+								.updateNavigateNum(listSocial,community);
 					}
 				}
 			});
@@ -429,7 +429,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				}
 				// controlXListBottom();
 				((MainActivity) getActivity())
-						.updateNavigateNum(conferenceAndChat.getCount());
+						.updateNavigateNum(conferenceAndChat.getCount() + community.getNewCount());
 				/**
 				 * 更新关系数
 				 */
@@ -504,7 +504,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 						adapter.setListSocial(listSocial);
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial);
+								.updateNavigateNum(listSocial, community);
 					}
 				}
 				deleteClickPosition = -1;
@@ -838,7 +838,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					if (adapter != null) {
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial);
+								.updateNavigateNum(listSocial,community);
 					}
 				}
 			});
