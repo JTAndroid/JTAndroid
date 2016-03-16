@@ -355,10 +355,12 @@ public class CommunityChatActivity extends ChatBaseActivity {
 					}
 				}
 				if(isNumIn){//群号加群发送名片
+					isNumIn = false;
 					sendCard();
 				}
 				if(fromActivityName!=null){//申请进群、详情进群发送名片
 					if(fromActivityName.equals("CommumitiesNotificationActivity") || fromActivityName.equals("CommunitiesDetailsActivity") || isNumIn){
+						fromActivityName=null;
 						sendCard();
 					}
 				}
@@ -410,6 +412,10 @@ public class CommunityChatActivity extends ChatBaseActivity {
 			intent.putExtra("applyType", applyType);
 			intent.putExtra(ENavConsts.EMucDetail, mucDetail);
 			startActivityForResult(intent, ENavigate.REQUSET_CODE_MUC);
+			break;
+		case android.R.id.home:
+			setResult(RESULT_OK);
+			finish();
 			break;
 		default:
 			break;

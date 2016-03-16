@@ -40,6 +40,7 @@ import com.tr.ui.base.JBaseFragmentActivity;
 import com.tr.ui.common.JointResourceMainFragment;
 import com.tr.ui.common.JointResourceFragment.ResourceType;
 import com.tr.ui.demand.MyView.MyViewPager;
+import com.tr.ui.home.frg.JoinFrg_chart;
 import com.tr.ui.home.utils.HomeCommonUtils;
 import com.tr.ui.knowledge.swipeback.SwipeBackActivity;
 import com.tr.ui.knowledge.utils.ActivityCollector;
@@ -75,8 +76,9 @@ public class KnowledgeOfDetailActivity extends SwipeBackActivity implements OnTo
 	private Knowledge2 knowledge2;
 	private String  requestActivity;
 	private boolean isShowSave;
-	private int currentItemNum=0;
-	private JointResourceMainFragment mJointResource;
+//	private JointResourceMainFragment mJointResource;
+	private JoinFrg_chart frgChart;
+	private boolean isFirstIn = true;
 	private JBaseFragment jBaseFragment;
 	@Override
 	public void initJabActionBar() {
@@ -103,14 +105,21 @@ public class KnowledgeOfDetailActivity extends SwipeBackActivity implements OnTo
 		mKnowledgeDetailFragment = new KnowledgeDetailFragment(
 				knowDetailContentVp,KnowledgeOfDetailActivity.this);
 		
-		mJointResource = new JointResourceMainFragment();
-		// 拿到跳转的数据(接口)
+//		mJointResource = new JointResourceMainFragment();
 		onReservedInterface();
+		Bundle bundle = new Bundle();
+		bundle.putString(EConsts.Key.ID, mKnowledgeId+"");
+		bundle.putInt(EConsts.Key.TYPE, 1);
+
+		frgChart = new JoinFrg_chart();
+		frgChart.setArguments(bundle);
+		// 拿到跳转的数据(接口)
 		initData(mKnowledgeId, mKnowledgeType);
 		mListTitles.add("知识详情");
 		mListTitles.add("资源对接");
 		mKnowledgeBaseFragments.add(mKnowledgeDetailFragment);
-		mKnowledgeBaseFragments.add(mJointResource);
+		mKnowledgeBaseFragments.add(frgChart);
+//		mKnowledgeBaseFragments.add(mJointResource);
 		myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
 		knowDetailContentVp.setAdapter(myViewPagerAdapter);
 		knowDetailContentVp
@@ -135,31 +144,32 @@ public class KnowledgeOfDetailActivity extends SwipeBackActivity implements OnTo
 			jBaseFragment = mKnowledgeBaseFragments.get(index);
 			switch (index) {
 			case 0:
-				currentItemNum = 0;
+				getActionBar().hide();
 				mKnowledgeDetailFragment.setCommentIcon();
 				if(knowledge2 == null){
 //					initData(mKnowledgeId,mKnowledgeType);
-					mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
+//					mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
 				}else{
 //					initData(knowledge2.getId(),knowledge2.getType());
-					mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
+//					mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
 				}
 				
 //				mKnowledegeCommentDetailsFragment.popupWindowDismiss();
 				/*getActionBar().hide();*/
 				break;
 			case 1:
-				currentItemNum = 1;
 				/*getActionBar().show();*/
 //				KnowledgeOfDetailActivity.this.showLoadingDialog();
 //				initCommentData();//更新评论和收藏数据数据
 //				mKnowledgeDetailFragment.stopMultiMedia();
+				if (isFirstIn) {
+					isFirstIn = false;
+					frgChart.getData();
+				}
 				break;
 			default:
 				break;
 			}
-			HomeCommonUtils.initLeftCustomActionBar(KnowledgeOfDetailActivity.this, getActionBar(), mListTitles.get(index), false, null, false, true);
-			jabGetActionBar().setDisplayShowHomeEnabled(true);
 		}
 
 		@Override
@@ -251,19 +261,19 @@ public class KnowledgeOfDetailActivity extends SwipeBackActivity implements OnTo
 
 	@Override
 	public void onBackPressed() {
-		if (myViewPagerAdapter != null
-				&& knowDetailContentVp.getCurrentItem() > 0
-				&& knowDetailContentVp.getCurrentItem() != 0) {
-			onBackPressedFragment();
-//			initCommentData();//更新评论和收藏数据数据
-				 if(mJointResource.equals(jBaseFragment)) {  
-					 knowDetailContentVp.setCurrentItem(0);
-				    }  else{
-				    	super.onBackPressed();
-				    }
-				
-			return;
-		}
+//		if (myViewPagerAdapter != null
+//				&& knowDetailContentVp.getCurrentItem() > 0
+//				&& knowDetailContentVp.getCurrentItem() != 0) {
+//			onBackPressedFragment();
+////			initCommentData();//更新评论和收藏数据数据
+//				 if(mJointResource.equals(jBaseFragment)) {  
+//					 knowDetailContentVp.setCurrentItem(0);
+//				    }  else{
+//				    	super.onBackPressed();
+//				    }
+//				
+//			return;
+//		}
 		
 		if(requestActivity != null){
 			if(requestActivity.equals("MyKnowledgeActivity")){
@@ -300,7 +310,7 @@ public class KnowledgeOfDetailActivity extends SwipeBackActivity implements OnTo
 			  return;
 			}
 			knowledge2 = (Knowledge2) dataHm.get("knowledge2");
-			mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
+//			mJointResource.setJointResourceResourceBase(ResourceType.Knowledge,knowledge2.toKnowledgeMini2());
 			mKnowledgeDetailFragment.setmKnowledge2(knowledge2);
 			KnowledgeOfDetailActivity.this.showLoadingDialog();
 			mKnowledgeDetailFragment.initKnowledgeDetailsData();

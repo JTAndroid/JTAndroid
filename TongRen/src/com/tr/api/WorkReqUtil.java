@@ -224,6 +224,31 @@ public class WorkReqUtil extends ReqBase {
 					doExecute(context, bind, EAPIConsts.WorkReqType.AFFAIR_CHART, url,
 							requestStr, handler);
 				}	
+
+	/**
+	 * 事务所有消息已读
+	 * @param context
+	 * @param bind
+	 * @param affairIds 注意：（String 事务字符串形式如：21,3243,54,232）所有未读消息的id拼接用逗号隔开
+	 * @param userId
+	 * @param handler
+	 */
+		public static void doAllMesReaded(Context context, IBindData bind,
+				String affairIds, String userId,Handler handler) {
+			
+			String requestStr = "";
+			try {
+				JSONObject jObject = new JSONObject();
+				jObject.put("affairIds", affairIds);
+				jObject.put("userId", userId);
+				requestStr = jObject.toString();
+			} catch (JSONException e) {
+				Log.d("xmx", e.getMessage());
+			}
+			String url = EAPIConsts.getIMUrl() + EAPIConsts.AFFAIR_ALL_MES_READED_URL;
+			doExecute(context, bind, EAPIConsts.WorkReqType.AFFAIR_ALL_MES_READED, url,
+					requestStr, handler);
+		}	
 			
 		
 }

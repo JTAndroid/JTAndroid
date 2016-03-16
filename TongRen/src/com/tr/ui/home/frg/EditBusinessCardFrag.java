@@ -30,6 +30,9 @@ import com.tr.api.PeopleReqUtil;
 import com.tr.model.demand.Metadata;
 import com.tr.model.home.MIndustry;
 import com.tr.model.home.MIndustrys;
+import com.tr.model.home.PeopleIndustry;
+import com.tr.model.home.PeopleIndustrys;
+import com.tr.model.home.PeopleProfession;
 import com.tr.model.obj.JTFile;
 import com.tr.navigate.ENavConsts;
 import com.tr.navigate.ENavigate;
@@ -94,11 +97,9 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 	private String qq = "";
 	private String weixin = "";
 	private String weibo = "";
-	/* 行业对象集合 */
-	private List<MIndustry> mIndustryList;
-	private MIndustrys mIndustrys;
-	private StringBuilder strBuilder;
-
+	/* 行业对象 */
+	private PeopleProfession mIndustrys;
+	
 	private ArrayList<Metadata> metadataArea; // 区域
 	private Area area_result; // 所在地区对象
 	private ArrayList<JTFile> picture; // 选择相片返回的值
@@ -110,6 +111,9 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.mContext = getActivity();
+		mIndustrys = new PeopleProfession();
+		categoryList = new ArrayList<Long>();
+		tid = new ArrayList<Long>();
 		getBundle();
 		mMainApp = App.getApp();
 	}
@@ -214,9 +218,9 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 						text_phone_num.setText(person.contactInformationList.get(i).content);
 				}
 				if (person.contactInformationList.get(i).type.equalsIgnoreCase("4")) {
-					if (person.contactInformationList.get(i).subtype.equalsIgnoreCase("1")) {
+//					if (person.contactInformationList.get(i).subtype.equalsIgnoreCase("1")) {
 						text_email.setText(person.contactInformationList.get(i).content);
-					}
+//					}
 				}
 			}
 			List<Basic> bList = person.getContactInformationList();
@@ -235,9 +239,13 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 			if (!TextUtils.isEmpty(weibo))
 				text_weibo.setText(weibo);
 		}
-		mIndustrys = new MIndustrys();
-		mIndustrys.setListIndustry(mMainApp.getAppData().getUser().getListIndustry());
-		showSettingIndustry();
+		if (people_details.people.getFirstIndustryDirection() != null && people_details.people.getSecondIndustryDirection() != null) {
+			mIndustrys.setFirstIndustryDirection(people_details.people.getFirstIndustryDirection());
+			mIndustrys.setSecondIndustryDirection(people_details.people.getSecondIndustryDirection());
+		}else{
+			mIndustrys = null;
+		}
+		showSettingIndustry(mIndustrys);
 	}
 
 	private void initView(View view) {
@@ -261,7 +269,7 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 
 			break;
 		case R.id.text_classify:// 职能即行业
-			ENavigate.startChooseProfessionActivityForResult(getActivity(), ENavConsts.ActivityReqCode.REQUEST_CODE_SETTING_INDUSTRY_ACTIVITY, 0, mIndustrys);
+			ENavigate.startProfessionActivityForResult(getActivity(), ENavConsts.ActivityReqCode.REQUEST_CODE_SETTING_INDUSTRY_FIRST_ACTIVITY);
 
 			break;
 		case R.id.text_area:// 地区
@@ -320,8 +328,8 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 			// 多级选择回调界面
 			setChooseText((ArrayList<Metadata>) intent.getSerializableExtra(ENavConsts.DEMAND_CHOOSE_DATA));
 			break;
-		case ENavConsts.ActivityReqCode.REQUEST_CODE_SETTING_INDUSTRY_ACTIVITY:// 职能即行业
-			mIndustrys = (MIndustrys) intent.getExtras().getSerializable(EConsts.Key.INDUSTRYS);
+		case ENavConsts.ActivityReqCode.REQUEST_CODE_SETTING_INDUSTRY_FIRST_ACTIVITY:// 职能即行业
+			mIndustrys = (PeopleProfession) intent.getExtras().getSerializable(EConsts.Key.INDUSTRYS);
 			handler.sendEmptyMessageDelayed(0, 100);
 			break;
 		case 9:// 头像
@@ -475,25 +483,14 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 
 	private Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
-			showSettingIndustry();
+			showSettingIndustry(mIndustrys);
 		};
 	};
 	private String url;  //上传图片的全路劲
 
-	private void showSettingIndustry() {
-		if (null != mIndustrys && null != mIndustrys.getListIndustry() && mIndustrys.getListIndustry().size() > 0) {
-			mIndustryList = mIndustrys.getListIndustry();
-			strBuilder = new StringBuilder("");
-			for (int i = 0; i < mIndustryList.size(); i++) {
-				if (mIndustryList.size() - 1 == i) {
-					strBuilder.append(mIndustryList.get(i).getName());
-				} else {
-					strBuilder.append(mIndustryList.get(i).getName() + "、");
-				}
-			}
-			mMainApp.getAppData().setmIndustrys(mIndustrys);
-			mMainApp.getAppData().getUser().setListIndustry(mIndustryList);
-			text_classify.setText(strBuilder.toString().trim());
+	private void showSettingIndustry(PeopleProfession mIndustrys) {
+		if (mIndustrys != null) {
+			text_classify.setText(mIndustrys.getFirstIndustryDirection()+"\t"+mIndustrys.getSecondIndustryDirection());
 		} else {
 			text_classify.setText("还未设置您感兴趣的行业");
 		}
@@ -555,6 +552,12 @@ public class EditBusinessCardFrag extends JBaseFragment implements OnClickListen
 		bList.add(weixin);
 		bList.add(weibo);
 		person.setContactInformationList(bList);
+		if (mIndustrys != null) {
+			person.setFirstIndustryDirection(mIndustrys.getFirstIndustryDirection());
+			person.setFirstIndustryDirectionId(mIndustrys.getFirstIndustryDirectionId());
+			person.setSecondIndustryDirection(mIndustrys.getSecondIndustryDirection());
+			person.setSecondIndustryDirectionId(mIndustrys.getSecondIndustryDirectionId());
+		}
 		people_request.people = person;
 		for (int i = 0; people_details.tid != null && i < people_details.tid.size(); i++) {
 			PersonTagRelation personTagRelation = people_details.tid.get(i);

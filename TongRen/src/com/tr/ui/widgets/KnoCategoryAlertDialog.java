@@ -1,5 +1,8 @@
 package com.tr.ui.widgets;
 
+import org.greenrobot.eventbus.EventBus;
+
+import com.common.evebusmodel.AddCategoryEvent;
 import com.tr.R;
 import com.tr.model.knowledge.Column;
 import com.tr.model.knowledge.UserCategory;
@@ -107,6 +110,7 @@ public class KnoCategoryAlertDialog extends Dialog implements View.OnClickListen
 				if(!TextUtils.isEmpty(nameEt.getText().toString())){ // 目录名称不为空
 					mListener.onClick(mOperType, 1, mCategory.getId(), nameEt.getText().toString(), mCategory.getLevel());
 					dismiss();
+					EventBus.getDefault().post(new AddCategoryEvent(true));
 				}
 				else{
 					EUtil.showToast(mContext, "目录名称不能为空");

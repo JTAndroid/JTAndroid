@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="111" android:versionName="1.1.0 sim" package="com.tr">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="114" android:versionName="1.1.0 sim" package="com.tr">
 
 
     <!-- dev(开发)、qa(QA )、sim(仿真)、beta(生产) --> 
@@ -151,6 +151,12 @@
         </activity>
         <!-- 添加人脉 -->
         <activity android:label="@string/app_name" android:name="com.tr.ui.user.modified.ProfessionAndCustomzationActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 添加职业 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.user.modified.ProfessionActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
+        </activity>
+        <!-- 添加职业 -->
+        <activity android:label="@string/app_name" android:name="com.tr.ui.user.modified.ProfessionSecondActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL">
         </activity>
         <!-- 人脉资源 -->
         <activity android:name="com.tr.ui.connections.detail.ConnsResourcesActivity" android:screenOrientation="portrait" android:theme="@style/ConnsTheme">

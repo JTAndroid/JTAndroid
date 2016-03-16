@@ -183,7 +183,7 @@ public class WorkNewActivity extends JBaseActivity implements
 			mAffarId = "";
 
 		initView();
-//		initData();
+		initData();
 
 	}
 

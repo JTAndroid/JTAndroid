@@ -45,6 +45,7 @@ public class EAPIConsts {
 	public static String AFFAIR_MODIFY_STATUS = "/affair/actionAffair.json"; // 事务状态修改
 
 	public static String AFFAIR_CHART = "/mobile/im/fetchMucIdForAffair"; // 事务聊天
+	public static String AFFAIR_ALL_MES_READED_URL = "/mobile/im/updateReadInfoFromAffair.action"; // 事务所有消息已读
 
 	public static String AFFAIR_CHAR_URL = "http://192.168.101.131:2222/ImServer";
 	
@@ -76,6 +77,7 @@ public class EAPIConsts {
 
 		public static final int AFFAIR_CHART = ReqBase + 9; // 事务畅聊
 		public static final int AFFAIR_LIST_GET_ALL = ReqBase + 10; // 获所有取事务列表
+		public static final int AFFAIR_ALL_MES_READED = ReqBase + 11; // 所有取事务列表消息已读
 
 	}
 
@@ -200,6 +202,7 @@ public class EAPIConsts {
 	// 文件上传地址
 
 	// 附件：
+	public static final String FILE_URL_WEB_AVATAR = "http://file.online.gintong.com";
 	public static final String FILE_URL_SIMULATER = "http://file.online.gintong.com/mobile/upload";
 	public static final String FILE_URL_QA = "http://file.qatest.gintong.com/mobile/upload";
 	public static final String FILE_URL_DEV = "http://192.168.101.22:81/mobile/upload";
@@ -266,7 +269,7 @@ public class EAPIConsts {
 	public final static String URL_HY_ONLINE_OTHER = "http://file.gintong.com/meeting/upload";
 
 	public static final String DynamicNews_URL_DEV = "http://192.168.120.155:3356/"; // DEV环境地址
-	public static final String DynamicNews_URL_SIMULATER = "http://192.168.101.15:3330/"; // 仿真环境地址
+	public static final String DynamicNews_URL_SIMULATER = "http://test.online.gintong.com/"; // 仿真环境地址
 	public static final String DynamicNews_URL_ONLINE = "http://gintong.com/"; // 域名线上地址
 	public static final String DynamicNews_URL_PERSON = ""; // 个人联调主脉
 	public static final String MAIN_PAGE_URL = ""; // 首页链接
@@ -779,6 +782,7 @@ public class EAPIConsts {
 		public static final String GET_TREATED_HTML = "http://211.103.198.53:2001/depoapp/"; // 获取处理后的网页(外网地址)
 		public static final String DELETE_FILE = "/file/delete.json"; // 删除附件
 		public static final String GET_PROFESSION_LIST = "/register/getInterestIndustry.json"; // 获取行业列表
+		public static final String PeopleInterestIndustry = "code/peopleIndustrysList.json";
 
 		// 关系
 		/** 获得 我的好友和人脉 列表 */
@@ -1250,6 +1254,7 @@ public class EAPIConsts {
 		public static final int GetJointResource_MY = ReqBase + 16; // 获取对接的资源
 		public static final int GetJointResource_FRIEND = ReqBase + 17; // 获取对接的资源
 		public static final int GetJointResource_GT = ReqBase + 18; // 获取对接的资源
+		public static final int GetPeopleProfessionList = ReqBase + 19; // 获取职业列表
 	}
 
 	// 用户、im模块之外的其他api

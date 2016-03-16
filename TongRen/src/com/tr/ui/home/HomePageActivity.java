@@ -132,6 +132,7 @@ public class HomePageActivity extends JBaseFragmentActivity {
 		top_line = findViewById(R.id.view_top_line);
 		Bundle bundle = new Bundle();
 		bundle.putString(EConsts.Key.ID, userId);
+		bundle.putInt(EConsts.Key.TYPE, 4);
 
 		frgChart = new JoinFrg_chart();
 		frgChart.setArguments(bundle);

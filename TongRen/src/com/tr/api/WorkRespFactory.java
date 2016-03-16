@@ -65,6 +65,12 @@ public class WorkRespFactory {
 				Log.d("xmx","respon:"+jsonObject.toString());
 				vObject=vResponseDataChar;
 				break;
+			case EAPIConsts.WorkReqType.AFFAIR_ALL_MES_READED://事务消息全部已读
+				//TODO 事务消息全部已读action 结果
+			    String key="result";
+			    Boolean bkey=jsonObject.getBoolean(key);
+			    vObject=bkey;
+				break;
 		}
 		return vObject;
 	}

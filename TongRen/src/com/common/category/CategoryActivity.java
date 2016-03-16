@@ -7,6 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,9 +38,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.common.category.CategoryAdapter.CategoryViewHolder;
 import com.common.constvalue.EnumConst.ModuleType;
+import com.common.evebusmodel.AddCategoryEvent;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.DemandReqUtil;
@@ -198,6 +204,7 @@ public class CategoryActivity extends JBaseActivity implements
 		CLICK;
 	}
 	public Operate operate = Operate.CLICK;
+	private EventBus controlBus;
 	@Override
 	public void initJabActionBar() {
 		HomeCommonUtils.initLeftCustomActionBar(this, jabGetActionBar(),"目录" ,false,null,false, true);
@@ -208,9 +215,12 @@ public class CategoryActivity extends JBaseActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kno_act_category);
+		controlBus = new EventBus();
+		controlBus.register(CategoryActivity.this);
 		initVars();
 		initControls();
 		doUpdate();
+
 	}
 
 	
@@ -609,6 +619,7 @@ public class CategoryActivity extends JBaseActivity implements
 					for (UserCategory category : mListCategory) {
 						category.setVisiable(true); // 全部显示
 						category.setFolded(false); // 全部展开
+						doUpdate();
 					}
 				} else {
 					searchCatetoryByKeyword(mKeyword);
@@ -1605,5 +1616,30 @@ public class CategoryActivity extends JBaseActivity implements
 		    connectionsList.add(connections);
 		}
 		return connectionsList;
+	}
+	
+	@Subscribe(threadMode = ThreadMode.MAIN)
+	public void onEventMainThread(AddCategoryEvent event) {
+		if(event.isBool()){
+			doUpdate();//添加目录更新UI	
+		}
+	}
+	@Subscribe
+	public void onEventPostThread() {
+
+	}
+	@Subscribe
+	public void onEventBackgroundThread() {
+
+	}
+	@Subscribe
+	public void onEventAsync() {
+
+	}
+	
+	@Override
+	protected void onDestroy() {
+		controlBus.unregister(CategoryActivity.this);
+		super.onDestroy();
 	}
 }

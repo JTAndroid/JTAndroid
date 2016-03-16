@@ -194,7 +194,7 @@ public class DynamicNews implements IPageBaseItem {
 	public static DynamicNews createFactory(JSONObject jsonObject) {
 		try {
 			DynamicNews self = new DynamicNews();
-			self.id = jsonObject.optLong("id");
+			self.id = Long.parseLong(jsonObject.getString("id"));
 			self.title = jsonObject.optString("title");
 			self.type = jsonObject.optInt("type");
 			self.content = jsonObject.optString("content");

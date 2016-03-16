@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.tr.R;
 import com.tr.ui.people.model.Education;
+import com.tr.ui.widgets.ExpandableTextView;
 import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
 
 /**
@@ -29,13 +31,14 @@ public class EducationExperienceAdapter extends BaseAdapter {
 	private Boolean ISNULL = false;
 	private Boolean ISEIDT = false;// 是否可进行编辑的
 	OnEditExperience editExperience = null;
-
+	private final SparseBooleanArray mCollapsedStatus;
 	public void setOnEditExperience(OnEditExperience onEditExperience) {
 		this.editExperience = onEditExperience;
 	}
 
 	public EducationExperienceAdapter(Context context, List<Education> items) {
 		this.mcContext = context;
+		this.mCollapsedStatus = new SparseBooleanArray();
 		this.list = items;
 	}
 
@@ -100,13 +103,13 @@ public class EducationExperienceAdapter extends BaseAdapter {
 			TextView text_state = ViewHolder.get(convertView, R.id.text_state);
 			String state = list.get(position).stime + "-" + list.get(position).etime + "\u3000" + list.get(position).educationalBackgroundType;
 			text_state.setText(state);
-
-			TextView text_brief_introduction = ViewHolder.get(convertView, R.id.text_brief_introduction);
+			
+			ExpandableTextView expandableTextView = ViewHolder.get(convertView,R.id.expand_text_view);
 			if (TextUtils.isEmpty(list.get(position).desc))
-				text_brief_introduction.setVisibility(View.GONE);
+				expandableTextView.setVisibility(View.GONE);
 			else {
-				text_brief_introduction.setVisibility(View.VISIBLE);
-				text_brief_introduction.setText(list.get(position).desc);
+				expandableTextView.setText(list.get(position).desc, mCollapsedStatus, position);
+				expandableTextView.setVisibility(View.VISIBLE);
 			}
 		}
 

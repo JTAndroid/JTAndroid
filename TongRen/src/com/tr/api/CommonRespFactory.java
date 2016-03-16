@@ -21,6 +21,7 @@ import com.tr.model.home.MIndustrys;
 import com.tr.model.home.MListCountry;
 import com.tr.model.home.MPageIndustrys;
 import com.tr.model.home.MUserQRUrl;
+import com.tr.model.home.PeopleIndustrys;
 import com.tr.model.joint.AffairNode;
 import com.tr.model.joint.ConnectionNode;
 import com.tr.model.joint.JointResource;
@@ -52,6 +53,9 @@ public class CommonRespFactory {
 		case EAPIConsts.CommonReqType.GetInterestIndustry:
 			// TODO
 			return MPageIndustrys.createFactory(jsonObject);
+		case EAPIConsts.CommonReqType.GetPeopleProfessionList:
+			// TODO
+			return PeopleIndustrys.createFactory(jsonObject);
 		case EAPIConsts.CommonReqType.GetRelatedResource: // 获取关联资源
 
 			// strKey = "type";

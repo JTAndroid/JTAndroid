@@ -288,7 +288,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 			case 9: // 组织
 			case JTFile.TYPE_ORGANIZATION:
 				// imageIv.setBackgroundResource(R.drawable.default_portrait116);
-				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.mFileName) ? jtFile.mFileName
+				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.fileName) ? jtFile.fileName
 						: jtFile.getmSuffixName();// 标题:姓名
 				forwardDynamicNews.type = DynamicNews.TYPE_FORWARDING_ORGANIZATION
 						+ "";// 转发类型
@@ -300,7 +300,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 				break;
 			case JTFile.TYPE_CLIENT: // 客户
 				// imageIv.setBackgroundResource(R.drawable.default_portrait116);
-				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.mFileName) ? jtFile.mFileName
+				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.fileName) ? jtFile.fileName
 						: jtFile.getmSuffixName();// 标题:姓名
 				// forwardDynamicNews.type = DynamicNews.TYPE_CUSTOMER_CARD +
 				// "";// 转发类型
@@ -313,7 +313,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 
 				break;
 			case 10:// 用户
-				forwardDynamicNews.title = jtFile.mFileName;// 标题:姓名
+				forwardDynamicNews.title = jtFile.fileName;// 标题:姓名
 				forwardDynamicNews.type = DynamicNews.TYPE_USER_CARD + "";// 转发类型
 				forwardDynamicNews.lowType = "0";// 源类型
 				forwardDynamicNews.content = jtFile.reserved1;// 内容:职位
@@ -344,7 +344,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 			case JTFile.TYPE_DEMAND:// 需求转发
 				forwardDynamicNews.createrId = jtFile.reserved3;// 转发需求的时候
 																// 传入创建者id
-				forwardDynamicNews.title = jtFile.mFileName;// 标题:需求title
+				forwardDynamicNews.title = jtFile.fileName;// 标题:需求title
 				forwardDynamicNews.type = DynamicNews.TYPE_FORWARDING_REQUIREMENT
 						+ "";// 转发类型
 				forwardDynamicNews.lowType = jtFile.reserved2 + "";// 源类型
@@ -617,10 +617,10 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 					dynamicNewsRequest, null);
 			InitiatorDataCache.getInstance().inviteAttendSelectedMap
 					.clear();
-		} else {
+		} else if(TextUtils.isEmpty(editflowEt.getText().toString().trim())) {
 			dismissLoadingDialog();
 			ToastUtil.showToast(CreateFlowActivtiy.this,
-					"内容不得为空");
+					"请添加动态内容");
 		}
 	}
 

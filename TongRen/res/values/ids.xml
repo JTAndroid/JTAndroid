@@ -37,5 +37,8 @@
    <item type="id" name="text_date"></item>
 
   <!-- zxing Messages IDs -->
+  
+  <item type="id" name="expandable_text"/>
+  <item type="id" name="expand_collapse"/>
 </resources>
 

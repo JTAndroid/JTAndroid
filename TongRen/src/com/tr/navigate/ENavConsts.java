@@ -31,6 +31,7 @@ public class ENavConsts {
 	public final static String EPushMessageType = "EPushMessageType"; // 推送消息类型
 	public final static String EShareParam = "EShareParam";
 	public final static String EProfessionAndCustomzation = "EProfessionAndCustomzation"; // 跳转类型
+	public final static String EProfessionAndCustomzationSecond = "EProfessionAndCustomzationSecond"; // 跳转二级类型
 	public final static String EShareParamList = "EShareParamList"; // 分享一组数据
 	public final static String SendMessagesForwardingList = "SendMessagesForwardingList";//分享单聊和群聊
 	// "type":"0-视频(video),1-音频(audio),2-文件(file),3-图片(image),4-其它(other),5-网页链接,6-人脉(JTContact),7-knowledge知识,8-机构客户,9-机构用户(线上金桐网用户),10-个人用户(线上个人用户),11-需求,12-普通文本,13-knowledge2新知识"
@@ -172,6 +173,8 @@ public class ENavConsts {
 		public static final int ACTIVITY_REQ_CODE = 4000;//
 		/* 设置行业 */
 		public static final int REQUEST_CODE_SETTING_INDUSTRY_ACTIVITY = 4002;
+		public static final int REQUEST_CODE_SETTING_INDUSTRY_FIRST_ACTIVITY = 4201;
+		public static final int REQUEST_CODE_SETTING_INDUSTRY_SECOND_ACTIVITY = 4202;
 		/* 动态查看更多评论 */
 		public static final int REQUEST_CODE_LOOK_MORE_COMMENT = 4003;
 		/** 评价查看更多评价 */

@@ -189,7 +189,7 @@ public class HomeRespFactory {
 			if (response.has("commentId")) {
 				long id = 0 ;
 				try {
-					id = response.getLong("commentId");
+					id = Long.parseLong(response.getString("commentId"));
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -7,6 +7,10 @@ import java.util.Date;
  * 标签和人的关系表
  */
 public class PersonTagRelation implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8622827762270136863L;
 	/** 
 	* 标签ID 
 	*/ 

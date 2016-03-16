@@ -69,8 +69,8 @@ public class MainMiddleAdapter extends BaseAdapter {
 				.get(convertView, R.id.image_item_find_iv);
 		LayoutParams params = image_logo.getLayoutParams();
 		if (position == 4) {//桐人模块UI单独处理
-			params.height = params.WRAP_CONTENT;
-			params.width = params.WRAP_CONTENT;
+			params.height = DensityUtil.dip2px(mContext, 60);
+			params.width = DensityUtil.dip2px(mContext, 90);
 		}else{
 			params.height = DensityUtil.dip2px(mContext, 50);
 			params.width = DensityUtil.dip2px(mContext, 50);

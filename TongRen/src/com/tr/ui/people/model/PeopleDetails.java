@@ -8,6 +8,10 @@ import com.tr.model.demand.ASSORPOK;
 
 public class PeopleDetails implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8774567213975602857L;
 	public List<PersonTagRelation> tid;  
 	public int type;	
 	public ArrayList<Category> categoryList = new ArrayList<Category>() ;

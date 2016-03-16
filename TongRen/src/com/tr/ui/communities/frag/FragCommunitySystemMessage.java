@@ -10,6 +10,7 @@ import java.util.List;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -39,6 +40,7 @@ import com.tr.ui.communities.im.CommunityChatActivity;
 import com.tr.ui.communities.model.CommunityNotify;
 import com.tr.ui.communities.model.ImMucinfo;
 import com.tr.ui.communities.model.Notification;
+import com.tr.ui.widgets.FlowLayout;
 import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
 import com.utils.common.GlobalVariable;
 import com.utils.http.EAPIConsts;
@@ -198,7 +200,7 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 			LinearLayout layout_transfer = ViewHolder.get(convertView, R.id.layout_transfer);// <!--转让群 -->
 			TextView notice_item_transfer = ViewHolder.get(convertView, R.id.notice_item_transfer);//转让者
 			
-			LinearLayout layout_transfer_refuse = ViewHolder.get(convertView, R.id.layout_transfer_refuse);// <!--转让群 回复状态-->
+			FlowLayout layout_transfer_refuse = ViewHolder.get(convertView, R.id.layout_transfer_refuse);// <!--转让群 回复状态-->
 			TextView notice_item_transfer_refuse = ViewHolder.get(convertView, R.id.notice_item_transfer_refuse);//转让者
 			TextView notice_item_notice_refuse = ViewHolder.get(convertView, R.id.notice_item_notice_refuse);//转让通过或拒绝
 			
@@ -423,16 +425,16 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 						switch(communityNotify.getAttendType()){//加入的方式：0邀请，1申请.
 						case 0:
 							list.add(Long.parseLong(App.getApp().getUserID()));
-							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunitySystemMessage.this, null);
+							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunitySystemMessage.this, mHandler);
 							break;
 						case 1:
 							list.add(communityNotify.getCreatedUserId());
-							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunitySystemMessage.this, null);
+							CommunityReqUtil.doInvite2Muc(mContext, communityNotify.getCommunityId(), list, FragCommunitySystemMessage.this, mHandler);
 							break;
 						}
 						break;
 					case 1:
-						CommunityReqUtil.doAssignmentCommunity(mContext, communityNotify.getCommunityId()+"", communityNotify.getApplicantId()+"", FragCommunitySystemMessage.this, null);
+						CommunityReqUtil.doAssignmentCommunity(mContext, communityNotify.getCommunityId()+"", communityNotify.getApplicantId()+"", FragCommunitySystemMessage.this, mHandler);
 						break;
 					}
 					communityNotify.setAcceptStatus(1);
@@ -490,4 +492,22 @@ public class FragCommunitySystemMessage extends JBaseFragment implements IBindDa
 		}
 		
 	}
+	
+	Handler mHandler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case EAPIConsts.handler.show_err:
+				Bundle bundle = (Bundle) msg.getData();
+				String errCode = (String) bundle
+						.getString(EAPIConsts.Header.ERRORCODE);
+				String errMessage = (String) bundle
+						.getString(EAPIConsts.Header.ERRORMESSAGE);
+				if(errCode.equals("-1")){
+					showToast(errMessage);
+					CommunityReqUtil.doHandleApply(getActivity(), FragCommunitySystemMessage.this, mCommunityNotify.getId(), 1, new Date().getTime(), null);
+				}
+				break;
+			}
+		};
+	};
 }

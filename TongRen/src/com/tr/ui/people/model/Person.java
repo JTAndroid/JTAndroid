@@ -132,7 +132,7 @@ public class Person  implements Serializable {
 	/**
 	 * 职业代码ID
 	 */
-	public Long careerId;
+//	public Long careerId;
 	/**
 	 * 区域代码
 	 */
@@ -196,6 +196,15 @@ public class Person  implements Serializable {
 	
 	/** 权限模块	*/
 	public String modelType;
+	
+	/** 职能模块，一级和二级*/
+	public String firstIndustryDirection;
+	
+	public int firstIndustryDirectionId;
+	
+	public String secondIndustryDirection;
+	
+	public int secondIndustryDirectionId;
 
 	public PermIds getPermIds() {
 		if (permIds == null)
@@ -512,15 +521,15 @@ public class Person  implements Serializable {
 		this.peopleNameList = peopleNameList;
 	}
 
-	public Long getCareerId() {
-		if (careerId == null)
-			return 0L;
-		return careerId;
-	}
-
-	public void setCareerId(Long careerId) {
-		this.careerId = careerId;
-	}
+//	public Long getCareerId() {
+//		if (careerId == null)
+//			return 0L;
+//		return careerId;
+//	}
+//
+//	public void setCareerId(Long careerId) {
+//		this.careerId = careerId;
+//	}
 
 	public Long getRegionId() {
 		if (regionId == null)
@@ -559,6 +568,37 @@ public class Person  implements Serializable {
 	public void setFromPersonId() {
 		this.fromPersonId = id;
 	}
-	
+
+	public String getFirstIndustryDirection() {
+		return firstIndustryDirection;
+	}
+
+	public void setFirstIndustryDirection(String firstIndustryDirection) {
+		this.firstIndustryDirection = firstIndustryDirection;
+	}
+
+	public int getFirstIndustryDirectionId() {
+		return firstIndustryDirectionId;
+	}
+
+	public void setFirstIndustryDirectionId(int firstIndustryDirectionId) {
+		this.firstIndustryDirectionId = firstIndustryDirectionId;
+	}
+
+	public String getSecondIndustryDirection() {
+		return secondIndustryDirection;
+	}
+
+	public void setSecondIndustryDirection(String secondIndustryDirection) {
+		this.secondIndustryDirection = secondIndustryDirection;
+	}
+
+	public int getSecondIndustryDirectionId() {
+		return secondIndustryDirectionId;
+	}
+
+	public void setSecondIndustryDirectionId(int secondIndustryDirectionId) {
+		this.secondIndustryDirectionId = secondIndustryDirectionId;
+	}
 	
 }
