@@ -21,6 +21,7 @@
             android:imeOptions="actionDone"
             android:maxLength="1000"
             android:minLines="3"
+            android:maxLines="3"
             android:paddingLeft="15dp"
             android:paddingTop="15dp"
             android:textColor="@color/text_black"

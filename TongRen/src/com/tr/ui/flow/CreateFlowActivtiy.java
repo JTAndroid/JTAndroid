@@ -288,7 +288,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 			case 9: // 组织
 			case JTFile.TYPE_ORGANIZATION:
 				// imageIv.setBackgroundResource(R.drawable.default_portrait116);
-				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.mFileName) ? jtFile.mFileName
+				forwardDynamicNews.title = !TextUtils.isEmpty(jtFile.fileName) ? jtFile.fileName
 						: jtFile.getmSuffixName();// 标题:姓名
 				forwardDynamicNews.type = DynamicNews.TYPE_FORWARDING_ORGANIZATION
 						+ "";// 转发类型
@@ -344,7 +344,7 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 			case JTFile.TYPE_DEMAND:// 需求转发
 				forwardDynamicNews.createrId = jtFile.reserved3;// 转发需求的时候
 																// 传入创建者id
-				forwardDynamicNews.title = jtFile.mFileName;// 标题:需求title
+				forwardDynamicNews.title = jtFile.fileName;// 标题:需求title
 				forwardDynamicNews.type = DynamicNews.TYPE_FORWARDING_REQUIREMENT
 						+ "";// 转发类型
 				forwardDynamicNews.lowType = jtFile.reserved2 + "";// 源类型
