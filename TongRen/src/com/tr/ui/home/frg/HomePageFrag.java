@@ -970,6 +970,7 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 				}
 				if (peopleDetails != null) {
 					person = peopleDetails.people;
+					App.getUser().setImage(person.getPortrait());
 					if (peopleDetails.personIdAfterConvert != null
 							&& peopleDetails.personIdAfterConvert != 0) {
 						friendIsToPeople = true;
