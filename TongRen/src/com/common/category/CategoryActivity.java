@@ -619,6 +619,7 @@ public class CategoryActivity extends JBaseActivity implements
 					for (UserCategory category : mListCategory) {
 						category.setVisiable(true); // 全部显示
 						category.setFolded(false); // 全部展开
+						doUpdate();
 					}
 				} else {
 					searchCatetoryByKeyword(mKeyword);
