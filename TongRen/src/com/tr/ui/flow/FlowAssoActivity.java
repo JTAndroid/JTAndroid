@@ -168,21 +168,25 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 			if(asso.getP().size()>0){
 				personll.setVisibility(View.VISIBLE);
 				peopleAdapter.setAssoList(asso.getP().get(0).conn);
+				peopleAdapter.setTag(asso.getP().get(0).tag);
 				peopleAdapter.notifyDataSetChanged();
 			}
 			if(asso.getO().size()>0){
 				orgall.setVisibility(View.VISIBLE);
 				organizationAdapter.setAssoList(asso.getO().get(0).conn);
+				organizationAdapter.setTag(asso.getP().get(0).tag);
 				organizationAdapter.notifyDataSetChanged();
 			}
 			if(asso.getK().size()>0){
 				knowll.setVisibility(View.VISIBLE);
 				knowledgeGroupAdapter.setListRelatedKnowledgeNode(asso.getK().get(0).conn);
+				knowledgeGroupAdapter.setTag(asso.getP().get(0).tag);
 				knowledgeGroupAdapter.notifyDataSetChanged();
 			}
 			if(asso.getR().size()>0){
 				thingll.setVisibility(View.VISIBLE);
 				affriaGroupAdapter.setListRelatedKnowledgeNode(asso.getR().get(0).conn);
+				affriaGroupAdapter.setTag(asso.getP().get(0).tag);
 				affriaGroupAdapter.notifyDataSetChanged();
 			}
 			
@@ -192,6 +196,7 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 	class ConnectionsGroupAdapter extends BaseAdapter{
 
 		private List<DemandASSOData> assoList = new ArrayList<DemandASSOData>();
+		private String tag;
 		
 		public ConnectionsGroupAdapter(List<DemandASSOData> assoList) {
 			this.assoList = assoList;
@@ -203,6 +208,10 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 
 		public void setAssoList(List<DemandASSOData> assoList) {
 			this.assoList = assoList;
+		}
+		
+		public void setTag(String tag){
+			this.tag = tag;
 		}
 		
 		public ConnectionsGroupAdapter() {}
@@ -237,7 +246,7 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 			}
 			DemandASSOData assoData = getItem(position);
 			holder.nameTv.setText(assoData.name); // 姓名
-			holder.describeTv.setText(assoData.tag); // 关系
+			holder.describeTv.setText(tag); // 关系
 			int type = 1;
 			if (assoData.type==2||assoData.type==3) {
 				type = 1;
@@ -261,11 +270,16 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 	class KnowledgeAffairGroupAdapter extends BaseAdapter{
 
 		private List<DemandASSOData> listRelatedKnowledgeNode = new ArrayList<DemandASSOData>();
+		private String tag;
 		
 		public KnowledgeAffairGroupAdapter() {}
 		
 		public KnowledgeAffairGroupAdapter(Context context, List<DemandASSOData> listRelatedKnowledgeNode) {
 			this.listRelatedKnowledgeNode = listRelatedKnowledgeNode;
+		}
+		
+		public void setTag(String tag){
+			this.tag = tag;
 		}
 		
 		public List<DemandASSOData> getListRelatedKnowledgeNode() {
