@@ -204,7 +204,6 @@ public class CategoryActivity extends JBaseActivity implements
 		CLICK;
 	}
 	public Operate operate = Operate.CLICK;
-	private EventBus controlBus;
 	@Override
 	public void initJabActionBar() {
 		HomeCommonUtils.initLeftCustomActionBar(this, jabGetActionBar(),"目录" ,false,null,false, true);
@@ -215,8 +214,7 @@ public class CategoryActivity extends JBaseActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kno_act_category);
-		controlBus = new EventBus();
-		controlBus.register(CategoryActivity.this);
+		EventBus.getDefault().register(CategoryActivity.this);
 		initVars();
 		initControls();
 		doUpdate();
@@ -1624,22 +1622,10 @@ public class CategoryActivity extends JBaseActivity implements
 			doUpdate();//添加目录更新UI
 		}
 	}
-	@Subscribe
-	public void onEventPostThread() {
-
-	}
-	@Subscribe
-	public void onEventBackgroundThread() {
-
-	}
-	@Subscribe
-	public void onEventAsync() {
-
-	}
 	
 	@Override
 	protected void onDestroy() {
-		controlBus.unregister(CategoryActivity.this);
+		EventBus.getDefault().unregister(CategoryActivity.this);
 		super.onDestroy();
 	}
 }
