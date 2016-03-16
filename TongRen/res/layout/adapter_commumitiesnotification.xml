@@ -97,7 +97,7 @@
 
         <!-- 转让群 已通过  被拒绝-->
 
-        <LinearLayout
+        <com.tr.ui.widgets.FlowLayout
             android:id="@+id/layout_transfer_refuse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                 android:text="已通过"
                 android:textColor="@color/text_flow_more"
                 android:textSize="@dimen/text_size_micro" />
-        </LinearLayout>
+        </com.tr.ui.widgets.FlowLayout>
         
         <!-- 自己的数据处理后的结果-->
 
