@@ -174,19 +174,19 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 			if(asso.getO().size()>0){
 				orgall.setVisibility(View.VISIBLE);
 				organizationAdapter.setAssoList(asso.getO().get(0).conn);
-				organizationAdapter.setTag(asso.getP().get(0).tag);
+				organizationAdapter.setTag(asso.getO().get(0).tag);
 				organizationAdapter.notifyDataSetChanged();
 			}
 			if(asso.getK().size()>0){
 				knowll.setVisibility(View.VISIBLE);
 				knowledgeGroupAdapter.setListRelatedKnowledgeNode(asso.getK().get(0).conn);
-				knowledgeGroupAdapter.setTag(asso.getP().get(0).tag);
+				knowledgeGroupAdapter.setTag(asso.getK().get(0).tag);
 				knowledgeGroupAdapter.notifyDataSetChanged();
 			}
 			if(asso.getR().size()>0){
 				thingll.setVisibility(View.VISIBLE);
 				affriaGroupAdapter.setListRelatedKnowledgeNode(asso.getR().get(0).conn);
-				affriaGroupAdapter.setTag(asso.getP().get(0).tag);
+				affriaGroupAdapter.setTag(asso.getR().get(0).tag);
 				affriaGroupAdapter.notifyDataSetChanged();
 			}
 			
@@ -328,7 +328,7 @@ public class FlowAssoActivity extends JBaseFragmentActivity implements IBindData
 			
 			
 			DemandASSOData demandASSOData = (DemandASSOData) getItem(position);
-			viewHolder.contentsTv.setText( demandASSOData.tag );
+			viewHolder.contentsTv.setText(tag);
 			viewHolder.titleTv.setText(demandASSOData.title);
 			
 			return convertView;
