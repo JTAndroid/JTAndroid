@@ -1487,7 +1487,7 @@ public class MainActivity extends JBaseFragmentActivity implements IBindData, Vi
 		}
 	}
 
-	public void updateNavigateNum(List<MSociality> listSocial, MSociality social) {
+	public void updateNavigateNum(List<MSociality> listSocial) {
 		int pushNum = 0;
 
 		// 增加判空操作
@@ -1497,9 +1497,6 @@ public class MainActivity extends JBaseFragmentActivity implements IBindData, Vi
 					pushNum += sociality.getNewCount();
 				}
 			}
-		}
-		if(social!=null){
-			pushNum += social.getNewCount();
 		}
 		updateNavigateNum(pushNum);
 	}

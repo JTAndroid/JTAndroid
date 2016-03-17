@@ -141,7 +141,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			switch (msg.what) {
 			case 1:
 				listSocial = (List<MSociality>) msg.obj;
-				((MainActivity) getActivity()).updateNavigateNum(listSocial,community);
+				((MainActivity) getActivity()).updateNavigateNum(listSocial);
 				init();
 				mListView.stopRefresh();
 				dismissLoadingDialog();
@@ -150,7 +150,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				break;
 			case 2:
 				listSocial = (List<MSociality>) msg.obj;
-				((MainActivity) getActivity()).updateNavigateNum(listSocial,community);
+				((MainActivity) getActivity()).updateNavigateNum(listSocial);
 				adapter.notifyDataSetChanged();
 				mListView.stopRefresh();
 				isRunningTask = false;
@@ -159,7 +159,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			case 3:
 				int pushNum = msg.arg1;
 				// navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-				updateNavigateNum(pushNum);
+//				updateNavigateNum(pushNum);
 				break;
 			case 4:
 				if (adapter != null) {
@@ -178,14 +178,14 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	 * 
 	 * @param pushNum
 	 */
-	public void updateNavigateNum(int pushNum) {
-		if (pushNum <= 0) {
-			navigateView.setVisibility(View.GONE);
-		} else {
-			navigateView.setVisibility(View.VISIBLE);
-			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-		}
-	}
+//	public void updateNavigateNum(int pushNum) {
+//		if (pushNum <= 0) {
+//			navigateView.setVisibility(View.GONE);
+//		} else {
+//			navigateView.setVisibility(View.VISIBLE);
+//			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
+//		}
+//	}
 
 	public FrgSociality() {
 		super();
@@ -305,7 +305,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					if (adapter != null && listSocial != null) {
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial,community);
+								.updateNavigateNum(listSocial);
 					}
 				}
 			});
@@ -504,7 +504,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 						adapter.setListSocial(listSocial);
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial, community);
+								.updateNavigateNum(listSocial);
 					}
 				}
 				deleteClickPosition = -1;
@@ -838,7 +838,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					if (adapter != null) {
 						adapter.notifyDataSetChanged();
 						((MainActivity) getActivity())
-								.updateNavigateNum(listSocial,community);
+								.updateNavigateNum(listSocial);
 					}
 				}
 			});
