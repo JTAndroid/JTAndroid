@@ -53,9 +53,14 @@ public class HomeRespFactory {
 		if (response == null) {
 		return null;
 		}
-		Long v = response.optLong("dynamicId");
-		System.out.println(v + "vvvvvvvvvvvvvvvvvvvvvvvvvvv");
-		return v;
+		try {
+			return Long.valueOf(response.getString("dynamicId"));
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return null;
 
 		}
 		case EAPIConsts.HomeReqType.HOME_REQ_ADD_DYNAMIC_COMMENT: {

@@ -877,6 +877,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 						tv.setLayoutParams(lp);
 						tv.setText(dpr.getUserName());
 						tv.setTextColor(0xff569ee2);
+						tv.setBackgroundResource(R.drawable.flow_bg);
 						
 						TextView tv_dot = new TextView(mContext);
 						tv_dot.setLayoutParams(lp);

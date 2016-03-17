@@ -272,6 +272,7 @@
                 android:id="@+id/linkTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/flow_bg"
                 android:layout_marginLeft="@dimen/common_margain_left_14"
                 android:text="人脉(4);组织(4);知识(2);事件(2)"
                 android:textColor="@color/text_flow_more"
