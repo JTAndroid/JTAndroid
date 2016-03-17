@@ -123,6 +123,8 @@ public class WorkNewActivity extends JBaseActivity implements
 	private String mRelationSelLabel;//关联的标签
 	private String mRelationSelEdityType = "a"; // a add e edit
 	
+	private boolean isCreate = false;
+	
 	
 	private int mButtonClick=0;
 
@@ -1501,14 +1503,8 @@ public class WorkNewActivity extends JBaseActivity implements
 	private OnClickListener mIMClick = new OnClickListener(){
 		@Override
 		public void onClick(View v) {
-			long userid = 0;
-			for(BUAffarMember member:mAffar.memebers){
-				if(member.type.equals("c")){
-					userid = member.getMemeberId();
-					break;
-				}
-			}
-			WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,userid, null);
+			isCreate = false;
+			WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 			mButtonClick=104;
 		}
 	};
@@ -1619,7 +1615,8 @@ public class WorkNewActivity extends JBaseActivity implements
 			mButtonClick=0;
 			BUResponseData vResponseData = (BUResponseData) object;
 			if (vResponseData.succeed) {
-
+				isCreate = true;
+				WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 				// 成功
 				ToastUtil.showToast(this, "创建事务成功");
 				mOperateType = "s";
@@ -1683,11 +1680,11 @@ public class WorkNewActivity extends JBaseActivity implements
 		case WorkReqType.AFFAIR_CHART: // 获取聊天id
 			mButtonClick=0;
 			BUResponseData vResponseDataChar = (BUResponseData) object;
-			if (vResponseDataChar.succeed) 
+			if (vResponseDataChar.succeed && !isCreate) 
 			{
 				ENavigate.startIMGroupActivity(WorkNewActivity.this, vResponseDataChar.id+"",1, isMemberO(App.getUserID()));
 			}
-			else
+			else if(!vResponseDataChar.succeed)
 			{
 				Toast.makeText(this, "获取聊天id失败", Toast.LENGTH_SHORT).show();
 			}
