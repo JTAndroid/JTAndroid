@@ -1503,7 +1503,7 @@ public class CategoryActivity extends JBaseActivity implements
 					}
 					mListCategory = linearListCategory1;
 					mCategoryListData =  linearListCategory;
-					if (mListSelectCategory.size() > 0) { // 用户已选择的目录
+					if (mListSelectCategory.size() > 0) { // 该组件已选择的目录
 						for (UserCategory sCategory : mListSelectCategory) {
 							long categoryId = recursiveGetCategoryId(sCategory);
 							for (UserCategory category : mListCategory) {
@@ -1512,6 +1512,36 @@ public class CategoryActivity extends JBaseActivity implements
 									break;
 								}
 							}
+						}
+						mListSelectCategory.clear();
+					}
+					if (mListCategory.size() > 0) { // 用户当前已选择的目录
+						ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
+						for (int i = 0; i < mListCategory.size(); i++) {
+							if (mListCategory.get(i).isSelected()) {
+								UserCategory category = mListCategory.get(i)
+										.lightClone(); // 浅拷贝，忽略listUserCategory
+								for (int j = i - 1; j >= 0; j--) {
+									// 停止遍历
+									if (j < 0 || category.getParentId() <= 0) {
+										break;
+									}
+									// 查找父目录
+									if (category.getParentId() == mListCategory.get(j)
+											.getId()) {
+										UserCategory tempCategory = category
+												.deepClone();
+										category = mListCategory.get(j).lightClone();
+										category.getListUserCategory().clear(); // 清空缓存数据
+										category.getListUserCategory()
+												.add(tempCategory);
+									}
+								}
+								listCategory.add(category);
+							}
+						}
+						for (UserCategory sCategory : listCategory) {
+							long categoryId = recursiveGetCategoryId(sCategory);
 							for (UserCategory category : mCategoryListData) {
 								if (categoryId == category.getId()) {
 									category.setSelected(true);
@@ -1519,7 +1549,6 @@ public class CategoryActivity extends JBaseActivity implements
 								}
 							}
 						}
-//						mListSelectCategory.clear();
 					}
 					// 是否需要根据关键字重新筛选
 					if (!TextUtils.isEmpty(keywordEt.getText())) {
