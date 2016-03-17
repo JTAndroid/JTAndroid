@@ -32,6 +32,7 @@ import android.widget.Toast;
 import com.tr.R;
 import com.tr.api.CommonReqUtil;
 import com.tr.api.KnowledgeReqUtil;
+import com.tr.image.ImageLoader;
 import com.tr.image.LogUtils;
 import com.tr.model.demand.LableData;
 import com.tr.model.joint.AffairNode;
@@ -922,8 +923,9 @@ public class CreateKnowledgeActivity extends JBaseActivity implements OnItemClic
 			JTFile jtFile = listJtFile.get(position);
 			
 //			if( position < listJtFile.size() - 1 ){
-				Bitmap bitmap = KnowledgeContentActivity.getSmallBitmap(jtFile.mLocalFilePath);
-				holder.iv.setImageBitmap(bitmap);
+//				Bitmap bitmap = KnowledgeContentActivity.getSmallBitmap(jtFile.mLocalFilePath);
+//				holder.iv.setImageBitmap(bitmap);
+				ImageLoader.load(holder.iv, jtFile.url, R.drawable.frgflow_img_null);
 //			}
 //			else {
 //				holder.iv.setImageResource(R.drawable.kno_add_pic);
