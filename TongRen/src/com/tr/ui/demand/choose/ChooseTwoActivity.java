@@ -138,7 +138,7 @@ public class ChooseTwoActivity extends JBaseActivity {
 		type = intent.getIntExtra(ENavConsts.DEMAND_CHOOSE_TYEP,
 				ChooseDataUtil.CHOOSE_TYPE_DEFAULT);
 		if (titleTv != null) {
-			if(type == ChooseDataUtil.CHOOSE_type_Trade){
+			if(type == ChooseDataUtil.CHOOSE_type_InInvestType||type == ChooseDataUtil.CHOOSE_type_OutInvestType){
 				titleTv.setText(meta.name);
 			}else{
 				if ("国外".equals(meta.name)) {
@@ -345,7 +345,7 @@ public class ChooseTwoActivity extends JBaseActivity {
 		mP.gravity = mP.gravity & ~Gravity.HORIZONTAL_GRAVITY_MASK
 				| Gravity.CENTER_HORIZONTAL;
 		mActionBar.setCustomView(mCustomView, mP);
-		mActionBar.setTitle(" ");
+		mActionBar.setTitle("所选的类型名称");
 		titleTv = (TextView) mCustomView.findViewById(R.id.titleTv);
 	}
 
@@ -413,7 +413,6 @@ public class ChooseTwoActivity extends JBaseActivity {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.demand_choose, menu);
 		saveItem = menu.findItem(R.id.chooseSave);
-		saveItem.setTitle("");
 		return true;
 	}
 }
