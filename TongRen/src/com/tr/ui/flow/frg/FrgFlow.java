@@ -880,7 +880,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 						
 						TextView tv_dot = new TextView(mContext);
 						tv_dot.setLayoutParams(lp);
-						tv_dot.setText(";");
+						tv_dot.setText(";  ");
 						tv_dot.setTextColor(0xff569ee2);
 						
 						tv.setOnClickListener(new OnClickListener() {
