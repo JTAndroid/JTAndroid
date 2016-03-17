@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="115" android:versionName="1.0.1 sim" package="com.tr">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="116" android:versionName="1.0.1 Beta" package="com.tr">
 
     <!-- dev(开发)、qa(QA )、sim(仿真)、beta(生产) -->
 
@@ -17,7 +17,7 @@
         <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="@string/map_key_official"/>
 
         <!-- 环信IM sdk -->
-        <meta-data android:name="EASEMOB_APPKEY" android:value="@string/huanxin_push_key_qa"/>
+        <meta-data android:name="EASEMOB_APPKEY" android:value="@string/huanxin_push_key_online"/>
 
         <!-- 私聊聊天 -->
         <activity android:configChanges="orientation|keyboardHidden" android:name="com.tr.ui.im.ChatActivity" android:screenOrientation="portrait" android:theme="@style/CustomThemeL" android:windowSoftInputMode="stateUnchanged">

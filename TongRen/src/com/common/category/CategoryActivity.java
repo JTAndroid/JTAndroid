@@ -1512,8 +1512,14 @@ public class CategoryActivity extends JBaseActivity implements
 									break;
 								}
 							}
+							for (UserCategory category : mCategoryListData) {
+								if (categoryId == category.getId()) {
+									category.setSelected(true);
+									break;
+								}
+							}
 						}
-						mListSelectCategory.clear();
+//						mListSelectCategory.clear();
 					}
 					// 是否需要根据关键字重新筛选
 					if (!TextUtils.isEmpty(keywordEt.getText())) {
