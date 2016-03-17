@@ -1616,7 +1616,6 @@ public class WorkNewActivity extends JBaseActivity implements
 			BUResponseData vResponseData = (BUResponseData) object;
 			if (vResponseData.succeed) {
 				isCreate = true;
-				WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 				// 成功
 				ToastUtil.showToast(this, "创建事务成功");
 				mOperateType = "s";
@@ -1626,6 +1625,7 @@ public class WorkNewActivity extends JBaseActivity implements
 				setClock();
 				initData();
 				initTopMenu();
+				WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 			} else {
 				ToastUtil.showToast(this, "创建事务失败");
 			}
