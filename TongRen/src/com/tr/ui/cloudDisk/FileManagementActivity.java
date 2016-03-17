@@ -45,6 +45,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import cn.sharesdk.framework.authorize.f;
+
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.CloudDiskReqUtil;
@@ -639,6 +641,8 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 	@Override
 	public void onBackPressed() {
 		isLongClick = false;
+		isSelectALL = false;
+		isCancleALL = true;
 		if (isSearch) {
 			startGetData(UserCurrentCategoryID);
 			isSearch = false;
@@ -744,6 +748,8 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 			break;
 		case android.R.id.home:
 			isLongClick = false;
+			isSelectALL = false;
+			isLongClick = false;
 			if (isSearch) {
 				startGetData(UserCurrentCategoryID);
 				isSearch = false;
@@ -818,11 +824,6 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 	 * @param checkNum
 	 */
 	private void showBottomRechristenUI(int checkNum){
-		if (checkNum == this.checkNum && checkNum != 0) {
-			showMenuItemUI(false);
-		}else{
-			showMenuItemUI(true);
-		};
 		if (checkNum == 0) {
 			delete_file_document.setVisibility(View.GONE);
 			delete_file_document_gray.setVisibility(View.VISIBLE);
@@ -1153,6 +1154,13 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 						}
 						//删除和重命名按钮的显示逻辑
 						showBottomRechristenUI(DeleteCategoryIdsLists.size()+DeleteDocumentIdsLists.size());
+						if (DeleteCategoryIdsLists.size()+DeleteDocumentIdsLists.size() == categoryAndDocument.size()) {
+							showMenuItemUI(false);
+						}else{
+							if (isLongClick) {
+								showMenuItemUI(true);
+							}
+						}
 						if (!mCreateCatalogAlertDialog.isBack() && !deleteCreateCatalogAlertDialog.isBack()) {
 							initMyActionBar("已选"+(DeleteDocumentIdsLists.size()+DeleteCategoryIdsLists.size())+"项");
 						}
@@ -1325,7 +1333,7 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 				listview.setPullLoadEnable(false);
 				//显示全选取消按钮
 				if (!isChatSaveFile) {
-					showMenuItemUI(false);
+					showMenuItemUI(true);
 				}
 				// 显示底部(删除、重命名)按钮
 				showBottomControlsUI(true);
@@ -1341,8 +1349,8 @@ public class FileManagementActivity extends JBaseFragmentActivity implements
 //				default:
 //					break;
 //				}
-				showBottomRechristenUI(DeleteCategoryIdsLists.size()+DeleteDocumentIdsLists.size());
 //				holder.filemanagement_select_cb.setChecked(true);
+				showBottomRechristenUI(DeleteCategoryIdsLists.size()+DeleteDocumentIdsLists.size());
 				return true;
 			}
 		});
