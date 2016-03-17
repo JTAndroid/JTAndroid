@@ -202,7 +202,9 @@ public class EAPIConsts {
 	// 文件上传地址
 
 	// 附件：
-	public static final String FILE_URL_WEB_AVATAR = "http://file.online.gintong.com";
+	public static final String FILE_URL_WEB_AVATAR = getWebUrl();
+	public static final String FILE_URL_WEB_AVATAR_SIMULATER = "http://file.online.gintong.com";
+	public static final String FILE_URL_WEB_AVATAR_ONLINE = "http://file.gintong.com";
 	public static final String FILE_URL_SIMULATER = "http://file.online.gintong.com/mobile/upload";
 	public static final String FILE_URL_QA = "http://file.qatest.gintong.com/mobile/upload";
 	public static final String FILE_URL_DEV = "http://192.168.101.22:81/mobile/upload";
@@ -414,6 +416,17 @@ public class EAPIConsts {
 		}
 	}
 
+	public static String getWebUrl(){
+		switch(ENVIRONMENT){
+		case SIMULATER:
+			return FILE_URL_WEB_AVATAR_SIMULATER;
+		case ONLINE:
+			return FILE_URL_WEB_AVATAR_ONLINE;
+		default: // 默认线上
+			return FILE_URL_WEB_AVATAR_ONLINE; 
+		}
+	}
+	
 	public static String getIMUrl() {
 		switch (IM_ENVIRONMENT) {
 		case QA:

@@ -688,7 +688,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 				holder.flow_user_img_iv.setImageResource(R.drawable.gintong_smart_brain);
 			}else{
 				String avatar = dn.getPicPath();
-				if(dn.getPicPath().indexOf("/web1/pic/avatar")!=-1){//web端发布的动态
+				if(!dn.getPicPath().startsWith("http")){//web端发布的动态
 					avatar = EAPIConsts.FILE_URL_WEB_AVATAR + dn.getPicPath();
 				}else{
 					avatar = dn.getPicPath();
