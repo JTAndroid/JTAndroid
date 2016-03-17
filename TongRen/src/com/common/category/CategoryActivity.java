@@ -158,7 +158,7 @@ public class CategoryActivity extends JBaseActivity implements
 	private boolean IsClickcategory;
 	private boolean isCategorySelect = true;// 目录是否支持多选 默认支持
 	ArrayList<UserCategory> linearListCategory1 = new ArrayList<UserCategory>();
-//	private Intent intentNoGroup = new Intent();
+	private Intent intentNoGroup = new Intent();
 
 	private JTPage jtpage;
 
@@ -252,40 +252,40 @@ public class CategoryActivity extends JBaseActivity implements
 //				mAdapter.notifyDataSetChanged();
 //				editRl.setVisibility(View.VISIBLE);
 //			}
-			
-//		}else if (item.getItemId() == 101) { // 完成选择
-//			if (infoIntegrityCheck(true)) {
-//				// 选择的目录结构
-//				ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
-//				for (int i = 0; i < mListCategory.size(); i++) {
-//					if (mListCategory.get(i).isSelected()) {
-//						UserCategory category = mListCategory.get(i)
-//								.lightClone(); // 浅拷贝，忽略listUserCategory
-//						for (int j = i - 1; j >= 0; j--) {
-//							// 停止遍历
-//							if (j < 0 || category.getParentId() <= 0) {
-//								break;
-//							}
-//							// 查找父目录
-//							if (category.getParentId() == mListCategory.get(j)
-//									.getId()) {
-//								UserCategory tempCategory = category
-//										.deepClone();
-//								category = mListCategory.get(j).lightClone();
-//								category.getListUserCategory().clear(); // 清空缓存数据
-//								category.getListUserCategory()
-//										.add(tempCategory);
-//							}
-//						}
-//						listCategory.add(category);
-//					}
-//				}
-//				
-//				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_LIST, listCategory);
-//				setResult(Activity.RESULT_OK, intentNoGroup);
-//				finish();
-//			}
-//		}
+//		}else 
+			if (item.getItemId() == 101) { // 完成选择
+			if (infoIntegrityCheck(true)) {
+				// 选择的目录结构
+				ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
+				for (int i = 0; i < mListCategory.size(); i++) {
+					if (mListCategory.get(i).isSelected()) {
+						UserCategory category = mListCategory.get(i)
+								.lightClone(); // 浅拷贝，忽略listUserCategory
+						for (int j = i - 1; j >= 0; j--) {
+							// 停止遍历
+							if (j < 0 || category.getParentId() <= 0) {
+								break;
+							}
+							// 查找父目录
+							if (category.getParentId() == mListCategory.get(j)
+									.getId()) {
+								UserCategory tempCategory = category
+										.deepClone();
+								category = mListCategory.get(j).lightClone();
+								category.getListUserCategory().clear(); // 清空缓存数据
+								category.getListUserCategory()
+										.add(tempCategory);
+							}
+						}
+						listCategory.add(category);
+					}
+				}
+				
+				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_LIST, listCategory);
+				setResult(Activity.RESULT_OK, intentNoGroup);
+				finish();
+			}
+		}
 		return true;
 	}
 	/*private OnClickListener mOnClickListener = new OnClickListener() {
@@ -398,26 +398,26 @@ public class CategoryActivity extends JBaseActivity implements
 
 
 	// 信息完整性检查
-//	private boolean infoIntegrityCheck(boolean showTip) {
-//		boolean integral = false;
-//		UserCategory categoryTmp = new UserCategory();
-//		for (UserCategory category : mListCategory) {
-//			if ("未分组".equals(category.getCategoryname())) {
-//				categoryTmp = category;
-//			}
-//			if (category.isSelected()) {
-//				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, true);
-//				integral = true;
-//			}
-//		}
-//		if (!integral) {
-////			showToast("请至少选择一个目录");
-//			categoryTmp.setSelected(true);
-//			intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, false);
-//			integral = true;
-//		}
-//		return integral;
-//	}
+	private boolean infoIntegrityCheck(boolean showTip) {
+		boolean integral = false;
+		UserCategory categoryTmp = new UserCategory();
+		for (UserCategory category : mListCategory) {
+			if ("未分组".equals(category.getCategoryname())) {
+				categoryTmp = category;
+			}
+			if (category.isSelected()) {
+				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, true);
+				integral = true;
+			}
+		}
+		if (!integral) {
+//			showToast("请至少选择一个目录");
+			categoryTmp.setSelected(true);
+			intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, false);
+			integral = true;
+		}
+		return integral;
+	}
 
 	// 递归得到目录id
 	private long recursiveGetCategoryId(UserCategory category) {
