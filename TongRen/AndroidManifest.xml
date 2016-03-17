@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="114" android:versionName="1.1.0 sim" package="com.tr">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="115" android:versionName="1.0.1 sim" package="com.tr">
 
     <!-- dev(开发)、qa(QA )、sim(仿真)、beta(生产) -->
 
