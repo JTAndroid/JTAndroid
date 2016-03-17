@@ -1501,7 +1501,14 @@ public class WorkNewActivity extends JBaseActivity implements
 	private OnClickListener mIMClick = new OnClickListener(){
 		@Override
 		public void onClick(View v) {
-			WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
+			long userid = 0;
+			for(BUAffarMember member:mAffar.memebers){
+				if(member.type.equals("c")){
+					userid = member.getMemeberId();
+					break;
+				}
+			}
+			WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,userid, null);
 			mButtonClick=104;
 		}
 	};
