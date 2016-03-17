@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="40dp"
-    android:background="@color/white"
+    android:background="@color/hy_activity_main_bg_color"
     android:orientation="vertical" >
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@color/hy_activity_main_bg_color"
         android:text="20150201"
         android:textColor="#92adb5"
         android:textSize="12sp" >

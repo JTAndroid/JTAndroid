@@ -78,6 +78,7 @@ import com.tr.ui.home.frg.FrgFlow.FlowType;
 import com.tr.ui.people.model.Person;
 import com.tr.ui.widgets.CommonSmileyParser;
 import com.tr.ui.widgets.EditOrDeletePopupWindow;
+import com.tr.ui.widgets.FlowLayout;
 import com.tr.ui.widgets.MessageDialog;
 import com.tr.ui.widgets.SmileyParser;
 import com.tr.ui.widgets.SmileyView;
@@ -89,6 +90,7 @@ import com.tr.ui.widgets.NoScrollListview;
 import com.utils.common.EConsts;
 import com.utils.common.EUtil;
 import com.utils.common.Util;
+import com.utils.common.Util.DensityUtil;
 import com.utils.display.DisplayUtil;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
@@ -456,7 +458,8 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 				holder.flowIv = (ImageView) convertView.findViewById(R.id.flowIv);
 				holder.flowGv = (NoScrollGridView) convertView.findViewById(R.id.flowGv);
 				holder.atperson_ll = (LinearLayout) convertView.findViewById(R.id.atperson_ll);
-				holder.atpersonTv = (TextView) convertView.findViewById(R.id.atpersonTv);
+				holder.atpersonFF = (FlowLayout) convertView.findViewById(R.id.atpersonFF);
+//				holder.atpersonTv = (TextView) convertView.findViewById(R.id.atpersonTv);
 				holder.link_ll = (LinearLayout) convertView.findViewById(R.id.link_ll);
 				holder.linkTv = (TextView) convertView.findViewById(R.id.linkTv);
 				holder.topic_ll = (LinearLayout) convertView.findViewById(R.id.topic_ll);
@@ -863,16 +866,34 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 			}
 			//@其他人
 			holder.atperson_ll.setVisibility(View.GONE);
+			holder.atpersonFF.removeAllViews();
 			if(dn.getPeopleRelation()!=null){
 				if(dn.getPeopleRelation().size()>0){
 					holder.atperson_ll.setVisibility(View.VISIBLE);
-					String atperson = "";
-					holder.atperson_ll.setVisibility(View.VISIBLE);
-					for(DynamicPeopleRelation dpr:dn.getPeopleRelation()){
-						atperson += dpr.getUserName()+"、";
-					}
-					if(!TextUtils.isEmpty(atperson)){
-						holder.atpersonTv.setText(atperson.substring(0, atperson.length()-1));
+					for(int i=0;i<dn.getPeopleRelation().size();i++){
+						final DynamicPeopleRelation dpr = dn.getPeopleRelation().get(i);
+						LinearLayout.LayoutParams lp =new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+						TextView tv = new TextView(mContext);
+						tv.setLayoutParams(lp);
+						tv.setText(dpr.getUserName());
+						tv.setTextColor(0xff569ee2);
+						
+						TextView tv_dot = new TextView(mContext);
+						tv_dot.setLayoutParams(lp);
+						tv_dot.setText(";");
+						tv_dot.setTextColor(0xff569ee2);
+						
+						tv.setOnClickListener(new OnClickListener() {
+							
+							@Override
+							public void onClick(View v) {
+								ENavigate.startRelationHomeActivity(mContext, dpr.getUserId()+"",true,1);
+							}
+						});
+						holder.atpersonFF.addView(tv);
+						if((i+1)<dn.getPeopleRelation().size()){
+							holder.atpersonFF.addView(tv_dot);
+						}
 					}
 				}
 			}
@@ -1095,6 +1116,7 @@ public class FrgFlow extends BaseViewPagerFragment implements IBindData{
 		public ImageView flowIv;//动态单张图片
 		public NoScrollGridView flowGv;//动态多张图片
 		public LinearLayout atperson_ll;//@布局
+		public FlowLayout atpersonFF;
 		public TextView atpersonTv;//@的人
 		public LinearLayout link_ll;//关联布局
 		public TextView linkTv;//关联的内容
