@@ -71,8 +71,9 @@
             android:orientation="horizontal" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/moreIv"
                 android:orientation="horizontal" >
 
                 <TextView
@@ -81,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="false"
                     android:ellipsize="end"
-                    android:maxLength="30"
+                    android:maxLength="15"
                     android:paddingRight="10dp"
                     android:singleLine="true"
                     android:textColor="@color/text_color"
@@ -103,6 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:paddingLeft="3dp"
                 android:clickable="true"
                 android:src="@drawable/icon_work_more" />
         </RelativeLayout>
