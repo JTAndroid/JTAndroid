@@ -79,6 +79,9 @@ public class ForgetPwdActivity extends JBaseActivity implements OnClickListener{
 			}
 			break;
 		case R.id.comitTv:
+			if(null==mVerifyCode){
+				return;
+			}
 			if (!mVerifyCode.equals(vcodeEt.getText().toString())) {
 				showToast("验证码错误");
 				return;

@@ -342,7 +342,7 @@ public class CommunityChatSettingActivity extends JBaseActivity implements OnCli
 			}else{
 				dissolve_group.setText("退出该群");
 			}
-
+			initData();
 			CommunityReqUtil.getSetDetail(this, this, communityId, createdUserId, null);
 			break;
 		case EAPIConsts.CommunityReqType.TYPE_MODIFY_MUC_NAME://修改社群名称

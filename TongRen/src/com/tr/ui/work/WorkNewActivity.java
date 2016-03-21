@@ -123,6 +123,8 @@ public class WorkNewActivity extends JBaseActivity implements
 	private String mRelationSelLabel;//关联的标签
 	private String mRelationSelEdityType = "a"; // a add e edit
 	
+	private boolean isCreate = false;
+	
 	
 	private int mButtonClick=0;
 
@@ -191,10 +193,6 @@ public class WorkNewActivity extends JBaseActivity implements
 	public void onResume() {
 		super.onResume();
 		mButtonClick=0;
-		if (mOperateType.equals("s")){
-			showLoadingDialog();
-			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,mUserId + "", mAffarId, null);
-		}
 		String location=(String) App.getApp().getParam("location");
 		if(!TextUtils.isEmpty(location)){
 			mAffar.location = location;
@@ -236,7 +234,8 @@ public class WorkNewActivity extends JBaseActivity implements
 
 			resetWorkView();
 		} else if (mOperateType.equals("s")) {//查看
-			//查看动作放在了onResume里执行
+			showLoadingDialog();
+			WorkReqUtil.getAffarDetail(WorkNewActivity.this, this,mUserId + "", mAffarId, null);
 		} else {//编辑
 			resetWorkView();
 		}
@@ -1504,6 +1503,7 @@ public class WorkNewActivity extends JBaseActivity implements
 	private OnClickListener mIMClick = new OnClickListener(){
 		@Override
 		public void onClick(View v) {
+			isCreate = false;
 			WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 			mButtonClick=104;
 		}
@@ -1615,7 +1615,7 @@ public class WorkNewActivity extends JBaseActivity implements
 			mButtonClick=0;
 			BUResponseData vResponseData = (BUResponseData) object;
 			if (vResponseData.succeed) {
-
+				isCreate = true;
 				// 成功
 				ToastUtil.showToast(this, "创建事务成功");
 				mOperateType = "s";
@@ -1625,6 +1625,7 @@ public class WorkNewActivity extends JBaseActivity implements
 				setClock();
 				initData();
 				initTopMenu();
+				WorkReqUtil.getCharId(WorkNewActivity.this, WorkNewActivity.this, mAffar,mUserId, null);
 			} else {
 				ToastUtil.showToast(this, "创建事务失败");
 			}
@@ -1679,11 +1680,11 @@ public class WorkNewActivity extends JBaseActivity implements
 		case WorkReqType.AFFAIR_CHART: // 获取聊天id
 			mButtonClick=0;
 			BUResponseData vResponseDataChar = (BUResponseData) object;
-			if (vResponseDataChar.succeed) 
+			if (vResponseDataChar.succeed && !isCreate) 
 			{
 				ENavigate.startIMGroupActivity(WorkNewActivity.this, vResponseDataChar.id+"",1, isMemberO(App.getUserID()));
 			}
-			else
+			else if(!vResponseDataChar.succeed)
 			{
 				Toast.makeText(this, "获取聊天id失败", Toast.LENGTH_SHORT).show();
 			}

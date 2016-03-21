@@ -510,7 +510,8 @@ public class CreateFlowActivtiy extends JBaseActivity implements
 					AttributeSet attrs) {
 				System.out.println(name);
 				if (name.equalsIgnoreCase("com.android.internal.view.menu.IconMenuItemView")
-						|| name.equalsIgnoreCase("com.android.internal.view.menu.ActionMenuItemView")) {
+						|| name.equalsIgnoreCase("com.android.internal.view.menu.ActionMenuItemView")
+						|| name.equalsIgnoreCase("com.android.internal.view.menu.MzActionMenuItemView")) {
 					try {
 						LayoutInflater f = getLayoutInflater();
 						viewFactory = f.createView(name, null, attrs);

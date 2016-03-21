@@ -149,7 +149,8 @@ public class CommunityRelevanceActivity extends JBaseActivity  {
 
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			ENavigate.startKnowledgeOfDetailActivity(CommunityRelevanceActivity.this, Long.parseLong(conn.get(position).id), conn.get(position).type);
+//			ENavigate.startKnowledgeOfDetailActivity(CommunityRelevanceActivity.this, Long.parseLong(conn.get(position).id), conn.get(position).type);
+			ENavigate.startCollectionKnowledgeOfDetailActivity(CommunityRelevanceActivity.this, Long.parseLong(conn.get(position).id), 1, true);
 
 		}
 	};

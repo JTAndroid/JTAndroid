@@ -505,6 +505,9 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 		case result_edit:// 编辑名片信息
 			person = (Person) intent.getSerializableExtra("people");
 			url = intent.getStringExtra("url");
+			if(App.getUserID().equals(userId)){
+				App.getUser().setImage(url);
+			}
 			peopleDetails.people = person;
 			updateCardUI();
 			dismissLoadingDialog();
@@ -969,6 +972,9 @@ public class HomePageFrag extends JBaseFragment implements OnClickListener,
 				}
 				if (peopleDetails != null) {
 					person = peopleDetails.people;
+					if(App.getUserID().equals(userId)){
+						App.getUser().setImage(person.getPortrait());
+					}
 					if (peopleDetails.personIdAfterConvert != null
 							&& peopleDetails.personIdAfterConvert != 0) {
 						friendIsToPeople = true;

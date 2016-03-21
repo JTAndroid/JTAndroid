@@ -542,6 +542,13 @@ public class EUtil {
 		}
 		return true;
 	}
+	
+	public static boolean isTextCorrect(Context context, String text){
+		String regEx="[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]"; 
+		Pattern p = Pattern.compile(regEx); 
+		Matcher m = p.matcher(text);
+		return m.find();
+	}
 
 	// 设备是否有SD卡
 	public static boolean isSDCardExist() {

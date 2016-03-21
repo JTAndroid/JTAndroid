@@ -23,6 +23,7 @@ import com.tr.ui.demand.util.ChooseDataUtil;
 import com.tr.ui.home.utils.HomeCommonUtils;
 import com.tr.ui.organization.model.Area;
 import com.tr.ui.people.cread.view.MyEditTextView;
+import com.utils.common.EUtil;
 import com.utils.log.ToastUtil;
 
 public class CreateLocationActivity extends JBaseActivity implements OnClickListener{
@@ -99,6 +100,9 @@ public class CreateLocationActivity extends JBaseActivity implements OnClickList
 			if (TextUtils.isEmpty(locationNameTv.getText())) {
 				ToastUtil.showToast(this, "位置地址为必填");
 				return false;
+			}else if(EUtil.isTextCorrect(CreateLocationActivity.this, locationNameTv.getText())){
+				ToastUtil.showToast(this, "位置地址包含特殊字符");
+				return false;
 			}
 			if (TextUtils.isEmpty(locationAreaTv.getText())) {
 				ToastUtil.showToast(this, "所在地区为必选");
@@ -106,6 +110,9 @@ public class CreateLocationActivity extends JBaseActivity implements OnClickList
 			}
 			if (TextUtils.isEmpty(locationAddressTv.getText())) {
 				ToastUtil.showToast(this, "详细地址为必填");
+				return false;
+			}else if(EUtil.isTextCorrect(CreateLocationActivity.this, locationAddressTv.getText())){
+				ToastUtil.showToast(this, "详细地址包含特殊字符");
 				return false;
 			}
 			

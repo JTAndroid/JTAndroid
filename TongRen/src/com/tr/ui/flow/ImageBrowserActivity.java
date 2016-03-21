@@ -15,13 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.tr.R;
 import com.tr.image.FileUtils;
+import com.tr.image.ImageLoader;
 import com.tr.model.obj.DynamicPicturePath;
 import com.tr.ui.base.JBaseFragmentActivity;
 import com.tr.ui.home.utils.HomeCommonUtils;
@@ -36,7 +32,6 @@ public class ImageBrowserActivity extends JBaseFragmentActivity {
 	
 	private ViewPager imageVp; // 滑动控件
 	private ImageBrowserAdapter adapter; // 适配器
-	private DisplayImageOptions displayOptions; // 图片显示配置
 	
 	private ImageLoader imageLoader;
 	private List<DynamicPicturePath> listMsg;
@@ -59,7 +54,6 @@ public class ImageBrowserActivity extends JBaseFragmentActivity {
 		initVars();
 		initControls();
 		initParams();
-		initImageLoaderConfiguration();
 	}
 	
 	private void initParams(){
@@ -69,13 +63,6 @@ public class ImageBrowserActivity extends JBaseFragmentActivity {
 
 	private void initVars(){
 		// 图片显示配置
-		displayOptions = new DisplayImageOptions.Builder()
-		.cacheInMemory(true)
-		.cacheOnDisc(true)
-		.bitmapConfig(Bitmap.Config.RGB_565)
-		.imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
-		.build();
-		// 
 	}
 	
 	private void initControls(){
@@ -99,25 +86,6 @@ public class ImageBrowserActivity extends JBaseFragmentActivity {
 		});
 	}
 	
-	// 初始化ImageLoader参数配置
-	private void initImageLoaderConfiguration() {
-		File cacheDir = new File(FileUtils.getIconDir());
-		if (cacheDir != null) {
-			ImageLoader.getInstance().destroy();
-			ImageLoaderConfiguration configuration = new ImageLoaderConfiguration.Builder(
-					getApplicationContext())
-					.discCache(new UnlimitedDiscCache(cacheDir))
-					.discCacheExtraOptions(480, 800, CompressFormat.JPEG, 75, null)
-					.defaultDisplayImageOptions(displayOptions)
-					.discCacheSize(50 * 1024 * 1024)//
-					.discCacheFileCount(100)// 缓存一百张图片
-					.writeDebugLogs()//
-					.build();
-			imageLoader = ImageLoader.getInstance();
-			imageLoader.init(configuration);
-		}
-	}
-
 	class ImageBrowserAdapter extends PagerAdapter{
 
 		private Context context;
@@ -167,7 +135,7 @@ public class ImageBrowserActivity extends JBaseFragmentActivity {
 			try {
 				container.addView(listView.get(position));
 				ImageView imgIv = (ImageView) listView.get(position).findViewById(R.id.imgIv);
-				imageLoader.displayImage(listMsg.get(position).getSourcePath(), imgIv, displayOptions);
+				imageLoader.load(imgIv, listMsg.get(position).getSourcePath());
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}

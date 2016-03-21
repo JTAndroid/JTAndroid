@@ -159,7 +159,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			case 3:
 				int pushNum = msg.arg1;
 				// navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-				updateNavigateNum(pushNum);
+//				updateNavigateNum(pushNum);
 				break;
 			case 4:
 				if (adapter != null) {
@@ -178,14 +178,14 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	 * 
 	 * @param pushNum
 	 */
-	public void updateNavigateNum(int pushNum) {
-		if (pushNum <= 0) {
-			navigateView.setVisibility(View.GONE);
-		} else {
-			navigateView.setVisibility(View.VISIBLE);
-			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-		}
-	}
+//	public void updateNavigateNum(int pushNum) {
+//		if (pushNum <= 0) {
+//			navigateView.setVisibility(View.GONE);
+//		} else {
+//			navigateView.setVisibility(View.VISIBLE);
+//			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
+//		}
+//	}
 
 	public FrgSociality() {
 		super();
@@ -429,7 +429,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				}
 				// controlXListBottom();
 				((MainActivity) getActivity())
-						.updateNavigateNum(conferenceAndChat.getCount());
+						.updateNavigateNum(conferenceAndChat.getCount() + community.getNewCount());
 				/**
 				 * 更新关系数
 				 */

@@ -142,7 +142,7 @@ public class ChooseThreeActivity extends JBaseActivity {
 				true);
 		type = intent.getIntExtra(ENavConsts.DEMAND_CHOOSE_TYEP, -1);
 		if (titleTv != null) {
-			if(type == ChooseDataUtil.CHOOSE_type_Trade){
+			if(type == ChooseDataUtil.CHOOSE_type_InInvestType||type == ChooseDataUtil.CHOOSE_type_OutInvestType){
 				titleTv.setText(meta.name);
 			}else{
 				if (meta.name.contains("洲")) {

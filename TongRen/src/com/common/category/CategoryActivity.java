@@ -158,7 +158,7 @@ public class CategoryActivity extends JBaseActivity implements
 	private boolean IsClickcategory;
 	private boolean isCategorySelect = true;// 目录是否支持多选 默认支持
 	ArrayList<UserCategory> linearListCategory1 = new ArrayList<UserCategory>();
-//	private Intent intentNoGroup = new Intent();
+	private Intent intentNoGroup = new Intent();
 
 	private JTPage jtpage;
 
@@ -204,7 +204,6 @@ public class CategoryActivity extends JBaseActivity implements
 		CLICK;
 	}
 	public Operate operate = Operate.CLICK;
-	private EventBus controlBus;
 	@Override
 	public void initJabActionBar() {
 		HomeCommonUtils.initLeftCustomActionBar(this, jabGetActionBar(),"目录" ,false,null,false, true);
@@ -215,8 +214,7 @@ public class CategoryActivity extends JBaseActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.kno_act_category);
-		controlBus = new EventBus();
-		controlBus.register(CategoryActivity.this);
+		EventBus.getDefault().register(CategoryActivity.this);
 		initVars();
 		initControls();
 		doUpdate();
@@ -254,40 +252,40 @@ public class CategoryActivity extends JBaseActivity implements
 //				mAdapter.notifyDataSetChanged();
 //				editRl.setVisibility(View.VISIBLE);
 //			}
-			
-//		}else if (item.getItemId() == 101) { // 完成选择
-//			if (infoIntegrityCheck(true)) {
-//				// 选择的目录结构
-//				ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
-//				for (int i = 0; i < mListCategory.size(); i++) {
-//					if (mListCategory.get(i).isSelected()) {
-//						UserCategory category = mListCategory.get(i)
-//								.lightClone(); // 浅拷贝，忽略listUserCategory
-//						for (int j = i - 1; j >= 0; j--) {
-//							// 停止遍历
-//							if (j < 0 || category.getParentId() <= 0) {
-//								break;
-//							}
-//							// 查找父目录
-//							if (category.getParentId() == mListCategory.get(j)
-//									.getId()) {
-//								UserCategory tempCategory = category
-//										.deepClone();
-//								category = mListCategory.get(j).lightClone();
-//								category.getListUserCategory().clear(); // 清空缓存数据
-//								category.getListUserCategory()
-//										.add(tempCategory);
-//							}
-//						}
-//						listCategory.add(category);
-//					}
-//				}
-//				
-//				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_LIST, listCategory);
-//				setResult(Activity.RESULT_OK, intentNoGroup);
-//				finish();
-//			}
-//		}
+//		}else 
+			if (item.getItemId() == 101) { // 完成选择
+			if (infoIntegrityCheck(true)) {
+				// 选择的目录结构
+				ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
+				for (int i = 0; i < mListCategory.size(); i++) {
+					if (mListCategory.get(i).isSelected()) {
+						UserCategory category = mListCategory.get(i)
+								.lightClone(); // 浅拷贝，忽略listUserCategory
+						for (int j = i - 1; j >= 0; j--) {
+							// 停止遍历
+							if (j < 0 || category.getParentId() <= 0) {
+								break;
+							}
+							// 查找父目录
+							if (category.getParentId() == mListCategory.get(j)
+									.getId()) {
+								UserCategory tempCategory = category
+										.deepClone();
+								category = mListCategory.get(j).lightClone();
+								category.getListUserCategory().clear(); // 清空缓存数据
+								category.getListUserCategory()
+										.add(tempCategory);
+							}
+						}
+						listCategory.add(category);
+					}
+				}
+				
+				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_LIST, listCategory);
+				setResult(Activity.RESULT_OK, intentNoGroup);
+				finish();
+			}
+		}
 		return true;
 	}
 	/*private OnClickListener mOnClickListener = new OnClickListener() {
@@ -400,26 +398,26 @@ public class CategoryActivity extends JBaseActivity implements
 
 
 	// 信息完整性检查
-//	private boolean infoIntegrityCheck(boolean showTip) {
-//		boolean integral = false;
-//		UserCategory categoryTmp = new UserCategory();
-//		for (UserCategory category : mListCategory) {
-//			if ("未分组".equals(category.getCategoryname())) {
-//				categoryTmp = category;
-//			}
-//			if (category.isSelected()) {
-//				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, true);
-//				integral = true;
-//			}
-//		}
-//		if (!integral) {
-////			showToast("请至少选择一个目录");
-//			categoryTmp.setSelected(true);
-//			intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, false);
-//			integral = true;
-//		}
-//		return integral;
-//	}
+	private boolean infoIntegrityCheck(boolean showTip) {
+		boolean integral = false;
+		UserCategory categoryTmp = new UserCategory();
+		for (UserCategory category : mListCategory) {
+			if ("未分组".equals(category.getCategoryname())) {
+				categoryTmp = category;
+			}
+			if (category.isSelected()) {
+				intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, true);
+				integral = true;
+			}
+		}
+		if (!integral) {
+//			showToast("请至少选择一个目录");
+			categoryTmp.setSelected(true);
+			intentNoGroup.putExtra(EConsts.Key.KNOWLEDGE_CATEGORY_GROUP, false);
+			integral = true;
+		}
+		return integral;
+	}
 
 	// 递归得到目录id
 	private long recursiveGetCategoryId(UserCategory category) {
@@ -619,8 +617,8 @@ public class CategoryActivity extends JBaseActivity implements
 					for (UserCategory category : mListCategory) {
 						category.setVisiable(true); // 全部显示
 						category.setFolded(false); // 全部展开
-						doUpdate();
 					}
+					doUpdate();
 				} else {
 					searchCatetoryByKeyword(mKeyword);
 				}
@@ -1505,7 +1503,7 @@ public class CategoryActivity extends JBaseActivity implements
 					}
 					mListCategory = linearListCategory1;
 					mCategoryListData =  linearListCategory;
-					if (mListSelectCategory.size() > 0) { // 用户已选择的目录
+					if (mListSelectCategory.size() > 0) { // 该组件已选择的目录
 						for (UserCategory sCategory : mListSelectCategory) {
 							long categoryId = recursiveGetCategoryId(sCategory);
 							for (UserCategory category : mListCategory) {
@@ -1516,6 +1514,41 @@ public class CategoryActivity extends JBaseActivity implements
 							}
 						}
 						mListSelectCategory.clear();
+					}
+					if (mListCategory.size() > 0) { // 用户当前已选择的目录
+						ArrayList<UserCategory> listCategory = new ArrayList<UserCategory>();
+						for (int i = 0; i < mListCategory.size(); i++) {
+							if (mListCategory.get(i).isSelected()) {
+								UserCategory category = mListCategory.get(i)
+										.lightClone(); // 浅拷贝，忽略listUserCategory
+								for (int j = i - 1; j >= 0; j--) {
+									// 停止遍历
+									if (j < 0 || category.getParentId() <= 0) {
+										break;
+									}
+									// 查找父目录
+									if (category.getParentId() == mListCategory.get(j)
+											.getId()) {
+										UserCategory tempCategory = category
+												.deepClone();
+										category = mListCategory.get(j).lightClone();
+										category.getListUserCategory().clear(); // 清空缓存数据
+										category.getListUserCategory()
+												.add(tempCategory);
+									}
+								}
+								listCategory.add(category);
+							}
+						}
+						for (UserCategory sCategory : listCategory) {
+							long categoryId = recursiveGetCategoryId(sCategory);
+							for (UserCategory category : mCategoryListData) {
+								if (categoryId == category.getId()) {
+									category.setSelected(true);
+									break;
+								}
+							}
+						}
 					}
 					// 是否需要根据关键字重新筛选
 					if (!TextUtils.isEmpty(keywordEt.getText())) {
@@ -1621,25 +1654,13 @@ public class CategoryActivity extends JBaseActivity implements
 	@Subscribe(threadMode = ThreadMode.MAIN)
 	public void onEventMainThread(AddCategoryEvent event) {
 		if(event.isBool()){
-			doUpdate();//添加目录更新UI	
+			doUpdate();//添加目录更新UI
 		}
-	}
-	@Subscribe
-	public void onEventPostThread() {
-
-	}
-	@Subscribe
-	public void onEventBackgroundThread() {
-
-	}
-	@Subscribe
-	public void onEventAsync() {
-
 	}
 	
 	@Override
 	protected void onDestroy() {
-		controlBus.unregister(CategoryActivity.this);
+		EventBus.getDefault().unregister(CategoryActivity.this);
 		super.onDestroy();
 	}
 }
