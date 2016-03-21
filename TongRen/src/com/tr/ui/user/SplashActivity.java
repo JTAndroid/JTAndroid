@@ -54,6 +54,7 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 	private App mMainApp;
 	private boolean mBlnFromNotifyBox;
 	private boolean mFromShare;
+	private boolean getKnowFromUrl = true;//是否已经调用解析知识的接口
 	private int pushMessageType; // 推送的消息类型
 	private JTFile mShareInfo;
 	private String loginData;
@@ -180,7 +181,7 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 				showToast("无法分享此类型的消息");
 			} else {
 				mShareInfo = JTFile.createFromIntent(getIntent());
-				CommonReqUtil.doFetchExternalKnowledgeUrl(this, this, mShareInfo.mUrl, true, null);
+//				CommonReqUtil.doFetchExternalKnowledgeUrl(this, this, mShareInfo.mUrl, true, null);
 			}
 			mFromShare = true;
 			mShareInfo.isOnlineUrl = true;
@@ -254,9 +255,8 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 				String baseName = myTask.baseActivity.getClassName();
 				String mainName = MainActivity.class.getName();
 				if (baseName.equalsIgnoreCase(mainName)) {
-					// TODO
-					ENavigate.startMainActivityEx(SplashActivity.this, mShareInfo, loginData);
-					finish();
+					getKnowFromUrl = false;
+					CommonReqUtil.doFetchExternalKnowledgeUrl(this, this, mShareInfo.mUrl, true, null);
 					return true;
 				}
 			}
@@ -384,9 +384,9 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 				// 第一次认证成功
 				if (mBlnFromNotifyBox) { // 消息盒子
 					ENavigate.startMainActivity(SplashActivity.this, MNotifyMessageBox.getInstance(), pushMessageType, loginData);
-				} else if (mFromShare) { // 分享
-					ENavigate.startMainActivityEx(SplashActivity.this, mShareInfo, loginData);
-				} else {
+				} else if (mFromShare && getKnowFromUrl) { // 分享
+					CommonReqUtil.doFetchExternalKnowledgeUrl(this, this, mShareInfo.mUrl, true, null);
+				} else if(!mFromShare) {
 					verifyUserStatus(mAppData/*.getUser().getUserStatus(), mAppData.getUserName()*/);
 				}
 			}
@@ -395,9 +395,9 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 			// 个人用户直接登录
 			if (mBlnFromNotifyBox) { // 消息盒子
 				ENavigate.startMainActivity(SplashActivity.this, MNotifyMessageBox.getInstance(), pushMessageType, loginData);
-			} else if (mFromShare) { // 分享
-				ENavigate.startMainActivityEx(SplashActivity.this, mShareInfo, loginData);
-			} else {
+			} else if (mFromShare && getKnowFromUrl) { // 分享
+				CommonReqUtil.doFetchExternalKnowledgeUrl(this, this, mShareInfo.mUrl, true, null);
+			} else if(!mFromShare) {
 				verifyUserStatus(mAppData/*.getUser().getUserStatus(), mAppData.getUserName()*/);
 			}
 		}
@@ -479,18 +479,22 @@ public class SplashActivity extends JBaseFragmentActivity implements IBindData {
 			Log.i(TAG, MSG);
 
 			if (object == null) {
-				Toast.makeText(SplashActivity.this, "解析失败", 0).show();
+//				Toast.makeText(SplashActivity.this, "解析失败", 0).show();
+				ENavigate.startMainActivityEx(SplashActivity.this, mShareInfo, loginData);
+				finish();
 				return;
 			}
 
 			Map<String, Object> dataHm = (Map<String, Object>) object;
 			Knowledge2 knowledge = (Knowledge2) dataHm.get("knowledge2");
 			mShareInfo.setmSuffixName(knowledge.getTitle());
-			mShareInfo.mFileName = knowledge.getTitle();
+			mShareInfo.mFileName = "知识";
 			mShareInfo.reserved2 = knowledge.getTitle();
 			mShareInfo.mTaskId = knowledge.getId() + "";
 			mShareInfo.setmType(13);// 知识
 			mShareInfo.setReserved1("1");
+			ENavigate.startMainActivityEx(SplashActivity.this, mShareInfo, loginData);
+			finish();
 		}
 	}
 
