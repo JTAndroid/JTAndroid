@@ -14,9 +14,9 @@ public class EAPIConsts {
 	/** 是否把log写到sdcard 上 log文件位置在sd根目录 文件名GushiLog */
 	public static boolean isLog2Sdcard = true;
 
-	public static int ENVIRONMENT = ONLINE; // api接口地址
-	public static int IM_ENVIRONMENT = ONLINE; // im部分api接口地址
-	public static int CONFERENCE_ENVIRONMENT = ONLINE; // 会议模式api接口地址
+	public static int ENVIRONMENT = SIMULATER; // api接口地址
+	public static int IM_ENVIRONMENT = SIMULATER; // im部分api接口地址
+	public static int CONFERENCE_ENVIRONMENT = SIMULATER; // 会议模式api接口地址
 
 	// 0-QA；1-仿真；2-生产；3-开发；4-个人；5-vpns
 	public enum Environment {
