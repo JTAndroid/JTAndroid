@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="20sp" >
+
+        <ImageView
+            android:id="@+id/meetingnote_item_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1px" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/meetingnote_item_img" >
+
+            <TextView
+                android:id="@+id/meetingnote_item_titleText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#222a32"
+               
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/meetingnote_item_timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meetingnote_item_titleText"
+                android:layout_marginTop="13dp"
+                android:textColor="#63a8be"
+               
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/meetingnote_item_contentText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:layout_below="@id/meetingnote_item_titleText"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/meetingnote_item_timeText"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="24dp"
+        android:background="#eeeeee" />
+
+</LinearLayout>

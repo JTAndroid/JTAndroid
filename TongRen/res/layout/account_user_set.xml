@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/list_account_user"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noaccountuser"
+        android:layout_width="fill_parent"
+        android:layout_height="113dp"
+        android:layout_marginLeft="123dp"
+        android:text="您好，您还没有添加收款数据"
+        android:textColor="#222a32"
+        android:textSize="21sp"
+        android:visibility="gone" />
+
+</LinearLayout>

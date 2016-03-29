@@ -13,12 +13,12 @@
         android:id="@+id/new_xlistview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fadeScrollbars="true"
-        android:listSelector="@drawable/commen_list_bg"
         android:divider="@drawable/commen_list_divider"
-        />
- 	<include
+        android:fadeScrollbars="true"
+        android:listSelector="@drawable/commen_list_bg" />
+
+    <include
         android:id="@+id/empty"
-        layout="@layout/activity_common_empty"
-        android:visibility="gone" />
+        layout="@layout/activity_common_empty" />
+
 </LinearLayout>

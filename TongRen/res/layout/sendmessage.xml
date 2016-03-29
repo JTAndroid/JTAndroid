@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f4f4f4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/sendmassage_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="57dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffffff"
+                android:gravity=""
+                android:hint="请输入通知内容"
+                android:lineSpacingExtra="12dp"
+                android:textColor="#222a32"
+                android:textColorHint="#c0c0c0"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#e0e0e0" />
+
+        <RelativeLayout
+            android:id="@+id/sendmessage_chooseModeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="13dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="选择模版" />
+
+            <ImageView
+                android:id="@+id/sendmessage_chooseModeimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icon_enter" />
+
+            <TextView
+                android:id="@+id/sendmessage_chooseModeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:layout_toLeftOf="@id/sendmessage_chooseModeimg"
+                android:textColor="#999999"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#e0e0e0" />
+
+        <RelativeLayout
+            android:id="@+id/sendmessage_chooseObjLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="53dp"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="选择对象" />
+
+            <ImageView
+                android:id="@+id/sendmessage_chooseObjimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icon_enter" />
+
+            <TextView
+                android:id="@+id/sendmessage_chooseObjText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:layout_toLeftOf="@id/sendmessage_chooseObjimg"
+                android:textColor="#999999"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

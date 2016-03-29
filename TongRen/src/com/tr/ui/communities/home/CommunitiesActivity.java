@@ -94,6 +94,7 @@ public class CommunitiesActivity extends JBaseActivity implements IXListViewList
 	public void initJabActionBar() {
 		getBundle();
 		setContentView(R.layout.activity_communities);
+		
 		initTitle();
 		ViewUtils.inject(this); // 注入view和事件..
 		// geneItems();

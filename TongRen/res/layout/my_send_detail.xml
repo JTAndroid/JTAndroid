@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mysend_detail_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/mysendetail_image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/mysendetail_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="28dp"
+                android:text="2015北京万圣节主题派对"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/mysenddetail_time_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/mysendetail_theme"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/icon_start_time" />
+
+            <TextView
+                android:id="@+id/mysenddetail_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mysendetail_theme"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/mysenddetail_time_image"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/mysenddetail_place_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/mysenddetail_time_image"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/icon_pointer1" />
+
+            <TextView
+                android:id="@+id/mysenddetail_place_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mysenddetail_time_tv"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/mysenddetail_place_image"
+                android:text="252"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_enter" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/mysenddetail_attendpeople"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/mycustomer_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16sp"
+            android:src="@drawable/my_client" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/mycustomer_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/mycustomer_image"
+            android:text="报名名单"
+            android:textColor="#222a32"
+            android:textSize="20dp" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_enter" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/mysenddetail_editactivity"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/mynote_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/my_notes" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/mynote_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/mynote_image"
+            android:text="编辑活动"
+            android:textColor="#222a32"
+            android:textSize="20dp" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_enter" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/mysenddetail_myshare"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/myshare_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/forward_bg" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/myshare_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/myshare_image"
+            android:text="分享给好友"
+            android:textColor="#222a32"
+            android:textSize="20dp" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_enter" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/mysenddetail_code"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/myshare_image1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_scan2" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/myshare_username1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/myshare_image1"
+            android:text="签到二维码"
+            android:textColor="#222a32"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_enter" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#eeeeee" >
+    </View>
+
+    <Button
+        android:id="@+id/mysendcancle_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:background="#fec164"
+        android:text="取消活动"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

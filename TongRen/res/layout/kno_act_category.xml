@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:paddingLeft="15dp"
+            android:text="你好"
             android:textColor="#569ee2"
             android:textSize="13sp" />
 

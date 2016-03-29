@@ -167,11 +167,6 @@ public class MyKnowledgeActivity extends JBaseActivity implements IBindData{
 		titleTv = (TextView) mCustomView.findViewById(R.id.titleTv);
 		titleTv.setText("我创建的");
 		titleTv.setOnClickListener(new OnClickListener() {
-			
-			
-
-			
-
 			@Override
 			public void onClick(View v) {
 				View view = View.inflate(context,

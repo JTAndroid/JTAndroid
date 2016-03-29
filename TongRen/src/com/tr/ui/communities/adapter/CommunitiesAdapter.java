@@ -27,7 +27,8 @@ import com.tr.ui.widgets.title.menu.popupwindow.ViewHolder;
 public class CommunitiesAdapter extends BaseAdapter {
 	private Context mcContext;
 	private List<ImMucinfo> list = new ArrayList<ImMucinfo>();
-	private DisplayImageOptions options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.avatar_community) // 设置图片下载期间显示的图片
+	private DisplayImageOptions options = new DisplayImageOptions.Builder()
+			.showImageOnLoading(R.drawable.avatar_community) // 设置图片下载期间显示的图片
 			.showImageForEmptyUri(R.drawable.avatar_community) // 设置图片Uri为空或是错误的时候显示的图片
 			.showImageOnFail(R.drawable.avatar_community) // 设置图片加载或解码过程中发生错误显示的图片
 			.cacheInMemory(true) // 设置下载的图片是否缓存在内存中
@@ -59,22 +60,25 @@ public class CommunitiesAdapter extends BaseAdapter {
 		if (list != null)
 			community = this.list.get(position);
 		if (convertView == null) {
-			convertView = View.inflate(mcContext, R.layout.new_xlistview_item, null);
+			convertView = View.inflate(mcContext, R.layout.new_xlistview_item,
+					null);
 		}
 		// image_group_advocate群主的标志
-		ImageView image_group_advocate = ViewHolder.get(convertView, R.id.image_group_advocate);
-		if (community.getIsqz() == 1)//群主
+		ImageView image_group_advocate = ViewHolder.get(convertView,
+				R.id.image_group_advocate);
+		if (community.getIsqz() == 1)// 群主
 			image_group_advocate.setVisibility(View.VISIBLE);
 		else
 			image_group_advocate.setVisibility(View.GONE);
-		
+
 		// 头像
 		ImageView circle_image = ViewHolder.get(convertView, R.id.circle_image);
-		if (community.getIsys() == 2)//隐身
+		if (community.getIsys() == 2)// 隐身
 			circle_image.setImageResource(R.drawable.icon_hiding_bg);
 		else
-			ImageLoader.getInstance().displayImage(community.getPicPath(), circle_image,options);
-		
+			ImageLoader.getInstance().displayImage(community.getPicPath(),
+					circle_image, options);
+
 		TextView text_title = ViewHolder.get(convertView, R.id.text_title);
 
 		TextView text_content = ViewHolder.get(convertView, R.id.text_content);
@@ -84,18 +88,20 @@ public class CommunitiesAdapter extends BaseAdapter {
 		return convertView;
 	}
 
-	 public void setCommunities(List<ImMucinfo> mlist) {
-	 this.list = mlist;
-	 }
-	 public List<ImMucinfo> getCommunities() {
-		 return list;
-	 }
-	 public void addCommunities(List<ImMucinfo> mlist) {
-	 if (this.list != null) {
-	 this.list.addAll(mlist);
-	 notifyDataSetChanged();
-	 }
-	 }
+	public void setCommunities(List<ImMucinfo> mlist) {
+		this.list = mlist;
+	}
+
+	public List<ImMucinfo> getCommunities() {
+		return list;
+	}
+
+	public void addCommunities(List<ImMucinfo> mlist) {
+		if (this.list != null) {
+			this.list.addAll(mlist);
+			notifyDataSetChanged();
+		}
+	}
 
 	public void setKeyWord(String keyWord) {
 		List<ImMucinfo> keyWordImMucinfo = new ArrayList<ImMucinfo>();

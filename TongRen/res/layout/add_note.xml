@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/add_note_title"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="13.3dp"
+        android:background="#ffffff"
+        android:paddingLeft="13.3dp"
+        android:textSize="20sp"
+        android:hint="请输入标题" />
+
+    <WebView
+        android:layout_marginTop="13.3dp"
+        android:id="@+id/myWebView_note"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/activity_profile_progressBar_add"
+        style="@android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_marginTop="13.3dp"
+        android:id="@+id/add_note_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="#fec164"
+        android:text="选择图片"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

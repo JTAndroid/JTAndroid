@@ -35,16 +35,16 @@
             <RadioButton
                 android:id="@+id/typeRb"
                 style="@style/rb_project_style"
-                android:visibility="gone"
-                android:text="分类" />
+                android:text="分类"
+                android:visibility="gone" />
 
             <View
                 android:layout_width="1dip"
                 android:layout_height="match_parent"
-                android:visibility="gone"
                 android:layout_marginBottom="@dimen/find_project_v_top_bot"
                 android:layout_marginTop="@dimen/find_project_v_top_bot"
-                android:background="@drawable/demand_find_project_dividing_line" />
+                android:background="@drawable/demand_find_project_dividing_line"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/vocationRb"
@@ -61,8 +61,8 @@
             <RadioButton
                 android:id="@+id/priceRb"
                 style="@style/rb_project_style"
-                android:visibility="gone"
-                android:text="@string/find_project_price" />
+                android:text="@string/find_project_price"
+                android:visibility="gone" />
         </RadioGroup>
     </LinearLayout>
 
@@ -73,11 +73,10 @@
 
     <com.tr.ui.common.view.XListView
         android:id="@+id/infoLv"
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-         >
+        android:background="@color/white" >
     </com.tr.ui.common.view.XListView>
-	
+
 </LinearLayout>

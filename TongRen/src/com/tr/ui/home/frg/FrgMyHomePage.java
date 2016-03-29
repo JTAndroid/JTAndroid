@@ -35,6 +35,7 @@ import android.widget.Toast;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.tongmeng.alliance.activity.MysettingActivity;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.CommonReqUtil;
@@ -271,7 +272,9 @@ public class FrgMyHomePage extends JBaseFragment implements OnClickListener,
 			startActivity(new Intent(getActivity(), MyKnowledgeActivity.class));
 			break;
 		case R.id.conference:// 会议
-			ENavigate.startMyMeetingActivity(getActivity());
+//			ENavigate.startMyMeetingActivity(getActivity());
+			Intent settingIntent = new Intent(getActivity(),MysettingActivity.class);
+			startActivity(settingIntent);
 			break;
 		case R.id.file_management:// 文件
 			ENavigate.startFileManagementActivity(getActivity(), null, null);

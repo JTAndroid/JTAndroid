@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+  
+    <RelativeLayout
+        android:id="@+id/hidepeopleinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+     android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+          android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:text="姓名"
+            android:textColor="#999999"
+            android:gravity="center|left"
+           android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+          android:id="@+id/values"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+          android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@id/key"
+            android:gravity="center|left"
+            android:text="15930738136"
+            android:textColor="#999999"
+            android:textSize="18sp" >
+
+        </TextView>
+        
+         
+  </RelativeLayout>
+   <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="13dp"
+        android:background="#eeeeee" >
+    </View>
+</LinearLayout>

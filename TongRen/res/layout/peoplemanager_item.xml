@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="13dp" >
+
+        <ImageView
+            android:id="@+id/peoplemanager_item_picImg"
+            android:layout_width="64dp"
+            android:layout_height="64dp" />
+
+        <RelativeLayout
+            android:id="@+id/peoplemanager_item_nameLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/peoplemanager_item_picImg" >
+
+            <ImageView
+                android:id="@+id/peoplemanager_item_qunzhuImg"
+                android:layout_width="32dp"
+                android:layout_height="20dp"
+                android:background="@drawable/icon_qunzhu"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/peoplemanager_item_nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/peoplemanager_item_qunzhuImg"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/peoplemanager_item_qunzhuImg"
+                android:textColor="#222a32"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/peoplemanager_item_qiandaoImg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@id/peoplemanager_item_qunzhuImg"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@id/peoplemanager_item_nameText"
+                android:background="@drawable/icon_qiandao"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/peoplemanager_item_positionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/peoplemanager_item_qiandaoImg"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@id/peoplemanager_item_qiandaoImg"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/peoplemanager_item_companyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/peoplemanager_item_nameLayout"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/peoplemanager_item_picImg"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/peoplemanager_item_messageImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:background="@drawable/icon_message"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/peoplemanager_item_callImg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="33dp"
+                android:background="@drawable/icon_call"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="13dp"
+        android:background="#dedede" />
+
+</LinearLayout>

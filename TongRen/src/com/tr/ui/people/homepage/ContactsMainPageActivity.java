@@ -64,6 +64,7 @@ import com.utils.display.DisplayUtil;
 import com.utils.http.EAPIConsts.PeopleRequestType;
 import com.utils.http.IBindData;
 import com.utils.image.AnimateFirstDisplayListener;
+import com.utils.log.KeelLog;
 
 /**
  *  发现/人脉页面
@@ -145,6 +146,8 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		KeelLog.e("ContactsMainPageActivity", "onCreate");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.people_contactsmainpage);
 		// bitmapUtils = new BitmapUtils(this);
@@ -180,6 +183,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * 初始化数据
 	 */
 	public void initDate() {
+		KeelLog.e("ContactsMainPageActivity", "initDate");
 		infoLv.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -249,6 +253,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * @param index
 	 */
 	public void searchDemand(int index) {
+		KeelLog.e("ContactsMainPageActivity", "searchDemand");
 		PeoplePage p = new PeoplePage();
 		p.setTypeId(typeId);
 		p.setRegionId(regionId);
@@ -261,6 +266,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * 获取页数据
 	 */
 	public void startGetData(int index) {
+		KeelLog.e("ContactsMainPageActivity", "startGetData");
 		if (index == 1) {
 			showLoadingDialog("  ");
 		}
@@ -269,6 +275,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 
 	@Override
 	public void onClick(View v) {
+		KeelLog.e("ContactsMainPageActivity", "onClick");
 		InputMethodManager imm = (InputMethodManager) ContactsMainPageActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
 		switch (v.getId()) {
 		case R.id.cancelTv:// 取消自定义
@@ -333,6 +340,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 *            区域，分类，职业，金额
 	 */
 	public void showPropu(final TypeTitle typeTitle) {
+		KeelLog.e("ContactsMainPageActivity", "showPropu");
 		this.typeTitle = typeTitle; //
 		this.typeItem = TypeItem.item1; // 当前显示的枚举对象
 		metadata02 = null;
@@ -408,6 +416,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * 区域数据
 	 */
 	private List<Metadata> showArea() {
+		KeelLog.e("ContactsMainPageActivity", "showArea");
 		List<Metadata> itemList = manager.queryArea();
 		itemList.add(0, new Metadata("0", "全部")); // 区域第一级添加不限
 		return itemList;
@@ -417,6 +426,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * 分类，职业 添加数据 65535 0
 	 */
 	private List<Metadata> showType(int id) {
+		KeelLog.e("ContactsMainPageActivity", "showType");
 		List<Metadata> itemList = manager.queryInvestType(id);
 		itemList.add(0, new Metadata("0", "全部"));
 		return itemList;
@@ -436,6 +446,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * @return 返回当前view
 	 */
 	private TranslateAnimation createAnimation(View v, float fromXDelta, float toXDelta, float fromYDelta, float toYDelta, int leng) {
+		KeelLog.e("ContactsMainPageActivity", "createAnimation");
 		TranslateAnimation ta = new TranslateAnimation(fromXDelta, toXDelta, fromYDelta, toYDelta);
 		ta.setDuration(leng);
 		v.setAnimation(ta);
@@ -449,6 +460,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 		private Context context;
 
 		public MyAdapter(Context context) {
+			KeelLog.e("ContactsMainPageActivity", "MyAdapter");
 			this.context = context;
 		}
 
@@ -515,6 +527,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	// 点击标题时调用
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		KeelLog.e("ContactsMainPageActivity", "onCheckedChanged");
 		if (isChecked) {
 			checkRB = (RadioButton) buttonView;
 			checkRB.setSelected(isChecked);
@@ -542,7 +555,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 */
 	@Override
 	public void initJabActionBar() {
-
+		KeelLog.e("ContactsMainPageActivity", "initJabActionBar");
 		ActionBar mActionBar = jabGetActionBar();
 		mActionBar.setDisplayShowCustomEnabled(true);
 		mActionBar.setDisplayShowHomeEnabled(true);
@@ -574,6 +587,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 
 	@Override
 	public void bindData(int tag, Object object) {
+		KeelLog.e("ContactsMainPageActivity", "bindData tag::"+tag+",object:"+object.toString());
 		dismissLoadingDialog();
 		infoLv.stopLoadMore();
 		infoLv.stopRefresh();
@@ -615,6 +629,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * 修改当前选择的数据
 	 */
 	private void selectData(Metadata metadata, int item) {
+		KeelLog.e("ContactsMainPageActivity", "selectData");
 		switch (typeTitle) {
 		case price:// 金额 //不限制
 			if (metadata == null) {
@@ -681,6 +696,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	}
 
 	private int getType() {
+		KeelLog.e("ContactsMainPageActivity", "getType");
 		String typeName = typeRb.getText().toString();
 		if ("分类".equals(typeName)) {
 			return 0;
@@ -712,6 +728,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 */
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		KeelLog.e("ContactsMainPageActivity", "onItemClick");
 		switch (parent.getId()) {
 		case R.id.lv_item1:// 如果是条目一的点击
 			this.typeItem = TypeItem.item1;
@@ -814,6 +831,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	}
 
 	private int getIndustry() {
+		KeelLog.e("ContactsMainPageActivity", "getIndustry");
 		if ("职位".equals(vocationRb.getText().toString())) {
 			return 0;
 		} else {
@@ -824,6 +842,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	}
 
 	private int getLocation() {
+		KeelLog.e("ContactsMainPageActivity", "getLocation");
 		if ("区域".equals(areaRb.getText().toString())) {
 			return 0;
 		} else {
@@ -840,6 +859,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	 * @param metadata
 	 */
 	private FindProjectAdapter_People showData(Metadata metadata) {
+		KeelLog.e("ContactsMainPageActivity", "showData");
 		Metadata data = new Metadata();
 		data.id = "全部";
 		data.name = "全部";
@@ -877,6 +897,7 @@ public class ContactsMainPageActivity extends JBaseActivity implements OnClickLi
 	}
 
 	private void chooseData() {
+		KeelLog.e("ContactsMainPageActivity", "chooseData");
 		lists.clear();
 		regionId = getLocation();
 		typeId = getType();

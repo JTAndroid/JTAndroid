@@ -54,6 +54,7 @@ import com.utils.common.EConsts;
 import com.utils.common.EUtil;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
+import com.utils.log.KeelLog;
 import com.utils.string.StringUtils;
 import com.utils.time.Util;
 
@@ -566,6 +567,7 @@ public class LoginActivity extends JBaseFragmentActivity {
 
 		@Override
 		public void bindData(int tag, Object object) {
+			KeelLog.e("LoginActivity", "tag::"+tag+"object:"+(DataBox) object);
 			String MSG = "bindData()";
 
 			// 隐藏加载框
@@ -599,7 +601,7 @@ public class LoginActivity extends JBaseFragmentActivity {
 				Log.i(TAG, MSG);
 				if (object != null) {
 					DataBox dataBox = (DataBox) object;
-
+					KeelLog.e("LoginActivity", "dataBox::"+dataBox.toString());
 					if (dataBox.mJTMember != null) {
 						if (dataBox.mJTMember.userStatus == 0) {
 							Toast.makeText(LoginActivity.this, "邮箱未验证，请登录邮箱验证", 1).show();

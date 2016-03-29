@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/note_item"
+    android:layout_width="match_parent"
+    android:layout_height="137.5dp"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22.5dp" >
+
+        <TextView
+            android:id="@+id/mynote_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginTop="18.75dp"
+            android:text="2015年发展大会"
+            android:textColor="#222a32"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/mynote_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mynote_title"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginTop="12.5dp"
+            android:text="11/30"
+            android:textColor="#63a8eb"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mynote_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mynote_title"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_toLeftOf="@id/mynote_image"
+            android:layout_toRightOf="@id/mynote_time"
+            android:text="菜刀书法，明年房价和开发，凡是被粉丝们能否，参数课程报名，v.vdknx.csdmfbksl，。三年模拟，"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/mynote_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            
+              />
+    </RelativeLayout>
+
+</RelativeLayout>

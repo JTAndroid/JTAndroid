@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="167dp"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:id="@+id/my_event1_createitem_statusLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/my_event1_createitem_statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="即将开始"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="17dp"
+                android:layout_marginLeft="11dp"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/my_event1_createitem_titleText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="赢在中国"
+                android:textColor="#222a32"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_event1_createitem_timeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_event1_createitem_statusLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动时间:"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_event1_createitem_timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="11月7日  09:00"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_event1_createitem_dayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="还有7天"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_event1_createitem_timeLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报名数:"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_event1_createitem_NoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="239"
+                android:textColor="#222a32"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/my_event1_createitem_setText"
+            android:layout_width="65dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/my_event1_createitem_statusLayout"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/btn_gray"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#eeeeee" />
+
+    <LinearLayout
+        android:id="@+id/my_event1_createitem_setLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="#f9f9f9"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/my_event1_createitem_namelistText"
+                android:layout_width="80dp"
+                android:layout_height="27dp"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="名单管理"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/my_event1_createitem_actioneditText"
+                android:layout_width="80dp"
+                android:layout_height="27dp"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="活动编辑"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/my_event1_createitem_actiondeleteText"
+                android:layout_width="80dp"
+                android:layout_height="27dp"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="活动删除"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="168dp"
+        android:layout_height="221dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_more"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/peoplemanager_signed"
+            android:layout_width="fill_parent"
+            android:layout_height="74dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="3dp"
+                android:text="已签到"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1px"
+            android:background="@drawable/dashedline" />
+
+        <LinearLayout
+            android:id="@+id/peoplemanager_unsigned"
+            android:layout_width="fill_parent"
+            android:layout_height="74dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:text="未签到"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="140dp"
+            android:layout_height="1px"
+            android:background="@drawable/dashedline" />
+
+        <LinearLayout
+            android:id="@+id/peoplemanager_all"
+            android:layout_width="fill_parent"
+            android:layout_height="74dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:text="全    部"
+                android:textColor="#ffffff"
+                android:textSize="19sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -38,6 +38,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ import com.easemob.EMCallBack;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMGroupManager;
 import com.lidroid.xutils.ViewUtils;
+import com.tongmeng.alliance.activity.TMToolActivity;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.CommunityReqUtil;
@@ -86,6 +88,7 @@ import com.utils.http.IBindData;
 public class FrgSociality extends JBaseFragment implements IBindData,
 		PushMessageCallBack {
 
+	private LinearLayout tm_layout;
 	private XListView mListView;
 	private JTPage mPage;
 	private MListSocialityAdapter adapter;
@@ -116,24 +119,24 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	// private ImageView redIv;
 	private int newConnectionsCount;
 	private FrameLayout launchChatingFL;
-//	private boolean isFirstLoadData = true;
+	// private boolean isFirstLoadData = true;
 	private SharedPreferences social_sp;
 	private SharedPreferences.Editor social_edtior;
-	
+
 	private final int PUSH_NEW = 5;
 	public final int REQ_CHAT = 100;
 	public final int REQ_MUC = 101;
-	
-	//增加社群item
+
+	// 增加社群item
 	private MSociality community;
 	private ArrayList<CommunityNotify> communityNotifylist;
 
 	@Override
 	public void onResume() {
 		super.onResume();
-//		if (social_sp.getBoolean(GlobalVariable.SOCIAL_ISFISTLOAD, false)) {
-			startGetData();
-//		}
+		// if (social_sp.getBoolean(GlobalVariable.SOCIAL_ISFISTLOAD, false)) {
+		startGetData();
+		// }
 	}
 
 	private Handler handler = new Handler() {
@@ -159,7 +162,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			case 3:
 				int pushNum = msg.arg1;
 				// navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-//				updateNavigateNum(pushNum);
+				updateNavigateNum(pushNum);
 				break;
 			case 4:
 				if (adapter != null) {
@@ -178,14 +181,14 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	 * 
 	 * @param pushNum
 	 */
-//	public void updateNavigateNum(int pushNum) {
-//		if (pushNum <= 0) {
-//			navigateView.setVisibility(View.GONE);
-//		} else {
-//			navigateView.setVisibility(View.VISIBLE);
-//			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
-//		}
-//	}
+	public void updateNavigateNum(int pushNum) {
+		if (pushNum <= 0) {
+			navigateView.setVisibility(View.GONE);
+		} else {
+			navigateView.setVisibility(View.VISIBLE);
+			navigateNumTv.setText((pushNum > 99 ? 99 : pushNum) + "");
+		}
+	}
 
 	public FrgSociality() {
 		super();
@@ -204,6 +207,17 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 		// actionBar
 		View view = inflater.inflate(R.layout.frg_sociality, null);
 		ViewUtils.inject(this, view);
+		
+		tm_layout = (LinearLayout) view.findViewById(R.id.frg_sociality_layout);
+		tm_layout.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(getActivity(),TMToolActivity.class);
+				startActivity(intent);
+			}
+		});
 		mListView = (XListView) view
 				.findViewById(R.id.home_frg_sociatity_listview);
 
@@ -256,7 +270,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 		 * null, nowIndex, socialityListMaxCount);
 		 */
 		if (isFirstStart) {
-//			showLoadingDialog();
+			// showLoadingDialog();
 		}
 
 		ConferenceReqUtil.doGetSocialList(getActivity(), FrgSociality.this,
@@ -264,8 +278,9 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 
 		ConnectionsReqUtil.getNewConnectionsCount(getActivity(),
 				FrgSociality.this, new JSONObject(), null);
-		
-		ConferenceReqUtil.getCommunityState(getActivity(), this, null, App.getUserID());
+
+		ConferenceReqUtil.getCommunityState(getActivity(), this, null,
+				App.getUserID());
 	}
 
 	private boolean mIsVisibleToUser;
@@ -289,11 +304,11 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 									getActivity().MODE_PRIVATE);
 					int meetingCount = sharedPreferences.getInt(
 							GlobalVariable.MEETING_NEW_COUNT_KEY, 0);
-					sharedPreferences = getActivity()
-							.getSharedPreferences(
-									GlobalVariable.SHARED_PREFERENCES_NOTICE_NEW_COUNT,
-									getActivity().MODE_PRIVATE);
-					int noticeCount =  sharedPreferences.getInt(GlobalVariable.NOTICE_NEW_COUNT_KEY, 0);
+					sharedPreferences = getActivity().getSharedPreferences(
+							GlobalVariable.SHARED_PREFERENCES_NOTICE_NEW_COUNT,
+							getActivity().MODE_PRIVATE);
+					int noticeCount = sharedPreferences.getInt(
+							GlobalVariable.NOTICE_NEW_COUNT_KEY, 0);
 					for (int i = 0; listSocial != null && i < listSocial.size(); i++) {
 						if (MSociality.isMeeting(listSocial.get(i).getType())) {
 							listSocial.get(i).setNewCount(meetingCount);
@@ -324,22 +339,22 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//		inflater.inflate(R.menu.sociaty_menu, menu);
+		// inflater.inflate(R.menu.sociaty_menu, menu);
 		menu.findItem(R.id.home_new_menu_more).setVisible(false);
-//		menu.findItem(R.id.aff_create).setVisible(false);
-//		menu.findItem(R.id.affairs_new_menu_list).setVisible(false);
-//		frgSocialityMenuView = menu.findItem(R.id.phone_call_notebook)
-//				.getActionView();
-//		launchChatingFL = (FrameLayout) frgSocialityMenuView
-//				.findViewById(R.id.activity_inlet_gam_fl);
-//		launchChatingFL.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				// TODO 发起畅聊
-//				ENavigate.startIMRelationSelectActivity(getActivity(), null,
-//						null, 0, null, null);
-//			}
-//		});
+		// menu.findItem(R.id.aff_create).setVisible(false);
+		// menu.findItem(R.id.affairs_new_menu_list).setVisible(false);
+		// frgSocialityMenuView = menu.findItem(R.id.phone_call_notebook)
+		// .getActionView();
+		// launchChatingFL = (FrameLayout) frgSocialityMenuView
+		// .findViewById(R.id.activity_inlet_gam_fl);
+		// launchChatingFL.setOnClickListener(new OnClickListener() {
+		// @Override
+		// public void onClick(View v) {
+		// // TODO 发起畅聊
+		// ENavigate.startIMRelationSelectActivity(getActivity(), null,
+		// null, 0, null, null);
+		// }
+		// });
 		super.onCreateOptionsMenu(menu, inflater);
 	}
 
@@ -377,7 +392,8 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					public void onSuccess() {
 						// 注册一个监听连接状态的listener
 						EMChatManager.getInstance().addConnectionListener(
-								new com.tr.imservice.MyConnectionListener(getActivity()));
+								new com.tr.imservice.MyConnectionListener(
+										getActivity()));
 
 						getActivity().runOnUiThread(new Runnable() {
 							public void run() {
@@ -414,9 +430,9 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				loginEasemob();
 				conferenceAndChat = (MListSociality) object;
 				listSocial = conferenceAndChat.getListSocial();
-				
-				//增加社群item
-				if(community == null){
+
+				// 增加社群item
+				if (community == null) {
 					community = new MSociality();
 				}
 				community.setType(MSociality.COMMUNITY);
@@ -429,7 +445,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				}
 				// controlXListBottom();
 				((MainActivity) getActivity())
-						.updateNavigateNum(conferenceAndChat.getCount() + community.getNewCount());
+						.updateNavigateNum(conferenceAndChat.getCount());
 				/**
 				 * 更新关系数
 				 */
@@ -449,17 +465,20 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 						.getSharedPreferences(
 								GlobalVariable.SHARED_PREFERENCES_MEETING_NEW_COUNT,
 								getActivity().MODE_PRIVATE);
-				SharedPreferences.Editor editor = meetingSharedPreferences.edit();
+				SharedPreferences.Editor editor = meetingSharedPreferences
+						.edit();
 				editor.putInt(GlobalVariable.MEETING_NEW_COUNT_KEY, meetingNum);
 				editor.commit();
-				
+
 				// 写入数
 				SharedPreferences noticeSharedPreferences = getActivity()
 						.getSharedPreferences(
 								GlobalVariable.SHARED_PREFERENCES_NOTICE_NEW_COUNT,
 								getActivity().MODE_PRIVATE);
-				SharedPreferences.Editor noticeEditor = noticeSharedPreferences.edit();
-				noticeEditor.putInt(GlobalVariable.NOTICE_NEW_COUNT_KEY, noticeNum);
+				SharedPreferences.Editor noticeEditor = noticeSharedPreferences
+						.edit();
+				noticeEditor.putInt(GlobalVariable.NOTICE_NEW_COUNT_KEY,
+						noticeNum);
 				noticeEditor.commit();
 
 				getActivity().runOnUiThread(new Runnable() {
@@ -509,9 +528,9 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 				}
 				deleteClickPosition = -1;
 			}
-			if(tag == EAPIConsts.ConferenceReqType.CONFERENCE_REQ_COMMUNITY_STATE){
+			if (tag == EAPIConsts.ConferenceReqType.CONFERENCE_REQ_COMMUNITY_STATE) {
 				if (object != null) {
-					if(community == null){
+					if (community == null) {
 						community = new MSociality();
 					}
 					int newcount = 0;
@@ -531,30 +550,33 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 					}
 				}
 			}
-//			isFirstLoadData = false;
-			if(social_edtior != null){
-				social_edtior.putBoolean(GlobalVariable.SOCIAL_ISFISTLOAD, false);
+			// isFirstLoadData = false;
+			if (social_edtior != null) {
+				social_edtior.putBoolean(GlobalVariable.SOCIAL_ISFISTLOAD,
+						false);
 				social_edtior.commit();
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 	}
-	
-	class ComparatorNotify implements Comparator{
+
+	class ComparatorNotify implements Comparator {
 
 		@Override
 		public int compare(Object lhs, Object rhs) {
 			CommunityNotify communityNotify1 = (CommunityNotify) lhs;
 			CommunityNotify communityNotify2 = (CommunityNotify) rhs;
-			int flag=communityNotify2.getUpdatedTime().compareTo(communityNotify1.getUpdatedTime());
+			int flag = communityNotify2.getUpdatedTime().compareTo(
+					communityNotify1.getUpdatedTime());
 			if (flag == 0) {
-				return communityNotify2.getCreatedTime().compareTo(communityNotify1.getCreatedTime());
+				return communityNotify2.getCreatedTime().compareTo(
+						communityNotify1.getCreatedTime());
 			} else {
 				return flag;
 			}
 		}
-		
+
 	}
 
 	private void init() {
@@ -587,8 +609,9 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 						holder.cnsSizeTvNew.setVisibility(View.GONE);
 					}
 					iscnsNewLongClick = false;
-				}else if(mSociality.getType() == MSociality.COMMUNITY){
-					Intent intent = new Intent(getActivity(), CommumitiesNotificationActivity.class);
+				} else if (mSociality.getType() == MSociality.COMMUNITY) {
+					Intent intent = new Intent(getActivity(),
+							CommumitiesNotificationActivity.class);
 					intent.putExtra("communityNotifylist", communityNotifylist);
 					getActivity().startActivity(intent);
 				} else if (MSociality.isMeeting(mSociality.getType())) {// 会议//
@@ -625,14 +648,15 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 									.setThatImage(mSociality.getSocialDetail()
 											.getListImageUrl().get(0));
 						}
-						ENavigate.startIMActivity(getActivity(), chatDetail,REQ_CHAT);
+						ENavigate.startIMActivity(getActivity(), chatDetail,
+								REQ_CHAT);
 
 						break;
 					// 群聊
 					case 2:
 						holder.chat_push_data_num_gv_control
 								.setVisibility(View.GONE);
-						ENavigate.startIMGroupActivity(getActivity(),REQ_MUC,
+						ENavigate.startIMGroupActivity(getActivity(), REQ_MUC,
 								mSociality.getId() + "");
 						break;
 					}
@@ -742,7 +766,7 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 								FrgSociality.this, mSociality.getId(), 0, type,
 								Long.valueOf(App.getUserID()),
 								format.format(new Date()), mHandler);
-						
+
 						IMReqUtil.doclearUnreadMessageNumber(getActivity(),
 								FrgSociality.this,
 								Long.valueOf(App.getUserID()), userId2, mucId,
@@ -827,10 +851,10 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	public void onPushMessage(String userId, MSociality mSociality) {
 		listSocial.clear();
 		List<MSociality> listSocialTemp = adapter.setListAddSocial(mSociality);
-		if(adapter.isPushNew){
+		if (adapter.isPushNew) {
 			adapter.isPushNew = false;
 			handler.sendEmptyMessage(PUSH_NEW);
-		}else{
+		} else {
 			listSocial.addAll(listSocialTemp);
 			getActivity().runOnUiThread(new Runnable() {
 				@Override
@@ -864,21 +888,29 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 	public void setListSocial(List<MSociality> listSocial) {
 		this.listSocial = listSocial;
 	}
-	
+
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if(resultCode!=getActivity().RESULT_OK){
+		if (resultCode != getActivity().RESULT_OK) {
 			return;
 		}
-		switch(requestCode){
+		switch (requestCode) {
 		case REQ_CHAT:
-			IMBaseMessage chat_msg = (IMBaseMessage) data.getSerializableExtra("imbasemsg");
-			if(chat_msg!=null){
-				for(MSociality social:listSocial){
-					if((social.getId()+"").equals(chat_msg.getSenderID()) || (social.getId()+"").equals(chat_msg.getRecvID())){
-						if(!TextUtils.isEmpty(chat_msg.getSenderName())){
-							social.getSocialDetail().setContent(chat_msg.getSenderName()+":"+chat_msg.getContent().replace(chat_msg.getSenderName(), ""));
+			IMBaseMessage chat_msg = (IMBaseMessage) data
+					.getSerializableExtra("imbasemsg");
+			if (chat_msg != null) {
+				for (MSociality social : listSocial) {
+					if ((social.getId() + "").equals(chat_msg.getSenderID())
+							|| (social.getId() + "").equals(chat_msg
+									.getRecvID())) {
+						if (!TextUtils.isEmpty(chat_msg.getSenderName())) {
+							social.getSocialDetail().setContent(
+									chat_msg.getSenderName()
+											+ ":"
+											+ chat_msg.getContent().replace(
+													chat_msg.getSenderName(),
+													""));
 						}
 						social.setTime(chat_msg.getTime());
 						adapter.notifyDataSetChanged();
@@ -888,12 +920,21 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			}
 			break;
 		case REQ_MUC:
-			IMBaseMessage muc_msg = (IMBaseMessage) data.getSerializableExtra("imbasemsg");
-			if(muc_msg!=null){
-				for(MSociality social:listSocial){
-					if((social.getId()+"").equals(muc_msg.getRecvID())){
-						if(!TextUtils.isEmpty(muc_msg.getSenderName())){
-							social.getSocialDetail().setContent(muc_msg.getSenderName()+":"+muc_msg.getContent().replace(muc_msg.getSenderName(), ""));
+			IMBaseMessage muc_msg = (IMBaseMessage) data
+					.getSerializableExtra("imbasemsg");
+			if (muc_msg != null) {
+				for (MSociality social : listSocial) {
+					if ((social.getId() + "").equals(muc_msg.getRecvID())) {
+						if (!TextUtils.isEmpty(muc_msg.getSenderName())) {
+							social.getSocialDetail()
+									.setContent(
+											muc_msg.getSenderName()
+													+ ":"
+													+ muc_msg
+															.getContent()
+															.replace(
+																	muc_msg.getSenderName(),
+																	""));
 						}
 						social.setTime(muc_msg.getTime());
 						adapter.notifyDataSetChanged();
@@ -904,5 +945,5 @@ public class FrgSociality extends JBaseFragment implements IBindData,
 			break;
 		}
 	}
-	
+
 }

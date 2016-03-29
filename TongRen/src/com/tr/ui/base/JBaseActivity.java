@@ -202,11 +202,5 @@ public abstract class JBaseActivity extends Activity {
 		ActivityHolder.getInstance().pop(this); // 出栈
 	}
 	
-	@Override
-	public void onResume(){
-		super.onResume();
-		MobclickAgent.onResume(this); // 友盟统计
-		ActivityHolder.getInstance().push(this); // 进栈
-	}
 	
 }

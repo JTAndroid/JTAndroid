@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mymap_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/mymap_relativeLayout2"
+        android:layout_width="460dp"
+        android:layout_height="37dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/mapshape1" >
+
+        <EditText
+            android:id="@+id/mymap_edittext1"
+            android:layout_width="460dp"
+            android:layout_height="37dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/mapshape1"
+            android:drawableLeft="@drawable/icon_search2"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:hint="搜索您的活动地点"
+            android:imeOptions="actionDone"
+            android:singleLine="true" />
+    </RelativeLayout>
+    <!--
+        <RelativeLayout
+            android:id="@+id/mymap_relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+           <RelativeLayout
+                android:id="@+id/mymap_relativeLayout1"
+                style="@drawable/mapshape1"
+                android:layout_width="460dp"
+                android:layout_height="@dimen/y60"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x14"
+                android:background="@drawable/bg_pa"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_search2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:hint="搜索您的活动地点"
+                        android:textColorHint="#999999"
+                        android:textSize="@dimen/x28" />
+                </LinearLayout>
+            </RelativeLayout>        <RelativeLayout
+            android:id="@+id/mymap_relativeLayout2"
+            android:layout_width="460dp"
+            android:layout_height="@dimen/y60"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/x14"
+            android:background="@drawable/mapshape1" >
+
+            <ImageView
+                android:id="@+id/mymap_img1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp" />
+
+            <Button
+                android:id="@+id/mymap_searchBtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:text="搜素" />
+        </RelativeLayout>
+    </RelativeLayout>    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mymap_relativeLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="#FA7456"
+        android:padding="7dp"
+        android:text="长按地图选定活动地址"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/mymap_locaionlayout"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_alignRight="@id/mymap_relativeLayout2"
+        android:layout_below="@id/mymap_relativeLayout2"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_location"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="定位"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mymap_sureBtn"
+        style="@drawable/mapshape1"
+        android:layout_width="460dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#FFBE6C"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/mymap_showText"
+        style="@drawable/mapshape1"
+        android:layout_width="460dp"
+        android:layout_height="52dp"
+        android:layout_above="@id/mymap_sureBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/bg_pa"
+        android:paddingBottom="16dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="16sp" />
+
+</RelativeLayout>

@@ -315,7 +315,7 @@
     <style name="CustomThemeL" parent="android:Theme.Holo">
         <item name="android:actionMenuTextAppearance">@style/CustomMenuTextAppearence</item>
         <item name="android:actionMenuTextColor">@android:color/black</item>
-         <item name="android:titleTextStyle">@style/common_text_style_large_black</item>
+        <item name="android:titleTextStyle">@style/common_text_style_large_black</item>
         <item name="android:homeAsUpIndicator">@drawable/home_back</item>
         <item name="android:selectableItemBackground">@drawable/item_background_holo_dark</item>
     </style>
@@ -494,14 +494,16 @@
     <!-- 人脉动画 -->
     <style name="ConnsDialogAnim" parent="android:Animation">
         <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
- <!--  //进入时的动画    -->                                                <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
-  <!--   //退出时的动画    --></style>
+        <!-- //进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- //退出时的动画 -->
+    </style>
 
     <!-- 人脉Tab样式 -->
     <style name="ConnsTheme" parent="CustomThemeL">
         <item name="android:actionMenuTextAppearance">@style/CustomMenuTextAppearence</item>
         <item name="android:homeAsUpIndicator">@drawable/home_back</item>
-<!--  <item name="searchViewSearchIcon">@drawable/jt_dt_search</item>  -->
+        <!-- <item name="searchViewSearchIcon">@drawable/jt_dt_search</item> -->
         <item name="android:selectableItemBackground">@drawable/item_background_holo_dark</item>
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
@@ -543,10 +545,10 @@
         <item name="@android:windowExitAnimation">@anim/push_down_out</item>
         <!--
         <item name="android:background">@color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
         -->
     </style>
-    
+
     <style name="CustomCheckboxTheme2" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/checkbox_style_circle</item>
     </style>
@@ -646,13 +648,14 @@
     <!-- 忘记重置密码页面样式2 -->
     <style name="CustomThemeLmy2" parent="android:Theme.Holo">
         <item name="android:actionMenuTextAppearance">@style/CustomMenuTextAppearencemy</item>
-         <item name="android:actionMenuTextColor">@android:color/black</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
         <!-- <item name="actionBarDivider">@null</item>  低版本设置 -->
         <item name="android:actionBarDivider">@null</item>
         <!-- 高版本设置 -->
     </style>
 
     <style name="CustomMenuTextAppearencemy">
+
         <!-- <item name="android:textColor">@color/white</item> -->
         <item name="android:textColor">#1a1a1a</item>
         <item name="android:textSize">13sp</item>
@@ -786,8 +789,8 @@
     <style name="ActivityTheme_Light" parent="android:Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/actionbar_def_style</item>
         <item name="android:homeAsUpIndicator">@drawable/home_back</item>
-         <item name="android:actionMenuTextColor">@android:color/black</item>
-         <item name="android:actionMenuTextAppearance">@style/CustomMenuTextAppearence</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+        <item name="android:actionMenuTextAppearance">@style/CustomMenuTextAppearence</item>
     </style>
 
     <style name="knowledgedetailsAnimationActivity" parent="@android:style/Animation.Activity">
@@ -804,14 +807,14 @@
         <!--
              Note that we use the base animation style here (that is no
              animations) because we really have no idea how this kind of
-             activity will be used.
+             activity will be used.
         -->
         <item name="android:windowAnimationStyle">@style/knowledgedetailsAnimationActivity</item>
     </style>
 
     <style name="popWindow_animation">
-                <item name="android:windowEnterAnimation">@anim/popupwindow_enter</item>
-                <item name="android:windowExitAnimation">@anim/popupwindow_exit</item>
+                        <item name="android:windowEnterAnimation">@anim/popupwindow_enter</item>
+                        <item name="android:windowExitAnimation">@anim/popupwindow_exit</item>
    </style>
 
     <style name="ExpandableItemStyle">
@@ -823,23 +826,23 @@
         <item name="android:textSize">@dimen/item_text_size</item>
     </style>
 
-    
     <style name="AppLightTheme" parent="android:Theme.Holo.Light">
-<item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
-</style>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+    </style>
 
-<style name="MenuTextStyle">
-<item name="android:textColor">@color/white</item>
-<item name="android:textSize">18sp</item>
-</style>
+    <style name="MenuTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
-<style name="AnimHead" parent="@android:style/Animation">
-    <item name="android:windowEnterAnimation">@anim/head_in</item>
-    <item name="android:windowExitAnimation">@anim/head_out</item>
-</style>
-<style name="AnimGodCreatedPopu" parent="@android:style/Animation">
-    <item name="android:windowEnterAnimation">@anim/faded_in</item>
-    <item name="android:windowExitAnimation">@anim/faded_out</item>
-</style>
+    <style name="AnimHead" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
+
+    <style name="AnimGodCreatedPopu" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/faded_in</item>
+        <item name="android:windowExitAnimation">@anim/faded_out</item>
+    </style>
 
 </resources>

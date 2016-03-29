@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/actionnote_nonotelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您好，在本会议中您还没有创建过会议笔记！"
+            android:textColor="#999999"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/actionnote_writenoteText"
+            android:layout_width="141dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:text="写笔记"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actionnote_listlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f4f4f4"
+        android:orientation="vertical" >
+
+        <com.tr.ui.common.view.XListView
+            android:id="@+id/actionnote_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/actionnote_progressBar"
+        style="@android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

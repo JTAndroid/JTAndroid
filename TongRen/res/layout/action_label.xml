@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingTop="10.0dip" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="已选择"
+                    android:textColor="#ff353535"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最多添加10个标签"
+                    android:textColor="#ff6c6c6c"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <com.tongmeng.alliance.view.MyTagGroupView
+                android:id="@+id/selectedCv"
+                style="@style/cv_label" />
+
+            <include layout="@layout/demand_item_division_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff1f1f1"
+                android:paddingBottom="6.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingTop="6.0dip"
+                android:text="我的标签"
+                android:textColor="#ff353535"
+                android:textSize="13.0sp" />
+
+            <include layout="@layout/demand_item_division_line" />
+
+            <com.tongmeng.alliance.view.MyTagGroupView
+                android:id="@+id/myLabelCv"
+                style="@style/cv_label" />
+
+            <include layout="@layout/demand_item_division_line" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff1f1f1"
+                android:paddingBottom="6.0dip"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingTop="6.0dip"
+                android:text="金桐推荐标签"
+                android:textColor="#ff353535"
+                android:textSize="13.0sp" />
+
+            <include layout="@layout/demand_item_division_line" />
+
+            <com.tongmeng.alliance.view.MyTagGroupView
+                android:id="@+id/defaultLabelCv"
+                style="@style/cv_label" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

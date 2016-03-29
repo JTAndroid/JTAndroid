@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/attendpeopleinfo_image"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_centerVertical="true"
+               />
+
+            <TextView
+                android:id="@+id/attendpeopleinfo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/attendpeopleinfo_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/attendpeopleinfo_image"
+                android:gravity="center|left"
+                android:text="米稳"
+                android:textColor="#222a32"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/attendpeopleinfo_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attendpeopleinfo_name"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/attendpeopleinfo_image"
+                android:gravity="center|left"
+                android:text="15930738136"
+                android:textColor="#999999"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/attendpeopleinfo_sms"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/attendpeopleinfo_name"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/attendpeopleinfo_phone"
+                android:src="@drawable/icon_message" />
+
+            <ImageView
+                android:id="@+id/attendpeopleinfo_call"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/attendpeopleinfo_name"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/attendpeopleinfo_sms"
+                android:src="@drawable/icon_call" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listview_attendpeople_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="67dp"
+        android:background="#f9f9f9"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/shouqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_shouqi" >
+        </ImageView>
+    </LinearLayout>
+
+</LinearLayout>

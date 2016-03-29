@@ -15,6 +15,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,6 +31,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.tongmeng.alliance.activity.ActionMainActivity;
 import com.tr.App;
 import com.tr.R;
 import com.tr.api.HomeReqUtil;
@@ -55,6 +57,7 @@ import com.utils.common.EUtil;
 import com.utils.common.GlobalVariable;
 import com.utils.http.EAPIConsts;
 import com.utils.http.IBindData;
+import com.utils.log.KeelLog;
 
 /**
  * 主页——金桐首页
@@ -100,7 +103,8 @@ public class GintongMainFragment extends JBaseFragment implements
 			R.drawable.image_capital, R.drawable.image_project,
 			R.drawable.image_stock, R.drawable.image_gt_project,
 			R.drawable.image_clue, R.drawable.image_tongmeng_activity,
-			R.drawable.image_gintong_think_tank, R.drawable.image_perpetual_calendar,
+			R.drawable.image_gintong_think_tank,
+			R.drawable.image_perpetual_calendar,
 			R.drawable.image_express_delivery, R.drawable.image_housing_loan,
 			R.drawable.image_ticket, R.drawable.image_kitchen };
 	private static final String[] bannerArrayStrings = new String[] {
@@ -319,6 +323,13 @@ public class GintongMainFragment extends JBaseFragment implements
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
+			if (listB.get(position).getAlt().contains("etongmeng.com")) {
+				Intent intent = new Intent(getActivity(),
+						ActionMainActivity.class);
+				startActivity(intent);
+				return;
+			}
+
 			String keyString = splitURL(listB.get(position).getAlt());
 			if (TextUtils.isEmpty(keyString)) {// 跳转到WEBVIEW
 				ENavigate.startWebViewActivity(getActivity(),
@@ -461,6 +472,8 @@ public class GintongMainFragment extends JBaseFragment implements
 		/**
 		 * 逻辑需要优化
 		 */
+		KeelLog.e("GintongMainFragment  mainPageLists.size()::"
+				+ mainPageLists.size());
 		int size = mainPageLists.size();
 		int count = 0;
 		for (int i = 0; i < size; i++) {
@@ -552,7 +565,7 @@ public class GintongMainFragment extends JBaseFragment implements
 	@SuppressWarnings("unchecked")
 	@Override
 	public void bindData(int tag, Object object) {
-		if(null!=getActivity()){
+		if (null != getActivity()) {
 			firstuse_sp_json = getActivity().getSharedPreferences(
 					GlobalVariable.SHARED_PREFERENCES_INDEX_JSON,
 					getActivity().MODE_PRIVATE);
@@ -561,8 +574,9 @@ public class GintongMainFragment extends JBaseFragment implements
 		case EAPIConsts.HomeReqType.HOME_PAGE_LIST:
 			if (object != null) {
 				mainPageLists = (ArrayList<MainPageList>) object;
-			} else if (null!=firstuse_sp_json&&!TextUtils.isEmpty(firstuse_sp_json.getString(
-					GlobalVariable.MAIN_INDEX_JSON, ""))) {// 取本地JSON数据
+			} else if (null != firstuse_sp_json
+					&& !TextUtils.isEmpty(firstuse_sp_json.getString(
+							GlobalVariable.MAIN_INDEX_JSON, ""))) {// 取本地JSON数据
 				String objString = firstuse_sp_json.getString(
 						GlobalVariable.MAIN_INDEX_JSON, "");
 				JSONObject jsonObject;

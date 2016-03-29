@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/search_linearlayout_customer"
+        android:layout_width="fill_parent"
+        android:layout_height="59dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/mynote_list_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/search_note_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:src="@drawable/icon_delete"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/serach_note_summint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="搜索"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/search_note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/mynote_list_Layout"
+            android:background="#FFFFFF"
+            android:hint="标题、正文"
+            android:paddingLeft="13dp"
+            android:singleLine="true"
+            android:textColor="#c0c0c0"
+            android:textSize="20dp"
+            android:windowSoftInputMode="stateHidden" />
+    </RelativeLayout>
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/listnote"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#f4f4f4"
+        android:dividerHeight="12.5dp" >
+    </com.tr.ui.common.view.XListView>
+
+</LinearLayout>

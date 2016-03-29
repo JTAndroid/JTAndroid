@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/my_event1_createLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/my_event1_createText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我发布的"
+                android:textColor="#5cafdb"
+                android:textSize="19sp" />
+
+            <View
+                android:id="@+id/my_event1_createView"
+                android:layout_width="107dp"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#5cafdb" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_event1_attendLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/my_event1_attendText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我参加的"
+                android:textColor="#999999"
+                android:textSize="19sp" />
+
+            <View
+                android:id="@+id/my_event1_attendView"
+                android:layout_width="107dp"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_event1_cancleLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/my_event1_cancleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已取消的"
+                android:textColor="#999999"
+                android:textSize="19sp" />
+
+            <View
+                android:id="@+id/my_event1_cancleView"
+                android:layout_width="107dp"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#eeeeee" />
+
+    <com.tr.ui.common.view.XListView
+        android:id="@+id/my_event1_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="13dp"
+        android:background="#ffffff"
+        android:dividerHeight="13dp"
+        android:visibility="gone" >
+    </com.tr.ui.common.view.XListView>
+
+    <LinearLayout
+        android:id="@+id/my_event1_noresuleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="居然没有内容"
+            android:textColor="#999999"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/my_event1_noresultItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="发布一个活动试试"
+            android:textColor="#ff9000"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</LinearLayout>

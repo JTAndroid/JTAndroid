@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/activity_actiondetail_glist_img"
+        android:layout_width="133dp"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:id="@+id/activity_actiondetail_glist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textColor="#999999"
+        android:textSize="16dp" />
+
+</LinearLayout>
