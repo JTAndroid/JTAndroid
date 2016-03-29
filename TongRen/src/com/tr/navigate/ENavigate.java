@@ -1758,6 +1758,33 @@ public class ENavigate {
 			context.startActivity(intent);
 		}
 	}
+	
+	/**
+	 * 人脉详情
+	 * 
+	 * @param context
+	 * @param fromActivityType
+	 *            "type":"1-创建  2-其他"
+	 * @param id
+	 *            人脉对象id
+	 * 
+	 *            control 是否需要进行权限控制 0 受权限控制 1 不受权限控制
+	 * @param requestCode
+	 * 
+	 */
+
+	public static void startContactsDetailsActivitys(Context context,
+			int fromActivitytype, long id, int requestcode,int persontype) {
+		Intent intent = new Intent(context, ContactsDetailsActivity.class);
+		intent.putExtra(ENavConsts.EFromActivityType, fromActivitytype);
+		intent.putExtra(EConsts.Key.PERSON_ID, id);
+		intent.putExtra(EConsts.Key.PERSON_TYPE, persontype);
+		if (requestcode != 0) {
+			((Activity) context).startActivityForResult(intent, requestcode);
+		} else {
+			context.startActivity(intent);
+		}
+	}
 
 	/**
 	 * 人脉详情

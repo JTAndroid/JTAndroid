@@ -68,7 +68,7 @@ public class RelationshipActivity extends BaseActivity implements OnClickListene
 						if (mMeetingPeople.getPeopleType()==2) {
 							ENavigate.startRelationHomeActivity(RelationshipActivity.this, mMeetingPeople.getPeopleId()+"");
 						}else {
-							ENavigate.startContactsDetailsActivity(RelationshipActivity.this, 2, mMeetingPeople.getPeopleId(), 0, 1);
+							ENavigate.startContactsDetailsActivitys(RelationshipActivity.this, 2, mMeetingPeople.getPeopleId(), 0,1);
 						}
 					}else if (relationType == 2) {
 						MMeetingOrgan mMeetingOrgan = meeting.getListMeetingOrgan().get(position);

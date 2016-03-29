@@ -208,7 +208,6 @@
     <dimen name="actionbar_text_size">16sp</dimen>
 
     <!-- 头像中文字大�?-->
-    <dimen name="avatar_text_size">16sp</dimen>
     <dimen name="text_tongren_size_l">16sp</dimen>
     <dimen name="text_tongren_size_m">14sp</dimen>
     <dimen name="text_tongren_size_s">13sp</dimen>
@@ -216,7 +215,6 @@
     <dimen name="view_small_padding">1dp</dimen>
     <dimen name="view_padding">4.5dp</dimen>
     
-    <dimen name="common_margain_top_88">66dp</dimen>
     <dimen name="common_margain_top_29">22dp</dimen>
     <dimen name="common_margain_top_20">15dp</dimen>
     <dimen name="common_margain_top_17">13dp</dimen>
