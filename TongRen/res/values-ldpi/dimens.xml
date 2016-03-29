@@ -213,7 +213,6 @@
     <dimen name="view_small_padding">0.375dp</dimen>
     <dimen name="view_padding">2.25dp</dimen>
     
-    <dimen name="common_margain_top_88">33dp</dimen>
     <dimen name="common_margain_top_29">11dp</dimen>
     <dimen name="common_margain_top_20">7.5dp</dimen>
     <dimen name="common_margain_top_17">6.375dp</dimen>

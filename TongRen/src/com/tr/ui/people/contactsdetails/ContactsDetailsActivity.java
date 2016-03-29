@@ -193,6 +193,7 @@ public class ContactsDetailsActivity extends SwipeBackActivity implements
 			id = intent.getLongExtra(EConsts.Key.PERSON_ID, -1);
 			//获取转发人脉查看权限
 			view = intent.getIntExtra(EConsts.Key.VIEW, 0);
+			persontype = intent.getIntExtra(EConsts.Key.PERSON_TYPE, 0);
 			System.out.println("创建人脉Id" + id);
 			eFromActivity = intent.getIntExtra(ENavConsts.EFromActivityType, 0);
 		}
@@ -225,7 +226,12 @@ public class ContactsDetailsActivity extends SwipeBackActivity implements
 	public void requestPeopleJson() {
 		peopleDetialParam = new PeopleDetialsIncomingParameters();
 		peopleDetialParam.id = id;// ==id
-		peopleDetialParam.personType = 2;// = personType
+		if (persontype == 1) {
+			peopleDetialParam.personType = 1;// = personType
+		}else{
+			peopleDetialParam.personType = 2;// = personType
+		}
+		
 		if (view == 1) {
 			peopleDetialParam.view = view;
 		} else {
@@ -1036,6 +1042,7 @@ public class ContactsDetailsActivity extends SwipeBackActivity implements
 	private String chineseName;
 	public PeopleDetails peopleDetails;
 	private PeopleDetialsIncomingParameters peopleDetialParam;
+	private int persontype;
 
 
 	@Override

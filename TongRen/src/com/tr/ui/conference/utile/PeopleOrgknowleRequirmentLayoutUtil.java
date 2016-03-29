@@ -26,6 +26,7 @@ import com.tr.model.conference.MMeetingData;
 import com.tr.model.conference.MMeetingOrgan;
 import com.tr.model.conference.MMeetingPeople;
 import com.tr.navigate.ENavigate;
+import com.tr.ui.conference.square.RelationshipActivity;
 import com.utils.common.GlobalVariable;
 import com.utils.common.Util;
 import com.utils.image.AnimateFirstDisplayListener;
@@ -68,7 +69,8 @@ public class PeopleOrgknowleRequirmentLayoutUtil {
 					if (aPeople.getPeopleType()==2) {
 						ENavigate.startRelationHomeActivity(mContext, aPeople.getPeopleId()+"");
 					}else {
-						ENavigate.startContactsDetailsActivity(mContext, 2, aPeople.getPeopleId(), 0, 1);
+//						ENavigate.startContactsDetailsActivity(mContext, 2, aPeople.getPeopleId(), 0, 1);
+						ENavigate.startContactsDetailsActivitys(mContext, 2, aPeople.getPeopleId(), 0,1);
 					}
 				}
 			});
