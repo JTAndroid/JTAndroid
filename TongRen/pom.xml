@@ -169,7 +169,7 @@
 		</dependency>
 		<dependency>
 			<groupId>gintong.librarys.SocialSDK</groupId>
-			<artifactId>WeiXin</artifactId>
+			<artifactId>WeiXin.Tencent</artifactId>
 			<version>1</version>
 		</dependency>
 		<dependency>
