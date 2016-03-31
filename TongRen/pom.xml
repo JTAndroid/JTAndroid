@@ -44,6 +44,25 @@
 			<scope>runtime</scope>
 			<type>so</type>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libamapv</artifactId>
+			<version>304.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		<dependency>
+			<groupId>gintong.librarys.native</groupId>
+			<artifactId>libamapv</artifactId>
+			<version>304ex.0</version>
+			<classifier>armeabi</classifier>
+			<scope>runtime</scope>
+			<type>so</type>
+		</dependency>
+		
 		<!-- 定位 -->
 		<dependency>
 			<groupId>gintong.librarys.native</groupId>
@@ -275,13 +294,6 @@
 			<scope>runtime</scope>
 			<type>so</type>
 		</dependency>
-
-
-		
-
-
-
-
 		<!-- 引用其他的工程 -->
 		<dependency>
 			<groupId>gintong.librarys.self</groupId>
